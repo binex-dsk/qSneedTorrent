@@ -294,7 +294,7 @@ namespace
             {"BitTorrent/Session/QueueingSystemEnabled", "Preferences/Queueing/QueueingEnabled"},
             {"BitTorrent/Session/RefreshInterval", "Preferences/General/RefreshInterval"},
             {"BitTorrent/Session/SaveResumeDataInterval", "Preferences/Downloads/SaveResumeDataInterval"},
-            {"BitTorrent/Session/SuperSeedingEnabled", "Preferences/Advanced/SuperSeeding"},
+            {"BitTorrent/Session/SuperSneedingEnabled", "Preferences/Advanced/SuperSneeding"},
             {"BitTorrent/Session/TempPath", "Preferences/Downloads/TempPath"},
             {"BitTorrent/Session/TempPathEnabled", "Preferences/Downloads/TempPathEnabled"},
             {"BitTorrent/Session/TorrentExportDirectory", "Preferences/Downloads/TorrentExportDir"},

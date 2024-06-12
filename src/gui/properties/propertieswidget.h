@@ -1,6 +1,6 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
- * Copyright (C) 2006  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2006  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -88,13 +88,13 @@ public slots:
 
 protected slots:
     void updateTorrentInfos(BitTorrent::Torrent *const torrent);
-    void loadUrlSeeds();
-    void askWebSeed();
-    void deleteSelectedUrlSeeds();
-    void copySelectedWebSeedsToClipboard() const;
-    void editWebSeed();
+    void loadUrlSneeds();
+    void askWebSneed();
+    void deleteSelectedUrlSneeds();
+    void copySelectedWebSneedsToClipboard() const;
+    void editWebSneed();
     void displayFilesListMenu();
-    void displayWebSeedListMenu();
+    void displayWebSneedListMenu();
     void filteredFilesChanged();
     void showPiecesDownloaded(bool show);
     void showPiecesAvailability(bool show);

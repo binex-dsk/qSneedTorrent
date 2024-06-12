@@ -1,6 +1,6 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
- * Copyright (C) 2010  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2010  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -70,15 +70,15 @@ PropTabBar::PropTabBar(QWidget *parent)
     peersButton->setShortcut(Qt::ALT + Qt::Key_R);
     addWidget(peersButton);
     m_btnGroup->addButton(peersButton, PeersTab);
-    // URL seeds tab
-    QPushButton *URLSeedsButton = new QPushButton(
+    // URL sneeds tab
+    QPushButton *URLSneedsButton = new QPushButton(
 #ifndef Q_OS_MACOS
             UIThemeManager::instance()->getIcon("network-server"),
 #endif
             tr("HTTP Sources"), parent);
-    URLSeedsButton->setShortcut(Qt::ALT + Qt::Key_B);
-    addWidget(URLSeedsButton);
-    m_btnGroup->addButton(URLSeedsButton, URLSeedsTab);
+    URLSneedsButton->setShortcut(Qt::ALT + Qt::Key_B);
+    addWidget(URLSneedsButton);
+    m_btnGroup->addButton(URLSneedsButton, URLSneedsTab);
     // Files tab
     QPushButton *filesButton = new QPushButton(
 #ifndef Q_OS_MACOS

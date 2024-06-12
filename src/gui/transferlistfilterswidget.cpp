@@ -1,6 +1,6 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
- * Copyright (C) 2006  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2006  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -183,9 +183,9 @@ StatusFilterWidget::StatusFilterWidget(QWidget *parent, TransferListWidget *tran
     auto *downloading = new QListWidgetItem(this);
     downloading->setData(Qt::DisplayRole, tr("Downloading (0)"));
     downloading->setData(Qt::DecorationRole, UIThemeManager::instance()->getIcon(QLatin1String("downloading")));
-    auto *seeding = new QListWidgetItem(this);
-    seeding->setData(Qt::DisplayRole, tr("Seeding (0)"));
-    seeding->setData(Qt::DecorationRole, UIThemeManager::instance()->getIcon(QLatin1String("uploading")));
+    auto *sneeding = new QListWidgetItem(this);
+    sneeding->setData(Qt::DisplayRole, tr("Sneeding (0)"));
+    sneeding->setData(Qt::DecorationRole, UIThemeManager::instance()->getIcon(QLatin1String("uploading")));
     auto *completed = new QListWidgetItem(this);
     completed->setData(Qt::DisplayRole, tr("Completed (0)"));
     completed->setData(Qt::DecorationRole, UIThemeManager::instance()->getIcon(QLatin1String("completed")));
@@ -230,7 +230,7 @@ StatusFilterWidget::~StatusFilterWidget()
 void StatusFilterWidget::updateTorrentNumbers()
 {
     int nbDownloading = 0;
-    int nbSeeding = 0;
+    int nbSneeding = 0;
     int nbCompleted = 0;
     int nbResumed = 0;
     int nbPaused = 0;
@@ -248,7 +248,7 @@ void StatusFilterWidget::updateTorrentNumbers()
         if (torrent->isDownloading())
             ++nbDownloading;
         if (torrent->isUploading())
-            ++nbSeeding;
+            ++nbSneeding;
         if (torrent->isCompleted())
             ++nbCompleted;
         if (torrent->isResumed())
@@ -273,7 +273,7 @@ void StatusFilterWidget::updateTorrentNumbers()
 
     item(TorrentFilter::All)->setData(Qt::DisplayRole, tr("All (%1)").arg(torrents.count()));
     item(TorrentFilter::Downloading)->setData(Qt::DisplayRole, tr("Downloading (%1)").arg(nbDownloading));
-    item(TorrentFilter::Seeding)->setData(Qt::DisplayRole, tr("Seeding (%1)").arg(nbSeeding));
+    item(TorrentFilter::Sneeding)->setData(Qt::DisplayRole, tr("Sneeding (%1)").arg(nbSneeding));
     item(TorrentFilter::Completed)->setData(Qt::DisplayRole, tr("Completed (%1)").arg(nbCompleted));
     item(TorrentFilter::Resumed)->setData(Qt::DisplayRole, tr("Resumed (%1)").arg(nbResumed));
     item(TorrentFilter::Paused)->setData(Qt::DisplayRole, tr("Paused (%1)").arg(nbPaused));

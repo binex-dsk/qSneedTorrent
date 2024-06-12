@@ -132,10 +132,10 @@ Application::Application(int &argc, char **argv)
     qRegisterMetaType<Log::Msg>("Log::Msg");
     qRegisterMetaType<Log::Peer>("Log::Peer");
 
-    setApplicationName("qBittorrent");
-    setOrganizationDomain("qbittorrent.org");
+    setApplicationName("qSneedTorrent");
+    setOrganizationDomain("qsneedtorrent.org");
 #if !defined(DISABLE_GUI)
-    setDesktopFileName("org.qbittorrent.qBittorrent");
+    setDesktopFileName("org.qsneedtorrent.qSneedTorrent");
 #if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     setAttribute(Qt::AA_UseHighDpiPixmaps, true);  // opt-in to the high DPI pixmap support
 #endif
@@ -172,7 +172,7 @@ Application::Application(int &argc, char **argv)
     if (isFileLoggerEnabled())
         m_fileLogger = new FileLogger(fileLoggerPath(), isFileLoggerBackup(), fileLoggerMaxSize(), isFileLoggerDeleteOld(), fileLoggerAge(), static_cast<FileLogger::FileLogAgeType>(fileLoggerAgeType()));
 
-    Logger::instance()->addMessage(tr("qBittorrent %1 started", "qBittorrent v3.2.0alpha started").arg(QBT_VERSION));
+    Logger::instance()->addMessage(tr("qSneedTorrent %1 started", "qSneedTorrent v3.2.0alpha started").arg(QBT_VERSION));
     if (portableModeEnabled)
     {
         Logger::instance()->addMessage(tr("Running in portable mode. Auto detected profile folder at: %1").arg(profileDir.toString()));
@@ -424,7 +424,7 @@ void Application::runExternalProgram(const BitTorrent::Torrent *torrent) const
     // Cannot give users shell environment by default, as doing so could
     // enable command injection via torrent name and other arguments
     // (especially when some automated download mechanism has been setup).
-    // See: https://github.com/qbittorrent/qBittorrent/issues/10925
+    // See: https://github.com/qsneedtorrent/qSneedTorrent/issues/10925
     QStringList args = QProcess::splitCommand(program);
     if (args.isEmpty())
         return;
@@ -442,14 +442,14 @@ void Application::sendNotificationEmail(const BitTorrent::Torrent *torrent)
         + tr("Save path: %1").arg(torrent->savePath().toString()) + "\n\n"
         + tr("The torrent was downloaded in %1.", "The torrent was downloaded in 1 hour and 20 seconds")
             .arg(Utils::Misc::userFriendlyDuration(torrent->activeTime())) + "\n\n\n"
-        + tr("Thank you for using qBittorrent.") + '\n';
+        + tr("Thank you for using qSneedTorrent.") + '\n';
 
     // Send the notification email
     const Preferences *pref = Preferences::instance();
     auto *smtp = new Net::Smtp(this);
     smtp->sendMail(pref->getMailNotificationSender(),
                      pref->getMailNotificationEmail(),
-                     tr("[qBittorrent] '%1' has finished downloading").arg(torrent->name()),
+                     tr("[qSneedTorrent] '%1' has finished downloading").arg(torrent->name()),
                      content);
 }
 
@@ -650,7 +650,7 @@ int Application::exec(const QStringList &params)
     const auto scheme = QString::fromLatin1(pref->isWebUiHttpsEnabled() ? "https" : "http");
     const auto url = QString::fromLatin1("%1://localhost:%2\n").arg(scheme, QString::number(pref->getWebUiPort()));
     const QString mesg = QString::fromLatin1("\n******** %1 ********\n").arg(tr("Information"))
-        + tr("To control qBittorrent, access the WebUI at: %1").arg(url);
+        + tr("To control qSneedTorrent, access the WebUI at: %1").arg(url);
     printf("%s\n", qUtf8Printable(mesg));
 
     if (pref->getWebUIPassword() == "ARQ77eY1NUZaQsuDHbIMCA==:0WMRkYTUWVT9wVvdDtHAjU9b3b7uB8NR1Gur2hmQCvCDpm39Q+PsJRJPaCU51dEiz+dTzh8qbPsL8WkFljQYFQ==")
@@ -724,7 +724,7 @@ void Application::initializeTranslation()
 
     installTranslator(&m_qtTranslator);
 
-    if (m_translator.load(QLatin1String(":/lang/qbittorrent_") + localeStr))
+    if (m_translator.load(QLatin1String(":/lang/qsneedtorrent_") + localeStr))
         qDebug("%s locale recognized, using translation.", qUtf8Printable(localeStr));
     else
         qDebug("%s locale unrecognized, using default (en).", qUtf8Printable(localeStr));

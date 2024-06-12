@@ -2,9 +2,9 @@ cmake_minimum_required(VERSION 3.16 FATAL_ERROR) # Policies <= CMP0097 default t
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/Modules)
 
-project(qBittorrent
-    DESCRIPTION "The qBittorrent BitTorrent client"
-    HOMEPAGE_URL "https://www.qbittorrent.org/"
+project(qSneedTorrent
+    DESCRIPTION "The qSneedTorrent BitTorrent client"
+    HOMEPAGE_URL "https://www.qsneedtorrent.org/"
     LANGUAGES CXX
 )
 
@@ -41,9 +41,9 @@ if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
         check_cxx_source_compiles(
             "#include <execinfo.h>
             int main(){return 0;}"
-            QBITTORRENT_HAS_EXECINFO_H
+            QSNEEDTORRENT_HAS_EXECINFO_H
         )
-        if (NOT QBITTORRENT_HAS_EXECINFO_H)
+        if (NOT QSNEEDTORRENT_HAS_EXECINFO_H)
             message(FATAL_ERROR "execinfo.h header file not found.\n"
                 "Please either disable the STACKTRACE feature or use a libc that has this header file, such as glibc (GNU libc)."
             )

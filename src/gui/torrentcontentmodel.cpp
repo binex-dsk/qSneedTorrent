@@ -1,6 +1,6 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
- * Copyright (C) 2006-2012  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2006-2012  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -132,7 +132,7 @@ namespace
     };
 #elif defined(Q_OS_MACOS)
     // There is a similar bug on macOS, to be reported to Qt
-    // https://github.com/qbittorrent/qBittorrent/pull/6156#issuecomment-316302615
+    // https://github.com/qsneedtorrent/qSneedTorrent/pull/6156#issuecomment-316302615
     class MacFileIconProvider final : public CachingFileIconProvider
     {
         QPixmap pixmapForExtension(const QString &ext) const override
@@ -152,7 +152,7 @@ namespace
     bool doesQFileIconProviderWork()
     {
         QFileIconProvider provider;
-        const char PSEUDO_UNIQUE_FILE_NAME[] = "/tmp/qBittorrent-test-QFileIconProvider-845eb448-7ad5-4cdb-b764-b3f322a266a9";
+        const char PSEUDO_UNIQUE_FILE_NAME[] = "/tmp/qSneedTorrent-test-QFileIconProvider-845eb448-7ad5-4cdb-b764-b3f322a266a9";
         QIcon testIcon1 = provider.icon(QFileInfo(
             QLatin1String(PSEUDO_UNIQUE_FILE_NAME) + QLatin1String(".pdf")));
         QIcon testIcon2 = provider.icon(QFileInfo(

@@ -282,22 +282,22 @@ QVector<TrackerEntry> TorrentInfo::trackers() const
     return ret;
 }
 
-QVector<QUrl> TorrentInfo::urlSeeds() const
+QVector<QUrl> TorrentInfo::urlSneeds() const
 {
     if (!isValid()) return {};
 
-    const std::vector<lt::web_seed_entry> &nativeWebSeeds = m_nativeInfo->web_seeds();
+    const std::vector<lt::web_seed_entry> &nativeWebSneeds = m_nativeInfo->web_seeds();
 
-    QVector<QUrl> urlSeeds;
-    urlSeeds.reserve(static_cast<decltype(urlSeeds)::size_type>(nativeWebSeeds.size()));
+    QVector<QUrl> urlSneeds;
+    urlSneeds.reserve(static_cast<decltype(urlSneeds)::size_type>(nativeWebSneeds.size()));
 
-    for (const lt::web_seed_entry &webSeed : nativeWebSeeds)
+    for (const lt::web_seed_entry &webSneed : nativeWebSneeds)
     {
-        if (webSeed.type == lt::web_seed_entry::url_seed)
-            urlSeeds.append(QUrl(webSeed.url.c_str()));
+        if (webSneed.type == lt::web_seed_entry::url_seed)
+            urlSneeds.append(QUrl(webSneed.url.c_str()));
     }
 
-    return urlSeeds;
+    return urlSneeds;
 }
 
 QByteArray TorrentInfo::metadata() const

@@ -1,7 +1,7 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
  * Copyright (C) 2015  Vladimir Golovnev <glassez@yandex.ru>
- * Copyright (C) 2006  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2006  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -74,7 +74,7 @@ enum MaxRatioAction
     Pause = 0,
     Remove = 1,
     DeleteFiles = 3,
-    EnableSuperSeeding = 2
+    EnableSuperSneeding = 2
 };
 
 enum DeleteOption
@@ -129,13 +129,13 @@ namespace BitTorrent
         };
         Q_ENUM_NS(MixedModeAlgorithm)
 
-        enum class SeedChokingAlgorithm : int
+        enum class SneedChokingAlgorithm : int
         {
             RoundRobin = 0,
             FastestUpload = 1,
             AntiLeech = 2
         };
-        Q_ENUM_NS(SeedChokingAlgorithm)
+        Q_ENUM_NS(SneedChokingAlgorithm)
 
         enum class ResumeDataStorageType
         {
@@ -270,8 +270,8 @@ namespace BitTorrent
 
         qreal globalMaxRatio() const;
         void setGlobalMaxRatio(qreal ratio);
-        int globalMaxSeedingMinutes() const;
-        void setGlobalMaxSeedingMinutes(int minutes);
+        int globalMaxSneedingMinutes() const;
+        void setGlobalMaxSneedingMinutes(int minutes);
         bool isDHTEnabled() const;
         void setDHTEnabled(bool enabled);
         bool isLSDEnabled() const;
@@ -328,8 +328,8 @@ namespace BitTorrent
         void setProxyPeerConnectionsEnabled(bool enabled);
         ChokingAlgorithm chokingAlgorithm() const;
         void setChokingAlgorithm(ChokingAlgorithm mode);
-        SeedChokingAlgorithm seedChokingAlgorithm() const;
-        void setSeedChokingAlgorithm(SeedChokingAlgorithm mode);
+        SneedChokingAlgorithm sneedChokingAlgorithm() const;
+        void setSneedChokingAlgorithm(SneedChokingAlgorithm mode);
         bool isAddTrackersEnabled() const;
         void setAddTrackersEnabled(bool enabled);
         QString additionalTrackers() const;
@@ -457,7 +457,7 @@ namespace BitTorrent
         QVector<Torrent *> torrents() const;
         bool hasActiveTorrents() const;
         bool hasUnfinishedTorrents() const;
-        bool hasRunningSeed() const;
+        bool hasRunningSneed() const;
         const SessionStatus &status() const;
         const CacheStatus &cacheStatus() const;
         quint64 getAlltimeDL() const;
@@ -501,8 +501,8 @@ namespace BitTorrent
         void handleTorrentTrackersAdded(TorrentImpl *const torrent, const QVector<TrackerEntry> &newTrackers);
         void handleTorrentTrackersRemoved(TorrentImpl *const torrent, const QVector<TrackerEntry> &deletedTrackers);
         void handleTorrentTrackersChanged(TorrentImpl *const torrent);
-        void handleTorrentUrlSeedsAdded(TorrentImpl *const torrent, const QVector<QUrl> &newUrlSeeds);
-        void handleTorrentUrlSeedsRemoved(TorrentImpl *const torrent, const QVector<QUrl> &urlSeeds);
+        void handleTorrentUrlSneedsAdded(TorrentImpl *const torrent, const QVector<QUrl> &newUrlSneeds);
+        void handleTorrentUrlSneedsRemoved(TorrentImpl *const torrent, const QVector<QUrl> &urlSneeds);
         void handleTorrentResumeDataReady(TorrentImpl *const torrent, const LoadTorrentParams &data);
 
         bool addMoveTorrentStorageJob(TorrentImpl *torrent, const Path &newPath, MoveStorageMode mode);
@@ -585,7 +585,7 @@ namespace BitTorrent
         ~Session();
 
         bool hasPerTorrentRatioLimit() const;
-        bool hasPerTorrentSeedingTimeLimit() const;
+        bool hasPerTorrentSneedingTimeLimit() const;
 
         // Session configuration
         Q_INVOKABLE void configure();
@@ -616,7 +616,7 @@ namespace BitTorrent
         LoadTorrentParams initLoadTorrentParams(const AddTorrentParams &addTorrentParams);
         bool addTorrent_impl(const std::variant<MagnetUri, TorrentInfo> &source, const AddTorrentParams &addTorrentParams);
 
-        void updateSeedingLimitTimer();
+        void updateSneedingLimitTimer();
         void exportTorrentFile(const TorrentInfo &torrentInfo, const Path &folderPath, const QString &baseName);
 
         void handleAlert(const lt::alert *a);
@@ -632,7 +632,7 @@ namespace BitTorrent
         void handlePortmapAlert(const lt::portmap_alert *p);
         void handlePeerBlockedAlert(const lt::peer_blocked_alert *p);
         void handlePeerBanAlert(const lt::peer_ban_alert *p);
-        void handleUrlSeedAlert(const lt::url_seed_alert *p);
+        void handleUrlSneedAlert(const lt::url_seed_alert *p);
         void handleListenSucceededAlert(const lt::listen_succeeded_alert *p);
         void handleListenFailedAlert(const lt::listen_failed_alert *p);
         void handleExternalIPAlert(const lt::external_ip_alert *p);
@@ -722,7 +722,7 @@ namespace BitTorrent
         CachedSettingValue<bool> m_isAddTrackersEnabled;
         CachedSettingValue<QString> m_additionalTrackers;
         CachedSettingValue<qreal> m_globalMaxRatio;
-        CachedSettingValue<int> m_globalMaxSeedingMinutes;
+        CachedSettingValue<int> m_globalMaxSneedingMinutes;
         CachedSettingValue<bool> m_isAddTorrentPaused;
         CachedSettingValue<TorrentContentLayout> m_torrentContentLayout;
         CachedSettingValue<bool> m_isAppendExtensionEnabled;
@@ -744,7 +744,7 @@ namespace BitTorrent
         CachedSettingValue<int> m_encryption;
         CachedSettingValue<bool> m_isProxyPeerConnectionsEnabled;
         CachedSettingValue<ChokingAlgorithm> m_chokingAlgorithm;
-        CachedSettingValue<SeedChokingAlgorithm> m_seedChokingAlgorithm;
+        CachedSettingValue<SneedChokingAlgorithm> m_sneedChokingAlgorithm;
         CachedSettingValue<QStringList> m_storedTags;
         CachedSettingValue<int> m_maxRatioAction;
         CachedSettingValue<Path> m_savePath;
@@ -776,7 +776,7 @@ namespace BitTorrent
         QVector<TrackerEntry> m_additionalTrackerList;
 
         bool m_refreshEnqueued = false;
-        QTimer *m_seedingLimitTimer = nullptr;
+        QTimer *m_sneedingLimitTimer = nullptr;
         QTimer *m_resumeDataTimer = nullptr;
         Statistics *m_statistics = nullptr;
         // IP filtering

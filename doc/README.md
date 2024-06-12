@@ -8,8 +8,8 @@ on that specific format.
 
 To build the man pages:
 ```shell
-pandoc -s -f markdown -t man qbittorrent.1.md -o qbittorrent.1
-pandoc -s -f markdown -t man qbittorrent-nox.1.md -o qbittorrent-nox.1
+pandoc -s -f markdown -t man qsneedtorrent.1.md -o qsneedtorrent.1
+pandoc -s -f markdown -t man qsneedtorrent-nox.1.md -o qsneedtorrent-nox.1
 ```
 
 There is also an online converter you can use if you have trouble installing a

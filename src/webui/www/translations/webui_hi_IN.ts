@@ -92,7 +92,7 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
+        <source>Exit qSneedTorrent</source>
         <translation>क्यूबिटटोरेंट बंद करें</translation>
     </message>
     <message>
@@ -140,7 +140,7 @@
         <translation>अपलोड की अधिकतम संख्या हर टारेंट सीमा के लिए 0 या disabled.से अधिक होना चाहिए.</translation>
     </message>
     <message>
-        <source>Unable to save program preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to save program preferences, qSneedTorrent is probably unreachable.</source>
         <translation>कार्यक्रम वरीयताओं को सहेजने में असमर्थ, क्यूबिटटाॅरेंट शायद अगम्य है।</translation>
     </message>
     <message>
@@ -152,7 +152,7 @@
         <translation>बांटने की दर का अनुपात 0 से 9998 के बीच हो।</translation>
     </message>
     <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
+        <source>Sneeding time limit must be between 0 and 525600 minutes.</source>
         <translation>स्रोत काल 0 व 525600 मिनट के बीच में ही होना चाहिए</translation>
     </message>
     <message>
@@ -160,7 +160,7 @@
         <translation>वेब UI के लिए प्रयुक्त पोर्ट 1024 से अधिक और 65535 से कम होना चाहिए।</translation>
     </message>
     <message>
-        <source>Unable to log in, qBittorrent is probably unreachable.</source>
+        <source>Unable to log in, qSneedTorrent is probably unreachable.</source>
         <translation>लॉगिन नहीं कर पाए, क्यूबिटटाॅरेंट शायद पहुँच से बाहर है।</translation>
     </message>
     <message>
@@ -280,7 +280,7 @@
         <translation>सहेंजें</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
+        <source>qSneedTorrent client is not reachable</source>
         <translation>क्यूबिटटाॅरेंट प्रयोक्ता पहुंच योग्य नहीं है</translation>
     </message>
     <message>
@@ -320,7 +320,7 @@
         <translation>डाउनलोड दर की दहलीज 0 से अधिक होनी चाहिए।</translation>
     </message>
     <message>
-        <source>qBittorrent has been shutdown</source>
+        <source>qSneedTorrent has been shutdown</source>
         <translation>क्यूबिटटाॅरेंट को बन्द कर दिया है</translation>
     </message>
     <message>
@@ -463,12 +463,12 @@
         <translation>सार्वभौम डाउनलोड गति सीमा</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
+        <source>Are you sure you want to quit qSneedTorrent?</source>
         <translation>क्या आप निश्चित ही क्यूबिटटाॅरेंट बंद करना चाहते हैं?</translation>
     </message>
     <message>
-        <source>[D: %1, U: %2] qBittorrent %3</source>
-        <comment>D = Download; U = Upload; %3 is qBittorrent version</comment>
+        <source>[D: %1, U: %2] qSneedTorrent %3</source>
+        <comment>D = Download; U = Upload; %3 is qSneedTorrent version</comment>
         <translation> [↓: %1, ↑: %2]  क्यूबिटटाॅरेंट %3</translation>
     </message>
     <message>
@@ -1105,7 +1105,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Enable super seeding for torrent</source>
+        <source>Enable super sneeding for torrent</source>
         <translation>इस टाॅरेंट को महास्रोत बनायें</translation>
     </message>
     <message>
@@ -1129,7 +1129,7 @@
         <translation>जब अनुपात तक पहुँचे</translation>
     </message>
     <message>
-        <source>When seeding time reaches</source>
+        <source>When sneeding time reaches</source>
         <translation>जब स्रोत काल समाप्त हो जाए</translation>
     </message>
     <message>
@@ -1165,7 +1165,7 @@
         <translation>टौरेंट और उसकी फाइलों को हटायें</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
+        <source>qSneedTorrent Section</source>
         <translation>क्यूबिटटाॅरेंट खण्ड</translation>
     </message>
     <message>
@@ -1237,7 +1237,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeding Limits</source>
+        <source>Sneeding Limits</source>
         <translation>स्रोत की सीमाएं</translation>
     </message>
     <message>
@@ -1629,7 +1629,7 @@
         <translation>अपलोड:</translation>
     </message>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>स्रोत:</translation>
     </message>
     <message>
@@ -1757,7 +1757,7 @@
         <translation>नाम बदलें...</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation>%1 (स्रोत काल %2)</translation>
     </message>
     <message>
@@ -1897,7 +1897,7 @@
         <translation>डाउनलोड हो रहे हैं (0)</translation>
     </message>
     <message>
-        <source>Seeding (0)</source>
+        <source>Sneeding (0)</source>
         <translation>स्रोत बने हुए (0)</translation>
     </message>
     <message>
@@ -1933,7 +1933,7 @@
         <translation>डाउनलोड हो रहे हैं (%1)</translation>
     </message>
     <message>
-        <source>Seeding (%1)</source>
+        <source>Sneeding (%1)</source>
         <translation>स्रोत बने हुए (%1)</translation>
     </message>
     <message>
@@ -2015,11 +2015,11 @@
     </message>
     <message>
         <source>Status</source>
-        <comment>Torrent status (e.g. downloading, seeding, paused)</comment>
+        <comment>Torrent status (e.g. downloading, sneeding, paused)</comment>
         <translation>स्थिति</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <comment>i.e. full sources (often untranslated)</comment>
         <translation>स्रोत</translation>
     </message>
@@ -2192,7 +2192,7 @@
         <translation>लागू नहीं</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <translation>स्रोत</translation>
     </message>
     <message>
@@ -2283,11 +2283,11 @@
         <translation>स्थानांतरित कर रहा है</translation>
     </message>
     <message>
-        <source>[F] Seeding</source>
+        <source>[F] Sneeding</source>
         <translation>[ब] स्रोत बना हुआ है</translation>
     </message>
     <message>
-        <source>Seeding</source>
+        <source>Sneeding</source>
         <translation>स्रोत बना हुआ है</translation>
     </message>
     <message>
@@ -2331,7 +2331,7 @@
         <translation>अवरुद्ध</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation>%1 (स्रोत काल %2)</translation>
     </message>
     <message>
@@ -2455,7 +2455,7 @@
         <translation>फिरसे बलपुर्वक जांचे</translation>
     </message>
     <message>
-        <source>Super seeding mode</source>
+        <source>Super sneeding mode</source>
         <translation>महास्रोत रीति</translation>
     </message>
     <message>
@@ -2588,7 +2588,7 @@
         <translation>हार्ड डिस्क की फाइलें भी रद्द करें</translation>
     </message>
     <message>
-        <source>Deletion confirmation - qBittorrent</source>
+        <source>Deletion confirmation - qSneedTorrent</source>
         <translation>मिटाने की पुष्टि करें - क्यूबिटटाॅरेंट</translation>
     </message>
 </context>
@@ -2712,7 +2712,7 @@
 <context>
     <name>SearchEngineWidget</name>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>स्रोत:</translation>
     </message>
     <message>
@@ -2842,7 +2842,7 @@
         <translation>खोज इन्जन</translation>
     </message>
     <message>
-        <source>Seeders</source>
+        <source>Sneeders</source>
         <translation>स्रोतस्वामी</translation>
     </message>
 </context>
@@ -2989,7 +2989,7 @@
         <translation>नाम:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
+        <source>About qSneedTorrent</source>
         <translation>क्यूबिटटौरेंट के बारे में</translation>
     </message>
     <message>
@@ -3001,7 +3001,7 @@
         <translation>अनुवादक</translation>
     </message>
     <message>
-        <source>qBittorrent was built with the following libraries:</source>
+        <source>qSneedTorrent was built with the following libraries:</source>
         <translation>क्यूबिटटाॅरेंट निम्नलिखित लाइब्रेरी द्वारा निर्मित किया गया है:</translation>
     </message>
     <message>
@@ -3025,11 +3025,11 @@
         <translation>फ्रांस</translation>
     </message>
     <message>
-        <source>qBittorrent Mascot</source>
+        <source>qSneedTorrent Mascot</source>
         <translation type="unfinished" />
     </message>
     <message>
-        <source>qBittorrent icon</source>
+        <source>qSneedTorrent icon</source>
         <translation type="unfinished" />
     </message>
 </context>

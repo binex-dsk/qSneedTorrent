@@ -102,9 +102,9 @@ MagnetUri::MagnetUri(const QString &source)
     for (const std::string &tracker : m_addTorrentParams.trackers)
         m_trackers.append({QString::fromStdString(tracker)});
 
-    m_urlSeeds.reserve(static_cast<decltype(m_urlSeeds)::size_type>(m_addTorrentParams.url_seeds.size()));
-    for (const std::string &urlSeed : m_addTorrentParams.url_seeds)
-        m_urlSeeds.append(QString::fromStdString(urlSeed));
+    m_urlSneeds.reserve(static_cast<decltype(m_urlSneeds)::size_type>(m_addTorrentParams.url_seeds.size()));
+    for (const std::string &urlSneed : m_addTorrentParams.url_seeds)
+        m_urlSneeds.append(QString::fromStdString(urlSneed));
 }
 
 bool MagnetUri::isValid() const
@@ -127,9 +127,9 @@ QVector<TrackerEntry> MagnetUri::trackers() const
     return m_trackers;
 }
 
-QVector<QUrl> MagnetUri::urlSeeds() const
+QVector<QUrl> MagnetUri::urlSneeds() const
 {
-    return m_urlSeeds;
+    return m_urlSneeds;
 }
 
 QString MagnetUri::url() const

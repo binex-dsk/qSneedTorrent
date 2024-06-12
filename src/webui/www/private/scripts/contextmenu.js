@@ -1,6 +1,6 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
- * Copyright (C) 2009  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2009  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -28,11 +28,11 @@
 
 'use strict';
 
-if (window.qBittorrent === undefined) {
-    window.qBittorrent = {};
+if (window.qSneedTorrent === undefined) {
+    window.qSneedTorrent = {};
 }
 
-window.qBittorrent.ContextMenu = (function() {
+window.qSneedTorrent.ContextMenu = (function() {
     const exports = function() {
         return {
             ContextMenu: ContextMenu,
@@ -308,7 +308,7 @@ window.qBittorrent.ContextMenu = (function() {
             let there_are_paused = false;
             let all_are_force_start = true;
             let there_are_force_start = false;
-            let all_are_super_seeding = true;
+            let all_are_super_sneeding = true;
             let all_are_auto_tmm = true;
             let there_are_auto_tmm = false;
             const tagsSelectionState = Object.clone(tagList);
@@ -329,8 +329,8 @@ window.qBittorrent.ContextMenu = (function() {
 
                 if (data['progress'] != 1.0) // not downloaded
                     all_are_downloaded = false;
-                else if (data['super_seeding'] !== true)
-                    all_are_super_seeding = false;
+                else if (data['super_sneeding'] !== true)
+                    all_are_super_sneeding = false;
 
                 if (data['state'] != 'pausedUP' && data['state'] != 'pausedDL')
                     all_are_paused = false;
@@ -375,8 +375,8 @@ window.qBittorrent.ContextMenu = (function() {
                 this.menu.getElement('a[href$=uploadLimit]').parentNode.addClass('separator');
                 this.hideItem('sequentialDownload');
                 this.hideItem('firstLastPiecePrio');
-                this.showItem('superSeeding');
-                this.setItemChecked('superSeeding', all_are_super_seeding);
+                this.showItem('superSneeding');
+                this.setItemChecked('superSneeding', all_are_super_sneeding);
             }
             else {
                 if (!show_seq_dl && show_f_l_piece_prio)
@@ -399,7 +399,7 @@ window.qBittorrent.ContextMenu = (function() {
 
                 this.showItem('downloadLimit');
                 this.menu.getElement('a[href$=uploadLimit]').parentNode.removeClass('separator');
-                this.hideItem('superSeeding');
+                this.hideItem('superSneeding');
             }
 
             this.showItem('start');
@@ -449,7 +449,7 @@ window.qBittorrent.ContextMenu = (function() {
             Object.each(sortedCategories, function(categoryName) {
                 const categoryHash = genHash(categoryName);
                 const el = new Element('li', {
-                    html: '<a href="javascript:torrentSetCategoryFN(\'' + categoryHash + '\');"><img src="icons/inode-directory.svg"/> ' + window.qBittorrent.Misc.escapeHtml(categoryName) + '</a>'
+                    html: '<a href="javascript:torrentSetCategoryFN(\'' + categoryHash + '\');"><img src="icons/inode-directory.svg"/> ' + window.qSneedTorrent.Misc.escapeHtml(categoryName) + '</a>'
                 });
                 if (first) {
                     el.addClass('separator');
@@ -487,7 +487,7 @@ window.qBittorrent.ContextMenu = (function() {
                 const tagHash = genHash(tagName);
                 const el = new Element('li', {
                     html: '<a href="#Tag/' + tagHash + '" onclick="event.preventDefault(); torrentSetTagsFN(\'' + tagHash + '\', !event.currentTarget.getElement(\'input[type=checkbox]\').checked);">'
-                        + '<input type="checkbox" onclick="this.checked = !this.checked;"> ' + window.qBittorrent.Misc.escapeHtml(tagName)
+                        + '<input type="checkbox" onclick="this.checked = !this.checked;"> ' + window.qSneedTorrent.Misc.escapeHtml(tagName)
                         + '</a>'
                 });
                 if (i === 0)
@@ -544,7 +544,7 @@ window.qBittorrent.ContextMenu = (function() {
     const RssFeedContextMenu = new Class({
         Extends: ContextMenu,
         updateMenuItems: function() {
-            let selectedRows = window.qBittorrent.Rss.rssFeedTable.selectedRowsIds();
+            let selectedRows = window.qSneedTorrent.Rss.rssFeedTable.selectedRowsIds();
             this.menu.getElement('a[href$=newSubscription]').parentNode.addClass('separator');
             switch (selectedRows.length) {
                 case 0:
@@ -572,7 +572,7 @@ window.qBittorrent.ContextMenu = (function() {
                         this.hideItem('updateAll');
                         this.hideItem('copyFeedURL');
                     }
-                    else if (window.qBittorrent.Rss.rssFeedTable.rows[selectedRows[0]].full_data.dataUid === '') {
+                    else if (window.qSneedTorrent.Rss.rssFeedTable.rows[selectedRows[0]].full_data.dataUid === '') {
                         // menu when single folder selected
                         this.showItem('update');
                         this.showItem('markRead');
@@ -641,7 +641,7 @@ window.qBittorrent.ContextMenu = (function() {
             });
         },
         updateMenuItems: function() {
-            let selectedRows = window.qBittorrent.RssDownloader.rssDownloaderRulesTable.selectedRowsIds();
+            let selectedRows = window.qSneedTorrent.RssDownloader.rssDownloaderRulesTable.selectedRowsIds();
             this.showItem('addRule');
             switch (selectedRows.length) {
                 case 0:
@@ -668,4 +668,4 @@ window.qBittorrent.ContextMenu = (function() {
     return exports();
 })();
 
-Object.freeze(window.qBittorrent.ContextMenu);
+Object.freeze(window.qSneedTorrent.ContextMenu);

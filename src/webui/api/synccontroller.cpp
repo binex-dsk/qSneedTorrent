@@ -408,8 +408,8 @@ SyncController::~SyncController()
 //  - "dlspeed": Torrent download speed
 //  - "upspeed": Torrent upload speed
 //  - "priority": Torrent queue position (-1 if queuing is disabled)
-//  - "num_seeds": Torrent seeds connected to
-//  - "num_complete": Torrent seeds in the swarm
+//  - "num_sneeds": Torrent sneeds connected to
+//  - "num_complete": Torrent sneeds in the swarm
 //  - "num_leechs": Torrent leechers connected to
 //  - "num_incomplete": Torrent leechers in the swarm
 //  - "ratio": Torrent share ratio
@@ -430,9 +430,9 @@ SyncController::~SyncController()
 //  - "download_path": Torrent download path
 //  - "completed": Amount of data completed
 //  - "max_ratio": Upload max share ratio
-//  - "max_seeding_time": Upload max seeding time
+//  - "max_sneeding_time": Upload max sneeding time
 //  - "ratio_limit": Upload share ratio limit
-//  - "seeding_time_limit": Upload seeding time limit
+//  - "sneeding_time_limit": Upload sneeding time limit
 //  - "seen_complete": Indicates the time when the torrent was last seen complete/whole
 //  - "last_activity": Last time when a chunk was downloaded/uploaded
 //  - "total_size": Size including unwanted data

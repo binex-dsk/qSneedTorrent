@@ -1,6 +1,6 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
- * Copyright (C) 2006  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2006  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -159,7 +159,7 @@ TransferListWidget::TransferListWidget(QWidget *parent, MainWindow *mainWindow)
     if (!columnLoaded)
     {
         setColumnHidden(TransferListModel::TR_ADD_DATE, true);
-        setColumnHidden(TransferListModel::TR_SEED_DATE, true);
+        setColumnHidden(TransferListModel::TR_SNEED_DATE, true);
         setColumnHidden(TransferListModel::TR_UPLIMIT, true);
         setColumnHidden(TransferListModel::TR_DLLIMIT, true);
         setColumnHidden(TransferListModel::TR_TRACKER, true);
@@ -272,7 +272,7 @@ void TransferListWidget::torrentDoubleClicked()
     if (!torrent) return;
 
     int action;
-    if (torrent->isSeed())
+    if (torrent->isSneed())
         action = Preferences::instance()->getActionOnDblClOnTorrentFn();
     else
         action = Preferences::instance()->getActionOnDblClOnTorrentDl();
@@ -681,12 +681,12 @@ void TransferListWidget::displayColumnHeaderMenu()
     menu->popup(QCursor::pos());
 }
 
-void TransferListWidget::setSelectedTorrentsSuperSeeding(const bool enabled) const
+void TransferListWidget::setSelectedTorrentsSuperSneeding(const bool enabled) const
 {
     for (BitTorrent::Torrent *const torrent : asConst(getSelectedTorrents()))
     {
         if (torrent->hasMetadata())
-            torrent->setSuperSeeding(enabled);
+            torrent->setSuperSneeding(enabled);
     }
 }
 
@@ -901,8 +901,8 @@ void TransferListWidget::displayListMenu()
     connect(actionCopyHash1, &QAction::triggered, this, [this]() { copySelectedInfohashes(CopyInfohashPolicy::Version1); });
     auto *actionCopyHash2 = new QAction(UIThemeManager::instance()->getIcon("edit-copy"), tr("Info hash v2"), listMenu);
     connect(actionCopyHash2, &QAction::triggered, this, [this]() { copySelectedInfohashes(CopyInfohashPolicy::Version2); });
-    auto *actionSuperSeedingMode = new TriStateAction(tr("Super seeding mode"), listMenu);
-    connect(actionSuperSeedingMode, &QAction::triggered, this, &TransferListWidget::setSelectedTorrentsSuperSeeding);
+    auto *actionSuperSneedingMode = new TriStateAction(tr("Super sneeding mode"), listMenu);
+    connect(actionSuperSneedingMode, &QAction::triggered, this, &TransferListWidget::setSelectedTorrentsSuperSneeding);
     auto *actionRename = new QAction(UIThemeManager::instance()->getIcon("edit-rename"), tr("Rename..."), listMenu);
     connect(actionRename, &QAction::triggered, this, &TransferListWidget::renameSelectedTorrent);
     auto *actionSequentialDownload = new TriStateAction(tr("Download in sequential order"), listMenu);
@@ -918,11 +918,11 @@ void TransferListWidget::displayListMenu()
 
     // Enable/disable pause/start action given the DL state
     bool needsPause = false, needsStart = false, needsForce = false, needsPreview = false;
-    bool allSameSuperSeeding = true;
-    bool superSeedingMode = false;
+    bool allSameSuperSneeding = true;
+    bool superSneedingMode = false;
     bool allSameSequentialDownloadMode = true, allSamePrioFirstlast = true;
     bool sequentialDownloadMode = false, prioritizeFirstLast = false;
-    bool oneHasMetadata = false, oneNotSeed = false;
+    bool oneHasMetadata = false, oneNotSneed = false;
     bool allSameCategory = true;
     bool allSameAutoTMM = true;
     bool firstAutoTMM = false;
@@ -962,9 +962,9 @@ void TransferListWidget::displayListMenu()
 
         if (torrent->hasMetadata())
             oneHasMetadata = true;
-        if (!torrent->isSeed())
+        if (!torrent->isSneed())
         {
-            oneNotSeed = true;
+            oneNotSneed = true;
             if (first)
             {
                 sequentialDownloadMode = torrent->isSequentialDownload();
@@ -980,12 +980,12 @@ void TransferListWidget::displayListMenu()
         }
         else
         {
-            if (!oneNotSeed && allSameSuperSeeding && torrent->hasMetadata())
+            if (!oneNotSneed && allSameSuperSneeding && torrent->hasMetadata())
             {
                 if (first)
-                    superSeedingMode = torrent->superSeeding();
-                else if (superSeedingMode != torrent->superSeeding())
-                    allSameSuperSeeding = false;
+                    superSneedingMode = torrent->superSneeding();
+                else if (superSneedingMode != torrent->superSneeding())
+                    allSameSuperSneeding = false;
             }
         }
 
@@ -1017,8 +1017,8 @@ void TransferListWidget::displayListMenu()
 
         first = false;
 
-        if (oneHasMetadata && oneNotSeed && !allSameSequentialDownloadMode
-            && !allSamePrioFirstlast && !allSameSuperSeeding && !allSameCategory
+        if (oneHasMetadata && oneNotSneed && !allSameSequentialDownloadMode
+            && !allSamePrioFirstlast && !allSameSuperSneeding && !allSameCategory
             && needsStart && needsForce && needsPause && needsPreview && !allSameAutoTMM
             && hasInfohashV1 && hasInfohashV2)
         {
@@ -1110,12 +1110,12 @@ void TransferListWidget::displayListMenu()
 
     listMenu->addSeparator();
     listMenu->addAction(actionTorrentOptions);
-    if (!oneNotSeed && oneHasMetadata)
+    if (!oneNotSneed && oneHasMetadata)
     {
-        actionSuperSeedingMode->setCheckState(allSameSuperSeeding
-            ? (superSeedingMode ? Qt::Checked : Qt::Unchecked)
+        actionSuperSneedingMode->setCheckState(allSameSuperSneeding
+            ? (superSneedingMode ? Qt::Checked : Qt::Unchecked)
             : Qt::PartiallyChecked);
-        listMenu->addAction(actionSuperSeedingMode);
+        listMenu->addAction(actionSuperSneedingMode);
     }
     listMenu->addSeparator();
     bool addedPreviewAction = false;
@@ -1124,7 +1124,7 @@ void TransferListWidget::displayListMenu()
         listMenu->addAction(actionPreviewFile);
         addedPreviewAction = true;
     }
-    if (oneNotSeed)
+    if (oneNotSneed)
     {
         actionSequentialDownload->setCheckState(allSameSequentialDownloadMode
             ? (sequentialDownloadMode ? Qt::Checked : Qt::Unchecked)
@@ -1148,7 +1148,7 @@ void TransferListWidget::displayListMenu()
         listMenu->addSeparator();
     }
     listMenu->addAction(actionOpenDestinationFolder);
-    if (BitTorrent::Session::instance()->isQueueingSystemEnabled() && oneNotSeed)
+    if (BitTorrent::Session::instance()->isQueueingSystemEnabled() && oneNotSneed)
     {
         listMenu->addSeparator();
         QMenu *queueMenu = listMenu->addMenu(tr("Queue"));

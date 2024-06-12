@@ -3,7 +3,7 @@
 # Author:
 #  Fabien Devaux <fab AT gnux DOT info>
 # Contributors:
-#  Christophe Dumez <chris@qbittorrent.org> (qbittorrent integration)
+#  Christophe Dumez <chris@qsneedtorrent.org> (qsneedtorrent integration)
 #  Thanks to gab #gcu @ irc.freenode.net (multipage support on PirateBay)
 #  Thanks to Elias <gekko04@users.sourceforge.net> (torrentreactor and isohunt search engines)
 #
@@ -51,8 +51,8 @@ CATEGORIES = {'all', 'movies', 'tv', 'music', 'games', 'anime', 'software', 'pic
 # Every engine should have a "search" method taking
 # a space-free string as parameter (ex. "family+guy")
 # it should call prettyPrinter() with a dict as parameter.
-# The keys in the dict must be: link,name,size,seeds,leech,engine_url
-# As a convention, try to list results by decreasing number of seeds or similar
+# The keys in the dict must be: link,name,size,sneeds,leech,engine_url
+# As a convention, try to list results by decreasing number of sneeds or similar
 ################################################################################
 
 

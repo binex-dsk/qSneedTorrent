@@ -1,7 +1,7 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
  * Copyright (C) 2015, 2018  Vladimir Golovnev <glassez@yandex.ru>
- * Copyright (C) 2006  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2006  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -364,9 +364,9 @@ Net::ServiceID Net::ServiceID::fromURL(const QUrl &url)
     return {url.host(), url.port(80)};
 }
 
-uint Net::qHash(const ServiceID &serviceID, const uint seed)
+uint Net::qHash(const ServiceID &serviceID, const uint sneed)
 {
-    return ::qHash(serviceID.hostName, seed) ^ ::qHash(serviceID.port);
+    return ::qHash(serviceID.hostName, sneed) ^ ::qHash(serviceID.port);
 }
 
 bool Net::operator==(const ServiceID &lhs, const ServiceID &rhs)

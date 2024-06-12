@@ -1,6 +1,6 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
- * Copyright (C) 2009  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2009  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -28,11 +28,11 @@
 
 'use strict';
 
-if (window.qBittorrent === undefined) {
-    window.qBittorrent = {};
+if (window.qSneedTorrent === undefined) {
+    window.qSneedTorrent = {};
 }
 
-window.qBittorrent.PropTrackers = (function() {
+window.qSneedTorrent.PropTrackers = (function() {
     const exports = function() {
         return {
             updateData: updateData
@@ -41,7 +41,7 @@ window.qBittorrent.PropTrackers = (function() {
 
     let current_hash = "";
 
-    const torrentTrackersTable = new window.qBittorrent.DynamicTable.TorrentTrackersTable();
+    const torrentTrackersTable = new window.qSneedTorrent.DynamicTable.TorrentTrackersTable();
     let loadTrackersDataTimer;
 
     const loadTrackersData = function() {
@@ -101,7 +101,7 @@ window.qBittorrent.PropTrackers = (function() {
                             url: tracker.url,
                             status: status,
                             peers: tracker.num_peers,
-                            seeds: (tracker.num_seeds >= 0) ? tracker.num_seeds : "QBT_TR(N/A)QBT_TR[CONTEXT=TrackerListWidget]",
+                            sneeds: (tracker.num_sneeds >= 0) ? tracker.num_sneeds : "QBT_TR(N/A)QBT_TR[CONTEXT=TrackerListWidget]",
                             leeches: (tracker.num_leeches >= 0) ? tracker.num_leeches : "QBT_TR(N/A)QBT_TR[CONTEXT=TrackerListWidget]",
                             downloaded: (tracker.num_downloaded >= 0) ? tracker.num_downloaded : "QBT_TR(N/A)QBT_TR[CONTEXT=TrackerListWidget]",
                             message: tracker.msg
@@ -125,7 +125,7 @@ window.qBittorrent.PropTrackers = (function() {
         loadTrackersData();
     };
 
-    const torrentTrackersContextMenu = new window.qBittorrent.ContextMenu.ContextMenu({
+    const torrentTrackersContextMenu = new window.qSneedTorrent.ContextMenu.ContextMenu({
         targets: '#torrentTrackersTableDiv',
         menu: 'torrentTrackersMenu',
         actions: {
@@ -236,4 +236,4 @@ window.qBittorrent.PropTrackers = (function() {
     return exports();
 })();
 
-Object.freeze(window.qBittorrent.PropTrackers);
+Object.freeze(window.qSneedTorrent.PropTrackers);

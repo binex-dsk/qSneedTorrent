@@ -1,7 +1,7 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
  * Copyright (C) 2022  Vladimir Golovnev <glassez@yandex.ru>
- * Copyright (C) 2012  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2012  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -98,4 +98,4 @@ Path operator+(const Path &lhs, const std::string &rhs);
 QDataStream &operator<<(QDataStream &out, const Path &path);
 QDataStream &operator>>(QDataStream &in, Path &path);
 
-uint qHash(const Path &key, uint seed);
+uint qHash(const Path &key, uint sneed);

@@ -36,7 +36,7 @@ const std::optional<TorrentIDSet> TorrentFilter::AnyID;
 const std::optional<QString> TorrentFilter::AnyTag;
 
 const TorrentFilter TorrentFilter::DownloadingTorrent(TorrentFilter::Downloading);
-const TorrentFilter TorrentFilter::SeedingTorrent(TorrentFilter::Seeding);
+const TorrentFilter TorrentFilter::SneedingTorrent(TorrentFilter::Sneeding);
 const TorrentFilter TorrentFilter::CompletedTorrent(TorrentFilter::Completed);
 const TorrentFilter TorrentFilter::PausedTorrent(TorrentFilter::Paused);
 const TorrentFilter TorrentFilter::ResumedTorrent(TorrentFilter::Resumed);
@@ -86,8 +86,8 @@ bool TorrentFilter::setTypeByName(const QString &filter)
 
     if (filter == "downloading")
         type = Downloading;
-    else if (filter == "seeding")
-        type = Seeding;
+    else if (filter == "sneeding")
+        type = Sneeding;
     else if (filter == "completed")
         type = Completed;
     else if (filter == "paused")
@@ -160,7 +160,7 @@ bool TorrentFilter::matchState(const BitTorrent::Torrent *const torrent) const
         return true;
     case Downloading:
         return torrent->isDownloading();
-    case Seeding:
+    case Sneeding:
         return torrent->isUploading();
     case Completed:
         return torrent->isCompleted();

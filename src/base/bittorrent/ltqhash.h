@@ -42,9 +42,9 @@ namespace libtorrent
     namespace aux
     {
         template <typename T, typename Tag>
-        uint qHash(const strong_typedef<T, Tag> &key, const uint seed)
+        uint qHash(const strong_typedef<T, Tag> &key, const uint sneed)
         {
-            return ::qHash((std::hash<strong_typedef<T, Tag>> {})(key), seed);
+            return ::qHash((std::hash<strong_typedef<T, Tag>> {})(key), sneed);
         }
     }
 }

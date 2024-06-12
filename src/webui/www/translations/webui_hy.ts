@@ -92,8 +92,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>Ելք qBittorrent-ից</translation>
+        <source>Exit qSneedTorrent</source>
+        <translation>Ելք qSneedTorrent-ից</translation>
     </message>
     <message>
         <source>Only one link per line</source>
@@ -140,8 +140,8 @@
         <translation>Վերբեռնելու սլոթների առավ. քանակը torrent-ի համար պետք է լինի կամ բարձր 0-ից կամ անջատված։</translation>
     </message>
     <message>
-        <source>Unable to save program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Հնարավոր չէ պահպանել ծրագրի կարգավորումները, qBittorrent-ը հնարավոր է անհասանելի է։</translation>
+        <source>Unable to save program preferences, qSneedTorrent is probably unreachable.</source>
+        <translation>Հնարավոր չէ պահպանել ծրագրի կարգավորումները, qSneedTorrent-ը հնարավոր է անհասանելի է։</translation>
     </message>
     <message>
         <source>Unknown</source>
@@ -152,7 +152,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
+        <source>Sneeding time limit must be between 0 and 525600 minutes.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -160,7 +160,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Unable to log in, qBittorrent is probably unreachable.</source>
+        <source>Unable to log in, qSneedTorrent is probably unreachable.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -280,8 +280,8 @@
         <translation>Պահպանել</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>qBittorrent ծրագիրը հասանելի չէ</translation>
+        <source>qSneedTorrent client is not reachable</source>
+        <translation>qSneedTorrent ծրագիրը հասանելի չէ</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -320,7 +320,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>qBittorrent has been shutdown</source>
+        <source>qSneedTorrent has been shutdown</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -463,13 +463,13 @@
         <translation>Ներբեռնման արագ. ընդհանրական սահմանաչափ</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Վստա՞հ եք, որ ուզում եք փակել qBittorrent-ը:</translation>
+        <source>Are you sure you want to quit qSneedTorrent?</source>
+        <translation>Վստա՞հ եք, որ ուզում եք փակել qSneedTorrent-ը:</translation>
     </message>
     <message>
-        <source>[D: %1, U: %2] qBittorrent %3</source>
-        <comment>D = Download; U = Upload; %3 is qBittorrent version</comment>
-        <translation>[Ներբեռ.՝ %1, Վերբեռ.՝ %2] qBittorrent %3</translation>
+        <source>[D: %1, U: %2] qSneedTorrent %3</source>
+        <comment>D = Download; U = Upload; %3 is qSneedTorrent version</comment>
+        <translation>[Ներբեռ.՝ %1, Վերբեռ.՝ %2] qSneedTorrent %3</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1105,7 +1105,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Enable super seeding for torrent</source>
+        <source>Enable super sneeding for torrent</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1129,7 +1129,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>When seeding time reaches</source>
+        <source>When sneeding time reaches</source>
         <translation>Երբ բաժանման ժամանակը հասնում է</translation>
     </message>
     <message>
@@ -1165,7 +1165,7 @@
         <translation>Հեռացնել torrent-ը և իր նիշքերը</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
+        <source>qSneedTorrent Section</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1237,7 +1237,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeding Limits</source>
+        <source>Sneeding Limits</source>
         <translation>Բաժանման սահմանաչափ</translation>
     </message>
     <message>
@@ -1629,7 +1629,7 @@
         <translation>Փոխանցվել է.</translation>
     </message>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>Բաժանողներ՝</translation>
     </message>
     <message>
@@ -1757,7 +1757,7 @@
         <translation>Անվանափոխել...</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1897,7 +1897,7 @@
         <translation>Ներբեռնում (0)</translation>
     </message>
     <message>
-        <source>Seeding (0)</source>
+        <source>Sneeding (0)</source>
         <translation>Փոխանցում (0)</translation>
     </message>
     <message>
@@ -1933,7 +1933,7 @@
         <translation>Ներբեռնում (%1)</translation>
     </message>
     <message>
-        <source>Seeding (%1)</source>
+        <source>Sneeding (%1)</source>
         <translation>Փոխանցում (%1)</translation>
     </message>
     <message>
@@ -2015,13 +2015,13 @@
     </message>
     <message>
         <source>Status</source>
-        <comment>Torrent status (e.g. downloading, seeding, paused)</comment>
+        <comment>Torrent status (e.g. downloading, sneeding, paused)</comment>
         <translation>Վիճակը</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <comment>i.e. full sources (often untranslated)</comment>
-        <translation>Seed-եր</translation>
+        <translation>Sneed-եր</translation>
     </message>
     <message>
         <source>Peers</source>
@@ -2192,7 +2192,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <translation>Բաժանողներ</translation>
     </message>
     <message>
@@ -2283,11 +2283,11 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>[F] Seeding</source>
+        <source>[F] Sneeding</source>
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeding</source>
+        <source>Sneeding</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2331,7 +2331,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2455,7 +2455,7 @@
         <translation>Ստիպ. վերստուգում</translation>
     </message>
     <message>
-        <source>Super seeding mode</source>
+        <source>Super sneeding mode</source>
         <translation>Գերփոխանցման եղանակ</translation>
     </message>
     <message>
@@ -2588,7 +2588,7 @@
         <translation>Նաև ջնջել նիշքերը կոշտ սկավառակից</translation>
     </message>
     <message>
-        <source>Deletion confirmation - qBittorrent</source>
+        <source>Deletion confirmation - qSneedTorrent</source>
         <translation>Հաստատեք ջնջումը</translation>
     </message>
 </context>
@@ -2712,7 +2712,7 @@
 <context>
     <name>SearchEngineWidget</name>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2842,7 +2842,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeders</source>
+        <source>Sneeders</source>
         <translation type="unfinished" />
     </message>
 </context>
@@ -2989,8 +2989,8 @@
         <translation>Անվանում՝</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>qBittorrent-ի մասին</translation>
+        <source>About qSneedTorrent</source>
+        <translation>qSneedTorrent-ի մասին</translation>
     </message>
     <message>
         <source>License</source>
@@ -3001,8 +3001,8 @@
         <translation>Թարգմանիչներ</translation>
     </message>
     <message>
-        <source>qBittorrent was built with the following libraries:</source>
-        <translation>qBittorrent-ը ստեղծվել է հետևյալ գրադարանների կիրառմամբ՝</translation>
+        <source>qSneedTorrent was built with the following libraries:</source>
+        <translation>qSneedTorrent-ը ստեղծվել է հետևյալ գրադարանների կիրառմամբ՝</translation>
     </message>
     <message>
         <source>Nationality:</source>
@@ -3025,11 +3025,11 @@
         <translation>France</translation>
     </message>
     <message>
-        <source>qBittorrent Mascot</source>
+        <source>qSneedTorrent Mascot</source>
         <translation type="unfinished" />
     </message>
     <message>
-        <source>qBittorrent icon</source>
+        <source>qSneedTorrent icon</source>
         <translation type="unfinished" />
     </message>
 </context>

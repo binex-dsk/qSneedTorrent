@@ -92,8 +92,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>Saír do qBittorrent</translation>
+        <source>Exit qSneedTorrent</source>
+        <translation>Saír do qSneedTorrent</translation>
     </message>
     <message>
         <source>Only one link per line</source>
@@ -140,8 +140,8 @@
         <translation>O límite do número máximo de slots de envío por torrent ten que ser superior a 0 ou debe desactivalo.</translation>
     </message>
     <message>
-        <source>Unable to save program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Non foi posíbel gardar as preferencias do programa, probabelmente o qBittorrent estea inaccesíbel.</translation>
+        <source>Unable to save program preferences, qSneedTorrent is probably unreachable.</source>
+        <translation>Non foi posíbel gardar as preferencias do programa, probabelmente o qSneedTorrent estea inaccesíbel.</translation>
     </message>
     <message>
         <source>Unknown</source>
@@ -152,7 +152,7 @@
         <translation>O límite da taxa de compartición debe estar entre 0 e 9998.</translation>
     </message>
     <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
+        <source>Sneeding time limit must be between 0 and 525600 minutes.</source>
         <translation>O límite do tempo de sementeira debe estar entre 0 e 525600 minutos.</translation>
     </message>
     <message>
@@ -160,8 +160,8 @@
         <translation>O porto usado para a interface web debe estar entre 1 e 65535.</translation>
     </message>
     <message>
-        <source>Unable to log in, qBittorrent is probably unreachable.</source>
-        <translation>Non é posíbel iniciar sesión. Probabelmente o qBittorrent non está accesíbel.</translation>
+        <source>Unable to log in, qSneedTorrent is probably unreachable.</source>
+        <translation>Non é posíbel iniciar sesión. Probabelmente o qSneedTorrent non está accesíbel.</translation>
     </message>
     <message>
         <source>Invalid Username or Password.</source>
@@ -280,8 +280,8 @@
         <translation>Gardar</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>O cliente qBittorrent non está accesíbel</translation>
+        <source>qSneedTorrent client is not reachable</source>
+        <translation>O cliente qSneedTorrent non está accesíbel</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -321,8 +321,8 @@ Non use caracteres especiais no nome da categoría.</translation>
         <translation>O límite da velocidade de descarga ten que ser superior a 0.</translation>
     </message>
     <message>
-        <source>qBittorrent has been shutdown</source>
-        <translation>O qBittorrent foi pechado.</translation>
+        <source>qSneedTorrent has been shutdown</source>
+        <translation>O qSneedTorrent foi pechado.</translation>
     </message>
     <message>
         <source>Open documentation</source>
@@ -464,13 +464,13 @@ Non use caracteres especiais no nome da categoría.</translation>
         <translation>Límite global de velocidade de descarga</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Confirma que desexa saír do qBittorrent?</translation>
+        <source>Are you sure you want to quit qSneedTorrent?</source>
+        <translation>Confirma que desexa saír do qSneedTorrent?</translation>
     </message>
     <message>
-        <source>[D: %1, U: %2] qBittorrent %3</source>
-        <comment>D = Download; U = Upload; %3 is qBittorrent version</comment>
-        <translation>[D: %1, E: %2] qBittorrent %3</translation>
+        <source>[D: %1, U: %2] qSneedTorrent %3</source>
+        <comment>D = Download; U = Upload; %3 is qSneedTorrent version</comment>
+        <translation>[D: %1, E: %2] qSneedTorrent %3</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1106,7 +1106,7 @@ Non use caracteres especiais no nome da categoría.</translation>
         <translation>Tamaño do socket atrasado:</translation>
     </message>
     <message>
-        <source>Enable super seeding for torrent</source>
+        <source>Enable super sneeding for torrent</source>
         <translation>Activar a supersementeira para o torrent</translation>
     </message>
     <message>
@@ -1130,7 +1130,7 @@ Non use caracteres especiais no nome da categoría.</translation>
         <translation>Cando a taxa alcance</translation>
     </message>
     <message>
-        <source>When seeding time reaches</source>
+        <source>When sneeding time reaches</source>
         <translation>Cando o tempo de sementeira alcance</translation>
     </message>
     <message>
@@ -1166,8 +1166,8 @@ Non use caracteres especiais no nome da categoría.</translation>
         <translation>Eliminar o torrent e os ficheiros</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>Sección do qBittorrent</translation>
+        <source>qSneedTorrent Section</source>
+        <translation>Sección do qSneedTorrent</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -1238,7 +1238,7 @@ Non use caracteres especiais no nome da categoría.</translation>
         <translation>Algoritmo de rexeitamento de envíos:</translation>
     </message>
     <message>
-        <source>Seeding Limits</source>
+        <source>Sneeding Limits</source>
         <translation>Límites da sementeira</translation>
     </message>
     <message>
@@ -1630,7 +1630,7 @@ Non use caracteres especiais no nome da categoría.</translation>
         <translation>Enviado:</translation>
     </message>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>Sementes:</translation>
     </message>
     <message>
@@ -1758,7 +1758,7 @@ Non use caracteres especiais no nome da categoría.</translation>
         <translation>Cambiar o nome...</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation>%1 (sementado por %2)</translation>
     </message>
     <message>
@@ -1898,7 +1898,7 @@ Non use caracteres especiais no nome da categoría.</translation>
         <translation>Descargando (0)</translation>
     </message>
     <message>
-        <source>Seeding (0)</source>
+        <source>Sneeding (0)</source>
         <translation>Sementando (0)</translation>
     </message>
     <message>
@@ -1934,7 +1934,7 @@ Non use caracteres especiais no nome da categoría.</translation>
         <translation>Descargando (%1)</translation>
     </message>
     <message>
-        <source>Seeding (%1)</source>
+        <source>Sneeding (%1)</source>
         <translation>Sementando (%1)</translation>
     </message>
     <message>
@@ -2016,11 +2016,11 @@ Non use caracteres especiais no nome da categoría.</translation>
     </message>
     <message>
         <source>Status</source>
-        <comment>Torrent status (e.g. downloading, seeding, paused)</comment>
+        <comment>Torrent status (e.g. downloading, sneeding, paused)</comment>
         <translation>Estado</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <comment>i.e. full sources (often untranslated)</comment>
         <translation>Sementes</translation>
     </message>
@@ -2193,7 +2193,7 @@ Non use caracteres especiais no nome da categoría.</translation>
         <translation>N/D</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <translation>Sementes</translation>
     </message>
     <message>
@@ -2284,11 +2284,11 @@ Non use caracteres especiais no nome da categoría.</translation>
         <translation>Movendo</translation>
     </message>
     <message>
-        <source>[F] Seeding</source>
+        <source>[F] Sneeding</source>
         <translation>[F] Sementando</translation>
     </message>
     <message>
-        <source>Seeding</source>
+        <source>Sneeding</source>
         <translation>Sementando</translation>
     </message>
     <message>
@@ -2332,7 +2332,7 @@ Non use caracteres especiais no nome da categoría.</translation>
         <translation>Á espera</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation>%1 (sementado por %2)</translation>
     </message>
     <message>
@@ -2456,7 +2456,7 @@ Non use caracteres especiais no nome da categoría.</translation>
         <translation>Forzar outra comprobación</translation>
     </message>
     <message>
-        <source>Super seeding mode</source>
+        <source>Super sneeding mode</source>
         <translation>Modo super-sementeira</translation>
     </message>
     <message>
@@ -2589,8 +2589,8 @@ Non use caracteres especiais no nome da categoría.</translation>
         <translation>Eliminar tamén os ficheiros do disco duro</translation>
     </message>
     <message>
-        <source>Deletion confirmation - qBittorrent</source>
-        <translation>Confirmación de eliminación - 'qBittorrent</translation>
+        <source>Deletion confirmation - qSneedTorrent</source>
+        <translation>Confirmación de eliminación - 'qSneedTorrent</translation>
     </message>
 </context>
 <context>
@@ -2713,7 +2713,7 @@ Non use caracteres especiais no nome da categoría.</translation>
 <context>
     <name>SearchEngineWidget</name>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>Sementes:</translation>
     </message>
     <message>
@@ -2843,7 +2843,7 @@ Non use caracteres especiais no nome da categoría.</translation>
         <translation>Motor de busca</translation>
     </message>
     <message>
-        <source>Seeders</source>
+        <source>Sneeders</source>
         <translation>Sementadores</translation>
     </message>
 </context>
@@ -2990,8 +2990,8 @@ Non use caracteres especiais no nome da categoría.</translation>
         <translation>Nome:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>Sobre o qBittorrent</translation>
+        <source>About qSneedTorrent</source>
+        <translation>Sobre o qSneedTorrent</translation>
     </message>
     <message>
         <source>License</source>
@@ -3002,8 +3002,8 @@ Non use caracteres especiais no nome da categoría.</translation>
         <translation>Tradutores</translation>
     </message>
     <message>
-        <source>qBittorrent was built with the following libraries:</source>
-        <translation>qBittorrent construiuse coas seguintes bibliotecas:</translation>
+        <source>qSneedTorrent was built with the following libraries:</source>
+        <translation>qSneedTorrent construiuse coas seguintes bibliotecas:</translation>
     </message>
     <message>
         <source>Nationality:</source>
@@ -3026,11 +3026,11 @@ Non use caracteres especiais no nome da categoría.</translation>
         <translation>Francia</translation>
     </message>
     <message>
-        <source>qBittorrent Mascot</source>
+        <source>qSneedTorrent Mascot</source>
         <translation type="unfinished" />
     </message>
     <message>
-        <source>qBittorrent icon</source>
+        <source>qSneedTorrent icon</source>
         <translation type="unfinished" />
     </message>
 </context>

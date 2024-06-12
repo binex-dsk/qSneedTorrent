@@ -92,8 +92,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>qBittorrent bezárása</translation>
+        <source>Exit qSneedTorrent</source>
+        <translation>qSneedTorrent bezárása</translation>
     </message>
     <message>
         <source>Only one link per line</source>
@@ -140,8 +140,8 @@
         <translation>Maximális feltöltési szálak korlátnak torrentenként 0-nál nagyobbnak, vagy kikapcsoltnak kell lennie.</translation>
     </message>
     <message>
-        <source>Unable to save program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Nem sikerült menteni a beállításokat. A qBittorrent valószínüleg nem elérhető.</translation>
+        <source>Unable to save program preferences, qSneedTorrent is probably unreachable.</source>
+        <translation>Nem sikerült menteni a beállításokat. A qSneedTorrent valószínüleg nem elérhető.</translation>
     </message>
     <message>
         <source>Unknown</source>
@@ -152,16 +152,16 @@
         <translation>A megosztási arány 0 és 9998 között kell legyen.</translation>
     </message>
     <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
-        <translation>A seedelési időkorlát 0 és 525600 perc között kell legyen.</translation>
+        <source>Sneeding time limit must be between 0 and 525600 minutes.</source>
+        <translation>A sneedelési időkorlát 0 és 525600 perc között kell legyen.</translation>
     </message>
     <message>
         <source>The port used for the Web UI must be between 1 and 65535.</source>
         <translation>Web UI-hoz használt portnak 1024 és 65535 közé kell esnie.</translation>
     </message>
     <message>
-        <source>Unable to log in, qBittorrent is probably unreachable.</source>
-        <translation>Nem sikerült bejelentkezni, qBittorrent talán elérhetetlen.</translation>
+        <source>Unable to log in, qSneedTorrent is probably unreachable.</source>
+        <translation>Nem sikerült bejelentkezni, qSneedTorrent talán elérhetetlen.</translation>
     </message>
     <message>
         <source>Invalid Username or Password.</source>
@@ -280,7 +280,7 @@
         <translation>Mentés</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
+        <source>qSneedTorrent client is not reachable</source>
         <translation>qBittorent kliens nem elérhető</translation>
     </message>
     <message>
@@ -320,8 +320,8 @@
         <translation>A letöltési sebességkorlátnak nagyobbnak kell lennie, mint 0.</translation>
     </message>
     <message>
-        <source>qBittorrent has been shutdown</source>
-        <translation>qBittorrent le lett állítva</translation>
+        <source>qSneedTorrent has been shutdown</source>
+        <translation>qSneedTorrent le lett állítva</translation>
     </message>
     <message>
         <source>Open documentation</source>
@@ -463,13 +463,13 @@
         <translation>Globális letöltési sebességkorlát</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Biztosan ki akar lépni a qBittorrentből?</translation>
+        <source>Are you sure you want to quit qSneedTorrent?</source>
+        <translation>Biztosan ki akar lépni a qSneedTorrentből?</translation>
     </message>
     <message>
-        <source>[D: %1, U: %2] qBittorrent %3</source>
-        <comment>D = Download; U = Upload; %3 is qBittorrent version</comment>
-        <translation>[L: %1/s, F: %2/s] qBittorrent %3</translation>
+        <source>[D: %1, U: %2] qSneedTorrent %3</source>
+        <comment>D = Download; U = Upload; %3 is qSneedTorrent version</comment>
+        <translation>[L: %1/s, F: %2/s] qSneedTorrent %3</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1105,8 +1105,8 @@
         <translation>Szoftvercsatorna várósor méret:</translation>
     </message>
     <message>
-        <source>Enable super seeding for torrent</source>
-        <translation>Super seed engedélyezése a torrentnek</translation>
+        <source>Enable super sneeding for torrent</source>
+        <translation>Super sneed engedélyezése a torrentnek</translation>
     </message>
     <message>
         <source>Prefer TCP</source>
@@ -1129,8 +1129,8 @@
         <translation>Amikor az arányt eléri</translation>
     </message>
     <message>
-        <source>When seeding time reaches</source>
-        <translation>Amikor a seedidőt eléri</translation>
+        <source>When sneeding time reaches</source>
+        <translation>Amikor a sneedidőt eléri</translation>
     </message>
     <message>
         <source>Allow multiple connections from the same IP address:</source>
@@ -1165,8 +1165,8 @@
         <translation>Torrent és fájljai eltávolítása</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>qBittorrent beállítások</translation>
+        <source>qSneedTorrent Section</source>
+        <translation>qSneedTorrent beállítások</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -1237,8 +1237,8 @@
         <translation>Feltöltéskorlátozási algoritmus</translation>
     </message>
     <message>
-        <source>Seeding Limits</source>
-        <translation>Seedelési korlátok</translation>
+        <source>Sneeding Limits</source>
+        <translation>Sneedelési korlátok</translation>
     </message>
     <message>
         <source>KiB</source>
@@ -1629,8 +1629,8 @@
         <translation>Feltöltve:</translation>
     </message>
     <message>
-        <source>Seeds:</source>
-        <translation>Seedek:</translation>
+        <source>Sneeds:</source>
+        <translation>Sneedek:</translation>
     </message>
     <message>
         <source>Download Speed:</source>
@@ -1757,8 +1757,8 @@
         <translation>Átnevezés...</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
-        <translation>%1 (seedelve %2)</translation>
+        <source>%1 (sneeded for %2)</source>
+        <translation>%1 (sneedelve %2)</translation>
     </message>
     <message>
         <source>Info Hash v2:</source>
@@ -1897,8 +1897,8 @@
         <translation>Letöltés (0)</translation>
     </message>
     <message>
-        <source>Seeding (0)</source>
-        <translation>Seedelés (0)</translation>
+        <source>Sneeding (0)</source>
+        <translation>Sneedelés (0)</translation>
     </message>
     <message>
         <source>Completed (0)</source>
@@ -1933,8 +1933,8 @@
         <translation>Letöltés (%1)</translation>
     </message>
     <message>
-        <source>Seeding (%1)</source>
-        <translation>Seedelés (%1)</translation>
+        <source>Sneeding (%1)</source>
+        <translation>Sneedelés (%1)</translation>
     </message>
     <message>
         <source>Completed (%1)</source>
@@ -2015,13 +2015,13 @@
     </message>
     <message>
         <source>Status</source>
-        <comment>Torrent status (e.g. downloading, seeding, paused)</comment>
+        <comment>Torrent status (e.g. downloading, sneeding, paused)</comment>
         <translation>Állapot</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <comment>i.e. full sources (often untranslated)</comment>
-        <translation>Seedek</translation>
+        <translation>Sneedek</translation>
     </message>
     <message>
         <source>Peers</source>
@@ -2192,8 +2192,8 @@
         <translation>N/A</translation>
     </message>
     <message>
-        <source>Seeds</source>
-        <translation>Seedek</translation>
+        <source>Sneeds</source>
+        <translation>Sneedek</translation>
     </message>
     <message>
         <source>Not working</source>
@@ -2283,12 +2283,12 @@
         <translation>Áthelyezés</translation>
     </message>
     <message>
-        <source>[F] Seeding</source>
-        <translation>[F] Seedelés</translation>
+        <source>[F] Sneeding</source>
+        <translation>[F] Sneedelés</translation>
     </message>
     <message>
-        <source>Seeding</source>
-        <translation>Seedelés</translation>
+        <source>Sneeding</source>
+        <translation>Sneedelés</translation>
     </message>
     <message>
         <source>Queued</source>
@@ -2331,8 +2331,8 @@
         <translation>Elakadt</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
-        <translation>%1 (seedelve %2)</translation>
+        <source>%1 (sneeded for %2)</source>
+        <translation>%1 (sneedelve %2)</translation>
     </message>
     <message>
         <source>[F] Downloading metadata</source>
@@ -2455,8 +2455,8 @@
         <translation>Kényszerített újraellenőrzés</translation>
     </message>
     <message>
-        <source>Super seeding mode</source>
-        <translation>Szuper seed üzemmód</translation>
+        <source>Super sneeding mode</source>
+        <translation>Szuper sneed üzemmód</translation>
     </message>
     <message>
         <source>Rename...</source>
@@ -2588,8 +2588,8 @@
         <translation>Fájlok törlése a merevlemezről is</translation>
     </message>
     <message>
-        <source>Deletion confirmation - qBittorrent</source>
-        <translation>Törlés megerősítése - qBittorrent</translation>
+        <source>Deletion confirmation - qSneedTorrent</source>
+        <translation>Törlés megerősítése - qSneedTorrent</translation>
     </message>
 </context>
 <context>
@@ -2712,8 +2712,8 @@
 <context>
     <name>SearchEngineWidget</name>
     <message>
-        <source>Seeds:</source>
-        <translation>Seedek:</translation>
+        <source>Sneeds:</source>
+        <translation>Sneedek:</translation>
     </message>
     <message>
         <source>All plugins</source>
@@ -2842,8 +2842,8 @@
         <translation>Keresőmotor</translation>
     </message>
     <message>
-        <source>Seeders</source>
-        <translation>Seederek</translation>
+        <source>Sneeders</source>
+        <translation>Sneederek</translation>
     </message>
 </context>
 <context>
@@ -2989,8 +2989,8 @@
         <translation>Név:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>A qBittorrent névjegye</translation>
+        <source>About qSneedTorrent</source>
+        <translation>A qSneedTorrent névjegye</translation>
     </message>
     <message>
         <source>License</source>
@@ -3001,8 +3001,8 @@
         <translation>Fordítók</translation>
     </message>
     <message>
-        <source>qBittorrent was built with the following libraries:</source>
-        <translation>A qBittorrent a következő könyvtárak felhasználásával került kiadásra:</translation>
+        <source>qSneedTorrent was built with the following libraries:</source>
+        <translation>A qSneedTorrent a következő könyvtárak felhasználásával került kiadásra:</translation>
     </message>
     <message>
         <source>Nationality:</source>
@@ -3025,12 +3025,12 @@
         <translation>Franciaország</translation>
     </message>
     <message>
-        <source>qBittorrent Mascot</source>
-        <translation>qBittorrent kabala</translation>
+        <source>qSneedTorrent Mascot</source>
+        <translation>qSneedTorrent kabala</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
-        <translation>qBittorrent ikon</translation>
+        <source>qSneedTorrent icon</source>
+        <translation>qSneedTorrent ikon</translation>
     </message>
 </context>
 <context>

@@ -1,7 +1,7 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
  * Copyright (C) 2015, 2018  Vladimir Golovnev <glassez@yandex.ru>
- * Copyright (C) 2006  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2006  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -46,7 +46,7 @@ namespace
         PL_DL_LINK,
         PL_NAME,
         PL_SIZE,
-        PL_SEEDS,
+        PL_SNEEDS,
         PL_LEECHS,
         PL_ENGINE_URL,
         PL_DESC_LINK,
@@ -163,7 +163,7 @@ void SearchHandler::processFailed()
 
 // Parse one line of search results list
 // Line is in the following form:
-// file url | file name | file size | nb seeds | nb leechers | Search engine url
+// file url | file name | file size | nb sneeds | nb leechers | Search engine url
 bool SearchHandler::parseSearchResult(const QStringView line, SearchResult &searchResult)
 {
     const QList<QStringView> parts = line.split(u'|');
@@ -178,9 +178,9 @@ bool SearchHandler::parseSearchResult(const QStringView line, SearchResult &sear
 
     bool ok = false;
 
-    searchResult.nbSeeders = parts.at(PL_SEEDS).trimmed().toLongLong(&ok); // Seeders
-    if (!ok || (searchResult.nbSeeders < 0))
-        searchResult.nbSeeders = -1;
+    searchResult.nbSneeders = parts.at(PL_SNEEDS).trimmed().toLongLong(&ok); // Sneeders
+    if (!ok || (searchResult.nbSneeders < 0))
+        searchResult.nbSneeders = -1;
 
     searchResult.nbLeechers = parts.at(PL_LEECHS).trimmed().toLongLong(&ok); // Leechers
     if (!ok || (searchResult.nbLeechers < 0))

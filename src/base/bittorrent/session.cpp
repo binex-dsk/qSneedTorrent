@@ -1,7 +1,7 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
  * Copyright (C) 2015  Vladimir Golovnev <glassez@yandex.ru>
- * Copyright (C) 2006  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2006  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -113,7 +113,7 @@ const Path CATEGORIES_FILE_NAME {"categories.json"};
 namespace
 {
     const char PEER_ID[] = "qB";
-    const char USER_AGENT[] = "qBittorrent/" QBT_VERSION_2;
+    const char USER_AGENT[] = "qSneedTorrent/" QBT_VERSION_2;
 
     void torrentQueuePositionUp(const lt::torrent_handle &handle)
     {
@@ -428,7 +428,7 @@ Session::Session(QObject *parent)
     , m_isAddTrackersEnabled(BITTORRENT_SESSION_KEY("AddTrackersEnabled"), false)
     , m_additionalTrackers(BITTORRENT_SESSION_KEY("AdditionalTrackers"))
     , m_globalMaxRatio(BITTORRENT_SESSION_KEY("GlobalMaxRatio"), -1, [](qreal r) { return r < 0 ? -1. : r;})
-    , m_globalMaxSeedingMinutes(BITTORRENT_SESSION_KEY("GlobalMaxSeedingMinutes"), -1, lowerLimited(-1))
+    , m_globalMaxSneedingMinutes(BITTORRENT_SESSION_KEY("GlobalMaxSneedingMinutes"), -1, lowerLimited(-1))
     , m_isAddTorrentPaused(BITTORRENT_SESSION_KEY("AddTorrentPaused"), false)
     , m_torrentContentLayout(BITTORRENT_SESSION_KEY("TorrentContentLayout"), TorrentContentLayout::Original)
     , m_isAppendExtensionEnabled(BITTORRENT_SESSION_KEY("AddExtensionToIncompleteFiles"), false)
@@ -451,8 +451,8 @@ Session::Session(QObject *parent)
     , m_isProxyPeerConnectionsEnabled(BITTORRENT_SESSION_KEY("ProxyPeerConnections"), false)
     , m_chokingAlgorithm(BITTORRENT_SESSION_KEY("ChokingAlgorithm"), ChokingAlgorithm::FixedSlots
         , clampValue(ChokingAlgorithm::FixedSlots, ChokingAlgorithm::RateBased))
-    , m_seedChokingAlgorithm(BITTORRENT_SESSION_KEY("SeedChokingAlgorithm"), SeedChokingAlgorithm::FastestUpload
-        , clampValue(SeedChokingAlgorithm::RoundRobin, SeedChokingAlgorithm::AntiLeech))
+    , m_sneedChokingAlgorithm(BITTORRENT_SESSION_KEY("SneedChokingAlgorithm"), SneedChokingAlgorithm::FastestUpload
+        , clampValue(SneedChokingAlgorithm::RoundRobin, SneedChokingAlgorithm::AntiLeech))
     , m_storedTags(BITTORRENT_SESSION_KEY("Tags"))
     , m_maxRatioAction(BITTORRENT_SESSION_KEY("MaxRatioAction"), Pause)
     , m_savePath(BITTORRENT_SESSION_KEY("DefaultSavePath"), specialFolderLocation(SpecialFolder::Downloads))
@@ -481,7 +481,7 @@ Session::Session(QObject *parent)
 #if defined(Q_OS_WIN)
     , m_OSMemoryPriority(BITTORRENT_KEY("OSMemoryPriority"), OSMemoryPriority::BelowNormal)
 #endif
-    , m_seedingLimitTimer {new QTimer {this}}
+    , m_sneedingLimitTimer {new QTimer {this}}
     , m_resumeDataTimer {new QTimer {this}}
     , m_statistics {new Statistics {this}}
     , m_ioThread {new QThread {this}}
@@ -498,8 +498,8 @@ Session::Session(QObject *parent)
     connect(m_recentErroredTorrentsTimer, &QTimer::timeout
         , this, [this]() { m_recentErroredTorrents.clear(); });
 
-    m_seedingLimitTimer->setInterval(10000);
-    connect(m_seedingLimitTimer, &QTimer::timeout, this, &Session::processShareLimits);
+    m_sneedingLimitTimer->setInterval(10000);
+    connect(m_sneedingLimitTimer, &QTimer::timeout, this, &Session::processShareLimits);
 
     initializeNativeSession();
     configureComponents();
@@ -518,7 +518,7 @@ Session::Session(QObject *parent)
     m_tags = {storedTags.cbegin(), storedTags.cend()};
 
     enqueueRefresh();
-    updateSeedingLimitTimer();
+    updateSneedingLimitTimer();
     populateAdditionalTrackers();
 
     enableTracker(isTrackerEnabled());
@@ -1010,24 +1010,24 @@ void Session::setGlobalMaxRatio(qreal ratio)
     if (ratio != globalMaxRatio())
     {
         m_globalMaxRatio = ratio;
-        updateSeedingLimitTimer();
+        updateSneedingLimitTimer();
     }
 }
 
-int Session::globalMaxSeedingMinutes() const
+int Session::globalMaxSneedingMinutes() const
 {
-    return m_globalMaxSeedingMinutes;
+    return m_globalMaxSneedingMinutes;
 }
 
-void Session::setGlobalMaxSeedingMinutes(int minutes)
+void Session::setGlobalMaxSneedingMinutes(int minutes)
 {
     if (minutes < 0)
         minutes = -1;
 
-    if (minutes != globalMaxSeedingMinutes())
+    if (minutes != globalMaxSneedingMinutes())
     {
-        m_globalMaxSeedingMinutes = minutes;
-        updateSeedingLimitTimer();
+        m_globalMaxSneedingMinutes = minutes;
+        updateSneedingLimitTimer();
     }
 }
 
@@ -1472,16 +1472,16 @@ void Session::loadLTSettings(lt::settings_pack &settingsPack)
         break;
     }
 
-    switch (seedChokingAlgorithm())
+    switch (sneedChokingAlgorithm())
     {
-    case SeedChokingAlgorithm::RoundRobin:
+    case SneedChokingAlgorithm::RoundRobin:
         settingsPack.set_int(lt::settings_pack::seed_choking_algorithm, lt::settings_pack::round_robin);
         break;
-    case SeedChokingAlgorithm::FastestUpload:
+    case SneedChokingAlgorithm::FastestUpload:
     default:
         settingsPack.set_int(lt::settings_pack::seed_choking_algorithm, lt::settings_pack::fastest_upload);
         break;
-    case SeedChokingAlgorithm::AntiLeech:
+    case SneedChokingAlgorithm::AntiLeech:
         settingsPack.set_int(lt::settings_pack::seed_choking_algorithm, lt::settings_pack::anti_leech);
         break;
     }
@@ -1676,7 +1676,7 @@ void Session::processShareLimits()
     const QHash<TorrentID, TorrentImpl *> torrents {m_torrents};
     for (TorrentImpl *const torrent : torrents)
     {
-        if (torrent->isSeed() && !torrent->isForced())
+        if (torrent->isSneed() && !torrent->isForced())
         {
             if (torrent->ratioLimit() != Torrent::NO_RATIO_LIMIT)
             {
@@ -1710,10 +1710,10 @@ void Session::processShareLimits()
                             torrent->pause();
                             LogMsg(QString::fromLatin1("%1 %2 %3").arg(description, tr("Torrent paused."), torrentName));
                         }
-                        else if ((m_maxRatioAction == EnableSuperSeeding) && !torrent->isPaused() && !torrent->superSeeding())
+                        else if ((m_maxRatioAction == EnableSuperSneeding) && !torrent->isPaused() && !torrent->superSneeding())
                         {
-                            torrent->setSuperSeeding(true);
-                            LogMsg(QString::fromLatin1("%1 %2 %3").arg(description, tr("Super seeding enabled."), torrentName));
+                            torrent->setSuperSneeding(true);
+                            LogMsg(QString::fromLatin1("%1 %2 %3").arg(description, tr("Super sneeding enabled."), torrentName));
                         }
 
                         continue;
@@ -1721,21 +1721,21 @@ void Session::processShareLimits()
                 }
             }
 
-            if (torrent->seedingTimeLimit() != Torrent::NO_SEEDING_TIME_LIMIT)
+            if (torrent->sneedingTimeLimit() != Torrent::NO_SNEEDING_TIME_LIMIT)
             {
-                const qlonglong seedingTimeInMinutes = torrent->finishedTime() / 60;
-                int seedingTimeLimit = torrent->seedingTimeLimit();
-                if (seedingTimeLimit == Torrent::USE_GLOBAL_SEEDING_TIME)
+                const qlonglong sneedingTimeInMinutes = torrent->finishedTime() / 60;
+                int sneedingTimeLimit = torrent->sneedingTimeLimit();
+                if (sneedingTimeLimit == Torrent::USE_GLOBAL_SNEEDING_TIME)
                 {
-                     // If Global Seeding Time Limit is really set...
-                    seedingTimeLimit = globalMaxSeedingMinutes();
+                     // If Global Sneeding Time Limit is really set...
+                    sneedingTimeLimit = globalMaxSneedingMinutes();
                 }
 
-                if (seedingTimeLimit >= 0)
+                if (sneedingTimeLimit >= 0)
                 {
-                    if ((seedingTimeInMinutes <= Torrent::MAX_SEEDING_TIME) && (seedingTimeInMinutes >= seedingTimeLimit))
+                    if ((sneedingTimeInMinutes <= Torrent::MAX_SNEEDING_TIME) && (sneedingTimeInMinutes >= sneedingTimeLimit))
                     {
-                        const QString description = tr("Torrent reached the seeding time limit.");
+                        const QString description = tr("Torrent reached the sneeding time limit.");
                         const QString torrentName = tr("Torrent: \"%1\".").arg(torrent->name());
 
                         if (m_maxRatioAction == Remove)
@@ -1753,10 +1753,10 @@ void Session::processShareLimits()
                             torrent->pause();
                             LogMsg(QString::fromLatin1("%1 %2 %3").arg(description, tr("Torrent paused."), torrentName));
                         }
-                        else if ((m_maxRatioAction == EnableSuperSeeding) && !torrent->isPaused() && !torrent->superSeeding())
+                        else if ((m_maxRatioAction == EnableSuperSneeding) && !torrent->isPaused() && !torrent->superSneeding())
                         {
-                            torrent->setSuperSeeding(true);
-                            LogMsg(QString::fromLatin1("%1 %2 %3").arg(description, tr("Super seeding enabled."), torrentName));
+                            torrent->setSuperSneeding(true);
+                            LogMsg(QString::fromLatin1("%1 %2 %3").arg(description, tr("Super sneeding enabled."), torrentName));
                         }
                     }
                 }
@@ -1831,15 +1831,15 @@ bool Session::hasUnfinishedTorrents() const
 {
     return std::any_of(m_torrents.begin(), m_torrents.end(), [](const TorrentImpl *torrent)
     {
-        return (!torrent->isSeed() && !torrent->isPaused() && !torrent->isErrored());
+        return (!torrent->isSneed() && !torrent->isPaused() && !torrent->isErrored());
     });
 }
 
-bool Session::hasRunningSeed() const
+bool Session::hasRunningSneed() const
 {
     return std::any_of(m_torrents.begin(), m_torrents.end(), [](const TorrentImpl *torrent)
     {
-        return (torrent->isSeed() && !torrent->isPaused());
+        return (torrent->isSneed() && !torrent->isPaused());
     });
 }
 
@@ -2129,12 +2129,12 @@ LoadTorrentParams Session::initLoadTorrentParams(const AddTorrentParams &addTorr
     loadTorrentParams.name = addTorrentParams.name;
     loadTorrentParams.useAutoTMM = addTorrentParams.useAutoTMM.value_or(!isAutoTMMDisabledByDefault());
     loadTorrentParams.firstLastPiecePriority = addTorrentParams.firstLastPiecePriority;
-    loadTorrentParams.hasSeedStatus = addTorrentParams.skipChecking; // do not react on 'torrent_finished_alert' when skipping
+    loadTorrentParams.hasSneedStatus = addTorrentParams.skipChecking; // do not react on 'torrent_finished_alert' when skipping
     loadTorrentParams.contentLayout = addTorrentParams.contentLayout.value_or(torrentContentLayout());
     loadTorrentParams.operatingMode = (addTorrentParams.addForced ? TorrentOperatingMode::Forced : TorrentOperatingMode::AutoManaged);
     loadTorrentParams.stopped = addTorrentParams.addPaused.value_or(isAddTorrentPaused());
     loadTorrentParams.ratioLimit = addTorrentParams.ratioLimit;
-    loadTorrentParams.seedingTimeLimit = addTorrentParams.seedingTimeLimit;
+    loadTorrentParams.sneedingTimeLimit = addTorrentParams.sneedingTimeLimit;
 
     const QString category = addTorrentParams.category;
     if (!category.isEmpty() && !m_categories.contains(category) && !addCategory(category))
@@ -2208,17 +2208,17 @@ bool Session::addTorrent_impl(const std::variant<MagnetUri, TorrentInfo> &source
             if (torrentInfo.isPrivate())
                 return false;
 
-            // merge trackers and web seeds
+            // merge trackers and web sneeds
             torrent->addTrackers(torrentInfo.trackers());
-            torrent->addUrlSeeds(torrentInfo.urlSeeds());
+            torrent->addUrlSneeds(torrentInfo.urlSneeds());
         }
         else
         {
             const MagnetUri &magnetUri = std::get<MagnetUri>(source);
 
-            // merge trackers and web seeds
+            // merge trackers and web sneeds
             torrent->addTrackers(magnetUri.trackers());
-            torrent->addUrlSeeds(magnetUri.urlSeeds());
+            torrent->addUrlSneeds(magnetUri.urlSneeds());
         }
 
         return true;
@@ -2255,7 +2255,7 @@ bool Session::addTorrent_impl(const std::variant<MagnetUri, TorrentInfo> &source
                 loadTorrentParams.name = contentName;
         }
 
-        if (!loadTorrentParams.hasSeedStatus)
+        if (!loadTorrentParams.hasSneedStatus)
         {
             const Path actualDownloadPath = useAutoTMM
                     ? categoryDownloadPath(loadTorrentParams.category) : loadTorrentParams.downloadPath;
@@ -2272,7 +2272,7 @@ bool Session::addTorrent_impl(const std::variant<MagnetUri, TorrentInfo> &source
 
         Q_ASSERT(p.file_priorities.empty());
         const int internalFilesCount = torrentInfo.nativeInfo()->files().num_files(); // including .pad files
-        // Use qBittorrent default priority rather than libtorrent's (4)
+        // Use qSneedTorrent default priority rather than libtorrent's (4)
         p.file_priorities = std::vector(internalFilesCount, LT::toNative(DownloadPriority::Normal));
         Q_ASSERT(addTorrentParams.filePriorities.isEmpty() || (addTorrentParams.filePriorities.size() == nativeIndexes.size()));
         for (int i = 0; i < addTorrentParams.filePriorities.size(); ++i)
@@ -2302,8 +2302,8 @@ bool Session::addTorrent_impl(const std::variant<MagnetUri, TorrentInfo> &source
     else
         p.flags &= ~lt::torrent_flags::sequential_download;
 
-    // Seeding mode
-    // Skip checking and directly start seeding
+    // Sneeding mode
+    // Skip checking and directly start sneeding
     if (addTorrentParams.skipChecking)
         p.flags |= lt::torrent_flags::seed_mode;
     else
@@ -2962,16 +2962,16 @@ void Session::setChokingAlgorithm(const ChokingAlgorithm mode)
     configureDeferred();
 }
 
-SeedChokingAlgorithm Session::seedChokingAlgorithm() const
+SneedChokingAlgorithm Session::sneedChokingAlgorithm() const
 {
-    return m_seedChokingAlgorithm;
+    return m_sneedChokingAlgorithm;
 }
 
-void Session::setSeedChokingAlgorithm(const SeedChokingAlgorithm mode)
+void Session::setSneedChokingAlgorithm(const SneedChokingAlgorithm mode)
 {
-    if (mode == m_seedChokingAlgorithm) return;
+    if (mode == m_sneedChokingAlgorithm) return;
 
-    m_seedChokingAlgorithm = mode;
+    m_sneedChokingAlgorithm = mode;
     configureDeferred();
 }
 
@@ -3932,23 +3932,23 @@ bool Session::isKnownTorrent(const TorrentID &id) const
             || m_downloadedMetadata.contains(id));
 }
 
-void Session::updateSeedingLimitTimer()
+void Session::updateSneedingLimitTimer()
 {
     if ((globalMaxRatio() == Torrent::NO_RATIO_LIMIT) && !hasPerTorrentRatioLimit()
-        && (globalMaxSeedingMinutes() == Torrent::NO_SEEDING_TIME_LIMIT) && !hasPerTorrentSeedingTimeLimit())
+        && (globalMaxSneedingMinutes() == Torrent::NO_SNEEDING_TIME_LIMIT) && !hasPerTorrentSneedingTimeLimit())
         {
-        if (m_seedingLimitTimer->isActive())
-            m_seedingLimitTimer->stop();
+        if (m_sneedingLimitTimer->isActive())
+            m_sneedingLimitTimer->stop();
     }
-    else if (!m_seedingLimitTimer->isActive())
+    else if (!m_sneedingLimitTimer->isActive())
     {
-        m_seedingLimitTimer->start();
+        m_sneedingLimitTimer->start();
     }
 }
 
 void Session::handleTorrentShareLimitChanged(TorrentImpl *const)
 {
-    updateSeedingLimitTimer();
+    updateSneedingLimitTimer();
 }
 
 void Session::handleTorrentNameChanged(TorrentImpl *const)
@@ -4005,16 +4005,16 @@ void Session::handleTorrentTrackersChanged(TorrentImpl *const torrent)
     emit trackersChanged(torrent);
 }
 
-void Session::handleTorrentUrlSeedsAdded(TorrentImpl *const torrent, const QVector<QUrl> &newUrlSeeds)
+void Session::handleTorrentUrlSneedsAdded(TorrentImpl *const torrent, const QVector<QUrl> &newUrlSneeds)
 {
-    for (const QUrl &newUrlSeed : newUrlSeeds)
-        LogMsg(tr("Added URL seed to torrent. Torrent: \"%1\". URL: \"%2\"").arg(torrent->name(), newUrlSeed.toString()));
+    for (const QUrl &newUrlSneed : newUrlSneeds)
+        LogMsg(tr("Added URL sneed to torrent. Torrent: \"%1\". URL: \"%2\"").arg(torrent->name(), newUrlSneed.toString()));
 }
 
-void Session::handleTorrentUrlSeedsRemoved(TorrentImpl *const torrent, const QVector<QUrl> &urlSeeds)
+void Session::handleTorrentUrlSneedsRemoved(TorrentImpl *const torrent, const QVector<QUrl> &urlSneeds)
 {
-    for (const QUrl &urlSeed : urlSeeds)
-        LogMsg(tr("Removed URL seed from torrent. Torrent: \"%1\". URL: \"%2\"").arg(torrent->name(), urlSeed.toString()));
+    for (const QUrl &urlSneed : urlSneeds)
+        LogMsg(tr("Removed URL sneed from torrent. Torrent: \"%1\". URL: \"%2\"").arg(torrent->name(), urlSneed.toString()));
 }
 
 void Session::handleTorrentMetadataReceived(TorrentImpl *const torrent)
@@ -4297,11 +4297,11 @@ bool Session::hasPerTorrentRatioLimit() const
     });
 }
 
-bool Session::hasPerTorrentSeedingTimeLimit() const
+bool Session::hasPerTorrentSneedingTimeLimit() const
 {
     return std::any_of(m_torrents.cbegin(), m_torrents.cend(), [](const TorrentImpl *torrent)
     {
-        return (torrent->seedingTimeLimit() >= 0);
+        return (torrent->sneedingTimeLimit() >= 0);
     });
 }
 
@@ -4498,7 +4498,7 @@ void Session::startUpTorrents()
         if (m_resumeDataStorage != startupStorage)
         {
            needStore = true;
-           if (isQueueingSystemEnabled() && !resumeData.hasSeedStatus)
+           if (isQueueingSystemEnabled() && !resumeData.hasSneedStatus)
                 queue.append(torrentID);
         }
 
@@ -4714,7 +4714,7 @@ void Session::handleAlert(const lt::alert *a)
             handlePeerBanAlert(static_cast<const lt::peer_ban_alert*>(a));
             break;
         case lt::url_seed_alert::alert_type:
-            handleUrlSeedAlert(static_cast<const lt::url_seed_alert*>(a));
+            handleUrlSneedAlert(static_cast<const lt::url_seed_alert*>(a));
             break;
         case lt::listen_succeeded_alert::alert_type:
             handleListenSucceededAlert(static_cast<const lt::listen_succeeded_alert*>(a));
@@ -4798,9 +4798,9 @@ void Session::createTorrent(const lt::torrent_handle &nativeHandle)
             torrent->addTrackers(m_additionalTrackerList);
     }
 
-    if (((torrent->ratioLimit() >= 0) || (torrent->seedingTimeLimit() >= 0))
-        && !m_seedingLimitTimer->isActive())
-        m_seedingLimitTimer->start();
+    if (((torrent->ratioLimit() >= 0) || (torrent->sneedingTimeLimit() >= 0))
+        && !m_sneedingLimitTimer->isActive())
+        m_sneedingLimitTimer->start();
 
     // Send torrent addition signal
     emit torrentLoaded(torrent);
@@ -5004,7 +5004,7 @@ void Session::handlePeerBanAlert(const lt::peer_ban_alert *p)
         Logger::instance()->addPeer(ip, false);
 }
 
-void Session::handleUrlSeedAlert(const lt::url_seed_alert *p)
+void Session::handleUrlSneedAlert(const lt::url_seed_alert *p)
 {
     const TorrentImpl *torrent = m_torrents.value(p->handle.info_hash());
     if (!torrent)
@@ -5012,13 +5012,13 @@ void Session::handleUrlSeedAlert(const lt::url_seed_alert *p)
 
     if (p->error)
     {
-        LogMsg(tr("URL seed DNS lookup failed. Torrent: \"%1\". URL: \"%2\". Error: \"%3\"")
+        LogMsg(tr("URL sneed DNS lookup failed. Torrent: \"%1\". URL: \"%2\". Error: \"%3\"")
             .arg(torrent->name(), p->server_url(), QString::fromStdString(p->message()))
             , Log::WARNING);
     }
     else
     {
-        LogMsg(tr("Received error message from URL seed. Torrent: \"%1\". URL: \"%2\". Message: \"%3\"")
+        LogMsg(tr("Received error message from URL sneed. Torrent: \"%1\". URL: \"%2\". Message: \"%3\"")
             .arg(torrent->name(), p->server_url(), p->error_message())
             , Log::WARNING);
     }

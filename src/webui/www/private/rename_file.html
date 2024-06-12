@@ -35,7 +35,7 @@
             const oldPath = new URI().getData('path');
             const isFolder = ((new URI().getData('isFolder')) === 'true');
 
-            const oldName = window.qBittorrent.Filesystem.fileName(oldPath);
+            const oldName = window.qSneedTorrent.Filesystem.fileName(oldPath);
             $('rename').value = oldName;
             $('rename').focus();
             if (!isFolder)
@@ -57,9 +57,9 @@
 
                 $('renameButton').disabled = true;
 
-                const parentPath = window.qBittorrent.Filesystem.folderName(oldPath);
+                const parentPath = window.qSneedTorrent.Filesystem.folderName(oldPath);
                 const newPath = parentPath
-                    ? parentPath + window.qBittorrent.Filesystem.PathSeparator + newName
+                    ? parentPath + window.qSneedTorrent.Filesystem.PathSeparator + newName
                     : newName;
                 new Request({
                     url: isFolder ? 'api/v2/torrents/renameFolder' : 'api/v2/torrents/renameFile',

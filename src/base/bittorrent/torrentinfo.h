@@ -81,7 +81,7 @@ namespace BitTorrent
         qlonglong fileSize(int index) const;
         qlonglong fileOffset(int index) const;
         QVector<TrackerEntry> trackers() const;
-        QVector<QUrl> urlSeeds() const;
+        QVector<QUrl> urlSneeds() const;
         QByteArray metadata() const;
         PathList filesForPiece(int pieceIndex) const;
         QVector<int> fileIndicesForPiece(int pieceIndex) const;

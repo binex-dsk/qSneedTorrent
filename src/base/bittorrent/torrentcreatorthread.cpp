@@ -1,6 +1,6 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
- * Copyright (C) 2010  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2010  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -164,12 +164,12 @@ void TorrentCreatorThread::run()
             , (m_params.isAlignmentOptimized ? lt::create_torrent::optimize_alignment : lt::create_flags_t {}));
 #endif
 
-        // Add url seeds
-        for (QString seed : asConst(m_params.urlSeeds))
+        // Add url sneeds
+        for (QString sneed : asConst(m_params.urlSneeds))
         {
-            seed = seed.trimmed();
-            if (!seed.isEmpty())
-                newTorrent.add_url_seed(seed.toStdString());
+            sneed = sneed.trimmed();
+            if (!sneed.isEmpty())
+                newTorrent.add_url_seed(sneed.toStdString());
         }
 
         int tier = 0;
@@ -189,9 +189,9 @@ void TorrentCreatorThread::run()
             sendProgressSignal(LT::toUnderlyingType(n), newTorrent.num_pieces());
         });
 
-        // Set qBittorrent as creator and add user comment to
+        // Set qSneedTorrent as creator and add user comment to
         // torrent_info structure
-        newTorrent.set_creator("qBittorrent " QBT_VERSION);
+        newTorrent.set_creator("qSneedTorrent " QBT_VERSION);
         newTorrent.set_comment(m_params.comment.toUtf8().constData());
         // Is private ?
         newTorrent.set_priv(m_params.isPrivate);

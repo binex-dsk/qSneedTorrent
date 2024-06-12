@@ -1,7 +1,7 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
  * Copyright (C) 2014  sledgehammer999 <hammered999@gmail.com>
- * Copyright (C) 2006  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2006  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -133,8 +133,8 @@ public:
     void setSplashScreenDisabled(bool b);
     bool preventFromSuspendWhenDownloading() const;
     void setPreventFromSuspendWhenDownloading(bool b);
-    bool preventFromSuspendWhenSeeding() const;
-    void setPreventFromSuspendWhenSeeding(bool b);
+    bool preventFromSuspendWhenSneeding() const;
+    void setPreventFromSuspendWhenSneeding(bool b);
 #ifdef Q_OS_WIN
     bool WinStartup() const;
     void setWinStartup(bool b);

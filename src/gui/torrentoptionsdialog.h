@@ -2,7 +2,7 @@
  * Bittorrent Client using Qt and libtorrent.
  * Copyright (C) 2020  thalieht
  * Copyright (C) 2011  Christian Kandeler
- * Copyright (C) 2011  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2011  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -72,7 +72,7 @@ private slots:
 
 private:
     qreal getRatio() const;
-    int getSeedingTime() const;
+    int getSneedingTime() const;
 
     QVector<BitTorrent::TorrentID> m_torrentIDs;
     Ui::TorrentOptionsDialog *m_ui;
@@ -87,7 +87,7 @@ private:
         Path downloadPath;
         QString category;
         qreal ratio;
-        int seedingTime;
+        int sneedingTime;
         int upSpeedLimit;
         int downSpeedLimit;
         Qt::CheckState autoTMM;

@@ -1,6 +1,6 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
- * Copyright (C) 2006  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2006  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -107,9 +107,9 @@ TrackerListWidget::TrackerListWidget(PropertiesWidget *properties)
     m_DHTItem->setTextAlignment(COL_PEERS, alignment);
     m_PEXItem->setTextAlignment(COL_PEERS, alignment);
     m_LSDItem->setTextAlignment(COL_PEERS, alignment);
-    m_DHTItem->setTextAlignment(COL_SEEDS, alignment);
-    m_PEXItem->setTextAlignment(COL_SEEDS, alignment);
-    m_LSDItem->setTextAlignment(COL_SEEDS, alignment);
+    m_DHTItem->setTextAlignment(COL_SNEEDS, alignment);
+    m_PEXItem->setTextAlignment(COL_SNEEDS, alignment);
+    m_LSDItem->setTextAlignment(COL_SNEEDS, alignment);
     m_DHTItem->setTextAlignment(COL_LEECHES, alignment);
     m_PEXItem->setTextAlignment(COL_LEECHES, alignment);
     m_LSDItem->setTextAlignment(COL_LEECHES, alignment);
@@ -120,7 +120,7 @@ TrackerListWidget::TrackerListWidget(PropertiesWidget *properties)
     // Set header alignment
     headerItem()->setTextAlignment(COL_TIER, alignment);
     headerItem()->setTextAlignment(COL_PEERS, alignment);
-    headerItem()->setTextAlignment(COL_SEEDS, alignment);
+    headerItem()->setTextAlignment(COL_SNEEDS, alignment);
     headerItem()->setTextAlignment(COL_LEECHES, alignment);
     headerItem()->setTextAlignment(COL_DOWNLOADED, alignment);
 
@@ -264,15 +264,15 @@ void TrackerListWidget::clear()
     m_trackerItems.clear();
 
     m_DHTItem->setText(COL_STATUS, "");
-    m_DHTItem->setText(COL_SEEDS, "");
+    m_DHTItem->setText(COL_SNEEDS, "");
     m_DHTItem->setText(COL_LEECHES, "");
     m_DHTItem->setText(COL_MSG, "");
     m_PEXItem->setText(COL_STATUS, "");
-    m_PEXItem->setText(COL_SEEDS, "");
+    m_PEXItem->setText(COL_SNEEDS, "");
     m_PEXItem->setText(COL_LEECHES, "");
     m_PEXItem->setText(COL_MSG, "");
     m_LSDItem->setText(COL_STATUS, "");
-    m_LSDItem->setText(COL_SEEDS, "");
+    m_LSDItem->setText(COL_SNEEDS, "");
     m_LSDItem->setText(COL_LEECHES, "");
     m_LSDItem->setText(COL_MSG, "");
 }
@@ -318,39 +318,39 @@ void TrackerListWidget::loadStickyItems(const BitTorrent::Torrent *torrent)
 
     // XXX: libtorrent should provide this info...
     // Count peers from DHT, PeX, LSD
-    uint seedsDHT = 0, seedsPeX = 0, seedsLSD = 0, peersDHT = 0, peersPeX = 0, peersLSD = 0;
+    uint sneedsDHT = 0, sneedsPeX = 0, sneedsLSD = 0, peersDHT = 0, peersPeX = 0, peersLSD = 0;
     for (const BitTorrent::PeerInfo &peer : asConst(torrent->peers()))
     {
         if (peer.isConnecting()) continue;
 
         if (peer.fromDHT())
         {
-            if (peer.isSeed())
-                ++seedsDHT;
+            if (peer.isSneed())
+                ++sneedsDHT;
             else
                 ++peersDHT;
         }
         if (peer.fromPeX())
         {
-            if (peer.isSeed())
-                ++seedsPeX;
+            if (peer.isSneed())
+                ++sneedsPeX;
             else
                 ++peersPeX;
         }
         if (peer.fromLSD())
         {
-            if (peer.isSeed())
-                ++seedsLSD;
+            if (peer.isSneed())
+                ++sneedsLSD;
             else
                 ++peersLSD;
         }
     }
 
-    m_DHTItem->setText(COL_SEEDS, QString::number(seedsDHT));
+    m_DHTItem->setText(COL_SNEEDS, QString::number(sneedsDHT));
     m_DHTItem->setText(COL_LEECHES, QString::number(peersDHT));
-    m_PEXItem->setText(COL_SEEDS, QString::number(seedsPeX));
+    m_PEXItem->setText(COL_SNEEDS, QString::number(sneedsPeX));
     m_PEXItem->setText(COL_LEECHES, QString::number(peersPeX));
-    m_LSDItem->setText(COL_SEEDS, QString::number(seedsLSD));
+    m_LSDItem->setText(COL_SNEEDS, QString::number(sneedsLSD));
     m_LSDItem->setText(COL_LEECHES, QString::number(peersLSD));
 }
 
@@ -406,8 +406,8 @@ void TrackerListWidget::loadTrackers()
         item->setText(COL_PEERS, ((entry.numPeers > -1)
             ? QString::number(entry.numPeers)
             : tr("N/A")));
-        item->setText(COL_SEEDS, ((entry.numSeeds > -1)
-            ? QString::number(entry.numSeeds)
+        item->setText(COL_SNEEDS, ((entry.numSneeds > -1)
+            ? QString::number(entry.numSneeds)
             : tr("N/A")));
         item->setText(COL_LEECHES, ((entry.numLeeches > -1)
             ? QString::number(entry.numLeeches)
@@ -419,7 +419,7 @@ void TrackerListWidget::loadTrackers()
         const Qt::Alignment alignment = (Qt::AlignRight | Qt::AlignVCenter);
         item->setTextAlignment(COL_TIER, alignment);
         item->setTextAlignment(COL_PEERS, alignment);
-        item->setTextAlignment(COL_SEEDS, alignment);
+        item->setTextAlignment(COL_SNEEDS, alignment);
         item->setTextAlignment(COL_LEECHES, alignment);
         item->setTextAlignment(COL_DOWNLOADED, alignment);
     }
@@ -632,7 +632,7 @@ QStringList TrackerListWidget::headerLabels()
         , tr("URL")
         , tr("Status")
         , tr("Peers")
-        , tr("Seeds")
+        , tr("Sneeds")
         , tr("Leeches")
         , tr("Downloaded")
         , tr("Message")

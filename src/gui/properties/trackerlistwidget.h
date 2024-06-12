@@ -1,6 +1,6 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
- * Copyright (C) 2006  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2006  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -50,7 +50,7 @@ public:
         COL_URL,
         COL_STATUS,
         COL_PEERS,
-        COL_SEEDS,
+        COL_SNEEDS,
         COL_LEECHES,
         COL_DOWNLOADED,
         COL_MSG,

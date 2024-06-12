@@ -34,16 +34,16 @@ win32-g++*|win32-clang-g++* {
 
     QMAKE_CXXFLAGS += -std=c++17
 
-    RC_FILE = qbittorrent_mingw.rc
+    RC_FILE = qsneedtorrent_mingw.rc
 
     LIBS += libadvapi32 libiphlpapi libole32 libpowrprof libshell32 libuser32 libwsock32 libws2_32
 }
 else:win32-msvc* {
     CONFIG -= embed_manifest_exe
     QMAKE_CXXFLAGS += /std:c++17 /utf-8
-    QMAKE_LFLAGS += "/MANIFEST:EMBED /MANIFESTINPUT:$$quote($${PWD}/src/qbittorrent.exe.manifest) /STACK:0x800000"
+    QMAKE_LFLAGS += "/MANIFEST:EMBED /MANIFESTINPUT:$$quote($${PWD}/src/qsneedtorrent.exe.manifest) /STACK:0x800000"
 
-    RC_FILE = qbittorrent.rc
+    RC_FILE = qsneedtorrent.rc
 
     LIBS += advapi32.lib crypt32.lib Iphlpapi.lib ole32.lib PowrProf.lib shell32.lib User32.lib
 }

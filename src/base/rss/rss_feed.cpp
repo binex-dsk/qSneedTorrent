@@ -1,8 +1,8 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
  * Copyright (C) 2015, 2017  Vladimir Golovnev <glassez@yandex.ru>
- * Copyright (C) 2010  Christophe Dumez <chris@qbittorrent.org>
- * Copyright (C) 2010  Arnaud Demaiziere <arnaud@qbittorrent.org>
+ * Copyright (C) 2010  Christophe Dumez <chris@qsneedtorrent.org>
+ * Copyright (C) 2010  Arnaud Demaiziere <arnaud@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -323,7 +323,7 @@ void Feed::loadArticles(const QByteArray &data)
 
 void Feed::loadArticlesLegacy()
 {
-    const SettingsPtr qBTRSSFeeds = Profile::instance()->applicationSettings(QStringLiteral("qBittorrent-rss-feeds"));
+    const SettingsPtr qBTRSSFeeds = Profile::instance()->applicationSettings(QStringLiteral("qSneedTorrent-rss-feeds"));
     const QVariantHash allOldItems = qBTRSSFeeds->value("old_items").toHash();
 
     for (const QVariant &var : asConst(allOldItems.value(m_url).toList()))

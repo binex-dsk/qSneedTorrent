@@ -30,7 +30,7 @@
 
 // Because of the poor handling of UTF-8 characters in MSVC (emits warning C4819),
 // we put all problematic UTF-8 chars/strings in this file.
-// See issue #3059 for more details (https://github.com/qbittorrent/qBittorrent/issues/3059).
+// See issue #3059 for more details (https://github.com/qsneedtorrent/qSneedTorrent/issues/3059).
 
 const char C_COPYRIGHT[] = "©";
 const char C_INEQUALITY[] = "≠";

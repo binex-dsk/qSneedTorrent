@@ -88,9 +88,9 @@ namespace
     const Column DB_COLUMN_DOWNLOAD_PATH = makeColumn("download_path");
     const Column DB_COLUMN_CONTENT_LAYOUT = makeColumn("content_layout");
     const Column DB_COLUMN_RATIO_LIMIT = makeColumn("ratio_limit");
-    const Column DB_COLUMN_SEEDING_TIME_LIMIT = makeColumn("seeding_time_limit");
+    const Column DB_COLUMN_SNEEDING_TIME_LIMIT = makeColumn("sneeding_time_limit");
     const Column DB_COLUMN_HAS_OUTER_PIECES_PRIORITY = makeColumn("has_outer_pieces_priority");
-    const Column DB_COLUMN_HAS_SEED_STATUS = makeColumn("has_seed_status");
+    const Column DB_COLUMN_HAS_SNEED_STATUS = makeColumn("has_sneed_status");
     const Column DB_COLUMN_OPERATING_MODE = makeColumn("operating_mode");
     const Column DB_COLUMN_STOPPED = makeColumn("stopped");
     const Column DB_COLUMN_RESUMEDATA = makeColumn("libtorrent_resume_data");
@@ -298,10 +298,10 @@ std::optional<BitTorrent::LoadTorrentParams> BitTorrent::DBResumeDataStorage::lo
         const QStringList tagList = tagsData.split(QLatin1Char(','));
         resumeData.tags.insert(tagList.cbegin(), tagList.cend());
     }
-    resumeData.hasSeedStatus = query.value(DB_COLUMN_HAS_SEED_STATUS.name).toBool();
+    resumeData.hasSneedStatus = query.value(DB_COLUMN_HAS_SNEED_STATUS.name).toBool();
     resumeData.firstLastPiecePriority = query.value(DB_COLUMN_HAS_OUTER_PIECES_PRIORITY.name).toBool();
     resumeData.ratioLimit = query.value(DB_COLUMN_RATIO_LIMIT.name).toInt() / 1000.0;
-    resumeData.seedingTimeLimit = query.value(DB_COLUMN_SEEDING_TIME_LIMIT.name).toInt();
+    resumeData.sneedingTimeLimit = query.value(DB_COLUMN_SNEEDING_TIME_LIMIT.name).toInt();
     resumeData.contentLayout = Utils::String::toEnum<TorrentContentLayout>(
                 query.value(DB_COLUMN_CONTENT_LAYOUT.name).toString(), TorrentContentLayout::Original);
     resumeData.operatingMode = Utils::String::toEnum<TorrentOperatingMode>(
@@ -426,9 +426,9 @@ void BitTorrent::DBResumeDataStorage::createDB() const
             makeColumnDefinition(DB_COLUMN_TARGET_SAVE_PATH, "TEXT"),
             makeColumnDefinition(DB_COLUMN_CONTENT_LAYOUT, "TEXT NOT NULL"),
             makeColumnDefinition(DB_COLUMN_RATIO_LIMIT, "INTEGER NOT NULL"),
-            makeColumnDefinition(DB_COLUMN_SEEDING_TIME_LIMIT, "INTEGER NOT NULL"),
+            makeColumnDefinition(DB_COLUMN_SNEEDING_TIME_LIMIT, "INTEGER NOT NULL"),
             makeColumnDefinition(DB_COLUMN_HAS_OUTER_PIECES_PRIORITY, "INTEGER NOT NULL"),
-            makeColumnDefinition(DB_COLUMN_HAS_SEED_STATUS, "INTEGER NOT NULL"),
+            makeColumnDefinition(DB_COLUMN_HAS_SNEED_STATUS, "INTEGER NOT NULL"),
             makeColumnDefinition(DB_COLUMN_OPERATING_MODE, "TEXT NOT NULL"),
             makeColumnDefinition(DB_COLUMN_STOPPED, "INTEGER NOT NULL"),
             makeColumnDefinition(DB_COLUMN_RESUMEDATA, "BLOB NOT NULL"),
@@ -537,9 +537,9 @@ void BitTorrent::DBResumeDataStorage::Worker::store(const TorrentID &id, const L
         DB_COLUMN_TARGET_SAVE_PATH,
         DB_COLUMN_CONTENT_LAYOUT,
         DB_COLUMN_RATIO_LIMIT,
-        DB_COLUMN_SEEDING_TIME_LIMIT,
+        DB_COLUMN_SNEEDING_TIME_LIMIT,
         DB_COLUMN_HAS_OUTER_PIECES_PRIORITY,
-        DB_COLUMN_HAS_SEED_STATUS,
+        DB_COLUMN_HAS_SNEED_STATUS,
         DB_COLUMN_OPERATING_MODE,
         DB_COLUMN_STOPPED,
         DB_COLUMN_RESUMEDATA
@@ -595,9 +595,9 @@ void BitTorrent::DBResumeDataStorage::Worker::store(const TorrentID &id, const L
             ? QVariant(QVariant::String) : resumeData.tags.join(QLatin1String(","))));
         query.bindValue(DB_COLUMN_CONTENT_LAYOUT.placeholder, Utils::String::fromEnum(resumeData.contentLayout));
         query.bindValue(DB_COLUMN_RATIO_LIMIT.placeholder, static_cast<int>(resumeData.ratioLimit * 1000));
-        query.bindValue(DB_COLUMN_SEEDING_TIME_LIMIT.placeholder, resumeData.seedingTimeLimit);
+        query.bindValue(DB_COLUMN_SNEEDING_TIME_LIMIT.placeholder, resumeData.sneedingTimeLimit);
         query.bindValue(DB_COLUMN_HAS_OUTER_PIECES_PRIORITY.placeholder, resumeData.firstLastPiecePriority);
-        query.bindValue(DB_COLUMN_HAS_SEED_STATUS.placeholder, resumeData.hasSeedStatus);
+        query.bindValue(DB_COLUMN_HAS_SNEED_STATUS.placeholder, resumeData.hasSneedStatus);
         query.bindValue(DB_COLUMN_OPERATING_MODE.placeholder, Utils::String::fromEnum(resumeData.operatingMode));
         query.bindValue(DB_COLUMN_STOPPED.placeholder, resumeData.stopped);
 

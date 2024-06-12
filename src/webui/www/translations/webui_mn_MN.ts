@@ -92,8 +92,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>qBittorrent-г хаах</translation>
+        <source>Exit qSneedTorrent</source>
+        <translation>qSneedTorrent-г хаах</translation>
     </message>
     <message>
         <source>Only one link per line</source>
@@ -140,8 +140,8 @@
         <translation>Нэгж торрентод харгалзах хуулалтын үүрийн дээд хязгаар нь 0-ээс илүү биш бол хязгаарлалт тавигдахгүй.</translation>
     </message>
     <message>
-        <source>Unable to save program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Тохиргоог хадгалж чадсангүй, qBittorrent-н хандалт таслалдсан байж болно.</translation>
+        <source>Unable to save program preferences, qSneedTorrent is probably unreachable.</source>
+        <translation>Тохиргоог хадгалж чадсангүй, qSneedTorrent-н хандалт таслалдсан байж болно.</translation>
     </message>
     <message>
         <source>Unknown</source>
@@ -152,7 +152,7 @@
         <translation>Хуваалцах харьцааны хязгаарлалт нь 0, 9998 хооронд байх ёстой.</translation>
     </message>
     <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
+        <source>Sneeding time limit must be between 0 and 525600 minutes.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -160,8 +160,8 @@
         <translation>Веб ХИ-д хэрэглэгдэх оролт нь 1, 65535 хооронд байх ёстой.</translation>
     </message>
     <message>
-        <source>Unable to log in, qBittorrent is probably unreachable.</source>
-        <translation>Нэвтэрч чадсангүй, qBittorrent-н хандалт таслалдсан байж болно.</translation>
+        <source>Unable to log in, qSneedTorrent is probably unreachable.</source>
+        <translation>Нэвтэрч чадсангүй, qSneedTorrent-н хандалт таслалдсан байж болно.</translation>
     </message>
     <message>
         <source>Invalid Username or Password.</source>
@@ -280,8 +280,8 @@
         <translation>Хадгалах</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>qBittorrent татагчид хандах боломжгүй байна</translation>
+        <source>qSneedTorrent client is not reachable</source>
+        <translation>qSneedTorrent татагчид хандах боломжгүй байна</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -320,8 +320,8 @@
         <translation>Таталтын зэргийн босго 0-ээс илүү байх шаардлагатай.</translation>
     </message>
     <message>
-        <source>qBittorrent has been shutdown</source>
-        <translation>qBittorrent хаагдлаа</translation>
+        <source>qSneedTorrent has been shutdown</source>
+        <translation>qSneedTorrent хаагдлаа</translation>
     </message>
     <message>
         <source>Open documentation</source>
@@ -463,13 +463,13 @@
         <translation>Татах хурдны ерөнхий хязгаар</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>qBittorrent-ийг хаахдаа итгэлтэй байна уу?</translation>
+        <source>Are you sure you want to quit qSneedTorrent?</source>
+        <translation>qSneedTorrent-ийг хаахдаа итгэлтэй байна уу?</translation>
     </message>
     <message>
-        <source>[D: %1, U: %2] qBittorrent %3</source>
-        <comment>D = Download; U = Upload; %3 is qBittorrent version</comment>
-        <translation>[Т: %1, И: %2] qBittorrent %3</translation>
+        <source>[D: %1, U: %2] qSneedTorrent %3</source>
+        <comment>D = Download; U = Upload; %3 is qSneedTorrent version</comment>
+        <translation>[Т: %1, И: %2] qSneedTorrent %3</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1105,7 +1105,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Enable super seeding for torrent</source>
+        <source>Enable super sneeding for torrent</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1129,7 +1129,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>When seeding time reaches</source>
+        <source>When sneeding time reaches</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1165,7 +1165,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>qBittorrent Section</source>
+        <source>qSneedTorrent Section</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1237,7 +1237,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeding Limits</source>
+        <source>Sneeding Limits</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1629,7 +1629,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1757,7 +1757,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1897,7 +1897,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeding (0)</source>
+        <source>Sneeding (0)</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1933,7 +1933,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeding (%1)</source>
+        <source>Sneeding (%1)</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2015,11 +2015,11 @@
     </message>
     <message>
         <source>Status</source>
-        <comment>Torrent status (e.g. downloading, seeding, paused)</comment>
+        <comment>Torrent status (e.g. downloading, sneeding, paused)</comment>
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <comment>i.e. full sources (often untranslated)</comment>
         <translation type="unfinished" />
     </message>
@@ -2192,7 +2192,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2283,11 +2283,11 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>[F] Seeding</source>
+        <source>[F] Sneeding</source>
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeding</source>
+        <source>Sneeding</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2331,7 +2331,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2455,7 +2455,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Super seeding mode</source>
+        <source>Super sneeding mode</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2588,7 +2588,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Deletion confirmation - qBittorrent</source>
+        <source>Deletion confirmation - qSneedTorrent</source>
         <translation type="unfinished" />
     </message>
 </context>
@@ -2712,7 +2712,7 @@
 <context>
     <name>SearchEngineWidget</name>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2842,7 +2842,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeders</source>
+        <source>Sneeders</source>
         <translation type="unfinished" />
     </message>
 </context>
@@ -2989,8 +2989,8 @@
         <translation>Нэр:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>qBittorrent-ийн тухай</translation>
+        <source>About qSneedTorrent</source>
+        <translation>qSneedTorrent-ийн тухай</translation>
     </message>
     <message>
         <source>License</source>
@@ -3001,8 +3001,8 @@
         <translation>Орчуулагчид</translation>
     </message>
     <message>
-        <source>qBittorrent was built with the following libraries:</source>
-        <translation>qBittorrent-ийг дараах сангууд дээр тулгуурлан бүтээсэн:</translation>
+        <source>qSneedTorrent was built with the following libraries:</source>
+        <translation>qSneedTorrent-ийг дараах сангууд дээр тулгуурлан бүтээсэн:</translation>
     </message>
     <message>
         <source>Nationality:</source>
@@ -3025,11 +3025,11 @@
         <translation>Франц</translation>
     </message>
     <message>
-        <source>qBittorrent Mascot</source>
+        <source>qSneedTorrent Mascot</source>
         <translation type="unfinished" />
     </message>
     <message>
-        <source>qBittorrent icon</source>
+        <source>qSneedTorrent icon</source>
         <translation type="unfinished" />
     </message>
 </context>

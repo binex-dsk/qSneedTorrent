@@ -63,11 +63,11 @@
     </div>
 
     <span>QBT_TR(Warning: Be sure to comply with your country's copyright laws when downloading torrents from any of these search engines.)QBT_TR[CONTEXT=PluginSelectDlg]</span>
-    <span style="font-style: italic;">QBT_TR(You can get new search engine plugins here:)QBT_TR[CONTEXT=PluginSelectDlg] <a href="http://plugins.qbittorrent.org" target="_blank">http://plugins.qbittorrent.org</a></span>
+    <span style="font-style: italic;">QBT_TR(You can get new search engine plugins here:)QBT_TR[CONTEXT=PluginSelectDlg] <a href="http://plugins.qsneedtorrent.org" target="_blank">http://plugins.qsneedtorrent.org</a></span>
     <div style="width: 100%; margin-top: 10px;">
-        <button style="width: 33%; line-height: 1.4em;" onclick="qBittorrent.SearchPlugins.installPlugin();">QBT_TR(Install new plugin)QBT_TR[CONTEXT=PluginSelectDlg]</button>
-        <button style="width: 33%; line-height: 1.4em;" onclick="qBittorrent.SearchPlugins.checkForUpdates();">QBT_TR(Check for updates)QBT_TR[CONTEXT=PluginSelectDlg]</button>
-        <button style="width: 32%; line-height: 1.4em;" onclick="qBittorrent.SearchPlugins.closeSearchWindow('searchPlugins');">QBT_TR(Close)QBT_TR[CONTEXT=PluginSelectDlg]</button>
+        <button style="width: 33%; line-height: 1.4em;" onclick="qSneedTorrent.SearchPlugins.installPlugin();">QBT_TR(Install new plugin)QBT_TR[CONTEXT=PluginSelectDlg]</button>
+        <button style="width: 33%; line-height: 1.4em;" onclick="qSneedTorrent.SearchPlugins.checkForUpdates();">QBT_TR(Check for updates)QBT_TR[CONTEXT=PluginSelectDlg]</button>
+        <button style="width: 32%; line-height: 1.4em;" onclick="qSneedTorrent.SearchPlugins.closeSearchWindow('searchPlugins');">QBT_TR(Close)QBT_TR[CONTEXT=PluginSelectDlg]</button>
     </div>
 </div>
 
@@ -79,11 +79,11 @@
 <script>
     'use strict';
 
-    if (window.qBittorrent === undefined) {
-        window.qBittorrent = {};
+    if (window.qSneedTorrent === undefined) {
+        window.qSneedTorrent = {};
     }
 
-    window.qBittorrent.SearchPlugins = (function() {
+    window.qSneedTorrent.SearchPlugins = (function() {
         const exports = function() {
             return {
                 closeSearchWindow: closeSearchWindow,
@@ -99,8 +99,8 @@
         let prevOffsetTop;
 
         const initSearchPlugins = function() {
-            searchPluginsTable = new window.qBittorrent.DynamicTable.SearchPluginsTable();
-            searchPluginsTableContextMenu = new window.qBittorrent.ContextMenu.SearchPluginsTableContextMenu({
+            searchPluginsTable = new window.qSneedTorrent.DynamicTable.SearchPluginsTable();
+            searchPluginsTableContextMenu = new window.qSneedTorrent.ContextMenu.SearchPluginsTableContextMenu({
                 targets: '.searchPluginsTableRow',
                 menu: 'searchPluginsTableMenu',
                 actions: {
@@ -150,7 +150,7 @@
             const plugins = searchPluginsTable.selectedRowsIds();
             let enable = true;
             if (plugins && plugins.length)
-                enable = !window.qBittorrent.Search.getPlugin(plugins[0]).enabled;
+                enable = !window.qSneedTorrent.Search.getPlugin(plugins[0]).enabled;
 
             const url = new URI('api/v2/search/enablePlugin');
             new Request({
@@ -210,8 +210,8 @@
             // remove old rows from the table
             for (let i = 0; i < oldPlugins.length; ++i) {
                 let found = false;
-                for (let j = 0; j < window.qBittorrent.Search.searchPlugins.length; ++j) {
-                    if (window.qBittorrent.Search.searchPlugins[j].name === oldPlugins[i]) {
+                for (let j = 0; j < window.qSneedTorrent.Search.searchPlugins.length; ++j) {
+                    if (window.qSneedTorrent.Search.searchPlugins[j].name === oldPlugins[i]) {
                         found = true;
                         break;
                     }
@@ -220,9 +220,9 @@
                     searchPluginsTable.removeRow(oldPlugins[i]);
             }
 
-            for (let i = 0; i < window.qBittorrent.Search.searchPlugins.length; ++i) {
-                window.qBittorrent.Search.searchPlugins[i].rowId = window.qBittorrent.Search.searchPlugins[i].name;
-                searchPluginsTable.updateRowData(window.qBittorrent.Search.searchPlugins[i]);
+            for (let i = 0; i < window.qSneedTorrent.Search.searchPlugins.length; ++i) {
+                window.qSneedTorrent.Search.searchPlugins[i].rowId = window.qSneedTorrent.Search.searchPlugins[i].name;
+                searchPluginsTable.updateRowData(window.qSneedTorrent.Search.searchPlugins[i]);
             }
 
             searchPluginsTable.updateTable();
@@ -237,5 +237,5 @@
         return exports();
     })();
 
-    Object.freeze(window.qBittorrent.SearchPlugins);
+    Object.freeze(window.qSneedTorrent.SearchPlugins);
 </script>

@@ -1,6 +1,6 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
- * Copyright (C) 2015 The qBittorrent project
+ * Copyright (C) 2015 The qSneedTorrent project
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -52,16 +52,16 @@ void StacktraceDialog::setStacktraceString(const QString &sigName, const QString
     // try to call Qt function as less as possible
     const QString htmlStr = QString(
         "<p align=center><b><font size=7 color=red>"
-        "qBittorrent has crashed"
+        "qSneedTorrent has crashed"
         "</font></b></p>"
         "<font size=4><p>"
         "Please file a bug report at "
-        "<a href=\"http://bugs.qbittorrent.org\">http://bugs.qbittorrent.org</a> "
+        "<a href=\"http://bugs.qsneedtorrent.org\">http://bugs.qsneedtorrent.org</a> "
         "and provide the following information:"
         "</p></font>"
         "<br/><hr><br/>"
         "<p align=center><font size=4>"
-        "qBittorrent version: " QBT_VERSION " (%1-bit)<br/>"
+        "qSneedTorrent version: " QBT_VERSION " (%1-bit)<br/>"
         "Libtorrent version: %2<br/>"
         "Qt version: " QT_VERSION_STR "<br/>"
         "Boost version: %3<br/>"

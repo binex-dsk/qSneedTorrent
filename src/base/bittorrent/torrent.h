@@ -1,7 +1,7 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
  * Copyright (C) 2015  Vladimir Golovnev <glassez@yandex.ru>
- * Copyright (C) 2006  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2006  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -97,7 +97,7 @@ namespace BitTorrent
         Error
     };
 
-    uint qHash(TorrentState key, uint seed);
+    uint qHash(TorrentState key, uint sneed);
 
     class Torrent : public AbstractFileStorage
     {
@@ -105,11 +105,11 @@ namespace BitTorrent
         static const qreal USE_GLOBAL_RATIO;
         static const qreal NO_RATIO_LIMIT;
 
-        static const int USE_GLOBAL_SEEDING_TIME;
-        static const int NO_SEEDING_TIME_LIMIT;
+        static const int USE_GLOBAL_SNEEDING_TIME;
+        static const int NO_SNEEDING_TIME_LIMIT;
 
         static const qreal MAX_RATIO;
-        static const int MAX_SEEDING_TIME;
+        static const int MAX_SNEEDING_TIME;
 
         virtual ~Torrent() = default;
 
@@ -192,14 +192,14 @@ namespace BitTorrent
         virtual qreal progress() const = 0;
         virtual QDateTime addedTime() const = 0;
         virtual qreal ratioLimit() const = 0;
-        virtual int seedingTimeLimit() const = 0;
+        virtual int sneedingTimeLimit() const = 0;
 
         virtual Path actualFilePath(int index) const = 0;
         virtual PathList filePaths() const = 0;
         virtual QVector<DownloadPriority> filePriorities() const = 0;
 
         virtual TorrentInfo info() const = 0;
-        virtual bool isSeed() const = 0;
+        virtual bool isSneed() const = 0;
         virtual bool isPaused() const = 0;
         virtual bool isQueued() const = 0;
         virtual bool isForced() const = 0;
@@ -218,7 +218,7 @@ namespace BitTorrent
         virtual bool hasError() const = 0;
         virtual int queuePosition() const = 0;
         virtual QVector<TrackerEntry> trackers() const = 0;
-        virtual QVector<QUrl> urlSeeds() const = 0;
+        virtual QVector<QUrl> urlSneeds() const = 0;
         virtual QString error() const = 0;
         virtual qlonglong totalDownload() const = 0;
         virtual qlonglong totalUpload() const = 0;
@@ -226,10 +226,10 @@ namespace BitTorrent
         virtual qlonglong finishedTime() const = 0;
         virtual qlonglong eta() const = 0;
         virtual QVector<qreal> filesProgress() const = 0;
-        virtual int seedsCount() const = 0;
+        virtual int sneedsCount() const = 0;
         virtual int peersCount() const = 0;
         virtual int leechsCount() const = 0;
-        virtual int totalSeedsCount() const = 0;
+        virtual int totalSneedsCount() const = 0;
         virtual int totalPeersCount() const = 0;
         virtual int totalLeechersCount() const = 0;
         virtual int completeCount() const = 0;
@@ -241,7 +241,7 @@ namespace BitTorrent
         virtual qlonglong timeSinceActivity() const = 0;
         virtual int downloadLimit() const = 0;
         virtual int uploadLimit() const = 0;
-        virtual bool superSeeding() const = 0;
+        virtual bool superSneeding() const = 0;
         virtual bool isDHTDisabled() const = 0;
         virtual bool isPEXDisabled() const = 0;
         virtual bool isLSDDisabled() const = 0;
@@ -251,7 +251,7 @@ namespace BitTorrent
         virtual QVector<int> pieceAvailability() const = 0;
         virtual qreal distributedCopies() const = 0;
         virtual qreal maxRatio() const = 0;
-        virtual int maxSeedingTime() const = 0;
+        virtual int maxSneedingTime() const = 0;
         virtual qreal realRatio() const = 0;
         virtual int uploadPayloadRate() const = 0;
         virtual int downloadPayloadRate() const = 0;
@@ -278,18 +278,18 @@ namespace BitTorrent
         virtual void forceRecheck() = 0;
         virtual void prioritizeFiles(const QVector<DownloadPriority> &priorities) = 0;
         virtual void setRatioLimit(qreal limit) = 0;
-        virtual void setSeedingTimeLimit(int limit) = 0;
+        virtual void setSneedingTimeLimit(int limit) = 0;
         virtual void setUploadLimit(int limit) = 0;
         virtual void setDownloadLimit(int limit) = 0;
-        virtual void setSuperSeeding(bool enable) = 0;
+        virtual void setSuperSneeding(bool enable) = 0;
         virtual void setDHTDisabled(bool disable) = 0;
         virtual void setPEXDisabled(bool disable) = 0;
         virtual void setLSDDisabled(bool disable) = 0;
         virtual void flushCache() const = 0;
         virtual void addTrackers(const QVector<TrackerEntry> &trackers) = 0;
         virtual void replaceTrackers(const QVector<TrackerEntry> &trackers) = 0;
-        virtual void addUrlSeeds(const QVector<QUrl> &urlSeeds) = 0;
-        virtual void removeUrlSeeds(const QVector<QUrl> &urlSeeds) = 0;
+        virtual void addUrlSneeds(const QVector<QUrl> &urlSneeds) = 0;
+        virtual void removeUrlSneeds(const QVector<QUrl> &urlSneeds) = 0;
         virtual bool connectPeer(const PeerAddress &peerAddress) = 0;
         virtual void clearPeers() = 0;
 

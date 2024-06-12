@@ -64,7 +64,7 @@ jobs:
           cmake --build build
           sudo cmake --install build
 
-      - name: Build qBittorrent (Qt5)
+      - name: Build qSneedTorrent (Qt5)
         if: ${{ startsWith(matrix.qt_version, 5) }}
         run: |
           lupdate -extensions c,cpp,h,hpp,ui ./
@@ -78,7 +78,7 @@ jobs:
             -D${{ matrix.qbt_gui }}
           cmake --build build
 
-      - name: Build qBittorrent (Qt6)
+      - name: Build qSneedTorrent (Qt6)
         if: ${{ startsWith(matrix.qt_version, 6) }}
         run: |
           lupdate -extensions c,cpp,h,hpp,ui ./
@@ -96,7 +96,7 @@ jobs:
       - name: Prepare build artifacts
         run: |
           mkdir upload
-          mv build/qbittorrent*.app upload
+          mv build/qsneedtorrent*.app upload
           mkdir upload/cmake
           cp build/compile_commands.json upload/cmake
           mkdir upload/cmake/libtorrent
@@ -105,5 +105,5 @@ jobs:
       - name: Upload build artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: qBittorrent-CI_macOS_${{ matrix.qbt_gui }}_libtorrent-${{ matrix.libt_version }}_Qt-${{ matrix.qt_version }}
+          name: qSneedTorrent-CI_macOS_${{ matrix.qbt_gui }}_libtorrent-${{ matrix.libt_version }}_Qt-${{ matrix.qt_version }}
           path: upload

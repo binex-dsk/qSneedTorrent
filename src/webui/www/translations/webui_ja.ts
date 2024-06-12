@@ -92,8 +92,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>qBittorrent の終了</translation>
+        <source>Exit qSneedTorrent</source>
+        <translation>qSneedTorrent の終了</translation>
     </message>
     <message>
         <source>Only one link per line</source>
@@ -140,8 +140,8 @@
         <translation>最大アップロートスロット数は 0 より大きいか無効でなくてはなりません。</translation>
     </message>
     <message>
-        <source>Unable to save program preferences, qBittorrent is probably unreachable.</source>
-        <translation>プログラム設定の保存ができません。qBittorrent はおそらく通信可能状態にありません。</translation>
+        <source>Unable to save program preferences, qSneedTorrent is probably unreachable.</source>
+        <translation>プログラム設定の保存ができません。qSneedTorrent はおそらく通信可能状態にありません。</translation>
     </message>
     <message>
         <source>Unknown</source>
@@ -152,7 +152,7 @@
         <translation>共有比は 0 から 9998 の間でなければなりません。</translation>
     </message>
     <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
+        <source>Sneeding time limit must be between 0 and 525600 minutes.</source>
         <translation>シード時間制限は 0 から 525600 分の間でなければなりません。</translation>
     </message>
     <message>
@@ -160,8 +160,8 @@
         <translation>Web UI に使用するポートは 1 から 65535 の間でなくてはなりません。</translation>
     </message>
     <message>
-        <source>Unable to log in, qBittorrent is probably unreachable.</source>
-        <translation>ログインできません。qBittorrent がおそらく通信できていません。</translation>
+        <source>Unable to log in, qSneedTorrent is probably unreachable.</source>
+        <translation>ログインできません。qSneedTorrent がおそらく通信できていません。</translation>
     </message>
     <message>
         <source>Invalid Username or Password.</source>
@@ -280,8 +280,8 @@
         <translation>保存</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>qBittorrent クライアントと通信できません</translation>
+        <source>qSneedTorrent client is not reachable</source>
+        <translation>qSneedTorrent クライアントと通信できません</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -320,8 +320,8 @@
         <translation>ダウンロード速度のしきい値は 0 より大きい必要があります。</translation>
     </message>
     <message>
-        <source>qBittorrent has been shutdown</source>
-        <translation>qBittorrent を終了しました</translation>
+        <source>qSneedTorrent has been shutdown</source>
+        <translation>qSneedTorrent を終了しました</translation>
     </message>
     <message>
         <source>Open documentation</source>
@@ -420,7 +420,7 @@
     </message>
     <message>
         <source>About</source>
-        <translation>qBittorrent について</translation>
+        <translation>qSneedTorrent について</translation>
     </message>
     <message>
         <source>Pause</source>
@@ -463,13 +463,13 @@
         <translation>全体のダウンロード速度上限</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>qBittorrent を終了しますか?</translation>
+        <source>Are you sure you want to quit qSneedTorrent?</source>
+        <translation>qSneedTorrent を終了しますか?</translation>
     </message>
     <message>
-        <source>[D: %1, U: %2] qBittorrent %3</source>
-        <comment>D = Download; U = Upload; %3 is qBittorrent version</comment>
-        <translation>[D: %1, U: %2] qBittorrent %3</translation>
+        <source>[D: %1, U: %2] qSneedTorrent %3</source>
+        <comment>D = Download; U = Upload; %3 is qSneedTorrent version</comment>
+        <translation>[D: %1, U: %2] qSneedTorrent %3</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1105,7 +1105,7 @@
         <translation>未処理の待機キューの数</translation>
     </message>
     <message>
-        <source>Enable super seeding for torrent</source>
+        <source>Enable super sneeding for torrent</source>
         <translation>トレントをスーパーシードにする</translation>
     </message>
     <message>
@@ -1129,7 +1129,7 @@
         <translation>達する共有比</translation>
     </message>
     <message>
-        <source>When seeding time reaches</source>
+        <source>When sneeding time reaches</source>
         <translation>達するシード時間</translation>
     </message>
     <message>
@@ -1165,8 +1165,8 @@
         <translation>トレントとそのファイルを除去</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>qBittorrent 部分</translation>
+        <source>qSneedTorrent Section</source>
+        <translation>qSneedTorrent 部分</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -1237,7 +1237,7 @@
         <translation>アップロード用チョークのアルゴリズム</translation>
     </message>
     <message>
-        <source>Seeding Limits</source>
+        <source>Sneeding Limits</source>
         <translation>シードの制限</translation>
     </message>
     <message>
@@ -1629,7 +1629,7 @@
         <translation>アップロード量:</translation>
     </message>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>シード数:</translation>
     </message>
     <message>
@@ -1757,7 +1757,7 @@
         <translation>名前の変更...</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation>%1 (シード時間 %2)</translation>
     </message>
     <message>
@@ -1897,7 +1897,7 @@
         <translation>ダウンロード中 (0)</translation>
     </message>
     <message>
-        <source>Seeding (0)</source>
+        <source>Sneeding (0)</source>
         <translation>シード中 (0)</translation>
     </message>
     <message>
@@ -1933,7 +1933,7 @@
         <translation>ダウンロード中 (%1)</translation>
     </message>
     <message>
-        <source>Seeding (%1)</source>
+        <source>Sneeding (%1)</source>
         <translation>シード中 (%1)</translation>
     </message>
     <message>
@@ -2015,11 +2015,11 @@
     </message>
     <message>
         <source>Status</source>
-        <comment>Torrent status (e.g. downloading, seeding, paused)</comment>
+        <comment>Torrent status (e.g. downloading, sneeding, paused)</comment>
         <translation>状態</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <comment>i.e. full sources (often untranslated)</comment>
         <translation>シード</translation>
     </message>
@@ -2192,7 +2192,7 @@
         <translation>N/A</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <translation>シード</translation>
     </message>
     <message>
@@ -2283,11 +2283,11 @@
         <translation>移動中</translation>
     </message>
     <message>
-        <source>[F] Seeding</source>
+        <source>[F] Sneeding</source>
         <translation>[F] シード中</translation>
     </message>
     <message>
-        <source>Seeding</source>
+        <source>Sneeding</source>
         <translation>シード中</translation>
     </message>
     <message>
@@ -2331,7 +2331,7 @@
         <translation>ダウンロード待ち</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation>%1 (シード時間 %2)</translation>
     </message>
     <message>
@@ -2455,7 +2455,7 @@
         <translation>強制再チェック</translation>
     </message>
     <message>
-        <source>Super seeding mode</source>
+        <source>Super sneeding mode</source>
         <translation>スーパーシードモード</translation>
     </message>
     <message>
@@ -2588,8 +2588,8 @@
         <translation>ハードディスク上のファイルも削除する</translation>
     </message>
     <message>
-        <source>Deletion confirmation - qBittorrent</source>
-        <translation>削除の確認 - qBittorrent</translation>
+        <source>Deletion confirmation - qSneedTorrent</source>
+        <translation>削除の確認 - qSneedTorrent</translation>
     </message>
 </context>
 <context>
@@ -2712,7 +2712,7 @@
 <context>
     <name>SearchEngineWidget</name>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>シード数:</translation>
     </message>
     <message>
@@ -2842,7 +2842,7 @@
         <translation>検索エンジン</translation>
     </message>
     <message>
-        <source>Seeders</source>
+        <source>Sneeders</source>
         <translation>シーダー</translation>
     </message>
 </context>
@@ -2989,8 +2989,8 @@
         <translation>名前:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>qBittorrent について</translation>
+        <source>About qSneedTorrent</source>
+        <translation>qSneedTorrent について</translation>
     </message>
     <message>
         <source>License</source>
@@ -3001,8 +3001,8 @@
         <translation>翻訳</translation>
     </message>
     <message>
-        <source>qBittorrent was built with the following libraries:</source>
-        <translation>qBittorrent を構成するライブラリ:</translation>
+        <source>qSneedTorrent was built with the following libraries:</source>
+        <translation>qSneedTorrent を構成するライブラリ:</translation>
     </message>
     <message>
         <source>Nationality:</source>
@@ -3025,11 +3025,11 @@
         <translation>フランス</translation>
     </message>
     <message>
-        <source>qBittorrent Mascot</source>
+        <source>qSneedTorrent Mascot</source>
         <translation type="unfinished" />
     </message>
     <message>
-        <source>qBittorrent icon</source>
+        <source>qSneedTorrent icon</source>
         <translation type="unfinished" />
     </message>
 </context>

@@ -340,19 +340,19 @@
         <file>preferences-other.svg</file>
         <file>preferences-system-network.svg</file>
         <file>preferences-web-browser-cookies.svg</file>
-        <file>qbittorrent-tray-dark.svg</file>
-        <file>qbittorrent-tray-light.svg</file>
-        <file>qbittorrent-tray-with-font.svg</file>
-        <file>qbittorrent-tray.svg</file>
-        <file>qbittorrent.ico</file>
-        <file>qbittorrent_file.ico</file>
+        <file>qsneedtorrent-tray-dark.svg</file>
+        <file>qsneedtorrent-tray-light.svg</file>
+        <file>qsneedtorrent-tray-with-font.svg</file>
+        <file>qsneedtorrent-tray.svg</file>
+        <file>qsneedtorrent.ico</file>
+        <file>qsneedtorrent_file.ico</file>
         <file>queued.svg</file>
         <file>ratio.svg</file>
         <file>resumed.svg</file>
         <file>rss-config.svg</file>
         <file>security-high.svg</file>
         <file>security-low.svg</file>
-        <file>seeding.svg</file>
+        <file>sneeding.svg</file>
         <file>services.svg</file>
         <file>slow.svg</file>
         <file>slow_off.svg</file>

@@ -46,12 +46,12 @@ jobs:
           wget \
             -q \
             https://scan.coverity.com/download/linux64 \
-            --post-data "token=${{ secrets.COVERITY_SCAN_TOKEN }}&project=qbittorrent%2FqBittorrent" \
+            --post-data "token=${{ secrets.COVERITY_SCAN_TOKEN }}&project=qsneedtorrent%2FqSneedTorrent" \
             -O coverity_tool.tgz
           mkdir coverity_tool
           tar xzf coverity_tool.tgz --strip 1 -C coverity_tool
 
-      - name: Build qBittorrent
+      - name: Build qSneedTorrent
         run: |
           cmake \
             -B build \
@@ -64,11 +64,11 @@ jobs:
 
       - name: Submit the result to Coverity Scan
         run: |
-          tar caf qbittorrent.xz cov-int
+          tar caf qsneedtorrent.xz cov-int
           curl \
             --form token="${{ secrets.COVERITY_SCAN_TOKEN }}" \
-            --form email=sledgehammer999@qbittorrent.org \
-            --form file=@qbittorrent.xz \
+            --form email=sledgehammer999@qsneedtorrent.org \
+            --form file=@qsneedtorrent.xz \
             --form version="$(git rev-parse --short HEAD)" \
             --form description="master" \
-            https://scan.coverity.com/builds?project=qbittorrent%2FqBittorrent
+            https://scan.coverity.com/builds?project=qsneedtorrent%2FqSneedTorrent

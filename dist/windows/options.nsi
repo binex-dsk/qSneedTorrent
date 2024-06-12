@@ -8,7 +8,7 @@ SetCompressor /SOLID LZMA
 SetCompressorDictSize 64
 XPStyle on
 
-;Uncomment when packaging 64bit qbittorrent
+;Uncomment when packaging 64bit qsneedtorrent
 ;!define APP64BIT
 
 !include "MUI.nsh"
@@ -36,23 +36,23 @@ XPStyle on
 
 !ifndef APP64BIT
   ; The name of the installer
-  Name "qBittorrent ${PROG_VERSION}"
+  Name "qSneedTorrent ${PROG_VERSION}"
 
   ; The file to write
-  OutFile "qbittorrent_${PROG_VERSION}_setup.exe"
+  OutFile "qsneedtorrent_${PROG_VERSION}_setup.exe"
 !else
   ; The name of the installer
-  Name "qBittorrent ${PROG_VERSION} x64"
+  Name "qSneedTorrent ${PROG_VERSION} x64"
 
   ; The file to write
-  OutFile "qbittorrent_${PROG_VERSION}_x64_setup.exe"
+  OutFile "qsneedtorrent_${PROG_VERSION}_x64_setup.exe"
 !endif
 
 ;Installer Version Information
-VIAddVersionKey "ProductName" "qBittorrent"
-VIAddVersionKey "CompanyName" "The qBittorrent project"
-VIAddVersionKey "LegalCopyright" "Copyright ©2006-2022 The qBittorrent project"
-VIAddVersionKey "FileDescription" "qBittorrent - A Bittorrent Client"
+VIAddVersionKey "ProductName" "qSneedTorrent"
+VIAddVersionKey "CompanyName" "The qSneedTorrent project"
+VIAddVersionKey "LegalCopyright" "Copyright ©2006-2022 The qSneedTorrent project"
+VIAddVersionKey "FileDescription" "qSneedTorrent - A Bittorrent Client"
 VIAddVersionKey "FileVersion" "${PROG_VERSION}"
 
 VIProductVersion "${PROG_VERSION}.0"
@@ -62,14 +62,14 @@ VIProductVersion "${PROG_VERSION}.0"
 ; (which in turn launches the 32bit uninstaller first) the value will still point to the 32bit location.
 ; The user has to manually uninstall the old version and THEN run the 64bit installer
 !ifndef APP64BIT
-  InstallDir $PROGRAMFILES32\qBittorrent
+  InstallDir $PROGRAMFILES32\qSneedTorrent
 !else
-  InstallDir $PROGRAMFILES64\qBittorrent
+  InstallDir $PROGRAMFILES64\qSneedTorrent
 !endif
 
 ; Registry key to check for directory (so if you install again, it will
 ; overwrite the old one automatically)
-InstallDirRegKey HKLM Software\qbittorrent InstallLocation
+InstallDirRegKey HKLM Software\qsneedtorrent InstallLocation
 
 ; Request application privileges for Windows Vista
 RequestExecutionLevel user
@@ -79,14 +79,14 @@ RequestExecutionLevel user
 !define MUI_ABORTWARNING
 !define MUI_HEADERIMAGE
 !define MUI_COMPONENTSPAGE_NODESC
-;!define MUI_ICON "qbittorrent.ico"
+;!define MUI_ICON "qsneedtorrent.ico"
 !define MUI_LICENSEPAGE_CHECKBOX
 !define MUI_LANGDLL_ALLLANGUAGES
 
 ;--------------------------------
 ;Remember the unistaller/installer language
 !define MUI_LANGDLL_REGISTRY_ROOT "HKLM"
-!define MUI_LANGDLL_REGISTRY_KEY "Software\qbittorrent"
+!define MUI_LANGDLL_REGISTRY_KEY "Software\qsneedtorrent"
 !define MUI_LANGDLL_REGISTRY_VALUENAME "Installer Language"
 
 ;--------------------------------

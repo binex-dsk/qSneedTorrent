@@ -1,7 +1,7 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
  * Copyright (C) 2014  sledgehammer999 <hammered999@gmail.com>
- * Copyright (C) 2006  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2006  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -197,7 +197,7 @@ void Preferences::setHideZeroComboValues(const int n)
 }
 
 // In Mac OS X the dock is sufficient for our needs so we disable the sys tray functionality.
-// See extensive discussion in https://github.com/qbittorrent/qBittorrent/pull/3018
+// See extensive discussion in https://github.com/qsneedtorrent/qSneedTorrent/pull/3018
 #ifndef Q_OS_MACOS
 bool Preferences::systemTrayEnabled() const
 {
@@ -311,14 +311,14 @@ void Preferences::setPreventFromSuspendWhenDownloading(const bool b)
     setValue(u"Preferences/General/PreventFromSuspendWhenDownloading"_qs, b);
 }
 
-bool Preferences::preventFromSuspendWhenSeeding() const
+bool Preferences::preventFromSuspendWhenSneeding() const
 {
-    return value(u"Preferences/General/PreventFromSuspendWhenSeeding"_qs, false);
+    return value(u"Preferences/General/PreventFromSuspendWhenSneeding"_qs, false);
 }
 
-void Preferences::setPreventFromSuspendWhenSeeding(const bool b)
+void Preferences::setPreventFromSuspendWhenSneeding(const bool b)
 {
-    setValue(u"Preferences/General/PreventFromSuspendWhenSeeding"_qs, b);
+    setValue(u"Preferences/General/PreventFromSuspendWhenSneeding"_qs, b);
 }
 
 #ifdef Q_OS_WIN
@@ -377,7 +377,7 @@ void Preferences::setMailNotificationEnabled(const bool enabled)
 QString Preferences::getMailNotificationSender() const
 {
     return value<QString>(u"Preferences/MailNotification/sender"_qs
-        , u"qBittorrent_notification@example.com"_qs);
+        , u"qSneedTorrent_notification@example.com"_qs);
 }
 
 void Preferences::setMailNotificationSender(const QString &mail)
@@ -1015,9 +1015,9 @@ void Preferences::setNeverCheckFileAssoc(const bool check)
 bool Preferences::isTorrentFileAssocSet()
 {
     const QSettings settings(u"HKEY_CURRENT_USER\\Software\\Classes"_qs, QSettings::NativeFormat);
-    if (settings.value(u".torrent/Default"_qs).toString() != u"qBittorrent")
+    if (settings.value(u".torrent/Default"_qs).toString() != u"qSneedTorrent")
     {
-        qDebug(".torrent != qBittorrent");
+        qDebug(".torrent != qSneedTorrent");
         return false;
     }
 
@@ -1050,9 +1050,9 @@ void Preferences::setTorrentFileAssoc(const bool set)
     if (set)
     {
         const QString oldProgId = settings.value(u".torrent/Default"_qs).toString();
-        if (!oldProgId.isEmpty() && (oldProgId != u"qBittorrent"))
+        if (!oldProgId.isEmpty() && (oldProgId != u"qSneedTorrent"))
             settings.setValue((u".torrent/OpenWithProgids/" + oldProgId), QString());
-        settings.setValue(u".torrent/Default"_qs, u"qBittorrent"_qs);
+        settings.setValue(u".torrent/Default"_qs, u"qSneedTorrent"_qs);
     }
     else if (isTorrentFileAssocSet())
     {

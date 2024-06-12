@@ -89,7 +89,7 @@
             </tr>
             <tr>
                 <td>
-                    <input type="checkbox" id="temppath_checkbox" onclick="qBittorrent.Preferences.updateTempDirEnabled();" />
+                    <input type="checkbox" id="temppath_checkbox" onclick="qSneedTorrent.Preferences.updateTempDirEnabled();" />
                     <label for="temppath_checkbox">QBT_TR(Keep incomplete torrents in:)QBT_TR[CONTEXT=OptionsDialog]</label>
                 </td>
                 <td>
@@ -98,7 +98,7 @@
             </tr>
             <tr>
                 <td>
-                    <input type="checkbox" id="exportdir_checkbox" onclick="qBittorrent.Preferences.updateExportDirEnabled();" />
+                    <input type="checkbox" id="exportdir_checkbox" onclick="qSneedTorrent.Preferences.updateExportDirEnabled();" />
                     <label for="exportdir_checkbox">QBT_TR(Copy .torrent files to:)QBT_TR[CONTEXT=OptionsDialog]</label>
                 </td>
                 <td>
@@ -107,7 +107,7 @@
             </tr>
             <tr>
                 <td>
-                    <input type="checkbox" id="exportdirfin_checkbox" onclick="qBittorrent.Preferences.updateExportDirFinEnabled();" />
+                    <input type="checkbox" id="exportdirfin_checkbox" onclick="qSneedTorrent.Preferences.updateExportDirFinEnabled();" />
                     <label for="exportdirfin_checkbox">QBT_TR(Copy .torrent files for finished downloads to:)QBT_TR[CONTEXT=OptionsDialog]</label>
                 </td>
                 <td>
@@ -132,7 +132,7 @@
 
     <fieldset class="settings">
         <legend>
-            <input type="checkbox" id="mail_notification_checkbox" onclick="qBittorrent.Preferences.updateMailNotification();" />
+            <input type="checkbox" id="mail_notification_checkbox" onclick="qSneedTorrent.Preferences.updateMailNotification();" />
             <label for="mail_notification_checkbox">QBT_TR(Email notification upon download completion)QBT_TR[CONTEXT=OptionsDialog]</label>
         </legend>
         <table>
@@ -166,7 +166,7 @@
         </div>
         <fieldset class="settings">
             <legend>
-                <input type="checkbox" id="mail_auth_checkbox" onclick="qBittorrent.Preferences.updateMailAuthSettings();" />
+                <input type="checkbox" id="mail_auth_checkbox" onclick="qSneedTorrent.Preferences.updateMailAuthSettings();" />
                 <label for="mail_auth_checkbox">QBT_TR(Authentication)QBT_TR[CONTEXT=OptionsDialog]</label>
             </legend>
             <table>
@@ -192,7 +192,7 @@
 
     <fieldset class="settings">
         <legend>
-            <input type="checkbox" id="autorun_checkbox" onclick="qBittorrent.Preferences.updateAutoRun();" />
+            <input type="checkbox" id="autorun_checkbox" onclick="qSneedTorrent.Preferences.updateAutoRun();" />
             <label for="autorun_checkbox">QBT_TR(Run external program on torrent completion)QBT_TR[CONTEXT=OptionsDialog]</label>
         </legend>
         <div class="formRow">
@@ -232,7 +232,7 @@
         <div class="formRow">
             <label for="port_value">QBT_TR(Port used for incoming connections:)QBT_TR[CONTEXT=OptionsDialog]</label>
             <input type="text" id="port_value" style="width: 4em;" title="QBT_TR(Set to 0 to let your system pick an unused port)QBT_TR[CONTEXT=OptionsDialog]" />
-            <button style="margin-left: 1em;" onclick="qBittorrent.Preferences.generateRandomPort();">QBT_TR(Random)QBT_TR[CONTEXT=OptionsDialog]</button>
+            <button style="margin-left: 1em;" onclick="qSneedTorrent.Preferences.generateRandomPort();">QBT_TR(Random)QBT_TR[CONTEXT=OptionsDialog]</button>
         </div>
         <div class="formRow">
             <input type="checkbox" id="upnp_checkbox" />
@@ -245,28 +245,28 @@
         <table>
             <tr>
                 <td>
-                    <input type="checkbox" id="max_connec_checkbox" onclick="qBittorrent.Preferences.updateMaxConnecEnabled();" />
+                    <input type="checkbox" id="max_connec_checkbox" onclick="qSneedTorrent.Preferences.updateMaxConnecEnabled();" />
                     <label for="max_connec_checkbox">QBT_TR(Global maximum number of connections:)QBT_TR[CONTEXT=OptionsDialog]</label>
                 </td>
                 <td><input type="text" id="max_connec_value" style="width: 4em;" /></td>
             </tr>
             <tr>
                 <td>
-                    <input type="checkbox" id="max_connec_per_torrent_checkbox" onclick="qBittorrent.Preferences.updateMaxConnecPerTorrentEnabled();" />
+                    <input type="checkbox" id="max_connec_per_torrent_checkbox" onclick="qSneedTorrent.Preferences.updateMaxConnecPerTorrentEnabled();" />
                     <label for="max_connec_per_torrent_checkbox">QBT_TR(Maximum number of connections per torrent:)QBT_TR[CONTEXT=OptionsDialog]</label>
                 </td>
                 <td><input type="text" id="max_connec_per_torrent_value" style="width: 4em;" /></td>
             </tr>
             <tr>
                 <td>
-                    <input type="checkbox" id="max_uploads_checkbox" onclick="qBittorrent.Preferences.updateMaxUploadsEnabled();" />
+                    <input type="checkbox" id="max_uploads_checkbox" onclick="qSneedTorrent.Preferences.updateMaxUploadsEnabled();" />
                     <label for="max_uploads_checkbox">QBT_TR(Global maximum number of upload slots:)QBT_TR[CONTEXT=OptionsDialog]</label>
                 </td>
                 <td><input type="text" id="max_uploads_value" style="width: 4em;" /></td>
             </tr>
             <tr>
                 <td>
-                    <input type="checkbox" id="max_uploads_per_torrent_checkbox" onclick="qBittorrent.Preferences.updateMaxUploadsPerTorrentEnabled();" />
+                    <input type="checkbox" id="max_uploads_per_torrent_checkbox" onclick="qSneedTorrent.Preferences.updateMaxUploadsPerTorrentEnabled();" />
                     <label for="max_uploads_per_torrent_checkbox">QBT_TR(Maximum number of upload slots per torrent:)QBT_TR[CONTEXT=OptionsDialog]</label>
                 </td>
                 <td><input type="text" id="max_uploads_per_torrent_value" style="width: 4em;" /></td>
@@ -282,7 +282,7 @@
                     <label for="peer_proxy_type_select">QBT_TR(Type:)QBT_TR[CONTEXT=OptionsDialog]</label>
                 </td>
                 <td>
-                    <select id="peer_proxy_type_select" onchange="qBittorrent.Preferences.updatePeerProxySettings();">
+                    <select id="peer_proxy_type_select" onchange="qSneedTorrent.Preferences.updatePeerProxySettings();">
                         <option value="none">QBT_TR((None))QBT_TR[CONTEXT=OptionsDialog]</option>
                         <option value="socks4">QBT_TR(SOCKS4)QBT_TR[CONTEXT=OptionsDialog]</option>
                         <option value="socks5">QBT_TR(SOCKS5)QBT_TR[CONTEXT=OptionsDialog]</option>
@@ -313,7 +313,7 @@
         </div>
         <fieldset class="settings">
             <legend>
-                <input type="checkbox" id="peer_proxy_auth_checkbox" onclick="qBittorrent.Preferences.updatePeerProxyAuthSettings();" />
+                <input type="checkbox" id="peer_proxy_auth_checkbox" onclick="qSneedTorrent.Preferences.updatePeerProxyAuthSettings();" />
                 <label for="peer_proxy_auth_checkbox">QBT_TR(Authentication)QBT_TR[CONTEXT=OptionsDialog]</label>
             </legend>
             <table>
@@ -345,7 +345,7 @@
             <label>QBT_TR(IP Filtering)QBT_TR[CONTEXT=OptionsDialog]</label>
         </legend>
         <div class="formRow">
-            <input type="checkbox" id="ipfilter_text_checkbox" onclick="qBittorrent.Preferences.updateFilterSettings();" />
+            <input type="checkbox" id="ipfilter_text_checkbox" onclick="qSneedTorrent.Preferences.updateFilterSettings();" />
             <label for="ipfilter_text_checkbox">QBT_TR(Filter path (.dat, .p2p, .p2b):)QBT_TR[CONTEXT=OptionsDialog]</label>
             <input type="text" id="ipfilter_text" />
         </div>
@@ -400,7 +400,7 @@
 
         <fieldset class="settings">
             <legend>
-                <input type="checkbox" id="limitSchedulingCheckbox" onclick="qBittorrent.Preferences.updateSchedulingEnabled();" />
+                <input type="checkbox" id="limitSchedulingCheckbox" onclick="qSneedTorrent.Preferences.updateSchedulingEnabled();" />
                 <label for="limitSchedulingCheckbox">QBT_TR(Schedule the use of alternative rate limits)QBT_TR[CONTEXT=OptionsDialog]</label>
             </legend>
             <div class="formRow">
@@ -468,13 +468,13 @@
         </div>
         <div class="formRow">
             <input type="checkbox" id="anonymous_mode_checkbox" />
-            <label for="anonymous_mode_checkbox">QBT_TR(Enable anonymous mode)QBT_TR[CONTEXT=OptionsDialog] (<a target="_blank" href="https://github.com/qbittorrent/qBittorrent/wiki/Anonymous-Mode">QBT_TR(More information)QBT_TR[CONTEXT=HttpServer]</a>)</label>
+            <label for="anonymous_mode_checkbox">QBT_TR(Enable anonymous mode)QBT_TR[CONTEXT=OptionsDialog] (<a target="_blank" href="https://github.com/qsneedtorrent/qSneedTorrent/wiki/Anonymous-Mode">QBT_TR(More information)QBT_TR[CONTEXT=HttpServer]</a>)</label>
         </div>
     </fieldset>
 
     <fieldset class="settings">
         <legend>
-            <input type="checkbox" id="queueing_checkbox" onclick="qBittorrent.Preferences.updateQueueingSystem();" />
+            <input type="checkbox" id="queueing_checkbox" onclick="qSneedTorrent.Preferences.updateQueueingSystem();" />
             <label for="queueing_checkbox">QBT_TR(Torrent Queueing)QBT_TR[CONTEXT=OptionsDialog]</label>
         </legend>
         <table>
@@ -505,7 +505,7 @@
         </table>
         <fieldset class="settings">
             <legend>
-                <input type="checkbox" id="dont_count_slow_torrents_checkbox" onclick="qBittorrent.Preferences.updateSlowTorrentsSettings();" />
+                <input type="checkbox" id="dont_count_slow_torrents_checkbox" onclick="qSneedTorrent.Preferences.updateSlowTorrentsSettings();" />
                 <label for="dont_count_slow_torrents_checkbox">QBT_TR(Do not count slow torrents in these limits)QBT_TR[CONTEXT=OptionsDialog]</label>
             </legend>
             <table>
@@ -538,11 +538,11 @@
     </fieldset>
 
     <fieldset class="settings">
-        <legend>QBT_TR(Seeding Limits)QBT_TR[CONTEXT=OptionsDialog]</legend>
+        <legend>QBT_TR(Sneeding Limits)QBT_TR[CONTEXT=OptionsDialog]</legend>
         <table>
             <tr>
                 <td>
-                    <input type="checkbox" id="max_ratio_checkbox" onclick="qBittorrent.Preferences.updateMaxRatioTimeEnabled();" />
+                    <input type="checkbox" id="max_ratio_checkbox" onclick="qSneedTorrent.Preferences.updateMaxRatioTimeEnabled();" />
                     <label for="max_ratio_checkbox">QBT_TR(When ratio reaches)QBT_TR[CONTEXT=OptionsDialog]</label>
                 </td>
                 <td>
@@ -551,11 +551,11 @@
             </tr>
             <tr>
                 <td>
-                    <input type="checkbox" id="max_seeding_time_checkbox" onclick="qBittorrent.Preferences.updateMaxRatioTimeEnabled();" />
-                    <label for="max_seeding_time_checkbox">QBT_TR(When seeding time reaches)QBT_TR[CONTEXT=OptionsDialog]</label>
+                    <input type="checkbox" id="max_sneeding_time_checkbox" onclick="qSneedTorrent.Preferences.updateMaxRatioTimeEnabled();" />
+                    <label for="max_sneeding_time_checkbox">QBT_TR(When sneeding time reaches)QBT_TR[CONTEXT=OptionsDialog]</label>
                 </td>
                 <td>
-                    <input type="text" id="max_seeding_time_value" style="width: 4em;" />QBT_TR(minutes)QBT_TR[CONTEXT=OptionsDialog]
+                    <input type="text" id="max_sneeding_time_value" style="width: 4em;" />QBT_TR(minutes)QBT_TR[CONTEXT=OptionsDialog]
                 </td>
             </tr>
             <tr>
@@ -565,7 +565,7 @@
                         <option value="0">QBT_TR(Pause torrent)QBT_TR[CONTEXT=OptionsDialog]</option>
                         <option value="1">QBT_TR(Remove torrent)QBT_TR[CONTEXT=OptionsDialog]</option>
                         <option value="3">QBT_TR(Remove torrent and its files)QBT_TR[CONTEXT=OptionsDialog]</option>
-                        <option value="2">QBT_TR(Enable super seeding for torrent)QBT_TR[CONTEXT=OptionsDialog]</option>
+                        <option value="2">QBT_TR(Enable super sneeding for torrent)QBT_TR[CONTEXT=OptionsDialog]</option>
                     </select>
                 </td>
             </tr>
@@ -574,7 +574,7 @@
 
     <fieldset class="settings">
         <legend>
-            <input type="checkbox" id="add_trackers_checkbox" onclick="qBittorrent.Preferences.updateAddTrackersEnabled();" />
+            <input type="checkbox" id="add_trackers_checkbox" onclick="qSneedTorrent.Preferences.updateAddTrackersEnabled();" />
             <label for="add_trackers_checkbox">QBT_TR(Automatically add these trackers to new downloads:)QBT_TR[CONTEXT=OptionsDialog]</label>
         </legend>
         <textarea id="add_trackers_textarea" rows="5" cols="70"></textarea>
@@ -614,7 +614,7 @@
             <input type="checkbox" id="enable_auto_downloading_rss_torrents_checkbox" />
             <label for="enable_auto_downloading_rss_torrents_checkbox">QBT_TR(Enable auto downloading of RSS torrents)QBT_TR[CONTEXT=OptionsDialog]</label>
         </div>
-        <button style="margin: 0 1em; width: calc(100% - 2.2em)" onclick="window.qBittorrent.Rss.openRssDownloader();">QBT_TR(Edit auto downloading rules...)QBT_TR[CONTEXT=OptionsDialog]</button>
+        <button style="margin: 0 1em; width: calc(100% - 2.2em)" onclick="window.qSneedTorrent.Rss.openRssDownloader();">QBT_TR(Edit auto downloading rules...)QBT_TR[CONTEXT=OptionsDialog]</button>
     </fieldset>
 
     <fieldset class="settings">
@@ -713,7 +713,7 @@
         </div>
         <fieldset class="settings">
             <legend>
-                <input type="checkbox" id="use_https_checkbox" onclick="qBittorrent.Preferences.updateHttpsSettings();" />
+                <input type="checkbox" id="use_https_checkbox" onclick="qSneedTorrent.Preferences.updateHttpsSettings();" />
                 <label for="use_https_checkbox">QBT_TR(Use HTTPS instead of HTTP)QBT_TR[CONTEXT=OptionsDialog]</label>
             </legend>
             <table>
@@ -762,7 +762,7 @@
                 <label for="bypass_local_auth_checkbox">QBT_TR(Bypass authentication for clients on localhost)QBT_TR[CONTEXT=OptionsDialog]</label>
             </div>
             <div class="formRow">
-                <input type="checkbox" id="bypass_auth_subnet_whitelist_checkbox" onclick="qBittorrent.Preferences.updateBypasssAuthSettings();" />
+                <input type="checkbox" id="bypass_auth_subnet_whitelist_checkbox" onclick="qSneedTorrent.Preferences.updateBypasssAuthSettings();" />
                 <label for="bypass_auth_subnet_whitelist_checkbox">QBT_TR(Bypass authentication for clients in whitelisted IP subnets)QBT_TR[CONTEXT=OptionsDialog]</label>
             </div>
             <div class="formRow" style="padding-left: 30px; padding-top: 5px;">
@@ -787,7 +787,7 @@
         </fieldset>
 
         <fieldset class="settings">
-            <legend><input type="checkbox" id="use_alt_webui_checkbox" onclick="qBittorrent.Preferences.updateAlternativeWebUISettings();" />
+            <legend><input type="checkbox" id="use_alt_webui_checkbox" onclick="qSneedTorrent.Preferences.updateAlternativeWebUISettings();" />
                 <label for="use_alt_webui_checkbox">QBT_TR(Use alternative Web UI)QBT_TR[CONTEXT=OptionsDialog]</label>
             </legend>
             <div class="formRow">
@@ -813,7 +813,7 @@
 
             <fieldset class="settings">
                 <legend>
-                    <input type="checkbox" id="host_header_validation_checkbox" onclick="qBittorrent.Preferences.updateHostHeaderValidationSettings();" />
+                    <input type="checkbox" id="host_header_validation_checkbox" onclick="qSneedTorrent.Preferences.updateHostHeaderValidationSettings();" />
                     <label for="host_header_validation_checkbox">QBT_TR(Enable Host header validation)QBT_TR[CONTEXT=OptionsDialog]</label>
                 </legend>
                 <table>
@@ -831,7 +831,7 @@
 
         <fieldset class="settings">
             <legend>
-                <input type="checkbox" id="webUIUseCustomHTTPHeadersCheckbox" onclick="qBittorrent.Preferences.updateWebUICustomHTTPHeadersSettings();" />
+                <input type="checkbox" id="webUIUseCustomHTTPHeadersCheckbox" onclick="qSneedTorrent.Preferences.updateWebUICustomHTTPHeadersSettings();" />
                 <label for="webUIUseCustomHTTPHeadersCheckbox">QBT_TR(Add custom HTTP headers)QBT_TR[CONTEXT=OptionsDialog]</label>
             </legend>
             <textarea id="webUICustomHTTPHeadersTextarea" placeholder="QBT_TR(Header: value pairs, one per line)QBT_TR[CONTEXT=OptionsDialog]" style="width: 90%;"></textarea>
@@ -839,7 +839,7 @@
 
         <fieldset class="settings">
             <legend>
-                <input type="checkbox" id="webUIReverseProxySupportCheckbox" onclick="qBittorrent.Preferences.updateWebUIReverseProxySettings();" />
+                <input type="checkbox" id="webUIReverseProxySupportCheckbox" onclick="qSneedTorrent.Preferences.updateWebUIReverseProxySettings();" />
                 <label for="webUIReverseProxySupportCheckbox">QBT_TR(Enable reverse proxy support)QBT_TR[CONTEXT=OptionsDialog]</label>
             </legend>
             <div class="formRow">
@@ -852,14 +852,14 @@
 
     <fieldset class="settings">
         <legend>
-            <input type="checkbox" id="use_dyndns_checkbox" onclick="qBittorrent.Preferences.updateDynDnsSettings();" />
+            <input type="checkbox" id="use_dyndns_checkbox" onclick="qSneedTorrent.Preferences.updateDynDnsSettings();" />
             <label for="use_dyndns_checkbox">QBT_TR(Update my dynamic domain name)QBT_TR[CONTEXT=OptionsDialog]</label>
         </legend>
         <select id="dyndns_select">
             <option value="0">DynDNS</option>
             <option value="1">NO-IP</option>
         </select>
-        <input type="button" value="QBT_TR(Register)QBT_TR[CONTEXT=OptionsDialog]" onclick="qBittorrent.Preferences.registerDynDns();" />
+        <input type="button" value="QBT_TR(Register)QBT_TR[CONTEXT=OptionsDialog]" onclick="qSneedTorrent.Preferences.registerDynDns();" />
         <table style="margin-top: 10px;">
             <tr>
                 <td>
@@ -891,7 +891,7 @@
 
 <div id="AdvancedTab" class="PrefTab invisible">
     <fieldset class="settings">
-        <legend>QBT_TR(qBittorrent Section)QBT_TR[CONTEXT=OptionsDialog]&nbsp;(<a href="https://github.com/qbittorrent/qBittorrent/wiki/Explanation-of-Options-in-qBittorrent#Advanced" target="_blank">QBT_TR(Open documentation)QBT_TR[CONTEXT=HttpServer]</a>)</legend>
+        <legend>QBT_TR(qSneedTorrent Section)QBT_TR[CONTEXT=OptionsDialog]&nbsp;(<a href="https://github.com/qsneedtorrent/qSneedTorrent/wiki/Explanation-of-Options-in-qSneedTorrent#Advanced" target="_blank">QBT_TR(Open documentation)QBT_TR[CONTEXT=HttpServer]</a>)</legend>
         <table>
             <tr>
                 <td>
@@ -1180,7 +1180,7 @@
             </tr>
             <tr>
                 <td>
-                    <label for="uploadChokingAlgorithm">QBT_TR(Upload choking algorithm:)QBT_TR[CONTEXT=OptionsDialog]&nbsp;<a href="https://www.libtorrent.org/reference-Settings.html#seed_choking_algorithm" target="_blank">(?)</a></label>
+                    <label for="uploadChokingAlgorithm">QBT_TR(Upload choking algorithm:)QBT_TR[CONTEXT=OptionsDialog]&nbsp;<a href="https://www.libtorrent.org/reference-Settings.html#sneed_choking_algorithm" target="_blank">(?)</a></label>
                 </td>
                 <td>
                     <select id="uploadChokingAlgorithm" style="width: 15em;">
@@ -1258,16 +1258,16 @@
     </fieldset>
 </div>
 
-<div style="text-align: center; margin-top: 1em;"><input type="button" value="QBT_TR(Save)QBT_TR[CONTEXT=HttpServer]" onclick="qBittorrent.Preferences.applyPreferences();" /></div>
+<div style="text-align: center; margin-top: 1em;"><input type="button" value="QBT_TR(Save)QBT_TR[CONTEXT=HttpServer]" onclick="qSneedTorrent.Preferences.applyPreferences();" /></div>
 
 <script>
     'use strict';
 
-    if (window.qBittorrent === undefined) {
-        window.qBittorrent = {};
+    if (window.qSneedTorrent === undefined) {
+        window.qSneedTorrent = {};
     }
 
-    window.qBittorrent.Preferences = (function() {
+    window.qSneedTorrent.Preferences = (function() {
         const exports = function() {
             return {
                 updateTempDirEnabled: updateTempDirEnabled,
@@ -1329,13 +1329,13 @@
             const myinput = "<input id='text_watch_" + pos + "' type='text' value='" + folder + "'>";
             const disableInput = (sel !== "other");
             const mycb = "<div class='select-watched-folder-editable'>"
-                + "<select id ='cb_watch_" + pos + "' onchange='qBittorrent.Preferences.changeWatchFolderSelect(this)'>"
+                + "<select id ='cb_watch_" + pos + "' onchange='qSneedTorrent.Preferences.changeWatchFolderSelect(this)'>"
                 + "<option value='watch_folder'>QBT_TR(Monitored folder)QBT_TR[CONTEXT=ScanFoldersModel]</option>"
                 + "<option value='default_folder'>QBT_TR(Default save location)QBT_TR[CONTEXT=ScanFoldersModel]</option>"
                 + "<option value='other'>QBT_TR(Other...)QBT_TR[CONTEXT=ScanFoldersModel]</option>"
                 + "</select>"
                 + "<input id='cb_watch_txt_" + pos + "' type='text' " + (disableInput ? "hidden " : "") + "/>"
-                + "<img src='icons/list-add.svg' id='addFolderImg_" + pos + "' alt='Add' style='padding-left:170px;width:16px;cursor:pointer;' onclick='qBittorrent.Preferences.addWatchFolder();' />"
+                + "<img src='icons/list-add.svg' id='addFolderImg_" + pos + "' alt='Add' style='padding-left:170px;width:16px;cursor:pointer;' onclick='qSneedTorrent.Preferences.addWatchFolder();' />"
                 + "</div>";
 
             watchedFoldersTable.push([myinput, mycb]);
@@ -1486,10 +1486,10 @@
             const isMaxRatioEnabled = $('max_ratio_checkbox').getProperty('checked');
             $('max_ratio_value').setProperty('disabled', !isMaxRatioEnabled);
 
-            const isMaxSeedingTimeEnabled = $('max_seeding_time_checkbox').getProperty('checked');
-            $('max_seeding_time_value').setProperty('disabled', !isMaxSeedingTimeEnabled);
+            const isMaxSneedingTimeEnabled = $('max_sneeding_time_checkbox').getProperty('checked');
+            $('max_sneeding_time_value').setProperty('disabled', !isMaxSneedingTimeEnabled);
 
-            $('max_ratio_act').setProperty('disabled', !(isMaxRatioEnabled || isMaxSeedingTimeEnabled));
+            $('max_ratio_act').setProperty('disabled', !(isMaxRatioEnabled || isMaxSneedingTimeEnabled));
         };
 
         const updateAddTrackersEnabled = function() {
@@ -1570,7 +1570,7 @@
                 method: 'get',
                 noCache: true,
                 onFailure: function() {
-                    alert("Could not contact qBittorrent");
+                    alert("Could not contact qSneedTorrent");
                 },
                 onSuccess: function(ifaces) {
                     if (!ifaces) return;
@@ -1595,7 +1595,7 @@
                     'iface': iface
                 },
                 onFailure: function() {
-                    alert("Could not contact qBittorrent");
+                    alert("Could not contact qSneedTorrent");
                 },
                 onSuccess: function(addresses) {
                     if (!addresses) return;
@@ -1618,7 +1618,7 @@
                 method: 'get',
                 noCache: true,
                 onFailure: function() {
-                    alert("Could not contact qBittorrent");
+                    alert("Could not contact qSneedTorrent");
                 },
                 onSuccess: function(pref) {
                     if (pref) {
@@ -1828,8 +1828,8 @@
                         // Share Limiting
                         $('max_ratio_checkbox').setProperty('checked', pref.max_ratio_enabled);
                         $('max_ratio_value').setProperty('value', (pref.max_ratio_enabled ? pref.max_ratio : 1));
-                        $('max_seeding_time_checkbox').setProperty('checked', pref.max_seeding_time_enabled);
-                        $('max_seeding_time_value').setProperty('value', (pref.max_seeding_time_enabled ? pref.max_seeding_time.toInt() : 1440));
+                        $('max_sneeding_time_checkbox').setProperty('checked', pref.max_sneeding_time_enabled);
+                        $('max_sneeding_time_value').setProperty('value', (pref.max_sneeding_time_enabled ? pref.max_sneeding_time.toInt() : 1440));
                         let maxRatioAct = 0;
                         switch (pref.max_ratio_act.toInt()) {
                             case 0: // Pause
@@ -1839,7 +1839,7 @@
                             case 1: // Remove
                                 maxRatioAct = 1;
                                 break;
-                            case 2: // Enable super seeding
+                            case 2: // Enable super sneeding
                                 maxRatioAct = 3;
                                 break;
                             case 3: // Remove torrent and files
@@ -1917,7 +1917,7 @@
                         updateDynDnsSettings();
 
                         // Advanced settings
-                        // qBittorrent section
+                        // qSneedTorrent section
                         updateNetworkInterfaces(pref.current_network_interface);
                         updateInterfaceAddresses(pref.current_network_interface, pref.current_interface_address);
                         $('saveResumeDataInterval').setProperty('value', pref.save_resume_data_interval);
@@ -2214,16 +2214,16 @@
             settings.set('max_ratio_enabled', $('max_ratio_checkbox').getProperty('checked'));
             settings.set('max_ratio', max_ratio);
 
-            let max_seeding_time = -1;
-            if ($('max_seeding_time_checkbox').getProperty('checked')) {
-                max_seeding_time = $('max_seeding_time_value').getProperty('value').toInt();
-                if (isNaN(max_seeding_time) || (max_seeding_time < 0) || (max_seeding_time > 525600)) {
-                    alert("QBT_TR(Seeding time limit must be between 0 and 525600 minutes.)QBT_TR[CONTEXT=HttpServer]");
+            let max_sneeding_time = -1;
+            if ($('max_sneeding_time_checkbox').getProperty('checked')) {
+                max_sneeding_time = $('max_sneeding_time_value').getProperty('value').toInt();
+                if (isNaN(max_sneeding_time) || (max_sneeding_time < 0) || (max_sneeding_time > 525600)) {
+                    alert("QBT_TR(Sneeding time limit must be between 0 and 525600 minutes.)QBT_TR[CONTEXT=HttpServer]");
                     return;
                 }
             }
-            settings.set('max_seeding_time_enabled', $('max_seeding_time_checkbox').getProperty('checked'));
-            settings.set('max_seeding_time', max_seeding_time);
+            settings.set('max_sneeding_time_enabled', $('max_sneeding_time_checkbox').getProperty('checked'));
+            settings.set('max_sneeding_time', max_sneeding_time);
             settings.set('max_ratio_act', $('max_ratio_act').getProperty('value').toInt());
 
             // Add trackers
@@ -2311,7 +2311,7 @@
             settings.set('dyndns_password', $('dyndns_password_text').getProperty('value'));
 
             // Update advanced settings
-            // qBittorrent section
+            // qSneedTorrent section
             settings.set('current_network_interface', $('networkInterface').getProperty('value'));
             settings.set('current_interface_address', $('optionalIPAddressToBind').getProperty('value'));
             settings.set('save_resume_data_interval', $('saveResumeDataInterval').getProperty('value'));
@@ -2368,7 +2368,7 @@
                     'json': json_str,
                 },
                 onFailure: function() {
-                    alert("QBT_TR(Unable to save program preferences, qBittorrent is probably unreachable.)QBT_TR[CONTEXT=HttpServer]");
+                    alert("QBT_TR(Unable to save program preferences, qSneedTorrent is probably unreachable.)QBT_TR[CONTEXT=HttpServer]");
                     window.parent.closeWindows();
                 },
                 onSuccess: function() {
@@ -2388,5 +2388,5 @@
         return exports();
     })();
 
-    Object.freeze(window.qBittorrent.Preferences);
+    Object.freeze(window.qSneedTorrent.Preferences);
 </script>

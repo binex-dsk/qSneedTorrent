@@ -103,7 +103,7 @@ jobs:
           cmake --build build
           cmake --install build
 
-      - name: Build qBittorrent
+      - name: Build qSneedTorrent
         run: |
           lupdate -extensions c,cpp,h,hpp,ui .
           cmake `
@@ -123,8 +123,8 @@ jobs:
       - name: Prepare build artifacts
         run: |
           mkdir upload
-          copy build/qbittorrent.exe upload
-          copy build/qbittorrent.pdb upload
+          copy build/qsneedtorrent.exe upload
+          copy build/qsneedtorrent.pdb upload
           copy dist/windows/qt.conf upload
           # runtimes
           copy "${{ env.Qt5_DIR }}/bin/Qt5Core.dll" upload
@@ -156,5 +156,5 @@ jobs:
       - name: Upload build artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: qBittorrent-CI_Windows-x64_libtorrent-${{ matrix.libt_version }}
+          name: qSneedTorrent-CI_Windows-x64_libtorrent-${{ matrix.libt_version }}
           path: upload

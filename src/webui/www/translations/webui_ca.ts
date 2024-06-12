@@ -92,8 +92,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>Surt del qBittorrent</translation>
+        <source>Exit qSneedTorrent</source>
+        <translation>Surt del qSneedTorrent</translation>
     </message>
     <message>
         <source>Only one link per line</source>
@@ -140,8 +140,8 @@
         <translation>El nombre màxim de pujades de ranures per torrent ha de ser major que 0 o estar inhabilitat.</translation>
     </message>
     <message>
-        <source>Unable to save program preferences, qBittorrent is probably unreachable.</source>
-        <translation>No es poden desar les preferències del programa, probablement el qBittorrent no és accessible.</translation>
+        <source>Unable to save program preferences, qSneedTorrent is probably unreachable.</source>
+        <translation>No es poden desar les preferències del programa, probablement el qSneedTorrent no és accessible.</translation>
     </message>
     <message>
         <source>Unknown</source>
@@ -152,7 +152,7 @@
         <translation>El límit de la ràtio de compartició ha de ser entre 0 i 9998.</translation>
     </message>
     <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
+        <source>Sneeding time limit must be between 0 and 525600 minutes.</source>
         <translation>El límit de la sembra ha de ser entre 0 i 525600 minuts.</translation>
     </message>
     <message>
@@ -160,8 +160,8 @@
         <translation>El port utilitzat per a la interfície d'usuari web ha de ser major de 1024 i menor de 65535.</translation>
     </message>
     <message>
-        <source>Unable to log in, qBittorrent is probably unreachable.</source>
-        <translation>No ha estat possible iniciar sessió, el qBittorrent deu estar il·localitzable en aquests moments. </translation>
+        <source>Unable to log in, qSneedTorrent is probably unreachable.</source>
+        <translation>No ha estat possible iniciar sessió, el qSneedTorrent deu estar il·localitzable en aquests moments. </translation>
     </message>
     <message>
         <source>Invalid Username or Password.</source>
@@ -280,8 +280,8 @@
         <translation>Desa</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>El client qBittorrent no és accessible</translation>
+        <source>qSneedTorrent client is not reachable</source>
+        <translation>El client qSneedTorrent no és accessible</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -321,8 +321,8 @@ Si us plau, no useu cap caràcter especial al nom de la categoria.</translation>
         <translation>El llindar de la velocitat de baixada ha de ser superior a 0.</translation>
     </message>
     <message>
-        <source>qBittorrent has been shutdown</source>
-        <translation>El qBittorrent s'ha tancat.</translation>
+        <source>qSneedTorrent has been shutdown</source>
+        <translation>El qSneedTorrent s'ha tancat.</translation>
     </message>
     <message>
         <source>Open documentation</source>
@@ -464,13 +464,13 @@ Si us plau, no useu cap caràcter especial al nom de la categoria.</translation>
         <translation>Velocitat límit global de baixada</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Segur que voleu sortir del qBittorrent?</translation>
+        <source>Are you sure you want to quit qSneedTorrent?</source>
+        <translation>Segur que voleu sortir del qSneedTorrent?</translation>
     </message>
     <message>
-        <source>[D: %1, U: %2] qBittorrent %3</source>
-        <comment>D = Download; U = Upload; %3 is qBittorrent version</comment>
-        <translation>[B: %1, P: %2] qBittorrent %3</translation>
+        <source>[D: %1, U: %2] qSneedTorrent %3</source>
+        <comment>D = Download; U = Upload; %3 is qSneedTorrent version</comment>
+        <translation>[B: %1, P: %2] qSneedTorrent %3</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1106,7 +1106,7 @@ Si us plau, no useu cap caràcter especial al nom de la categoria.</translation>
         <translation>Mida del registre històric del sòcol:</translation>
     </message>
     <message>
-        <source>Enable super seeding for torrent</source>
+        <source>Enable super sneeding for torrent</source>
         <translation>Habilita la supersembra per al torrent</translation>
     </message>
     <message>
@@ -1130,7 +1130,7 @@ Si us plau, no useu cap caràcter especial al nom de la categoria.</translation>
         <translation>Quan la ràtio assoleixi</translation>
     </message>
     <message>
-        <source>When seeding time reaches</source>
+        <source>When sneeding time reaches</source>
         <translation>Quan el temps de sembra assoleixi</translation>
     </message>
     <message>
@@ -1166,8 +1166,8 @@ Si us plau, no useu cap caràcter especial al nom de la categoria.</translation>
         <translation>Suprimeix el torrent i els fitxers</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>Secció de qBittorrent</translation>
+        <source>qSneedTorrent Section</source>
+        <translation>Secció de qSneedTorrent</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -1238,7 +1238,7 @@ Si us plau, no useu cap caràcter especial al nom de la categoria.</translation>
         <translation>Algorisme d'ofec de pujada:</translation>
     </message>
     <message>
-        <source>Seeding Limits</source>
+        <source>Sneeding Limits</source>
         <translation>Límits de sembra</translation>
     </message>
     <message>
@@ -1630,7 +1630,7 @@ Si us plau, no useu cap caràcter especial al nom de la categoria.</translation>
         <translation>Pujada:</translation>
     </message>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>Llavors:</translation>
     </message>
     <message>
@@ -1758,7 +1758,7 @@ Si us plau, no useu cap caràcter especial al nom de la categoria.</translation>
         <translation>Canvia'n el nom...</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation>%1 (sembrat durant %2)</translation>
     </message>
     <message>
@@ -1898,7 +1898,7 @@ Si us plau, no useu cap caràcter especial al nom de la categoria.</translation>
         <translation>Baixant (0)</translation>
     </message>
     <message>
-        <source>Seeding (0)</source>
+        <source>Sneeding (0)</source>
         <translation>Sembrant (0)</translation>
     </message>
     <message>
@@ -1934,7 +1934,7 @@ Si us plau, no useu cap caràcter especial al nom de la categoria.</translation>
         <translation>Baixant (%1)</translation>
     </message>
     <message>
-        <source>Seeding (%1)</source>
+        <source>Sneeding (%1)</source>
         <translation>Sembrant (%1)</translation>
     </message>
     <message>
@@ -2016,11 +2016,11 @@ Si us plau, no useu cap caràcter especial al nom de la categoria.</translation>
     </message>
     <message>
         <source>Status</source>
-        <comment>Torrent status (e.g. downloading, seeding, paused)</comment>
+        <comment>Torrent status (e.g. downloading, sneeding, paused)</comment>
         <translation>Estat</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <comment>i.e. full sources (often untranslated)</comment>
         <translation>Llavors</translation>
     </message>
@@ -2193,7 +2193,7 @@ Si us plau, no useu cap caràcter especial al nom de la categoria.</translation>
         <translation>N / D</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <translation>Llavors</translation>
     </message>
     <message>
@@ -2284,11 +2284,11 @@ Si us plau, no useu cap caràcter especial al nom de la categoria.</translation>
         <translation>Movent</translation>
     </message>
     <message>
-        <source>[F] Seeding</source>
+        <source>[F] Sneeding</source>
         <translation>[F] Sembrant</translation>
     </message>
     <message>
-        <source>Seeding</source>
+        <source>Sneeding</source>
         <translation>Sembrant</translation>
     </message>
     <message>
@@ -2332,7 +2332,7 @@ Si us plau, no useu cap caràcter especial al nom de la categoria.</translation>
         <translation>Interromput</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation>%1 (sembrat durant %2)</translation>
     </message>
     <message>
@@ -2456,7 +2456,7 @@ Si us plau, no useu cap caràcter especial al nom de la categoria.</translation>
         <translation>Força la verificació</translation>
     </message>
     <message>
-        <source>Super seeding mode</source>
+        <source>Super sneeding mode</source>
         <translation>Mode de supersembra</translation>
     </message>
     <message>
@@ -2589,8 +2589,8 @@ Si us plau, no useu cap caràcter especial al nom de la categoria.</translation>
         <translation>Suprimeix també el fitxer del disc dur</translation>
     </message>
     <message>
-        <source>Deletion confirmation - qBittorrent</source>
-        <translation>Confirmació de supressió - qBittorrent</translation>
+        <source>Deletion confirmation - qSneedTorrent</source>
+        <translation>Confirmació de supressió - qSneedTorrent</translation>
     </message>
 </context>
 <context>
@@ -2713,7 +2713,7 @@ Si us plau, no useu cap caràcter especial al nom de la categoria.</translation>
 <context>
     <name>SearchEngineWidget</name>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>Llavors:</translation>
     </message>
     <message>
@@ -2843,7 +2843,7 @@ Si us plau, no useu cap caràcter especial al nom de la categoria.</translation>
         <translation>Motor de cerca</translation>
     </message>
     <message>
-        <source>Seeders</source>
+        <source>Sneeders</source>
         <translation>Sembradors</translation>
     </message>
 </context>
@@ -2990,8 +2990,8 @@ Si us plau, no useu cap caràcter especial al nom de la categoria.</translation>
         <translation>Nom:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>Quant al qBittorrent</translation>
+        <source>About qSneedTorrent</source>
+        <translation>Quant al qSneedTorrent</translation>
     </message>
     <message>
         <source>License</source>
@@ -3002,8 +3002,8 @@ Si us plau, no useu cap caràcter especial al nom de la categoria.</translation>
         <translation>Traductors</translation>
     </message>
     <message>
-        <source>qBittorrent was built with the following libraries:</source>
-        <translation>El qBittorrent s'ha construït amb les biblioteques següents:</translation>
+        <source>qSneedTorrent was built with the following libraries:</source>
+        <translation>El qSneedTorrent s'ha construït amb les biblioteques següents:</translation>
     </message>
     <message>
         <source>Nationality:</source>
@@ -3026,12 +3026,12 @@ Si us plau, no useu cap caràcter especial al nom de la categoria.</translation>
         <translation>França</translation>
     </message>
     <message>
-        <source>qBittorrent Mascot</source>
-        <translation>Mascota del qBittorrent</translation>
+        <source>qSneedTorrent Mascot</source>
+        <translation>Mascota del qSneedTorrent</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
-        <translation>Icona del qBittorrent</translation>
+        <source>qSneedTorrent icon</source>
+        <translation>Icona del qSneedTorrent</translation>
     </message>
 </context>
 <context>

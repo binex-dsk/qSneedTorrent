@@ -78,7 +78,7 @@ void FileLogger::changePath(const Path &newPath)
 
     closeLogFile();
 
-    m_path = newPath / Path("qbittorrent.log");
+    m_path = newPath / Path("qsneedtorrent.log");
     m_logFile.setFileName(m_path.data());
 
     Utils::Fs::mkpath(newPath);
@@ -89,7 +89,7 @@ void FileLogger::deleteOld(const int age, const FileLogAgeType ageType)
 {
     const QDateTime date = QDateTime::currentDateTime();
     const QDir dir {m_path.parentPath().data()};
-    const QFileInfoList fileList = dir.entryInfoList(QStringList("qbittorrent.log.bak*")
+    const QFileInfoList fileList = dir.entryInfoList(QStringList("qsneedtorrent.log.bak*")
         , (QDir::Files | QDir::Writable), (QDir::Time | QDir::Reversed));
 
     for (const QFileInfo &file : fileList)

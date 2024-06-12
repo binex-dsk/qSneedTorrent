@@ -42,7 +42,7 @@ private slots:
     void infoAction();
     void propertiesAction();
     void trackersAction();
-    void webseedsAction();
+    void websneedsAction();
     void filesAction();
     void pieceHashesAction();
     void pieceStatesAction();
@@ -81,7 +81,7 @@ private slots:
     void setSavePathAction();
     void setDownloadPathAction();
     void setAutoManagementAction();
-    void setSuperSeedingAction();
+    void setSuperSneedingAction();
     void setForceStartAction();
     void toggleSequentialDownloadAction();
     void toggleFirstLastPiecePrioAction();

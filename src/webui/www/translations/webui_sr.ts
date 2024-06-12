@@ -92,8 +92,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>Изађи из qBittorrent-а</translation>
+        <source>Exit qSneedTorrent</source>
+        <translation>Изађи из qSneedTorrent-а</translation>
     </message>
     <message>
         <source>Only one link per line</source>
@@ -140,8 +140,8 @@
         <translation>Максимални број слотова за слање Торента при лимитирању мора бити већи од 0 или онемогућен.</translation>
     </message>
     <message>
-        <source>Unable to save program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Не могу да сачувам програмска подешавања, qBittorrent је вероватно недоступан.</translation>
+        <source>Unable to save program preferences, qSneedTorrent is probably unreachable.</source>
+        <translation>Не могу да сачувам програмска подешавања, qSneedTorrent је вероватно недоступан.</translation>
     </message>
     <message>
         <source>Unknown</source>
@@ -152,7 +152,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
+        <source>Sneeding time limit must be between 0 and 525600 minutes.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -160,8 +160,8 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Unable to log in, qBittorrent is probably unreachable.</source>
-        <translation>Није могуће улоговати се, qBittorrent је вероватно недоступан.</translation>
+        <source>Unable to log in, qSneedTorrent is probably unreachable.</source>
+        <translation>Није могуће улоговати се, qSneedTorrent је вероватно недоступан.</translation>
     </message>
     <message>
         <source>Invalid Username or Password.</source>
@@ -280,8 +280,8 @@
         <translation>Сачувај</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>qBittorrent клијент није доступан</translation>
+        <source>qSneedTorrent client is not reachable</source>
+        <translation>qSneedTorrent клијент није доступан</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -320,8 +320,8 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>qBittorrent has been shutdown</source>
-        <translation>qBittorrent је искључен</translation>
+        <source>qSneedTorrent has been shutdown</source>
+        <translation>qSneedTorrent је искључен</translation>
     </message>
     <message>
         <source>Open documentation</source>
@@ -463,13 +463,13 @@
         <translation>Општи лимит брзине преузимања</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Да ли сте сигурни да желите да изађете из qBittorrent-а?</translation>
+        <source>Are you sure you want to quit qSneedTorrent?</source>
+        <translation>Да ли сте сигурни да желите да изађете из qSneedTorrent-а?</translation>
     </message>
     <message>
-        <source>[D: %1, U: %2] qBittorrent %3</source>
-        <comment>D = Download; U = Upload; %3 is qBittorrent version</comment>
-        <translation>[Преуз: %1, Отпр: %2] qBittorrent %3</translation>
+        <source>[D: %1, U: %2] qSneedTorrent %3</source>
+        <comment>D = Download; U = Upload; %3 is qSneedTorrent version</comment>
+        <translation>[Преуз: %1, Отпр: %2] qSneedTorrent %3</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1105,7 +1105,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Enable super seeding for torrent</source>
+        <source>Enable super sneeding for torrent</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1129,7 +1129,7 @@
         <translation>Када однос достигне</translation>
     </message>
     <message>
-        <source>When seeding time reaches</source>
+        <source>When sneeding time reaches</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1165,8 +1165,8 @@
         <translation>Уклони торент и његове фајлове</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>qBittorrent Одељак</translation>
+        <source>qSneedTorrent Section</source>
+        <translation>qSneedTorrent Одељак</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -1237,7 +1237,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeding Limits</source>
+        <source>Sneeding Limits</source>
         <translation>Ограничења донирања</translation>
     </message>
     <message>
@@ -1629,8 +1629,8 @@
         <translation>Послато:</translation>
     </message>
     <message>
-        <source>Seeds:</source>
-        <translation>Донори (seeds)</translation>
+        <source>Sneeds:</source>
+        <translation>Донори (sneeds)</translation>
     </message>
     <message>
         <source>Download Speed:</source>
@@ -1757,7 +1757,7 @@
         <translation>Преименуј...</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1897,7 +1897,7 @@
         <translation>Преузима се (0)</translation>
     </message>
     <message>
-        <source>Seeding (0)</source>
+        <source>Sneeding (0)</source>
         <translation>Донира се (0)</translation>
     </message>
     <message>
@@ -1933,7 +1933,7 @@
         <translation>Преузима се (%1)</translation>
     </message>
     <message>
-        <source>Seeding (%1)</source>
+        <source>Sneeding (%1)</source>
         <translation>Донира се (%1)</translation>
     </message>
     <message>
@@ -2015,11 +2015,11 @@
     </message>
     <message>
         <source>Status</source>
-        <comment>Torrent status (e.g. downloading, seeding, paused)</comment>
+        <comment>Torrent status (e.g. downloading, sneeding, paused)</comment>
         <translation>Статус</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <comment>i.e. full sources (often untranslated)</comment>
         <translation>Донори</translation>
     </message>
@@ -2192,7 +2192,7 @@
         <translation>Недоступно</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2283,11 +2283,11 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>[F] Seeding</source>
+        <source>[F] Sneeding</source>
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeding</source>
+        <source>Sneeding</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2331,7 +2331,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2455,8 +2455,8 @@
         <translation>Форсирано провери</translation>
     </message>
     <message>
-        <source>Super seeding mode</source>
-        <translation>Супер seeding (донирајући) мод</translation>
+        <source>Super sneeding mode</source>
+        <translation>Супер sneeding (донирајући) мод</translation>
     </message>
     <message>
         <source>Rename...</source>
@@ -2588,8 +2588,8 @@
         <translation>Такође избриши датотеке на чврстом диску</translation>
     </message>
     <message>
-        <source>Deletion confirmation - qBittorrent</source>
-        <translation>Потврда брисања - qBittorrent</translation>
+        <source>Deletion confirmation - qSneedTorrent</source>
+        <translation>Потврда брисања - qSneedTorrent</translation>
     </message>
 </context>
 <context>
@@ -2712,7 +2712,7 @@
 <context>
     <name>SearchEngineWidget</name>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2842,7 +2842,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeders</source>
+        <source>Sneeders</source>
         <translation type="unfinished" />
     </message>
 </context>
@@ -2989,8 +2989,8 @@
         <translation>Име:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>O qBittorrent-у</translation>
+        <source>About qSneedTorrent</source>
+        <translation>O qSneedTorrent-у</translation>
     </message>
     <message>
         <source>License</source>
@@ -3001,8 +3001,8 @@
         <translation>Преводиоци</translation>
     </message>
     <message>
-        <source>qBittorrent was built with the following libraries:</source>
-        <translation>Ова верзија qBittorrentа је изграђена користећи наведене библиотеке:</translation>
+        <source>qSneedTorrent was built with the following libraries:</source>
+        <translation>Ова верзија qSneedTorrentа је изграђена користећи наведене библиотеке:</translation>
     </message>
     <message>
         <source>Nationality:</source>
@@ -3025,11 +3025,11 @@
         <translation>Француска</translation>
     </message>
     <message>
-        <source>qBittorrent Mascot</source>
+        <source>qSneedTorrent Mascot</source>
         <translation type="unfinished" />
     </message>
     <message>
-        <source>qBittorrent icon</source>
+        <source>qSneedTorrent icon</source>
         <translation type="unfinished" />
     </message>
 </context>

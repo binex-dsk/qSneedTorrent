@@ -248,25 +248,25 @@ QIcon UIThemeManager::getSystrayIcon() const
     {
 #if defined(Q_OS_UNIX)
     case TrayIcon::Style::Normal:
-        return QIcon::fromTheme(QLatin1String("qbittorrent-tray"));
+        return QIcon::fromTheme(QLatin1String("qsneedtorrent-tray"));
     case TrayIcon::Style::MonoDark:
-        return QIcon::fromTheme(QLatin1String("qbittorrent-tray-dark"));
+        return QIcon::fromTheme(QLatin1String("qsneedtorrent-tray-dark"));
     case TrayIcon::Style::MonoLight:
-        return QIcon::fromTheme(QLatin1String("qbittorrent-tray-light"));
+        return QIcon::fromTheme(QLatin1String("qsneedtorrent-tray-light"));
 #else
     case TrayIcon::Style::Normal:
-        return getIcon(QLatin1String("qbittorrent-tray"));
+        return getIcon(QLatin1String("qsneedtorrent-tray"));
     case TrayIcon::Style::MonoDark:
-        return getIcon(QLatin1String("qbittorrent-tray-dark"));
+        return getIcon(QLatin1String("qsneedtorrent-tray-dark"));
     case TrayIcon::Style::MonoLight:
-        return getIcon(QLatin1String("qbittorrent-tray-light"));
+        return getIcon(QLatin1String("qsneedtorrent-tray-light"));
 #endif
     default:
         break;
     }
 
     // As a failsafe in case the enum is invalid
-    return getIcon(QLatin1String("qbittorrent-tray"));
+    return getIcon(QLatin1String("qsneedtorrent-tray"));
 }
 #endif
 

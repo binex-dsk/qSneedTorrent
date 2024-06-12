@@ -28,11 +28,11 @@
 
 'use strict';
 
-if (window.qBittorrent === undefined) {
-    window.qBittorrent = {};
+if (window.qSneedTorrent === undefined) {
+    window.qSneedTorrent = {};
 }
 
-window.qBittorrent.Misc = (function() {
+window.qSneedTorrent.Misc = (function() {
     const exports = function() {
         return {
             friendlyUnit: friendlyUnit,
@@ -216,4 +216,4 @@ window.qBittorrent.Misc = (function() {
     return exports();
 })();
 
-Object.freeze(window.qBittorrent.Misc);
+Object.freeze(window.qSneedTorrent.Misc);

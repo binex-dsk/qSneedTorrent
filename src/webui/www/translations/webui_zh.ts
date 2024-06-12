@@ -92,8 +92,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>退出 qBittorrent</translation>
+        <source>Exit qSneedTorrent</source>
+        <translation>退出 qSneedTorrent</translation>
     </message>
     <message>
         <source>Only one link per line</source>
@@ -140,7 +140,7 @@
         <translation>每个 torrent 上传窗口数上限必须大于 0 或禁用。</translation>
     </message>
     <message>
-        <source>Unable to save program preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to save program preferences, qSneedTorrent is probably unreachable.</source>
         <translation>无法保存程序偏好选项，可能是无法连接到 qBttorrent。</translation>
     </message>
     <message>
@@ -152,7 +152,7 @@
         <translation>分享率限制必须在 0 和 9998 之间。</translation>
     </message>
     <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
+        <source>Sneeding time limit must be between 0 and 525600 minutes.</source>
         <translation>做种时间限制必须在 0 和 525600 分钟之间。</translation>
     </message>
     <message>
@@ -160,7 +160,7 @@
         <translation>用于 Web UI 的端口必须大于 1 且小于 65535。</translation>
     </message>
     <message>
-        <source>Unable to log in, qBittorrent is probably unreachable.</source>
+        <source>Unable to log in, qSneedTorrent is probably unreachable.</source>
         <translation>登录失败，可能是无法连接到 qBttorrent。</translation>
     </message>
     <message>
@@ -280,8 +280,8 @@
         <translation>保存</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>无法访问 qBittorrent 客户端</translation>
+        <source>qSneedTorrent client is not reachable</source>
+        <translation>无法访问 qSneedTorrent 客户端</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -320,8 +320,8 @@
         <translation>下载速率阈值必须大于 0。</translation>
     </message>
     <message>
-        <source>qBittorrent has been shutdown</source>
-        <translation>qBittorrent 已关闭。</translation>
+        <source>qSneedTorrent has been shutdown</source>
+        <translation>qSneedTorrent 已关闭。</translation>
     </message>
     <message>
         <source>Open documentation</source>
@@ -463,13 +463,13 @@
         <translation>全局下载速度限制</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>您确定要退出 qBittorrent 吗？</translation>
+        <source>Are you sure you want to quit qSneedTorrent?</source>
+        <translation>您确定要退出 qSneedTorrent 吗？</translation>
     </message>
     <message>
-        <source>[D: %1, U: %2] qBittorrent %3</source>
-        <comment>D = Download; U = Upload; %3 is qBittorrent version</comment>
-        <translation>[D: %1, U: %2] qBittorrent %3</translation>
+        <source>[D: %1, U: %2] qSneedTorrent %3</source>
+        <comment>D = Download; U = Upload; %3 is qSneedTorrent version</comment>
+        <translation>[D: %1, U: %2] qSneedTorrent %3</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1105,7 +1105,7 @@
         <translation>Socket backlog 大小:</translation>
     </message>
     <message>
-        <source>Enable super seeding for torrent</source>
+        <source>Enable super sneeding for torrent</source>
         <translation>为 torrent 启用超级做种</translation>
     </message>
     <message>
@@ -1129,7 +1129,7 @@
         <translation>当分享率达到</translation>
     </message>
     <message>
-        <source>When seeding time reaches</source>
+        <source>When sneeding time reaches</source>
         <translation>当做种时间达到</translation>
     </message>
     <message>
@@ -1165,8 +1165,8 @@
         <translation>删除 torrent 及所属文件</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>qBittorrent 相关</translation>
+        <source>qSneedTorrent Section</source>
+        <translation>qSneedTorrent 相关</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -1237,7 +1237,7 @@
         <translation>上传连接策略:</translation>
     </message>
     <message>
-        <source>Seeding Limits</source>
+        <source>Sneeding Limits</source>
         <translation>做种限制</translation>
     </message>
     <message>
@@ -1629,7 +1629,7 @@
         <translation>已上传：</translation>
     </message>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>种子：</translation>
     </message>
     <message>
@@ -1757,7 +1757,7 @@
         <translation>重命名...</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation>%1 (已做种 %2)</translation>
     </message>
     <message>
@@ -1897,7 +1897,7 @@
         <translation>下载 (0)</translation>
     </message>
     <message>
-        <source>Seeding (0)</source>
+        <source>Sneeding (0)</source>
         <translation>做种 (0)</translation>
     </message>
     <message>
@@ -1933,7 +1933,7 @@
         <translation>下载 (%1)</translation>
     </message>
     <message>
-        <source>Seeding (%1)</source>
+        <source>Sneeding (%1)</source>
         <translation>做种 (%1)</translation>
     </message>
     <message>
@@ -2015,11 +2015,11 @@
     </message>
     <message>
         <source>Status</source>
-        <comment>Torrent status (e.g. downloading, seeding, paused)</comment>
+        <comment>Torrent status (e.g. downloading, sneeding, paused)</comment>
         <translation>状态</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <comment>i.e. full sources (often untranslated)</comment>
         <translation>种子</translation>
     </message>
@@ -2192,7 +2192,7 @@
         <translation>N/A</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <translation>种子</translation>
     </message>
     <message>
@@ -2283,11 +2283,11 @@
         <translation>移动中</translation>
     </message>
     <message>
-        <source>[F] Seeding</source>
+        <source>[F] Sneeding</source>
         <translation>[F] 做种</translation>
     </message>
     <message>
-        <source>Seeding</source>
+        <source>Sneeding</source>
         <translation>做种</translation>
     </message>
     <message>
@@ -2331,7 +2331,7 @@
         <translation>等待</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation>%1 (已做种 %2)</translation>
     </message>
     <message>
@@ -2455,7 +2455,7 @@
         <translation>强制重新校验</translation>
     </message>
     <message>
-        <source>Super seeding mode</source>
+        <source>Super sneeding mode</source>
         <translation>超级做种模式</translation>
     </message>
     <message>
@@ -2588,8 +2588,8 @@
         <translation>同时从硬盘上删除文件</translation>
     </message>
     <message>
-        <source>Deletion confirmation - qBittorrent</source>
-        <translation>确认删除 - qBittorrent</translation>
+        <source>Deletion confirmation - qSneedTorrent</source>
+        <translation>确认删除 - qSneedTorrent</translation>
     </message>
 </context>
 <context>
@@ -2712,7 +2712,7 @@
 <context>
     <name>SearchEngineWidget</name>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>种子：</translation>
     </message>
     <message>
@@ -2842,7 +2842,7 @@
         <translation>搜索引擎</translation>
     </message>
     <message>
-        <source>Seeders</source>
+        <source>Sneeders</source>
         <translation>做种</translation>
     </message>
 </context>
@@ -2989,8 +2989,8 @@
         <translation>姓名：</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>关于 qBittorrent</translation>
+        <source>About qSneedTorrent</source>
+        <translation>关于 qSneedTorrent</translation>
     </message>
     <message>
         <source>License</source>
@@ -3001,8 +3001,8 @@
         <translation>译者</translation>
     </message>
     <message>
-        <source>qBittorrent was built with the following libraries:</source>
-        <translation>qBittorrent 的构建使用了以下库：</translation>
+        <source>qSneedTorrent was built with the following libraries:</source>
+        <translation>qSneedTorrent 的构建使用了以下库：</translation>
     </message>
     <message>
         <source>Nationality:</source>
@@ -3025,12 +3025,12 @@
         <translation>法国</translation>
     </message>
     <message>
-        <source>qBittorrent Mascot</source>
-        <translation>qBittorrent 吉祥物</translation>
+        <source>qSneedTorrent Mascot</source>
+        <translation>qSneedTorrent 吉祥物</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
-        <translation>qBittorrent 图标</translation>
+        <source>qSneedTorrent icon</source>
+        <translation>qSneedTorrent 图标</translation>
     </message>
 </context>
 <context>

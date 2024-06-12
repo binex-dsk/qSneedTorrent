@@ -1,7 +1,7 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
  * Copyright (C) 2021  Mike Tzou (Chocobo1)
- * Copyright (C) 2010  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2010  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -79,7 +79,7 @@ void ProgramUpdater::checkForUpdates() const
     // Don't change this User-Agent. In case our updater goes haywire,
     // the filehost can identify it and contact us.
     Net::DownloadManager::instance()->download(
-        Net::DownloadRequest(RSS_URL).userAgent("qBittorrent/" QBT_VERSION_2 " ProgramUpdater (www.qbittorrent.org)")
+        Net::DownloadRequest(RSS_URL).userAgent("qSneedTorrent/" QBT_VERSION_2 " ProgramUpdater (www.qsneedtorrent.org)")
         , this, &ProgramUpdater::rssDownloadFinished);
 }
 
@@ -92,12 +92,12 @@ void ProgramUpdater::rssDownloadFinished(const Net::DownloadResult &result)
 {
     if (result.status != Net::DownloadStatus::Success)
     {
-        qDebug() << "Downloading the new qBittorrent updates RSS failed:" << result.errorString;
+        qDebug() << "Downloading the new qSneedTorrent updates RSS failed:" << result.errorString;
         emit updateCheckFinished();
         return;
     }
 
-    qDebug("Finished downloading the new qBittorrent updates RSS");
+    qDebug("Finished downloading the new qSneedTorrent updates RSS");
 
     const auto getStringValue = [](QXmlStreamReader &xml) -> QString
     {

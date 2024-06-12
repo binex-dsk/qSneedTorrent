@@ -92,8 +92,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>Thoát qBittorrent</translation>
+        <source>Exit qSneedTorrent</source>
+        <translation>Thoát qSneedTorrent</translation>
     </message>
     <message>
         <source>Only one link per line</source>
@@ -140,8 +140,8 @@
         <translation>Giới hạn số lượng tối đa các phần tải lên của mỗi torrent phải lớn hơn 0 nếu không sẽ bị vô hiệu hóa.</translation>
     </message>
     <message>
-        <source>Unable to save program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Không thể lưu tùy chọn chương trình, qBittorrent có thể không truy cập được.</translation>
+        <source>Unable to save program preferences, qSneedTorrent is probably unreachable.</source>
+        <translation>Không thể lưu tùy chọn chương trình, qSneedTorrent có thể không truy cập được.</translation>
     </message>
     <message>
         <source>Unknown</source>
@@ -152,7 +152,7 @@
         <translation>Giới hạn tỷ lệ chia sẻ phải từ 0 đến 9998.</translation>
     </message>
     <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
+        <source>Sneeding time limit must be between 0 and 525600 minutes.</source>
         <translation>Giới hạn thời gian chia sẻ phải trong khoảng từ 0 đến 525600 phút.</translation>
     </message>
     <message>
@@ -160,8 +160,8 @@
         <translation>Cổng được sử dụng cho giao diện người dùng Web phải từ 1 đến 65535.</translation>
     </message>
     <message>
-        <source>Unable to log in, qBittorrent is probably unreachable.</source>
-        <translation>Không thể đăng nhập, qBittorrent có thể không truy cập được.</translation>
+        <source>Unable to log in, qSneedTorrent is probably unreachable.</source>
+        <translation>Không thể đăng nhập, qSneedTorrent có thể không truy cập được.</translation>
     </message>
     <message>
         <source>Invalid Username or Password.</source>
@@ -280,8 +280,8 @@
         <translation>Lưu lại</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>Hiện không thể kết nối đến máy trạm của qBittorrent</translation>
+        <source>qSneedTorrent client is not reachable</source>
+        <translation>Hiện không thể kết nối đến máy trạm của qSneedTorrent</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -320,8 +320,8 @@
         <translation>Ngưỡng tỉ lệ tải xuống phải lớn hơn 0.</translation>
     </message>
     <message>
-        <source>qBittorrent has been shutdown</source>
-        <translation>qBittorrent đã bị tắt</translation>
+        <source>qSneedTorrent has been shutdown</source>
+        <translation>qSneedTorrent đã bị tắt</translation>
     </message>
     <message>
         <source>Open documentation</source>
@@ -463,13 +463,13 @@
         <translation>Giới Hạn Tốc Độ Tải Xuống Chung</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Bạn có chắc muốn thoát qBittorrent không?</translation>
+        <source>Are you sure you want to quit qSneedTorrent?</source>
+        <translation>Bạn có chắc muốn thoát qSneedTorrent không?</translation>
     </message>
     <message>
-        <source>[D: %1, U: %2] qBittorrent %3</source>
-        <comment>D = Download; U = Upload; %3 is qBittorrent version</comment>
-        <translation>[D: %1, U: %2] qBittorrent %3</translation>
+        <source>[D: %1, U: %2] qSneedTorrent %3</source>
+        <comment>D = Download; U = Upload; %3 is qSneedTorrent version</comment>
+        <translation>[D: %1, U: %2] qSneedTorrent %3</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1105,7 +1105,7 @@
         <translation>Kích thước tồn đọng socket</translation>
     </message>
     <message>
-        <source>Enable super seeding for torrent</source>
+        <source>Enable super sneeding for torrent</source>
         <translation>Bật siêu chia sẻ cho torrent</translation>
     </message>
     <message>
@@ -1129,7 +1129,7 @@
         <translation>Khi tỷ lệ đạt đến</translation>
     </message>
     <message>
-        <source>When seeding time reaches</source>
+        <source>When sneeding time reaches</source>
         <translation>Khi thời gian chia sẻ đạt đến</translation>
     </message>
     <message>
@@ -1165,8 +1165,8 @@
         <translation>Xóa torrent và các tệp của nó</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>Phần qBittorrent</translation>
+        <source>qSneedTorrent Section</source>
+        <translation>Phần qSneedTorrent</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -1237,7 +1237,7 @@
         <translation>Thuật toán làm nghẽn tải lên:</translation>
     </message>
     <message>
-        <source>Seeding Limits</source>
+        <source>Sneeding Limits</source>
         <translation>Giới hạn chia sẻ</translation>
     </message>
     <message>
@@ -1629,7 +1629,7 @@
         <translation>Đã tải lên:</translation>
     </message>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>Chia sẻ:</translation>
     </message>
     <message>
@@ -1757,7 +1757,7 @@
         <translation>Đổi tên...</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation>%1 (đã chia sẻ cho %2)</translation>
     </message>
     <message>
@@ -1897,7 +1897,7 @@
         <translation>Đang tải về (0)</translation>
     </message>
     <message>
-        <source>Seeding (0)</source>
+        <source>Sneeding (0)</source>
         <translation>Đang chia sẻ (0)</translation>
     </message>
     <message>
@@ -1933,7 +1933,7 @@
         <translation>Đang Tải Xuống (%1)</translation>
     </message>
     <message>
-        <source>Seeding (%1)</source>
+        <source>Sneeding (%1)</source>
         <translation>Đang chia sẻ (%1)</translation>
     </message>
     <message>
@@ -2015,11 +2015,11 @@
     </message>
     <message>
         <source>Status</source>
-        <comment>Torrent status (e.g. downloading, seeding, paused)</comment>
+        <comment>Torrent status (e.g. downloading, sneeding, paused)</comment>
         <translation>Trạng thái</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <comment>i.e. full sources (often untranslated)</comment>
         <translation>Chia sẻ</translation>
     </message>
@@ -2192,7 +2192,7 @@
         <translation>Không</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <translation>Chia sẻ</translation>
     </message>
     <message>
@@ -2283,11 +2283,11 @@
         <translation>Di chuyển</translation>
     </message>
     <message>
-        <source>[F] Seeding</source>
+        <source>[F] Sneeding</source>
         <translation>[F] Đang chia sẻ</translation>
     </message>
     <message>
-        <source>Seeding</source>
+        <source>Sneeding</source>
         <translation>Đang chia sẻ</translation>
     </message>
     <message>
@@ -2331,7 +2331,7 @@
         <translation>Bị đình trệ</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation>%1 (đã chia sẻ cho %2)</translation>
     </message>
     <message>
@@ -2455,7 +2455,7 @@
         <translation>Buộc kiểm tra lại</translation>
     </message>
     <message>
-        <source>Super seeding mode</source>
+        <source>Super sneeding mode</source>
         <translation>Chế độ siêu chia sẻ</translation>
     </message>
     <message>
@@ -2588,8 +2588,8 @@
         <translation>Đồng thời xóa tệp trên ổ đĩa</translation>
     </message>
     <message>
-        <source>Deletion confirmation - qBittorrent</source>
-        <translation>Xác nhận xóa - qBittorrent</translation>
+        <source>Deletion confirmation - qSneedTorrent</source>
+        <translation>Xác nhận xóa - qSneedTorrent</translation>
     </message>
 </context>
 <context>
@@ -2712,7 +2712,7 @@
 <context>
     <name>SearchEngineWidget</name>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>Chia sẻ:</translation>
     </message>
     <message>
@@ -2842,7 +2842,7 @@
         <translation>Máy tìm kiếm</translation>
     </message>
     <message>
-        <source>Seeders</source>
+        <source>Sneeders</source>
         <translation>Máy chia sẻ</translation>
     </message>
 </context>
@@ -2989,8 +2989,8 @@
         <translation>Tên:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>Thông tin qBittorrent</translation>
+        <source>About qSneedTorrent</source>
+        <translation>Thông tin qSneedTorrent</translation>
     </message>
     <message>
         <source>License</source>
@@ -3001,8 +3001,8 @@
         <translation>Người dịch</translation>
     </message>
     <message>
-        <source>qBittorrent was built with the following libraries:</source>
-        <translation>qBittorrent được xây dựng với các thư viện sau:</translation>
+        <source>qSneedTorrent was built with the following libraries:</source>
+        <translation>qSneedTorrent được xây dựng với các thư viện sau:</translation>
     </message>
     <message>
         <source>Nationality:</source>
@@ -3025,12 +3025,12 @@
         <translation>Pháp</translation>
     </message>
     <message>
-        <source>qBittorrent Mascot</source>
-        <translation>Linh Vật qBittorrent</translation>
+        <source>qSneedTorrent Mascot</source>
+        <translation>Linh Vật qSneedTorrent</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
-        <translation>biểu tượng qBittorrent</translation>
+        <source>qSneedTorrent icon</source>
+        <translation>biểu tượng qSneedTorrent</translation>
     </message>
 </context>
 <context>

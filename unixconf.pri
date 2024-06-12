@@ -15,10 +15,10 @@ QMAKE_CXXFLAGS += -Wall -Wextra -Wpedantic -Wformat-security
 
 # Man page
 nogui {
-    man.files = ../doc/qbittorrent-nox.1
+    man.files = ../doc/qsneedtorrent-nox.1
 }
 else {
-    man.files = ../doc/qbittorrent.1
+    man.files = ../doc/qsneedtorrent.1
 }
 
 man.path = $$MANPREFIX/man1
@@ -28,32 +28,32 @@ DIST_PATH = ../dist/unix
 
 # Systemd Service file
 nogui:systemd {
-    systemdService.files = $$DIST_PATH/systemd/qbittorrent-nox@.service
+    systemdService.files = $$DIST_PATH/systemd/qsneedtorrent-nox@.service
     systemdService.path = $$PREFIX/lib/systemd/system
     INSTALLS += systemdService
 }
 
 # Menu Icon
 !nogui {
-    desktopEntry.files = $$DIST_PATH/org.qbittorrent.qBittorrent.desktop
+    desktopEntry.files = $$DIST_PATH/org.qsneedtorrent.qSneedTorrent.desktop
     desktopEntry.path = $$DATADIR/applications
     INSTALLS += desktopEntry
 
-    appdata.files = $$DIST_PATH/org.qbittorrent.qBittorrent.appdata.xml
+    appdata.files = $$DIST_PATH/org.qsneedtorrent.qSneedTorrent.appdata.xml
     appdata.path = $$DATADIR/metainfo
     INSTALLS += appdata
 
     menuicons.files = $$DIST_PATH/menuicons/*
     menuicons.path = $$DATADIR/icons/hicolor
-    statusIconScalable.files = $$PWD/src/icons/qbittorrent-tray.svg \
-                               $$PWD/src/icons/qbittorrent-tray-dark.svg \
-                               $$PWD/src/icons/qbittorrent-tray-light.svg
+    statusIconScalable.files = $$PWD/src/icons/qsneedtorrent-tray.svg \
+                               $$PWD/src/icons/qsneedtorrent-tray-dark.svg \
+                               $$PWD/src/icons/qsneedtorrent-tray-light.svg
     statusIconScalable.path = $$DATADIR/icons/hicolor/scalable/status
     INSTALLS += \
         menuicons \
         statusIconScalable
 
-    pixmap.files = $$DIST_PATH/menuicons/128x128/apps/qbittorrent.png
+    pixmap.files = $$DIST_PATH/menuicons/128x128/apps/qsneedtorrent.png
     pixmap.path = $$DATADIR/pixmaps
     INSTALLS += pixmap
 }

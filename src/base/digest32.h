@@ -126,7 +126,7 @@ bool operator<(const Digest32<N> &left, const Digest32<N> &right)
 }
 
 template <int N>
-uint qHash(const Digest32<N> &key, const uint seed)
+uint qHash(const Digest32<N> &key, const uint sneed)
 {
-    return ::qHash(std::hash<typename Digest32<N>::UnderlyingType>()(key), seed);
+    return ::qHash(std::hash<typename Digest32<N>::UnderlyingType>()(key), sneed);
 }

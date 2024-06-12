@@ -205,7 +205,7 @@ void Utils::Gui::openFolderSelect(const Path &path)
     }
     else
     {
-        // "caja" manager can't pinpoint the file, see: https://github.com/qbittorrent/qBittorrent/issues/5003
+        // "caja" manager can't pinpoint the file, see: https://github.com/qsneedtorrent/qSneedTorrent/issues/5003
         openPath(path.parentPath());
     }
 #else

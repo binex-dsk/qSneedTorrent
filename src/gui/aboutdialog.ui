@@ -12,7 +12,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>About qBittorrent</string>
+   <string>About qSneedTorrent</string>
   </property>
   <layout class="QVBoxLayout" name="aboutDlgLayout">
    <item>
@@ -23,7 +23,7 @@
      <item>
       <widget class="QLabel" name="labelName">
        <property name="text">
-        <string notr="true">qBittorrent</string>
+        <string notr="true">qSneedTorrent</string>
        </property>
       </widget>
      </item>
@@ -97,7 +97,7 @@
           <item row="2" column="1">
            <widget class="QLabel" name="label_19">
             <property name="text">
-             <string notr="true">&lt;a href=&quot;mailto:sledgehammer999@qbittorrent.org&quot;&gt;sledgehammer999@qbittorrent.org&lt;/a&gt;</string>
+             <string notr="true">&lt;a href=&quot;mailto:sledgehammer999@qsneedtorrent.org&quot;&gt;sledgehammer999@qsneedtorrent.org&lt;/a&gt;</string>
             </property>
             <property name="openExternalLinks">
              <bool>true</bool>
@@ -174,7 +174,7 @@
           <item row="2" column="1">
            <widget class="QLabel" name="label_6">
             <property name="text">
-             <string notr="true">&lt;a href=&quot;mailto:chris@qbittorrent.org&quot;&gt;chris@qbittorrent.org&lt;/a&gt;</string>
+             <string notr="true">&lt;a href=&quot;mailto:chris@qsneedtorrent.org&quot;&gt;chris@qsneedtorrent.org&lt;/a&gt;</string>
             </property>
             <property name="openExternalLinks">
              <bool>true</bool>
@@ -325,7 +325,7 @@
        <item>
         <widget class="QLabel" name="label">
          <property name="text">
-          <string>qBittorrent was built with the following libraries:</string>
+          <string>qSneedTorrent was built with the following libraries:</string>
          </property>
         </widget>
        </item>

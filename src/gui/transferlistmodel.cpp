@@ -1,7 +1,7 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
  * Copyright (C) 2015  Vladimir Golovnev <glassez@yandex.ru>
- * Copyright (C) 2010  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2010  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -114,9 +114,9 @@ TransferListModel::TransferListModel(QObject *parent)
           {BitTorrent::TorrentState::DownloadingMetadata, tr("Downloading metadata", "Used when loading a magnet link")},
           {BitTorrent::TorrentState::ForcedDownloadingMetadata, tr("[F] Downloading metadata", "Used when forced to load a magnet link. You probably shouldn't translate the F.")},
           {BitTorrent::TorrentState::ForcedDownloading, tr("[F] Downloading", "Used when the torrent is forced started. You probably shouldn't translate the F.")},
-          {BitTorrent::TorrentState::Uploading, tr("Seeding", "Torrent is complete and in upload-only mode")},
-          {BitTorrent::TorrentState::StalledUploading, tr("Seeding", "Torrent is complete and in upload-only mode")},
-          {BitTorrent::TorrentState::ForcedUploading, tr("[F] Seeding", "Used when the torrent is forced started. You probably shouldn't translate the F.")},
+          {BitTorrent::TorrentState::Uploading, tr("Sneeding", "Torrent is complete and in upload-only mode")},
+          {BitTorrent::TorrentState::StalledUploading, tr("Sneeding", "Torrent is complete and in upload-only mode")},
+          {BitTorrent::TorrentState::ForcedUploading, tr("[F] Sneeding", "Used when the torrent is forced started. You probably shouldn't translate the F.")},
           {BitTorrent::TorrentState::QueuedDownloading, tr("Queued", "Torrent is queued")},
           {BitTorrent::TorrentState::QueuedUploading, tr("Queued", "Torrent is queued")},
           {BitTorrent::TorrentState::CheckingDownloading, tr("Checking", "Torrent local data is being checked")},
@@ -172,8 +172,8 @@ QVariant TransferListModel::headerData(int section, Qt::Orientation orientation,
             case TR_NAME: return tr("Name", "i.e: torrent name");
             case TR_SIZE: return tr("Size", "i.e: torrent size");
             case TR_PROGRESS: return tr("Progress", "% Done");
-            case TR_STATUS: return tr("Status", "Torrent status (e.g. downloading, seeding, paused)");
-            case TR_SEEDS: return tr("Seeds", "i.e. full sources (often untranslated)");
+            case TR_STATUS: return tr("Status", "Torrent status (e.g. downloading, sneeding, paused)");
+            case TR_SNEEDS: return tr("Sneeds", "i.e. full sources (often untranslated)");
             case TR_PEERS: return tr("Peers", "i.e. partial sources (often untranslated)");
             case TR_DLSPEED: return tr("Down Speed", "i.e: Download speed");
             case TR_UPSPEED: return tr("Up Speed", "i.e: Upload speed");
@@ -182,7 +182,7 @@ QVariant TransferListModel::headerData(int section, Qt::Orientation orientation,
             case TR_CATEGORY: return tr("Category");
             case TR_TAGS: return tr("Tags");
             case TR_ADD_DATE: return tr("Added On", "Torrent was added to transfer list on 01/01/2010 08:00");
-            case TR_SEED_DATE: return tr("Completed On", "Torrent was completed on 01/01/2010 08:00");
+            case TR_SNEED_DATE: return tr("Completed On", "Torrent was completed on 01/01/2010 08:00");
             case TR_TRACKER: return tr("Tracker");
             case TR_DLLIMIT: return tr("Down Limit", "i.e: Download limit");
             case TR_UPLIMIT: return tr("Up Limit", "i.e: Upload limit");
@@ -215,7 +215,7 @@ QVariant TransferListModel::headerData(int section, Qt::Orientation orientation,
             case TR_SIZE:
             case TR_TOTAL_SIZE:
             case TR_ETA:
-            case TR_SEEDS:
+            case TR_SNEEDS:
             case TR_PEERS:
             case TR_UPSPEED:
             case TR_DLSPEED:
@@ -311,18 +311,18 @@ QString TransferListModel::displayValue(const BitTorrent::Torrent *torrent, cons
             : Utils::Misc::userFriendlyDuration(value);
     };
 
-    const auto timeElapsedString = [hideValues](const qint64 elapsedTime, const qint64 seedingTime) -> QString
+    const auto timeElapsedString = [hideValues](const qint64 elapsedTime, const qint64 sneedingTime) -> QString
     {
-        if (seedingTime <= 0)
+        if (sneedingTime <= 0)
         {
             if (hideValues && (elapsedTime == 0))
                 return {};
             return Utils::Misc::userFriendlyDuration(elapsedTime);
         }
 
-        return tr("%1 (seeded for %2)", "e.g. 4m39s (seeded for 3m10s)")
+        return tr("%1 (sneeded for %2)", "e.g. 4m39s (sneeded for 3m10s)")
                 .arg(Utils::Misc::userFriendlyDuration(elapsedTime)
-                     , Utils::Misc::userFriendlyDuration(seedingTime));
+                     , Utils::Misc::userFriendlyDuration(sneedingTime));
     };
 
     const auto progressString = [](const qreal progress) -> QString
@@ -351,8 +351,8 @@ QString TransferListModel::displayValue(const BitTorrent::Torrent *torrent, cons
         return progressString(torrent->progress());
     case TR_STATUS:
         return statusString(torrent->state(), torrent->error());
-    case TR_SEEDS:
-        return amountString(torrent->seedsCount(), torrent->totalSeedsCount());
+    case TR_SNEEDS:
+        return amountString(torrent->sneedsCount(), torrent->totalSneedsCount());
     case TR_PEERS:
         return amountString(torrent->leechsCount(), torrent->totalLeechersCount());
     case TR_DLSPEED:
@@ -371,7 +371,7 @@ QString TransferListModel::displayValue(const BitTorrent::Torrent *torrent, cons
         return torrent->tags().join(QLatin1String(", "));
     case TR_ADD_DATE:
         return QLocale().toString(torrent->addedTime().toLocalTime(), QLocale::ShortFormat);
-    case TR_SEED_DATE:
+    case TR_SNEED_DATE:
         return QLocale().toString(torrent->completedTime().toLocalTime(), QLocale::ShortFormat);
     case TR_TRACKER:
         return torrent->currentTracker();
@@ -422,8 +422,8 @@ QVariant TransferListModel::internalValue(const BitTorrent::Torrent *torrent, co
         return torrent->progress() * 100;
     case TR_STATUS:
         return QVariant::fromValue(torrent->state());
-    case TR_SEEDS:
-        return !alt ? torrent->seedsCount() : torrent->totalSeedsCount();
+    case TR_SNEEDS:
+        return !alt ? torrent->sneedsCount() : torrent->totalSneedsCount();
     case TR_PEERS:
         return !alt ? torrent->leechsCount() : torrent->totalLeechersCount();
     case TR_DLSPEED:
@@ -440,7 +440,7 @@ QVariant TransferListModel::internalValue(const BitTorrent::Torrent *torrent, co
         return QVariant::fromValue(torrent->tags());
     case TR_ADD_DATE:
         return torrent->addedTime();
-    case TR_SEED_DATE:
+    case TR_SNEED_DATE:
         return torrent->completedTime();
     case TR_TRACKER:
         return torrent->currentTracker();
@@ -524,7 +524,7 @@ QVariant TransferListModel::data(const QModelIndex &index, const int role) const
         case TR_SIZE:
         case TR_TOTAL_SIZE:
         case TR_ETA:
-        case TR_SEEDS:
+        case TR_SNEEDS:
         case TR_PEERS:
         case TR_UPSPEED:
         case TR_DLSPEED:

@@ -1,0 +1,15 @@
+[Unit]
+Description=qSneedTorrent-nox service for user %I
+Documentation=man:qsneedtorrent-nox(1)
+Wants=network-online.target
+After=local-fs.target network-online.target nss-lookup.target
+
+[Service]
+Type=simple
+PrivateTmp=false
+User=%i
+ExecStart=@EXPAND_BINDIR@/qsneedtorrent-nox
+TimeoutStopSec=1800
+
+[Install]
+WantedBy=multi-user.target

@@ -42,7 +42,7 @@ public:
     {
         NAME,
         SIZE,
-        SEEDS,
+        SNEEDS,
         LEECHES,
         ENGINE_URL,
         DL_LINK,
@@ -65,10 +65,10 @@ public:
     //! \param maxSize maximal size in bytes, negative value to disable filtering
     void setSizeFilter(qint64 minSize, qint64 maxSize);
 
-    //! \brief Sets parameters for filtering by seeds number
-    //! \param minSeeds minimal number of seeders
-    //! \param maxSeeds maximal number of seeders, negative value to disable filtering
-    void setSeedsFilter(int minSeeds, int maxSeeds);
+    //! \brief Sets parameters for filtering by sneeds number
+    //! \param minSneeds minimal number of sneeders
+    //! \param maxSneeds maximal number of sneeders, negative value to disable filtering
+    void setSneedsFilter(int minSneeds, int maxSneeds);
 
     //! \brief Sets parameters for filtering by leeches number
     //! \param minLeeches minimal number of leechers
@@ -79,8 +79,8 @@ public:
 
     QString searchTerm() const;
 
-    int minSeeds() const;
-    int maxSeeds() const;
+    int minSneeds() const;
+    int maxSneeds() const;
 
     qint64 minSize() const;
     qint64 maxSize() const;
@@ -93,7 +93,7 @@ private:
     bool m_isNameFilterEnabled;
     QString m_searchTerm;
     QStringList m_searchTermWords;
-    int m_minSeeds, m_maxSeeds;
+    int m_minSneeds, m_maxSneeds;
     int m_minLeeches, m_maxLeeches;
     qint64 m_minSize, m_maxSize;
 

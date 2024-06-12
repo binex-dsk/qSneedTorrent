@@ -33,7 +33,7 @@
             const path = new URI().getData('path');
             // set text field to current value
             if (path)
-                $('setLocation').value = window.qBittorrent.Misc.escapeHtml(path);
+                $('setLocation').value = window.qSneedTorrent.Misc.escapeHtml(path);
 
             $('setLocation').focus();
             $('setLocationButton').addEvent('click', function(e) {

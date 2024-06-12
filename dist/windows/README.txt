@@ -20,11 +20,11 @@ You will need NSIS and upx to make the installer. You need a unicode version of 
 I tested with NSIS 3.0 (final).
 
 1. Open the options.nsi file in an editor and change line that contains
-   "!define PROG_VERSION "3.0.3"" to the version of qbittorrent you just built.
+   "!define PROG_VERSION "3.0.3"" to the version of qsneedtorrent you just built.
 2. Extract the plugins found in the folder "nsis plugins" into your
    NSIS's unicode Plugin directory(usually C:\Program Files\NSIS\Plugins\x86-unicode).
    Only the *.dll files are needed. Use the unicode version of the dlls.
-3. The script you need to compile is "qbittorrent.nsi". It includes all other necessary scripts.
+3. The script you need to compile is "qsneedtorrent.nsi". It includes all other necessary scripts.
 4. The script expects the following file tree:
 
 The installer script expects the following file tree:
@@ -46,8 +46,8 @@ translations
 installer.nsi
 license.txt
 options.nsi
-qbittorrent.exe
-qbittorrent.nsi
+qsneedtorrent.exe
+qsneedtorrent.nsi
 qt.conf
 translations.nsi
 UAC.nsh
@@ -56,7 +56,7 @@ uninstaller.nsi
 
 5. "license.txt" is a text file that contains the text rendered
    from src\gui\gpl.html or the text contained in COPYING
-6. "qbittorrent.exe" is the compiled binary file.
+6. "qsneedtorrent.exe" is the compiled binary file.
 
 SCRIPT HACKERS:
 

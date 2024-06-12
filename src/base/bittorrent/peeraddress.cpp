@@ -77,7 +77,7 @@ bool BitTorrent::operator==(const BitTorrent::PeerAddress &left, const BitTorren
     return (left.ip == right.ip) && (left.port == right.port);
 }
 
-uint BitTorrent::qHash(const BitTorrent::PeerAddress &addr, const uint seed)
+uint BitTorrent::qHash(const BitTorrent::PeerAddress &addr, const uint sneed)
 {
-    return (::qHash(addr.ip, seed) ^ ::qHash(addr.port));
+    return (::qHash(addr.ip, sneed) ^ ::qHash(addr.port));
 }

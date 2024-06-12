@@ -194,7 +194,7 @@ int TransferListSortModel::compare(const QModelIndex &left, const QModelIndex &r
         return threeWayCompare(leftValue.toInt(), rightValue.toInt());
 
     case TransferListModel::TR_ADD_DATE:
-    case TransferListModel::TR_SEED_DATE:
+    case TransferListModel::TR_SNEED_DATE:
     case TransferListModel::TR_SEEN_COMPLETE_DATE:
         return customCompare(leftValue.toDateTime(), rightValue.toDateTime());
 
@@ -206,9 +206,9 @@ int TransferListSortModel::compare(const QModelIndex &left, const QModelIndex &r
         return customCompare(leftValue.toInt(), rightValue.toInt());
 
     case TransferListModel::TR_PEERS:
-    case TransferListModel::TR_SEEDS:
+    case TransferListModel::TR_SNEEDS:
         {
-            // Active peers/seeds take precedence over total peers/seeds
+            // Active peers/sneeds take precedence over total peers/sneeds
             const auto activeL = leftValue.toInt();
             const auto activeR = rightValue.toInt();
             if (activeL != activeR)

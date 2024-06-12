@@ -1,4 +1,4 @@
-qBittorrent Web UI
+qSneedTorrent Web UI
 ---
 
 ### Browser compatibility

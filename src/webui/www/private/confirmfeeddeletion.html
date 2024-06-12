@@ -31,7 +31,7 @@
                         onComplete: (response) => {
                             ++completionCount;
                             if (completionCount === paths.length) {
-                                window.parent.qBittorrent.Rss.updateRssFeedList();
+                                window.parent.qSneedTorrent.Rss.updateRssFeedList();
                                 window.parent.closeWindows();
                             }
                         }

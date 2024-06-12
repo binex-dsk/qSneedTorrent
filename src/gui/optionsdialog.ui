@@ -389,7 +389,7 @@
                <item>
                 <widget class="QCheckBox" name="checkStartup">
                  <property name="text">
-                  <string>Start qBittorrent on Windows start up</string>
+                  <string>Start qSneedTorrent on Windows start up</string>
                  </property>
                 </widget>
                </item>
@@ -406,10 +406,10 @@
                <item>
                 <widget class="QCheckBox" name="checkStartMinimized">
                  <property name="toolTip">
-                  <string>When qBittorrent is started, the main window will be minimized</string>
+                  <string>When qSneedTorrent is started, the main window will be minimized</string>
                  </property>
                  <property name="text">
-                  <string>Start qBittorrent minimized</string>
+                  <string>Start qSneedTorrent minimized</string>
                  </property>
                 </widget>
                </item>
@@ -439,7 +439,7 @@
                <item>
                 <widget class="QGroupBox" name="checkShowSystray">
                  <property name="title">
-                  <string>Show &amp;qBittorrent in notification area</string>
+                  <string>Show &amp;qSneedTorrent in notification area</string>
                  </property>
                  <property name="checkable">
                   <bool>true</bool>
@@ -451,7 +451,7 @@
                      <string>When minimizing, the main window is closed and must be reopened from the systray icon</string>
                     </property>
                     <property name="text">
-                     <string>Minimize qBittorrent to notification area</string>
+                     <string>Minimize qSneedTorrent to notification area</string>
                     </property>
                     <property name="checked">
                      <bool>false</bool>
@@ -464,7 +464,7 @@
                      <string>The systray icon will still be visible when closing the main window</string>
                     </property>
                     <property name="text">
-                     <string extracomment="The systray icon will still be visible when closing the main window">Close qBittorrent to notification area</string>
+                     <string extracomment="The systray icon will still be visible when closing the main window">Close qSneedTorrent to notification area</string>
                     </property>
                    </widget>
                   </item>
@@ -523,14 +523,14 @@
                   <item>
                    <widget class="QCheckBox" name="checkAssociateTorrents">
                     <property name="text">
-                     <string>Use qBittorrent for .torrent files</string>
+                     <string>Use qSneedTorrent for .torrent files</string>
                     </property>
                    </widget>
                   </item>
                   <item>
                    <widget class="QCheckBox" name="checkAssociateMagnetLinks">
                     <property name="text">
-                     <string>Use qBittorrent for magnet links</string>
+                     <string>Use qSneedTorrent for magnet links</string>
                     </property>
                    </widget>
                   </item>
@@ -561,9 +561,9 @@
                 </widget>
                </item>
                <item>
-                <widget class="QCheckBox" name="checkPreventFromSuspendWhenSeeding">
+                <widget class="QCheckBox" name="checkPreventFromSuspendWhenSneeding">
                  <property name="text">
-                  <string>Inhibit system sleep when torrents are seeding</string>
+                  <string>Inhibit system sleep when torrents are sneeding</string>
                  </property>
                 </widget>
                </item>
@@ -2351,7 +2351,7 @@ Disable encryption: Only connect to peers without protocol encryption</string>
                  <item>
                   <widget class="QLabel" name="label_anonymous">
                    <property name="text">
-                    <string>(&lt;a href=&quot;https://github.com/qbittorrent/qBittorrent/wiki/Anonymous-Mode&quot;&gt;More information&lt;/a&gt;)</string>
+                    <string>(&lt;a href=&quot;https://github.com/qsneedtorrent/qSneedTorrent/wiki/Anonymous-Mode&quot;&gt;More information&lt;/a&gt;)</string>
                    </property>
                    <property name="openExternalLinks">
                     <bool>true</bool>
@@ -2565,13 +2565,13 @@ Disable encryption: Only connect to peers without protocol encryption</string>
              </widget>
             </item>
             <item>
-             <widget class="QGroupBox" name="seedingLimitsBox">
+             <widget class="QGroupBox" name="sneedingLimitsBox">
               <property name="title">
-               <string>Seeding Limits</string>
+               <string>Sneeding Limits</string>
               </property>
               <layout class="QGridLayout" name="gridLayout_91">
                <item row="2" column="1">
-                <widget class="QSpinBox" name="spinMaxSeedingMinutes">
+                <widget class="QSpinBox" name="spinMaxSneedingMinutes">
                  <property name="enabled">
                   <bool>false</bool>
                  </property>
@@ -2587,9 +2587,9 @@ Disable encryption: Only connect to peers without protocol encryption</string>
                 </widget>
                </item>
                <item row="2" column="0">
-                <widget class="QCheckBox" name="checkMaxSeedingMinutes">
+                <widget class="QCheckBox" name="checkMaxSneedingMinutes">
                  <property name="text">
-                  <string>When seeding time reaches</string>
+                  <string>When sneeding time reaches</string>
                  </property>
                 </widget>
                </item>
@@ -2625,7 +2625,7 @@ Disable encryption: Only connect to peers without protocol encryption</string>
                  </item>
                  <item>
                   <property name="text">
-                   <string>Enable super seeding for torrent</string>
+                   <string>Enable super sneeding for torrent</string>
                   </property>
                  </item>
                 </widget>
@@ -3496,7 +3496,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.</string>
   <tabstop>checkAssociateTorrents</tabstop>
   <tabstop>checkAssociateMagnetLinks</tabstop>
   <tabstop>checkPreventFromSuspendWhenDownloading</tabstop>
-  <tabstop>checkPreventFromSuspendWhenSeeding</tabstop>
+  <tabstop>checkPreventFromSuspendWhenSneeding</tabstop>
   <tabstop>checkAdditionDialog</tabstop>
   <tabstop>checkAdditionDialogFront</tabstop>
   <tabstop>checkPreallocateAll</tabstop>
@@ -3658,9 +3658,9 @@ Use ';' to split multiple entries. Can use wildcard '*'.</string>
    </hints>
   </connection>
   <connection>
-   <sender>checkMaxSeedingMinutes</sender>
+   <sender>checkMaxSneedingMinutes</sender>
    <signal>toggled(bool)</signal>
-   <receiver>spinMaxSeedingMinutes</receiver>
+   <receiver>spinMaxSneedingMinutes</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">

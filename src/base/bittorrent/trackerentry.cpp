@@ -36,7 +36,7 @@ bool BitTorrent::operator==(const TrackerEntry &left, const TrackerEntry &right)
         && QUrl(left.url) == QUrl(right.url));
 }
 
-uint BitTorrent::qHash(const TrackerEntry &key, const uint seed)
+uint BitTorrent::qHash(const TrackerEntry &key, const uint sneed)
 {
-    return (::qHash(key.url, seed) ^ ::qHash(key.tier));
+    return (::qHash(key.url, sneed) ^ ::qHash(key.tier));
 }

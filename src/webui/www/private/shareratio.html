@@ -37,20 +37,20 @@
             const origValues = new URI().getData('orig').split('|');
 
             const values = {
-                ratioLimit: window.qBittorrent.Misc.friendlyFloat(origValues[0], 2),
-                seedingTimeLimit: parseInt(origValues[1]),
-                maxRatio: window.qBittorrent.Misc.friendlyFloat(origValues[2], 2),
-                maxSeedingTime: parseInt(origValues[3])
+                ratioLimit: window.qSneedTorrent.Misc.friendlyFloat(origValues[0], 2),
+                sneedingTimeLimit: parseInt(origValues[1]),
+                maxRatio: window.qSneedTorrent.Misc.friendlyFloat(origValues[2], 2),
+                maxSneedingTime: parseInt(origValues[3])
             };
 
             // select default when orig values not passed. using double equals to compare string and int
-            if ((origValues[0] === "") || ((values.ratioLimit == UseGlobalLimit) && (values.seedingTimeLimit == UseGlobalLimit))) {
+            if ((origValues[0] === "") || ((values.ratioLimit == UseGlobalLimit) && (values.sneedingTimeLimit == UseGlobalLimit))) {
                 // use default option
                 setSelectedRadioValue('shareLimit', 'default');
             }
-            else if ((values.maxRatio == NoLimit) && (values.maxSeedingTime == NoLimit)) {
+            else if ((values.maxRatio == NoLimit) && (values.maxSneedingTime == NoLimit)) {
                 setSelectedRadioValue('shareLimit', 'none');
-                // TODO set input boxes to *global* max ratio and seeding time
+                // TODO set input boxes to *global* max ratio and sneeding time
             }
             else {
                 setSelectedRadioValue('shareLimit', 'custom');
@@ -58,9 +58,9 @@
                     $('setRatio').set('checked', true);
                     $('ratio').set('value', values.ratioLimit);
                 }
-                if (values.seedingTimeLimit >= 0) {
+                if (values.sneedingTimeLimit >= 0) {
                     $('setMinutes').set('checked', true);
-                    $('minutes').set('value', values.seedingTimeLimit);
+                    $('minutes').set('value', values.sneedingTimeLimit);
                 }
             }
 
@@ -76,17 +76,17 @@
 
                 const shareLimit = getSelectedRadioValue('shareLimit');
                 let ratioLimitValue = 0.00;
-                let seedingTimeLimitValue = 0;
+                let sneedingTimeLimitValue = 0;
 
                 if (shareLimit === 'default') {
-                    ratioLimitValue = seedingTimeLimitValue = UseGlobalLimit;
+                    ratioLimitValue = sneedingTimeLimitValue = UseGlobalLimit;
                 }
                 else if (shareLimit === 'none') {
-                    ratioLimitValue = seedingTimeLimitValue = NoLimit;
+                    ratioLimitValue = sneedingTimeLimitValue = NoLimit;
                 }
                 else if (shareLimit === 'custom') {
                     ratioLimitValue = $('setRatio').get('checked') ? $('ratio').get('value') : -1;
-                    seedingTimeLimitValue = $('setMinutes').get('checked') ? $('minutes').get('value') : -1;
+                    sneedingTimeLimitValue = $('setMinutes').get('checked') ? $('minutes').get('value') : -1;
                 }
                 else {
                     return false;
@@ -98,7 +98,7 @@
                     data: {
                         hashes: hashesList.join('|'),
                         ratioLimit: ratioLimitValue,
-                        seedingTimeLimit: seedingTimeLimitValue
+                        sneedingTimeLimit: sneedingTimeLimitValue
                     },
                     onComplete: function() {
                         window.parent.closeWindows();

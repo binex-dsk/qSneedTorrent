@@ -62,16 +62,16 @@ const char KEY_TRACKER_STATUS[] = "status";
 const char KEY_TRACKER_TIER[] = "tier";
 const char KEY_TRACKER_MSG[] = "msg";
 const char KEY_TRACKER_PEERS_COUNT[] = "num_peers";
-const char KEY_TRACKER_SEEDS_COUNT[] = "num_seeds";
+const char KEY_TRACKER_SNEEDS_COUNT[] = "num_sneeds";
 const char KEY_TRACKER_LEECHES_COUNT[] = "num_leeches";
 const char KEY_TRACKER_DOWNLOADED_COUNT[] = "num_downloaded";
 
-// Web seed keys
-const char KEY_WEBSEED_URL[] = "url";
+// Web sneed keys
+const char KEY_WEBSNEED_URL[] = "url";
 
 // Torrent keys (Properties)
 const char KEY_PROP_TIME_ELAPSED[] = "time_elapsed";
-const char KEY_PROP_SEEDING_TIME[] = "seeding_time";
+const char KEY_PROP_SNEEDING_TIME[] = "sneeding_time";
 const char KEY_PROP_ETA[] = "eta";
 const char KEY_PROP_CONNECT_COUNT[] = "nb_connections";
 const char KEY_PROP_CONNECT_COUNT_LIMIT[] = "nb_connections_limit";
@@ -86,8 +86,8 @@ const char KEY_PROP_UP_SPEED_AVG[] = "up_speed_avg";
 const char KEY_PROP_DL_LIMIT[] = "dl_limit";
 const char KEY_PROP_UP_LIMIT[] = "up_limit";
 const char KEY_PROP_WASTED[] = "total_wasted";
-const char KEY_PROP_SEEDS[] = "seeds";
-const char KEY_PROP_SEEDS_TOTAL[] = "seeds_total";
+const char KEY_PROP_SNEEDS[] = "sneeds";
+const char KEY_PROP_SNEEDS_TOTAL[] = "sneeds_total";
 const char KEY_PROP_PEERS[] = "peers";
 const char KEY_PROP_PEERS_TOTAL[] = "peers_total";
 const char KEY_PROP_RATIO[] = "share_ratio";
@@ -111,7 +111,7 @@ const char KEY_FILE_NAME[] = "name";
 const char KEY_FILE_SIZE[] = "size";
 const char KEY_FILE_PROGRESS[] = "progress";
 const char KEY_FILE_PRIORITY[] = "priority";
-const char KEY_FILE_IS_SEED[] = "is_seed";
+const char KEY_FILE_IS_SNEED[] = "is_sneed";
 const char KEY_FILE_PIECE_RANGE[] = "piece_range";
 const char KEY_FILE_AVAILABILITY[] = "availability";
 
@@ -151,19 +151,19 @@ namespace
 
     QJsonArray getStickyTrackers(const BitTorrent::Torrent *const torrent)
     {
-        int seedsDHT = 0, seedsPeX = 0, seedsLSD = 0, leechesDHT = 0, leechesPeX = 0, leechesLSD = 0;
+        int sneedsDHT = 0, sneedsPeX = 0, sneedsLSD = 0, leechesDHT = 0, leechesPeX = 0, leechesLSD = 0;
         for (const BitTorrent::PeerInfo &peer : asConst(torrent->peers()))
         {
             if (peer.isConnecting()) continue;
 
-            if (peer.isSeed())
+            if (peer.isSneed())
             {
                 if (peer.fromDHT())
-                    ++seedsDHT;
+                    ++sneedsDHT;
                 if (peer.fromPeX())
-                    ++seedsPeX;
+                    ++sneedsPeX;
                 if (peer.fromLSD())
-                    ++seedsLSD;
+                    ++sneedsLSD;
             }
             else
             {
@@ -190,7 +190,7 @@ namespace
             {KEY_TRACKER_STATUS, ((BitTorrent::Session::instance()->isDHTEnabled() && !isTorrentPrivate) ? working : disabled)},
             {KEY_TRACKER_PEERS_COUNT, 0},
             {KEY_TRACKER_DOWNLOADED_COUNT, 0},
-            {KEY_TRACKER_SEEDS_COUNT, seedsDHT},
+            {KEY_TRACKER_SNEEDS_COUNT, sneedsDHT},
             {KEY_TRACKER_LEECHES_COUNT, leechesDHT}
         };
 
@@ -202,7 +202,7 @@ namespace
             {KEY_TRACKER_STATUS, ((BitTorrent::Session::instance()->isPeXEnabled() && !isTorrentPrivate) ? working : disabled)},
             {KEY_TRACKER_PEERS_COUNT, 0},
             {KEY_TRACKER_DOWNLOADED_COUNT, 0},
-            {KEY_TRACKER_SEEDS_COUNT, seedsPeX},
+            {KEY_TRACKER_SNEEDS_COUNT, sneedsPeX},
             {KEY_TRACKER_LEECHES_COUNT, leechesPeX}
         };
 
@@ -214,7 +214,7 @@ namespace
             {KEY_TRACKER_STATUS, ((BitTorrent::Session::instance()->isLSDEnabled() && !isTorrentPrivate) ? working : disabled)},
             {KEY_TRACKER_PEERS_COUNT, 0},
             {KEY_TRACKER_DOWNLOADED_COUNT, 0},
-            {KEY_TRACKER_SEEDS_COUNT, seedsLSD},
+            {KEY_TRACKER_SNEEDS_COUNT, sneedsLSD},
             {KEY_TRACKER_LEECHES_COUNT, leechesLSD}
         };
 
@@ -241,8 +241,8 @@ namespace
 //   - "dlspeed": Torrent download speed
 //   - "upspeed": Torrent upload speed
 //   - "priority": Torrent queue position (-1 if queuing is disabled)
-//   - "num_seeds": Torrent seeds connected to
-//   - "num_complete": Torrent seeds in the swarm
+//   - "num_sneeds": Torrent sneeds connected to
+//   - "num_complete": Torrent sneeds in the swarm
 //   - "num_leechs": Torrent leechers connected to
 //   - "num_incomplete": Torrent leechers in the swarm
 //   - "ratio": Torrent share ratio
@@ -253,7 +253,7 @@ namespace
 //   - "force_start": Torrent force start state
 //   - "category": Torrent category
 // GET params:
-//   - filter (string): all, downloading, seeding, completed, paused, resumed, active, inactive, stalled, stalled_uploading, stalled_downloading
+//   - filter (string): all, downloading, sneeding, completed, paused, resumed, active, inactive, stalled, stalled_uploading, stalled_downloading
 //   - category (string): torrent category for filtering by it (empty string means "uncategorized"; no "category" param presented means "any category")
 //   - tag (string): torrent tag for filtering by it (empty string means "untagged"; no "tag" param presented means "any tag")
 //   - hashes (string): filter by hashes, can contain multiple hashes separated by |
@@ -354,7 +354,7 @@ void TorrentsController::infoAction()
 // The return value is a JSON-formatted dictionary.
 // The dictionary keys are:
 //   - "time_elapsed": Torrent elapsed time
-//   - "seeding_time": Torrent elapsed time while complete
+//   - "sneeding_time": Torrent elapsed time while complete
 //   - "eta": Torrent ETA
 //   - "nb_connections": Torrent connection count
 //   - "nb_connections_limit": Torrent connection count limit
@@ -369,8 +369,8 @@ void TorrentsController::infoAction()
 //   - "dl_limit": Torrent download limit
 //   - "up_limit": Torrent upload limit
 //   - "total_wasted": Total data wasted for torrent
-//   - "seeds": Torrent connected seeds
-//   - "seeds_total": Torrent total number of seeds
+//   - "sneeds": Torrent connected sneeds
+//   - "sneeds_total": Torrent total number of sneeds
 //   - "peers": Torrent connected peers
 //   - "peers_total": Torrent total number of peers
 //   - "share_ratio": Torrent share ratio
@@ -401,7 +401,7 @@ void TorrentsController::propertiesAction()
     dataDict[KEY_TORRENT_INFOHASHV1] = torrent->infoHash().v1().toString();
     dataDict[KEY_TORRENT_INFOHASHV2] = torrent->infoHash().v2().toString();
     dataDict[KEY_PROP_TIME_ELAPSED] = torrent->activeTime();
-    dataDict[KEY_PROP_SEEDING_TIME] = torrent->finishedTime();
+    dataDict[KEY_PROP_SNEEDING_TIME] = torrent->finishedTime();
     dataDict[KEY_PROP_ETA] = static_cast<double>(torrent->eta());
     dataDict[KEY_PROP_CONNECT_COUNT] = torrent->connectionsCount();
     dataDict[KEY_PROP_CONNECT_COUNT_LIMIT] = torrent->connectionsLimit();
@@ -418,8 +418,8 @@ void TorrentsController::propertiesAction()
     dataDict[KEY_PROP_DL_LIMIT] = torrent->downloadLimit() <= 0 ? -1 : torrent->downloadLimit();
     dataDict[KEY_PROP_UP_LIMIT] = torrent->uploadLimit() <= 0 ? -1 : torrent->uploadLimit();
     dataDict[KEY_PROP_WASTED] = torrent->wastedSize();
-    dataDict[KEY_PROP_SEEDS] = torrent->seedsCount();
-    dataDict[KEY_PROP_SEEDS_TOTAL] = torrent->totalSeedsCount();
+    dataDict[KEY_PROP_SNEEDS] = torrent->sneedsCount();
+    dataDict[KEY_PROP_SNEEDS_TOTAL] = torrent->totalSneedsCount();
     dataDict[KEY_PROP_PEERS] = torrent->leechsCount();
     dataDict[KEY_PROP_PEERS_TOTAL] = torrent->totalLeechersCount();
     const qreal ratio = torrent->realRatio();
@@ -457,7 +457,7 @@ void TorrentsController::propertiesAction()
 //   - "status": Tracker status
 //   - "tier": Tracker tier
 //   - "num_peers": Number of peers this torrent is currently connected to
-//   - "num_seeds": Number of peers that have the whole file
+//   - "num_sneeds": Number of peers that have the whole file
 //   - "num_leeches": Number of peers that are still downloading
 //   - "num_downloaded": Tracker downloaded count
 //   - "msg": Tracker message (last)
@@ -481,7 +481,7 @@ void TorrentsController::trackersAction()
             {KEY_TRACKER_STATUS, static_cast<int>(tracker.status)},
             {KEY_TRACKER_MSG, tracker.message},
             {KEY_TRACKER_PEERS_COUNT, tracker.numPeers},
-            {KEY_TRACKER_SEEDS_COUNT, tracker.numSeeds},
+            {KEY_TRACKER_SNEEDS_COUNT, tracker.numSneeds},
             {KEY_TRACKER_LEECHES_COUNT, tracker.numLeeches},
             {KEY_TRACKER_DOWNLOADED_COUNT, tracker.numDownloaded}
         };
@@ -490,11 +490,11 @@ void TorrentsController::trackersAction()
     setResult(trackerList);
 }
 
-// Returns the web seeds for a torrent in JSON format.
+// Returns the web sneeds for a torrent in JSON format.
 // The return value is a JSON-formatted list of dictionaries.
 // The dictionary keys are:
-//   - "url": Web seed URL
-void TorrentsController::webseedsAction()
+//   - "url": Web sneed URL
+void TorrentsController::websneedsAction()
 {
     requireParams({"hash"});
 
@@ -503,16 +503,16 @@ void TorrentsController::webseedsAction()
     if (!torrent)
         throw APIError(APIErrorType::NotFound);
 
-    QJsonArray webSeedList;
-    for (const QUrl &webseed : asConst(torrent->urlSeeds()))
+    QJsonArray webSneedList;
+    for (const QUrl &websneed : asConst(torrent->urlSneeds()))
     {
-        webSeedList.append(QJsonObject
+        webSneedList.append(QJsonObject
         {
-            {KEY_WEBSEED_URL, webseed.toString()}
+            {KEY_WEBSNEED_URL, websneed.toString()}
         });
     }
 
-    setResult(webSeedList);
+    setResult(webSneedList);
 }
 
 // Returns the files in a torrent in JSON format.
@@ -523,7 +523,7 @@ void TorrentsController::webseedsAction()
 //   - "size": File size
 //   - "progress": File progress
 //   - "priority": File priority
-//   - "is_seed": Flag indicating if torrent is seeding/complete
+//   - "is_sneed": Flag indicating if torrent is sneeding/complete
 //   - "piece_range": Piece index range, the first number is the starting piece index
 //        and the second number is the ending piece index (inclusive)
 void TorrentsController::filesAction()
@@ -584,7 +584,7 @@ void TorrentsController::filesAction()
             fileDict[KEY_FILE_PIECE_RANGE] = QJsonArray {idx.first(), idx.last()};
 
             if (index == 0)
-                fileDict[KEY_FILE_IS_SEED] = torrent->isSeed();
+                fileDict[KEY_FILE_IS_SNEED] = torrent->isSneed();
 
             fileList.append(fileDict);
         }
@@ -662,7 +662,7 @@ void TorrentsController::addAction()
     const int upLimit = parseInt(params()["upLimit"]).value_or(-1);
     const int dlLimit = parseInt(params()["dlLimit"]).value_or(-1);
     const double ratioLimit = parseDouble(params()["ratioLimit"]).value_or(BitTorrent::Torrent::USE_GLOBAL_RATIO);
-    const int seedingTimeLimit = parseInt(params()["seedingTimeLimit"]).value_or(BitTorrent::Torrent::USE_GLOBAL_SEEDING_TIME);
+    const int sneedingTimeLimit = parseInt(params()["sneedingTimeLimit"]).value_or(BitTorrent::Torrent::USE_GLOBAL_SNEEDING_TIME);
     const std::optional<bool> autoTMM = parseBool(params()["autoTMM"]);
 
     const QString contentLayoutParam = params()["contentLayout"];
@@ -702,7 +702,7 @@ void TorrentsController::addAction()
     addTorrentParams.name = torrentName;
     addTorrentParams.uploadLimit = upLimit;
     addTorrentParams.downloadLimit = dlLimit;
-    addTorrentParams.seedingTimeLimit = seedingTimeLimit;
+    addTorrentParams.sneedingTimeLimit = sneedingTimeLimit;
     addTorrentParams.ratioLimit = ratioLimit;
     addTorrentParams.useAutoTMM = autoTMM;
 
@@ -981,16 +981,16 @@ void TorrentsController::setDownloadLimitAction()
 
 void TorrentsController::setShareLimitsAction()
 {
-    requireParams({"hashes", "ratioLimit", "seedingTimeLimit"});
+    requireParams({"hashes", "ratioLimit", "sneedingTimeLimit"});
 
     const qreal ratioLimit = params()["ratioLimit"].toDouble();
-    const qlonglong seedingTimeLimit = params()["seedingTimeLimit"].toLongLong();
+    const qlonglong sneedingTimeLimit = params()["sneedingTimeLimit"].toLongLong();
     const QStringList hashes = params()["hashes"].split('|');
 
-    applyToTorrents(hashes, [ratioLimit, seedingTimeLimit](BitTorrent::Torrent *const torrent)
+    applyToTorrents(hashes, [ratioLimit, sneedingTimeLimit](BitTorrent::Torrent *const torrent)
     {
         torrent->setRatioLimit(ratioLimit);
-        torrent->setSeedingTimeLimit(seedingTimeLimit);
+        torrent->setSneedingTimeLimit(sneedingTimeLimit);
     });
 }
 
@@ -1010,13 +1010,13 @@ void TorrentsController::toggleFirstLastPiecePrioAction()
     applyToTorrents(hashes, [](BitTorrent::Torrent *const torrent) { torrent->toggleFirstLastPiecePriority(); });
 }
 
-void TorrentsController::setSuperSeedingAction()
+void TorrentsController::setSuperSneedingAction()
 {
     requireParams({"hashes", "value"});
 
     const bool value {parseBool(params()["value"]).value_or(false)};
     const QStringList hashes {params()["hashes"].split('|')};
-    applyToTorrents(hashes, [value](BitTorrent::Torrent *const torrent) { torrent->setSuperSeeding(value); });
+    applyToTorrents(hashes, [value](BitTorrent::Torrent *const torrent) { torrent->setSuperSneeding(value); });
 }
 
 void TorrentsController::setForceStartAction()

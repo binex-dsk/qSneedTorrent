@@ -1,6 +1,6 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
- * Copyright (C) 2006  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2006  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -102,7 +102,7 @@ PropertiesWidget::PropertiesWidget(QWidget *parent)
     connect(m_ui->selectAllButton, &QPushButton::clicked, m_propListModel, &TorrentContentFilterModel::selectAll);
     connect(m_ui->selectNoneButton, &QPushButton::clicked, m_propListModel, &TorrentContentFilterModel::selectNone);
     connect(m_propListModel, &TorrentContentFilterModel::filteredFilesChanged, this, &PropertiesWidget::filteredFilesChanged);
-    connect(m_ui->listWebSeeds, &QWidget::customContextMenuRequested, this, &PropertiesWidget::displayWebSeedListMenu);
+    connect(m_ui->listWebSneeds, &QWidget::customContextMenuRequested, this, &PropertiesWidget::displayWebSneedListMenu);
     connect(m_propListDelegate, &PropListDelegate::filteredFilesChanged, this, &PropertiesWidget::filteredFilesChanged);
     connect(m_ui->stackedProperties, &QStackedWidget::currentChanged, this, &PropertiesWidget::loadDynamicData);
     connect(BitTorrent::Session::instance(), &BitTorrent::Session::torrentSavePathChanged, this, &PropertiesWidget::updateSavePath);
@@ -154,11 +154,11 @@ PropertiesWidget::PropertiesWidget(QWidget *parent)
     connect(m_tabBar, &PropTabBar::visibilityToggled, this, &PropertiesWidget::setVisibility);
     connect(m_tabBar, &PropTabBar::visibilityToggled, this, &PropertiesWidget::saveSettings);
 
-    const auto *editWebSeedsHotkey = new QShortcut(Qt::Key_F2, m_ui->listWebSeeds, nullptr, nullptr, Qt::WidgetShortcut);
-    connect(editWebSeedsHotkey, &QShortcut::activated, this, &PropertiesWidget::editWebSeed);
-    const auto *deleteWebSeedsHotkey = new QShortcut(QKeySequence::Delete, m_ui->listWebSeeds, nullptr, nullptr, Qt::WidgetShortcut);
-    connect(deleteWebSeedsHotkey, &QShortcut::activated, this, &PropertiesWidget::deleteSelectedUrlSeeds);
-    connect(m_ui->listWebSeeds, &QListWidget::doubleClicked, this, &PropertiesWidget::editWebSeed);
+    const auto *editWebSneedsHotkey = new QShortcut(Qt::Key_F2, m_ui->listWebSneeds, nullptr, nullptr, Qt::WidgetShortcut);
+    connect(editWebSneedsHotkey, &QShortcut::activated, this, &PropertiesWidget::editWebSneed);
+    const auto *deleteWebSneedsHotkey = new QShortcut(QKeySequence::Delete, m_ui->listWebSneeds, nullptr, nullptr, Qt::WidgetShortcut);
+    connect(deleteWebSneedsHotkey, &QShortcut::activated, this, &PropertiesWidget::deleteSelectedUrlSneeds);
+    connect(m_ui->listWebSneeds, &QListWidget::doubleClicked, this, &PropertiesWidget::editWebSneed);
 
     const auto *renameFileHotkey = new QShortcut(Qt::Key_F2, m_ui->filesList, nullptr, nullptr, Qt::WidgetShortcut);
     connect(renameFileHotkey, &QShortcut::activated, this, [this]() { m_ui->filesList->renameSelectedFile(*m_torrent); });
@@ -291,9 +291,9 @@ void PropertiesWidget::clear()
     m_ui->labelConnectionsVal->clear();
     m_ui->labelReannounceInVal->clear();
     m_ui->labelShareRatioVal->clear();
-    m_ui->listWebSeeds->clear();
+    m_ui->listWebSneeds->clear();
     m_ui->labelETAVal->clear();
-    m_ui->labelSeedsVal->clear();
+    m_ui->labelSneedsVal->clear();
     m_ui->labelPeersVal->clear();
     m_ui->labelDlSpeedVal->clear();
     m_ui->labelUpSpeedVal->clear();
@@ -372,8 +372,8 @@ void PropertiesWidget::loadTorrentInfos(BitTorrent::Torrent *const torrent)
         // Comment
         m_ui->labelCommentVal->setText(Utils::Misc::parseHtmlLinks(m_torrent->comment().toHtmlEscaped()));
 
-        // URL seeds
-        loadUrlSeeds();
+        // URL sneeds
+        loadUrlSneeds();
 
         m_ui->labelCreatedByVal->setText(m_torrent->creator());
     }
@@ -450,8 +450,8 @@ void PropertiesWidget::loadDynamicData()
             m_ui->labelDlLimitVal->setText(m_torrent->downloadLimit() <= 0 ? QString::fromUtf8(C_INFINITY) : Utils::Misc::friendlyUnit(m_torrent->downloadLimit(), true));
 
             QString elapsedString;
-            if (m_torrent->isSeed())
-                elapsedString = tr("%1 (seeded for %2)", "e.g. 4m39s (seeded for 3m10s)")
+            if (m_torrent->isSneed())
+                elapsedString = tr("%1 (sneeded for %2)", "e.g. 4m39s (sneeded for 3m10s)")
                     .arg(Utils::Misc::userFriendlyDuration(m_torrent->activeTime())
                         , Utils::Misc::userFriendlyDuration(m_torrent->finishedTime()));
             else
@@ -471,9 +471,9 @@ void PropertiesWidget::loadDynamicData()
             const qreal ratio = m_torrent->realRatio();
             m_ui->labelShareRatioVal->setText(ratio > BitTorrent::Torrent::MAX_RATIO ? QString::fromUtf8(C_INFINITY) : Utils::String::fromDouble(ratio, 2));
 
-            m_ui->labelSeedsVal->setText(tr("%1 (%2 total)", "%1 and %2 are numbers, e.g. 3 (10 total)")
-                .arg(QString::number(m_torrent->seedsCount())
-                    , QString::number(m_torrent->totalSeedsCount())));
+            m_ui->labelSneedsVal->setText(tr("%1 (%2 total)", "%1 and %2 are numbers, e.g. 3 (10 total)")
+                .arg(QString::number(m_torrent->sneedsCount())
+                    , QString::number(m_torrent->totalSneedsCount())));
 
             m_ui->labelPeersVal->setText(tr("%1 (%2 total)", "%1 and %2 are numbers, e.g. 3 (10 total)")
                 .arg(QString::number(m_torrent->leechsCount())
@@ -499,7 +499,7 @@ void PropertiesWidget::loadDynamicData()
             {
                 m_ui->labelTotalPiecesVal->setText(tr("%1 x %2 (have %3)", "(torrent pieces) eg 152 x 4MB (have 25)").arg(m_torrent->piecesCount()).arg(Utils::Misc::friendlyUnit(m_torrent->pieceLength())).arg(m_torrent->piecesHave()));
 
-                if (!m_torrent->isSeed() && !m_torrent->isPaused() && !m_torrent->isQueued() && !m_torrent->isChecking())
+                if (!m_torrent->isSneed() && !m_torrent->isPaused() && !m_torrent->isQueued() && !m_torrent->isChecking())
                 {
                     // Pieces availability
                     showPiecesAvailability(true);
@@ -577,19 +577,19 @@ void PropertiesWidget::loadDynamicData()
     }
 }
 
-void PropertiesWidget::loadUrlSeeds()
+void PropertiesWidget::loadUrlSneeds()
 {
     if (!m_torrent)
         return;
 
-    m_ui->listWebSeeds->clear();
-    qDebug("Loading URL seeds");
-    const QVector<QUrl> hcSeeds = m_torrent->urlSeeds();
-    // Add url seeds
-    for (const QUrl &hcSeed : hcSeeds)
+    m_ui->listWebSneeds->clear();
+    qDebug("Loading URL sneeds");
+    const QVector<QUrl> hcSneeds = m_torrent->urlSneeds();
+    // Add url sneeds
+    for (const QUrl &hcSneed : hcSneeds)
     {
-        qDebug("Loading URL seed: %s", qUtf8Printable(hcSeed.toString()));
-        new QListWidgetItem(hcSeed.toString(), m_ui->listWebSeeds);
+        qDebug("Loading URL sneed: %s", qUtf8Printable(hcSneed.toString()));
+        new QListWidgetItem(hcSneed.toString(), m_ui->listWebSneeds);
     }
 }
 
@@ -655,7 +655,7 @@ void PropertiesWidget::displayFilesListMenu()
         menu->addSeparator();
     }
 
-    if (!m_torrent->isSeed())
+    if (!m_torrent->isSneed())
     {
         const auto applyPriorities = [this](const BitTorrent::DownloadPriority prio)
         {
@@ -739,26 +739,26 @@ void PropertiesWidget::displayFilesListMenu()
     menu->popup(QCursor::pos());
 }
 
-void PropertiesWidget::displayWebSeedListMenu()
+void PropertiesWidget::displayWebSneedListMenu()
 {
     if (!m_torrent) return;
 
-    const QModelIndexList rows = m_ui->listWebSeeds->selectionModel()->selectedRows();
+    const QModelIndexList rows = m_ui->listWebSneeds->selectionModel()->selectedRows();
 
     QMenu *menu = new QMenu(this);
     menu->setAttribute(Qt::WA_DeleteOnClose);
 
-    menu->addAction(UIThemeManager::instance()->getIcon("list-add"), tr("New Web seed"), this, &PropertiesWidget::askWebSeed);
+    menu->addAction(UIThemeManager::instance()->getIcon("list-add"), tr("New Web sneed"), this, &PropertiesWidget::askWebSneed);
 
     if (!rows.isEmpty())
     {
-        menu->addAction(UIThemeManager::instance()->getIcon("list-remove"), tr("Remove Web seed")
-            , this, &PropertiesWidget::deleteSelectedUrlSeeds);
+        menu->addAction(UIThemeManager::instance()->getIcon("list-remove"), tr("Remove Web sneed")
+            , this, &PropertiesWidget::deleteSelectedUrlSneeds);
         menu->addSeparator();
-        menu->addAction(UIThemeManager::instance()->getIcon("edit-copy"), tr("Copy Web seed URL")
-            , this, &PropertiesWidget::copySelectedWebSeedsToClipboard);
-        menu->addAction(UIThemeManager::instance()->getIcon("edit-rename"), tr("Edit Web seed URL")
-            , this, &PropertiesWidget::editWebSeed);
+        menu->addAction(UIThemeManager::instance()->getIcon("edit-copy"), tr("Copy Web sneed URL")
+            , this, &PropertiesWidget::copySelectedWebSneedsToClipboard);
+        menu->addAction(UIThemeManager::instance()->getIcon("edit-rename"), tr("Edit Web sneed URL")
+            , this, &PropertiesWidget::editWebSneed);
     }
 
     menu->popup(QCursor::pos());
@@ -809,47 +809,47 @@ void PropertiesWidget::configure()
     }
 }
 
-void PropertiesWidget::askWebSeed()
+void PropertiesWidget::askWebSneed()
 {
     bool ok = false;
-    // Ask user for a new url seed
-    const QString urlSeed = AutoExpandableDialog::getText(this, tr("New URL seed", "New HTTP source"),
-                                                           tr("New URL seed:"), QLineEdit::Normal,
+    // Ask user for a new url sneed
+    const QString urlSneed = AutoExpandableDialog::getText(this, tr("New URL sneed", "New HTTP source"),
+                                                           tr("New URL sneed:"), QLineEdit::Normal,
                                                            QLatin1String("http://www."), &ok);
     if (!ok) return;
-    qDebug("Adding %s web seed", qUtf8Printable(urlSeed));
-    if (!m_ui->listWebSeeds->findItems(urlSeed, Qt::MatchFixedString).empty())
+    qDebug("Adding %s web sneed", qUtf8Printable(urlSneed));
+    if (!m_ui->listWebSneeds->findItems(urlSneed, Qt::MatchFixedString).empty())
     {
-        QMessageBox::warning(this, "qBittorrent",
-                             tr("This URL seed is already in the list."),
+        QMessageBox::warning(this, "qSneedTorrent",
+                             tr("This URL sneed is already in the list."),
                              QMessageBox::Ok);
         return;
     }
     if (m_torrent)
-        m_torrent->addUrlSeeds({urlSeed});
-    // Refresh the seeds list
-    loadUrlSeeds();
+        m_torrent->addUrlSneeds({urlSneed});
+    // Refresh the sneeds list
+    loadUrlSneeds();
 }
 
-void PropertiesWidget::deleteSelectedUrlSeeds()
+void PropertiesWidget::deleteSelectedUrlSneeds()
 {
-    const QList<QListWidgetItem *> selectedItems = m_ui->listWebSeeds->selectedItems();
+    const QList<QListWidgetItem *> selectedItems = m_ui->listWebSneeds->selectedItems();
     if (selectedItems.isEmpty()) return;
 
-    QVector<QUrl> urlSeeds;
-    urlSeeds.reserve(selectedItems.size());
+    QVector<QUrl> urlSneeds;
+    urlSneeds.reserve(selectedItems.size());
 
     for (const QListWidgetItem *item : selectedItems)
-        urlSeeds << item->text();
+        urlSneeds << item->text();
 
-    m_torrent->removeUrlSeeds(urlSeeds);
+    m_torrent->removeUrlSneeds(urlSneeds);
     // Refresh list
-    loadUrlSeeds();
+    loadUrlSneeds();
 }
 
-void PropertiesWidget::copySelectedWebSeedsToClipboard() const
+void PropertiesWidget::copySelectedWebSneedsToClipboard() const
 {
-    const QList<QListWidgetItem *> selectedItems = m_ui->listWebSeeds->selectedItems();
+    const QList<QListWidgetItem *> selectedItems = m_ui->listWebSneeds->selectedItems();
     if (selectedItems.isEmpty()) return;
 
     QStringList urlsToCopy;
@@ -859,30 +859,30 @@ void PropertiesWidget::copySelectedWebSeedsToClipboard() const
     QApplication::clipboard()->setText(urlsToCopy.join('\n'));
 }
 
-void PropertiesWidget::editWebSeed()
+void PropertiesWidget::editWebSneed()
 {
-    const QList<QListWidgetItem *> selectedItems = m_ui->listWebSeeds->selectedItems();
+    const QList<QListWidgetItem *> selectedItems = m_ui->listWebSneeds->selectedItems();
     if (selectedItems.size() != 1) return;
 
     const QListWidgetItem *selectedItem = selectedItems.last();
-    const QString oldSeed = selectedItem->text();
+    const QString oldSneed = selectedItem->text();
     bool result;
-    const QString newSeed = AutoExpandableDialog::getText(this, tr("Web seed editing"),
-                                                           tr("Web seed URL:"), QLineEdit::Normal,
-                                                           oldSeed, &result);
+    const QString newSneed = AutoExpandableDialog::getText(this, tr("Web sneed editing"),
+                                                           tr("Web sneed URL:"), QLineEdit::Normal,
+                                                           oldSneed, &result);
     if (!result) return;
 
-    if (!m_ui->listWebSeeds->findItems(newSeed, Qt::MatchFixedString).empty())
+    if (!m_ui->listWebSneeds->findItems(newSneed, Qt::MatchFixedString).empty())
     {
-        QMessageBox::warning(this, QLatin1String("qBittorrent"),
-                             tr("This URL seed is already in the list."),
+        QMessageBox::warning(this, QLatin1String("qSneedTorrent"),
+                             tr("This URL sneed is already in the list."),
                              QMessageBox::Ok);
         return;
     }
 
-    m_torrent->removeUrlSeeds({oldSeed});
-    m_torrent->addUrlSeeds({newSeed});
-    loadUrlSeeds();
+    m_torrent->removeUrlSneeds({oldSneed});
+    m_torrent->addUrlSneeds({newSneed});
+    loadUrlSneeds();
 }
 
 void PropertiesWidget::applyPriorities()

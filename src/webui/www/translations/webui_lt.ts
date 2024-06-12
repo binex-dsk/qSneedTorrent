@@ -92,8 +92,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>Išeiti iš qBittorrent</translation>
+        <source>Exit qSneedTorrent</source>
+        <translation>Išeiti iš qSneedTorrent</translation>
     </message>
     <message>
         <source>Only one link per line</source>
@@ -140,8 +140,8 @@
         <translation>Didžiausias išsiuntimo prisijungimų kiekis vienam torentui privalo būti arba aukštesnis už 0, arba išjungtas.</translation>
     </message>
     <message>
-        <source>Unable to save program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Nepavyko išsaugoti programos nuostatų, qBittorrent tikriausiai yra nepasiekiama.</translation>
+        <source>Unable to save program preferences, qSneedTorrent is probably unreachable.</source>
+        <translation>Nepavyko išsaugoti programos nuostatų, qSneedTorrent tikriausiai yra nepasiekiama.</translation>
     </message>
     <message>
         <source>Unknown</source>
@@ -152,7 +152,7 @@
         <translation>Dalinimosi santykio apribojimas privalo būti tarp 0 ir 9998.</translation>
     </message>
     <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
+        <source>Sneeding time limit must be between 0 and 525600 minutes.</source>
         <translation>Skleidimo laiko riba privalo būti tarp 0 ir 525600 minučių.</translation>
     </message>
     <message>
@@ -160,8 +160,8 @@
         <translation>Tinklo naudotojo sąsajos prievadas privalo būti tarp 1 ir 65535.</translation>
     </message>
     <message>
-        <source>Unable to log in, qBittorrent is probably unreachable.</source>
-        <translation>Negalima prisijungti, qBittorrent, tikriausiai, yra nepasiekamas.</translation>
+        <source>Unable to log in, qSneedTorrent is probably unreachable.</source>
+        <translation>Negalima prisijungti, qSneedTorrent, tikriausiai, yra nepasiekamas.</translation>
     </message>
     <message>
         <source>Invalid Username or Password.</source>
@@ -280,8 +280,8 @@
         <translation>Išsaugoti</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>qBittorrent klientas nepasiekiamas</translation>
+        <source>qSneedTorrent client is not reachable</source>
+        <translation>qSneedTorrent klientas nepasiekiamas</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -320,8 +320,8 @@
         <translation>Atsiuntimo greičio slenkstis privalo būti didesnis už 0.</translation>
     </message>
     <message>
-        <source>qBittorrent has been shutdown</source>
-        <translation>qBittorrent išjungta</translation>
+        <source>qSneedTorrent has been shutdown</source>
+        <translation>qSneedTorrent išjungta</translation>
     </message>
     <message>
         <source>Open documentation</source>
@@ -463,13 +463,13 @@
         <translation>Visuotinis atsiuntimo greičio apribojimas</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Ar tikrai norite išeiti iš qBittorrent?</translation>
+        <source>Are you sure you want to quit qSneedTorrent?</source>
+        <translation>Ar tikrai norite išeiti iš qSneedTorrent?</translation>
     </message>
     <message>
-        <source>[D: %1, U: %2] qBittorrent %3</source>
-        <comment>D = Download; U = Upload; %3 is qBittorrent version</comment>
-        <translation>[A: %1, I: %2] qBittorrent %3</translation>
+        <source>[D: %1, U: %2] qSneedTorrent %3</source>
+        <comment>D = Download; U = Upload; %3 is qSneedTorrent version</comment>
+        <translation>[A: %1, I: %2] qSneedTorrent %3</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1105,7 +1105,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Enable super seeding for torrent</source>
+        <source>Enable super sneeding for torrent</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1129,7 +1129,7 @@
         <translation>Kai dalijimosi santykis pasieks</translation>
     </message>
     <message>
-        <source>When seeding time reaches</source>
+        <source>When sneeding time reaches</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1165,8 +1165,8 @@
         <translation>Šalinti torentą ir jo failus</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>qBittorrent sekcija</translation>
+        <source>qSneedTorrent Section</source>
+        <translation>qSneedTorrent sekcija</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -1237,7 +1237,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeding Limits</source>
+        <source>Sneeding Limits</source>
         <translation>Skleidimo apribojimai</translation>
     </message>
     <message>
@@ -1629,7 +1629,7 @@
         <translation>Išsiųsta:</translation>
     </message>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>Skleidėjai:</translation>
     </message>
     <message>
@@ -1757,7 +1757,7 @@
         <translation>Pervardinti...</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1897,7 +1897,7 @@
         <translation>Atsiunčiami (0)</translation>
     </message>
     <message>
-        <source>Seeding (0)</source>
+        <source>Sneeding (0)</source>
         <translation>Skleidžiami (0)</translation>
     </message>
     <message>
@@ -1933,7 +1933,7 @@
         <translation>Atsiunčiami (%1)</translation>
     </message>
     <message>
-        <source>Seeding (%1)</source>
+        <source>Sneeding (%1)</source>
         <translation>Skleidžiami (%1)</translation>
     </message>
     <message>
@@ -2015,11 +2015,11 @@
     </message>
     <message>
         <source>Status</source>
-        <comment>Torrent status (e.g. downloading, seeding, paused)</comment>
+        <comment>Torrent status (e.g. downloading, sneeding, paused)</comment>
         <translation>Būsena</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <comment>i.e. full sources (often untranslated)</comment>
         <translation>Skleidėjai</translation>
     </message>
@@ -2192,7 +2192,7 @@
         <translation>Nėra</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <translation>Skleidėjai</translation>
     </message>
     <message>
@@ -2283,11 +2283,11 @@
         <translation>Perkeliama</translation>
     </message>
     <message>
-        <source>[F] Seeding</source>
+        <source>[F] Sneeding</source>
         <translation>[F] Skleidžiama</translation>
     </message>
     <message>
-        <source>Seeding</source>
+        <source>Sneeding</source>
         <translation>Skleidžiama</translation>
     </message>
     <message>
@@ -2331,7 +2331,7 @@
         <translation>Laukiama</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2455,7 +2455,7 @@
         <translation>Priverstinai pertikrinti</translation>
     </message>
     <message>
-        <source>Super seeding mode</source>
+        <source>Super sneeding mode</source>
         <translation>Super skleidimo režimas</translation>
     </message>
     <message>
@@ -2588,8 +2588,8 @@
         <translation>Taipogi ištrinti failus iš kietojo disko</translation>
     </message>
     <message>
-        <source>Deletion confirmation - qBittorrent</source>
-        <translation>Ištrynimo patvirtinimas - qBittorrent</translation>
+        <source>Deletion confirmation - qSneedTorrent</source>
+        <translation>Ištrynimo patvirtinimas - qSneedTorrent</translation>
     </message>
 </context>
 <context>
@@ -2712,7 +2712,7 @@
 <context>
     <name>SearchEngineWidget</name>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>Skleidėjai:</translation>
     </message>
     <message>
@@ -2842,7 +2842,7 @@
         <translation>Paieškos sistema</translation>
     </message>
     <message>
-        <source>Seeders</source>
+        <source>Sneeders</source>
         <translation>Skleidėjai</translation>
     </message>
 </context>
@@ -2989,8 +2989,8 @@
         <translation>Vardas:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>Apie qBittorrent</translation>
+        <source>About qSneedTorrent</source>
+        <translation>Apie qSneedTorrent</translation>
     </message>
     <message>
         <source>License</source>
@@ -3001,8 +3001,8 @@
         <translation>Vertėjai</translation>
     </message>
     <message>
-        <source>qBittorrent was built with the following libraries:</source>
-        <translation>qBittorrent buvo sukurta su šiomis bibliotekomis:</translation>
+        <source>qSneedTorrent was built with the following libraries:</source>
+        <translation>qSneedTorrent buvo sukurta su šiomis bibliotekomis:</translation>
     </message>
     <message>
         <source>Nationality:</source>
@@ -3025,11 +3025,11 @@
         <translation>Prancūzija</translation>
     </message>
     <message>
-        <source>qBittorrent Mascot</source>
+        <source>qSneedTorrent Mascot</source>
         <translation type="unfinished" />
     </message>
     <message>
-        <source>qBittorrent icon</source>
+        <source>qSneedTorrent icon</source>
         <translation type="unfinished" />
     </message>
 </context>

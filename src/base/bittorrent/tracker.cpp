@@ -2,7 +2,7 @@
  * Bittorrent Client using Qt and libtorrent.
  * Copyright (C) 2019  Mike Tzou (Chocobo1)
  * Copyright (C) 2015  Vladimir Golovnev <glassez@yandex.ru>
- * Copyright (C) 2006  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2006  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -140,9 +140,9 @@ namespace BitTorrent
         return !(left == right);
     }
 
-    uint qHash(const Peer &key, const uint seed)
+    uint qHash(const Peer &key, const uint sneed)
     {
-        return qHash(key.uniqueID(), seed);
+        return qHash(key.uniqueID(), sneed);
     }
 }
 
@@ -173,8 +173,8 @@ void Tracker::TorrentStats::setPeer(const Peer &peer)
     }
 
     // add peer
-    if (peer.isSeeder)
-        ++seeders;
+    if (peer.isSneeder)
+        ++sneeders;
     peers.insert(peer);
 }
 
@@ -184,8 +184,8 @@ bool Tracker::TorrentStats::removePeer(const Peer &peer)
     if (iter == peers.end())
         return false;
 
-    if (iter->isSeeder)
-        --seeders;
+    if (iter->isSneeder)
+        --sneeders;
     peers.remove(*iter);
     return true;
 }
@@ -337,7 +337,7 @@ void Tracker::processAnnounceRequest()
     announceReq.noPeerId = (queryParams.value(ANNOUNCE_REQUEST_NO_PEER_ID) == "1");
 
     // 6. left
-    announceReq.peer.isSeeder = (queryParams.value(ANNOUNCE_REQUEST_LEFT) == "0");
+    announceReq.peer.isSneeder = (queryParams.value(ANNOUNCE_REQUEST_LEFT) == "0");
 
     // 7. compact
     announceReq.compact = (queryParams.value(ANNOUNCE_REQUEST_COMPACT) != "0");
@@ -363,7 +363,7 @@ void Tracker::processAnnounceRequest()
         || (announceReq.event == ANNOUNCE_REQUEST_EVENT_STARTED)
         || (announceReq.event == ANNOUNCE_REQUEST_EVENT_PAUSED))
         {
-        // [BEP-21] Extension for partial seeds
+        // [BEP-21] Extension for partial sneeds
         // (partial support - we don't support BEP-48 so the part that concerns that is not supported)
         registerPeer(announceReq);
     }
@@ -410,8 +410,8 @@ void Tracker::prepareAnnounceResponse(const TrackerAnnounceRequest &announceReq)
     lt::entry::dictionary_type replyDict
     {
         {ANNOUNCE_RESPONSE_INTERVAL, ANNOUNCE_INTERVAL},
-        {ANNOUNCE_RESPONSE_COMPLETE, torrentStats.seeders},
-        {ANNOUNCE_RESPONSE_INCOMPLETE, (torrentStats.peers.size() - torrentStats.seeders)},
+        {ANNOUNCE_RESPONSE_COMPLETE, torrentStats.sneeders},
+        {ANNOUNCE_RESPONSE_INCOMPLETE, (torrentStats.peers.size() - torrentStats.sneeders)},
 
         // [BEP-24] Tracker Returns External IP (partial support - might not work properly for all IPv6 cases)
         {ANNOUNCE_RESPONSE_EXTERNAL_IP, toBigEndianByteArray(announceReq.socketAddress).toStdString()}

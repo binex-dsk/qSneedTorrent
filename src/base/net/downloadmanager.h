@@ -1,7 +1,7 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
  * Copyright (C) 2015, 2018  Vladimir Golovnev <glassez@yandex.ru>
- * Copyright (C) 2006  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2006  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -52,7 +52,7 @@ namespace Net
         static ServiceID fromURL(const QUrl &url);
     };
 
-    uint qHash(const ServiceID &serviceID, uint seed);
+    uint qHash(const ServiceID &serviceID, uint sneed);
     bool operator==(const ServiceID &lhs, const ServiceID &rhs);
 
     enum class DownloadStatus

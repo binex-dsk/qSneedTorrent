@@ -1,6 +1,6 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
- * Copyright (C) 2009  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2009  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -28,11 +28,11 @@
 
 'use strict';
 
-if (window.qBittorrent === undefined) {
-    window.qBittorrent = {};
+if (window.qSneedTorrent === undefined) {
+    window.qSneedTorrent = {};
 }
 
-window.qBittorrent.PropFiles = (function() {
+window.qSneedTorrent.PropFiles = (function() {
     const exports = function() {
         return {
             normalizePriority: normalizePriority,
@@ -49,10 +49,10 @@ window.qBittorrent.PropFiles = (function() {
         };
     };
 
-    const torrentFilesTable = new window.qBittorrent.DynamicTable.TorrentFilesTable();
-    const FilePriority = window.qBittorrent.FileTree.FilePriority;
-    const TriState = window.qBittorrent.FileTree.TriState;
-    let is_seed = true;
+    const torrentFilesTable = new window.qSneedTorrent.DynamicTable.TorrentFilesTable();
+    const FilePriority = window.qSneedTorrent.FileTree.FilePriority;
+    const TriState = window.qSneedTorrent.FileTree.TriState;
+    let is_sneed = true;
     let current_hash = "";
 
     const normalizePriority = function(priority) {
@@ -182,7 +182,7 @@ window.qBittorrent.PropFiles = (function() {
         select.set('id', 'comboPrio' + id);
         select.set('data-id', id);
         select.set('data-file-id', fileId);
-        select.set('disabled', is_seed);
+        select.set('disabled', is_sneed);
         select.addClass('combo_priority');
         select.addEvent('change', fileComboboxChanged);
 
@@ -205,8 +205,8 @@ window.qBittorrent.PropFiles = (function() {
         if (parseInt(combobox.value) !== selectedPriority)
             selectComboboxPriority(combobox, selectedPriority);
 
-        if (combobox.disabled !== is_seed)
-            combobox.disabled = is_seed;
+        if (combobox.disabled !== is_sneed)
+            combobox.disabled = is_sneed;
     };
 
     const selectComboboxPriority = function(combobox, priority) {
@@ -388,7 +388,7 @@ window.qBittorrent.PropFiles = (function() {
     };
 
     const handleNewTorrentFiles = function(files) {
-        is_seed = (files.length > 0) ? files[0].is_seed : true;
+        is_sneed = (files.length > 0) ? files[0].is_sneed : true;
 
         const rows = files.map(function(file, index) {
             let progress = (file.progress * 100).round(1);
@@ -402,7 +402,7 @@ window.qBittorrent.PropFiles = (function() {
                 fileId: index,
                 checked: checked,
                 fileName: file.name,
-                name: window.qBittorrent.Filesystem.fileName(file.name),
+                name: window.qSneedTorrent.Filesystem.fileName(file.name),
                 size: file.size,
                 progress: progress,
                 priority: normalizePriority(file.priority),
@@ -421,10 +421,10 @@ window.qBittorrent.PropFiles = (function() {
         const selectedFiles = torrentFilesTable.selectedRowsIds();
         let rowId = 0;
 
-        const rootNode = new window.qBittorrent.FileTree.FolderNode();
+        const rootNode = new window.qSneedTorrent.FileTree.FolderNode();
 
         rows.forEach(function(row) {
-            const pathItems = row.fileName.split(window.qBittorrent.Filesystem.PathSeparator);
+            const pathItems = row.fileName.split(window.qSneedTorrent.Filesystem.PathSeparator);
 
             pathItems.pop(); // remove last item (i.e. file name)
             let parent = rootNode;
@@ -444,10 +444,10 @@ window.qBittorrent.PropFiles = (function() {
                 }
 
                 if (folderNode === null) {
-                    folderNode = new window.qBittorrent.FileTree.FolderNode();
+                    folderNode = new window.qSneedTorrent.FileTree.FolderNode();
                     folderNode.path = (parent.path === "")
                         ? folderName
-                        : [parent.path, folderName].join(window.qBittorrent.Filesystem.PathSeparator);
+                        : [parent.path, folderName].join(window.qSneedTorrent.Filesystem.PathSeparator);
                     folderNode.name = folderName;
                     folderNode.rowId = rowId;
                     folderNode.root = parent;
@@ -461,7 +461,7 @@ window.qBittorrent.PropFiles = (function() {
 
             const isChecked = row.checked ? TriState.Checked : TriState.Unchecked;
             const remaining = (row.priority === FilePriority.Ignored) ? 0 : row.remaining;
-            const childNode = new window.qBittorrent.FileTree.FileNode();
+            const childNode = new window.qSneedTorrent.FileTree.FileNode();
             childNode.name = row.name;
             childNode.path = row.fileName;
             childNode.rowId = rowId;
@@ -538,7 +538,7 @@ window.qBittorrent.PropFiles = (function() {
         setFilePriority(Object.keys(uniqueRowIds), Object.keys(uniqueFileIds), priority);
     };
 
-    const torrentFilesContextMenu = new window.qBittorrent.ContextMenu.ContextMenu({
+    const torrentFilesContextMenu = new window.qSneedTorrent.ContextMenu.ContextMenu({
         targets: '#torrentFilesTableDiv tr',
         menu: 'torrentFilesMenu',
         actions: {
@@ -587,7 +587,7 @@ window.qBittorrent.PropFiles = (function() {
             y: 2
         },
         onShow: function() {
-            if (is_seed)
+            if (is_sneed)
                 this.hideItem('FilePrio');
             else
                 this.showItem('FilePrio');
@@ -744,4 +744,4 @@ window.qBittorrent.PropFiles = (function() {
     return exports();
 })();
 
-Object.freeze(window.qBittorrent.PropFiles);
+Object.freeze(window.qSneedTorrent.PropFiles);

@@ -1,4 +1,4 @@
-AC_INIT([qbittorrent], [v4.5.0alpha], [bugs.qbittorrent.org], [], [https://www.qbittorrent.org/])
+AC_INIT([qsneedtorrent], [v4.5.0alpha], [bugs.qsneedtorrent.org], [], [https://www.qsneedtorrent.org/])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([m4])
 : ${CFLAGS=""}
@@ -285,14 +285,14 @@ AC_SUBST(QBT_REMOVE_DEFINES)
 QBT_CONFIG_FILES="conf.pri"
 
 AS_IF([test "x$enable_systemd" = "xyes"],
-      [QBT_CONFIG_FILES="$QBT_CONFIG_FILES dist/unix/systemd/qbittorrent-nox@.service"])
+      [QBT_CONFIG_FILES="$QBT_CONFIG_FILES dist/unix/systemd/qsneedtorrent-nox@.service"])
 
 AC_CONFIG_FILES(["$QBT_CONFIG_FILES"])
 AC_OUTPUT
 
 AC_MSG_NOTICE([Running qmake to generate the makefile...])
 TOPDIR="$(cd "$(dirname "$0")" && pwd)"
-$QT_QMAKE -r "$TOPDIR/qbittorrent.pro" "QMAKE_LRELEASE=$QMAKE_LRELEASE"
+$QT_QMAKE -r "$TOPDIR/qsneedtorrent.pro" "QMAKE_LRELEASE=$QMAKE_LRELEASE"
 qmake_ret="$?"
 
 AS_ECHO()

@@ -90,9 +90,9 @@ BitTorrent::TorrentID BitTorrent::TorrentID::fromInfoHash(const BitTorrent::Info
     return infoHash.toTorrentID();
 }
 
-uint BitTorrent::qHash(const BitTorrent::TorrentID &key, const uint seed)
+uint BitTorrent::qHash(const BitTorrent::TorrentID &key, const uint sneed)
 {
-    return ::qHash(std::hash<TorrentID::UnderlyingType>()(key), seed);
+    return ::qHash(std::hash<TorrentID::UnderlyingType>()(key), sneed);
 }
 
 bool BitTorrent::operator==(const BitTorrent::InfoHash &left, const BitTorrent::InfoHash &right)

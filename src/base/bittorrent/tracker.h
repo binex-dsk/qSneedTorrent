@@ -2,7 +2,7 @@
  * Bittorrent Client using Qt and libtorrent.
  * Copyright (C) 2019  Mike Tzou (Chocobo1)
  * Copyright (C) 2015  Vladimir Golovnev <glassez@yandex.ru>
- * Copyright (C) 2010  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2010  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -53,7 +53,7 @@ namespace BitTorrent
     {
         QByteArray peerId;
         ushort port = 0;  // self-claimed by peer, might not be the same as socket port
-        bool isSeeder = false;
+        bool isSneeder = false;
 
         // caching precomputed values
         lt::entry::string_type address;
@@ -64,7 +64,7 @@ namespace BitTorrent
 
     bool operator==(const Peer &left, const Peer &right);
     bool operator!=(const Peer &left, const Peer &right);
-    uint qHash(const Peer &key, uint seed);
+    uint qHash(const Peer &key, uint sneed);
 
     // *Basic* Bittorrent tracker implementation
     // [BEP-3] The BitTorrent Protocol Specification
@@ -78,7 +78,7 @@ namespace BitTorrent
 
         struct TorrentStats
         {
-            qint64 seeders = 0;
+            qint64 sneeders = 0;
             QSet<Peer> peers;
 
             void setPeer(const Peer &peer);

@@ -28,11 +28,11 @@
 
 'use strict';
 
-if (window.qBittorrent === undefined) {
-    window.qBittorrent = {};
+if (window.qSneedTorrent === undefined) {
+    window.qSneedTorrent = {};
 }
 
-window.qBittorrent.FileTree = (function() {
+window.qSneedTorrent.FileTree = (function() {
     const exports = function() {
         return {
             FilePriority: FilePriority,
@@ -194,4 +194,4 @@ window.qBittorrent.FileTree = (function() {
     return exports();
 })();
 
-Object.freeze(window.qBittorrent.FileTree);
+Object.freeze(window.qSneedTorrent.FileTree);

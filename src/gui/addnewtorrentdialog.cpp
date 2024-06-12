@@ -1,6 +1,6 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
- * Copyright (C) 2012  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2012  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -380,7 +380,7 @@ bool AddNewTorrentDialog::loadTorrentImpl()
             else
             {
                 torrent->addTrackers(m_torrentInfo.trackers());
-                torrent->addUrlSeeds(m_torrentInfo.urlSeeds());
+                torrent->addUrlSneeds(m_torrentInfo.urlSneeds());
                 RaisedMessageBox::information(this, tr("Torrent is already present"), tr("Torrent '%1' is already in the transfer list. Trackers have been merged.").arg(torrent->name()), QMessageBox::Ok);
             }
         }
@@ -423,7 +423,7 @@ bool AddNewTorrentDialog::loadMagnet(const BitTorrent::MagnetUri &magnetUri)
             else
             {
                 torrent->addTrackers(magnetUri.trackers());
-                torrent->addUrlSeeds(magnetUri.urlSeeds());
+                torrent->addUrlSneeds(magnetUri.urlSneeds());
                 RaisedMessageBox::information(this, tr("Torrent is already present"), tr("Magnet link '%1' is already in the transfer list. Trackers have been merged.").arg(torrent->name()), QMessageBox::Ok);
             }
         }

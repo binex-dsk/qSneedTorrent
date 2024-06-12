@@ -1,7 +1,7 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
  * Copyright (C) 2015  Vladimir Golovnev <glassez@yandex.ru>
- * Copyright (C) 2010  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2010  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -55,7 +55,7 @@ public:
         TR_TOTAL_SIZE,
         TR_PROGRESS,
         TR_STATUS,
-        TR_SEEDS,
+        TR_SNEEDS,
         TR_PEERS,
         TR_DLSPEED,
         TR_UPSPEED,
@@ -64,7 +64,7 @@ public:
         TR_CATEGORY,
         TR_TAGS,
         TR_ADD_DATE,
-        TR_SEED_DATE,
+        TR_SNEED_DATE,
         TR_TRACKER,
         TR_DLLIMIT,
         TR_UPLIMIT,

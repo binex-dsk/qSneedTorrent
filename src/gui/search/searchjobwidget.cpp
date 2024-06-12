@@ -1,7 +1,7 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
  * Copyright (C) 2018  Vladimir Golovnev <glassez@yandex.ru>
- * Copyright (C) 2006  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2006  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -77,12 +77,12 @@ SearchJobWidget::SearchJobWidget(SearchHandler *searchHandler, QWidget *parent)
     m_searchListModel = new QStandardItemModel(0, SearchSortModel::NB_SEARCH_COLUMNS, this);
     m_searchListModel->setHeaderData(SearchSortModel::NAME, Qt::Horizontal, tr("Name", "i.e: file name"));
     m_searchListModel->setHeaderData(SearchSortModel::SIZE, Qt::Horizontal, tr("Size", "i.e: file size"));
-    m_searchListModel->setHeaderData(SearchSortModel::SEEDS, Qt::Horizontal, tr("Seeders", "i.e: Number of full sources"));
+    m_searchListModel->setHeaderData(SearchSortModel::SNEEDS, Qt::Horizontal, tr("Sneeders", "i.e: Number of full sources"));
     m_searchListModel->setHeaderData(SearchSortModel::LEECHES, Qt::Horizontal, tr("Leechers", "i.e: Number of partial sources"));
     m_searchListModel->setHeaderData(SearchSortModel::ENGINE_URL, Qt::Horizontal, tr("Search engine"));
     // Set columns text alignment
     m_searchListModel->setHeaderData(SearchSortModel::SIZE, Qt::Horizontal, QVariant(Qt::AlignRight | Qt::AlignVCenter), Qt::TextAlignmentRole);
-    m_searchListModel->setHeaderData(SearchSortModel::SEEDS, Qt::Horizontal, QVariant(Qt::AlignRight | Qt::AlignVCenter), Qt::TextAlignmentRole);
+    m_searchListModel->setHeaderData(SearchSortModel::SNEEDS, Qt::Horizontal, QVariant(Qt::AlignRight | Qt::AlignVCenter), Qt::TextAlignmentRole);
     m_searchListModel->setHeaderData(SearchSortModel::LEECHES, Qt::Horizontal, QVariant(Qt::AlignRight | Qt::AlignVCenter), Qt::TextAlignmentRole);
 
     m_proxyModel = new SearchSortModel(this);
@@ -140,11 +140,11 @@ SearchJobWidget::SearchJobWidget(SearchHandler *searchHandler, QWidget *parent)
     connect(m_lineEditSearchResultsFilter, &LineEdit::textChanged, this, &SearchJobWidget::filterSearchResults);
     connect(m_ui->filterMode, qOverload<int>(&QComboBox::currentIndexChanged)
             , this, &SearchJobWidget::updateFilter);
-    connect(m_ui->minSeeds, &QAbstractSpinBox::editingFinished, this, &SearchJobWidget::updateFilter);
-    connect(m_ui->minSeeds, qOverload<int>(&QSpinBox::valueChanged)
+    connect(m_ui->minSneeds, &QAbstractSpinBox::editingFinished, this, &SearchJobWidget::updateFilter);
+    connect(m_ui->minSneeds, qOverload<int>(&QSpinBox::valueChanged)
             , this, &SearchJobWidget::updateFilter);
-    connect(m_ui->maxSeeds, &QAbstractSpinBox::editingFinished, this, &SearchJobWidget::updateFilter);
-    connect(m_ui->maxSeeds, qOverload<int>(&QSpinBox::valueChanged)
+    connect(m_ui->maxSneeds, &QAbstractSpinBox::editingFinished, this, &SearchJobWidget::updateFilter);
+    connect(m_ui->maxSneeds, qOverload<int>(&QSpinBox::valueChanged)
             , this, &SearchJobWidget::updateFilter);
     connect(m_ui->minSize, &QAbstractSpinBox::editingFinished, this, &SearchJobWidget::updateFilter);
     connect(m_ui->minSize, qOverload<double>(&QDoubleSpinBox::valueChanged)
@@ -320,8 +320,8 @@ void SearchJobWidget::updateFilter()
     using Utils::Misc::SizeUnit;
 
     m_proxyModel->enableNameFilter(filteringMode() == NameFilteringMode::OnlyNames);
-    // we update size and seeds filter parameters in the model even if they are disabled
-    m_proxyModel->setSeedsFilter(m_ui->minSeeds->value(), m_ui->maxSeeds->value());
+    // we update size and sneeds filter parameters in the model even if they are disabled
+    m_proxyModel->setSneedsFilter(m_ui->minSneeds->value(), m_ui->maxSneeds->value());
     m_proxyModel->setSizeFilter(
         sizeInBytes(m_ui->minSize->value(), static_cast<SizeUnit>(m_ui->minSizeUnit->currentIndex())),
         sizeInBytes(m_ui->maxSize->value(), static_cast<SizeUnit>(m_ui->maxSizeUnit->currentIndex())));
@@ -545,7 +545,7 @@ void SearchJobWidget::appendSearchResults(const QVector<SearchResult> &results)
         setModelData(SearchSortModel::ENGINE_URL, result.siteUrl, result.siteUrl);
         setModelData(SearchSortModel::DESC_LINK, result.descrLink, result.descrLink);
         setModelData(SearchSortModel::SIZE, Utils::Misc::friendlyUnit(result.fileSize), result.fileSize, (Qt::AlignRight | Qt::AlignVCenter));
-        setModelData(SearchSortModel::SEEDS, QString::number(result.nbSeeders), result.nbSeeders, (Qt::AlignRight | Qt::AlignVCenter));
+        setModelData(SearchSortModel::SNEEDS, QString::number(result.nbSneeders), result.nbSneeders, (Qt::AlignRight | Qt::AlignVCenter));
         setModelData(SearchSortModel::LEECHES, QString::number(result.nbLeechers), result.nbLeechers, (Qt::AlignRight | Qt::AlignVCenter));
     }
 

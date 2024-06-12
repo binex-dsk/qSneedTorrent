@@ -1,6 +1,6 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
- * Copyright (C) 2006  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2006  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -109,7 +109,7 @@ private slots:
     void displayListMenu();
     void displayColumnHeaderMenu();
     void currentChanged(const QModelIndex &current, const QModelIndex&) override;
-    void setSelectedTorrentsSuperSeeding(bool enabled) const;
+    void setSelectedTorrentsSuperSneeding(bool enabled) const;
     void setSelectedTorrentsSequentialDownload(bool enabled) const;
     void setSelectedFirstLastPiecePrio(bool enabled) const;
     void setSelectedAutoTMMEnabled(bool enabled);

@@ -49,7 +49,7 @@ public:
     {
         All,
         Downloading,
-        Seeding,
+        Sneeding,
         Completed,
         Resumed,
         Paused,
@@ -68,7 +68,7 @@ public:
     static const std::optional<QString> AnyTag;
 
     static const TorrentFilter DownloadingTorrent;
-    static const TorrentFilter SeedingTorrent;
+    static const TorrentFilter SneedingTorrent;
     static const TorrentFilter CompletedTorrent;
     static const TorrentFilter PausedTorrent;
     static const TorrentFilter ResumedTorrent;

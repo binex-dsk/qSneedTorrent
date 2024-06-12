@@ -92,8 +92,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>Έξοδος qBittorrent</translation>
+        <source>Exit qSneedTorrent</source>
+        <translation>Έξοδος qSneedTorrent</translation>
     </message>
     <message>
         <source>Only one link per line</source>
@@ -140,8 +140,8 @@
         <translation>Το όριο του μέγιστου αριθμού slots αποστολής ανά torrent πρέπει να είναι μεγαλύτερο από 0 ή απενεργοποιημένο.</translation>
     </message>
     <message>
-        <source>Unable to save program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Δεν είναι δυνατή η αποθήκευση των προτιμήσεων του προγράμματος, το qBittorrent είναι πιθανώς μη διαθέσιμο.</translation>
+        <source>Unable to save program preferences, qSneedTorrent is probably unreachable.</source>
+        <translation>Δεν είναι δυνατή η αποθήκευση των προτιμήσεων του προγράμματος, το qSneedTorrent είναι πιθανώς μη διαθέσιμο.</translation>
     </message>
     <message>
         <source>Unknown</source>
@@ -152,16 +152,16 @@
         <translation>Το όριο αναλογίας διαμοιρασμού πρέπει να είναι μεταξύ 0 και 9998.</translation>
     </message>
     <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
-        <translation>Το χρονικό όριο seeding πρέπει να είναι μεταξύ 0 και 525600 λεπτών.</translation>
+        <source>Sneeding time limit must be between 0 and 525600 minutes.</source>
+        <translation>Το χρονικό όριο sneeding πρέπει να είναι μεταξύ 0 και 525600 λεπτών.</translation>
     </message>
     <message>
         <source>The port used for the Web UI must be between 1 and 65535.</source>
         <translation>Η θύρα που χρησιμοποιείται για το Web UI πρέπει να είναι μεταξύ 1 και 65535.</translation>
     </message>
     <message>
-        <source>Unable to log in, qBittorrent is probably unreachable.</source>
-        <translation>Αδυναμία σύνδεσης, το qBittorrent είναι πιθανώς μη διαθέσιμο.</translation>
+        <source>Unable to log in, qSneedTorrent is probably unreachable.</source>
+        <translation>Αδυναμία σύνδεσης, το qSneedTorrent είναι πιθανώς μη διαθέσιμο.</translation>
     </message>
     <message>
         <source>Invalid Username or Password.</source>
@@ -280,8 +280,8 @@
         <translation>Αποθήκευση</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>Ο qBittorrent client δεν είναι διαθέσιμος</translation>
+        <source>qSneedTorrent client is not reachable</source>
+        <translation>Ο qSneedTorrent client δεν είναι διαθέσιμος</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -320,8 +320,8 @@
         <translation>Το όριο ρυθμού λήψης πρέπει να είναι μεγαλύτερο του 0.</translation>
     </message>
     <message>
-        <source>qBittorrent has been shutdown</source>
-        <translation>Το qBittorrent τερματίστηκε.</translation>
+        <source>qSneedTorrent has been shutdown</source>
+        <translation>Το qSneedTorrent τερματίστηκε.</translation>
     </message>
     <message>
         <source>Open documentation</source>
@@ -463,13 +463,13 @@
         <translation>Γενικό Όριο Ταχύτητας Λήψης</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Είστε σίγουροι ότι θέλετε να κλείσετε το qBittorrent?</translation>
+        <source>Are you sure you want to quit qSneedTorrent?</source>
+        <translation>Είστε σίγουροι ότι θέλετε να κλείσετε το qSneedTorrent?</translation>
     </message>
     <message>
-        <source>[D: %1, U: %2] qBittorrent %3</source>
-        <comment>D = Download; U = Upload; %3 is qBittorrent version</comment>
-        <translation>[Λ: %1, Α: %2] qBittorrent %3</translation>
+        <source>[D: %1, U: %2] qSneedTorrent %3</source>
+        <comment>D = Download; U = Upload; %3 is qSneedTorrent version</comment>
+        <translation>[Λ: %1, Α: %2] qSneedTorrent %3</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1105,8 +1105,8 @@
         <translation>Μέγεθος backlog του socket:</translation>
     </message>
     <message>
-        <source>Enable super seeding for torrent</source>
-        <translation>Ενεργοποίηση super seeding για το torrent</translation>
+        <source>Enable super sneeding for torrent</source>
+        <translation>Ενεργοποίηση super sneeding για το torrent</translation>
     </message>
     <message>
         <source>Prefer TCP</source>
@@ -1129,8 +1129,8 @@
         <translation>Όταν η αναλογία φτάνει</translation>
     </message>
     <message>
-        <source>When seeding time reaches</source>
-        <translation>Όταν ο χρόνος seeding φτάσει</translation>
+        <source>When sneeding time reaches</source>
+        <translation>Όταν ο χρόνος sneeding φτάσει</translation>
     </message>
     <message>
         <source>Allow multiple connections from the same IP address:</source>
@@ -1165,8 +1165,8 @@
         <translation>Αφαίρεση του torrent και των αρχείων του</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>Ενότητα qBittorrent</translation>
+        <source>qSneedTorrent Section</source>
+        <translation>Ενότητα qSneedTorrent</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -1237,8 +1237,8 @@
         <translation>Αλγόριθμος choking αποστολής:</translation>
     </message>
     <message>
-        <source>Seeding Limits</source>
-        <translation>Όρια Seeding</translation>
+        <source>Sneeding Limits</source>
+        <translation>Όρια Sneeding</translation>
     </message>
     <message>
         <source>KiB</source>
@@ -1629,8 +1629,8 @@
         <translation>Έγινε Αποστολή:</translation>
     </message>
     <message>
-        <source>Seeds:</source>
-        <translation>Seeds:</translation>
+        <source>Sneeds:</source>
+        <translation>Sneeds:</translation>
     </message>
     <message>
         <source>Download Speed:</source>
@@ -1757,7 +1757,7 @@
         <translation>Μετονομασία...</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation>%1 (διαμοιράστηκε για %2)</translation>
     </message>
     <message>
@@ -1897,8 +1897,8 @@
         <translation>Γίνεται Λήψη (0)</translation>
     </message>
     <message>
-        <source>Seeding (0)</source>
-        <translation>Seeding (0)</translation>
+        <source>Sneeding (0)</source>
+        <translation>Sneeding (0)</translation>
     </message>
     <message>
         <source>Completed (0)</source>
@@ -1933,8 +1933,8 @@
         <translation>Γίνεται Λήψη (%1)</translation>
     </message>
     <message>
-        <source>Seeding (%1)</source>
-        <translation>Seeding (%1)</translation>
+        <source>Sneeding (%1)</source>
+        <translation>Sneeding (%1)</translation>
     </message>
     <message>
         <source>Completed (%1)</source>
@@ -2015,11 +2015,11 @@
     </message>
     <message>
         <source>Status</source>
-        <comment>Torrent status (e.g. downloading, seeding, paused)</comment>
+        <comment>Torrent status (e.g. downloading, sneeding, paused)</comment>
         <translation>Κατάσταση</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <comment>i.e. full sources (often untranslated)</comment>
         <translation>Διαμοιραστές</translation>
     </message>
@@ -2192,7 +2192,7 @@
         <translation>Δ/Υ</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <translation>Διαμοιραστές</translation>
     </message>
     <message>
@@ -2283,12 +2283,12 @@
         <translation>Μετακίνηση</translation>
     </message>
     <message>
-        <source>[F] Seeding</source>
-        <translation>[Ε] Seeding</translation>
+        <source>[F] Sneeding</source>
+        <translation>[Ε] Sneeding</translation>
     </message>
     <message>
-        <source>Seeding</source>
-        <translation>Seeding</translation>
+        <source>Sneeding</source>
+        <translation>Sneeding</translation>
     </message>
     <message>
         <source>Queued</source>
@@ -2331,7 +2331,7 @@
         <translation>Σε καθυστέρηση</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation>%1 (διαμοιράστηκε για %2)</translation>
     </message>
     <message>
@@ -2455,8 +2455,8 @@
         <translation>Εξαναγκαστικός επανέλεγχος</translation>
     </message>
     <message>
-        <source>Super seeding mode</source>
-        <translation>Λειτουργία super seeding</translation>
+        <source>Super sneeding mode</source>
+        <translation>Λειτουργία super sneeding</translation>
     </message>
     <message>
         <source>Rename...</source>
@@ -2588,8 +2588,8 @@
         <translation>Να διαγραφούν επίσης τα αρχεία στο σκληρό δίσκο</translation>
     </message>
     <message>
-        <source>Deletion confirmation - qBittorrent</source>
-        <translation>Επιβεβαίωση διαγραφής - qBittorrent</translation>
+        <source>Deletion confirmation - qSneedTorrent</source>
+        <translation>Επιβεβαίωση διαγραφής - qSneedTorrent</translation>
     </message>
 </context>
 <context>
@@ -2712,7 +2712,7 @@
 <context>
     <name>SearchEngineWidget</name>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>Διαμοιραστές:</translation>
     </message>
     <message>
@@ -2842,8 +2842,8 @@
         <translation>Μηχανή αναζήτησης</translation>
     </message>
     <message>
-        <source>Seeders</source>
-        <translation>Seeders</translation>
+        <source>Sneeders</source>
+        <translation>Sneeders</translation>
     </message>
 </context>
 <context>
@@ -2989,7 +2989,7 @@
         <translation>Όνομα:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
+        <source>About qSneedTorrent</source>
         <translation>Σχετικά με το qBittorent</translation>
     </message>
     <message>
@@ -3001,8 +3001,8 @@
         <translation>Μεταφραστές</translation>
     </message>
     <message>
-        <source>qBittorrent was built with the following libraries:</source>
-        <translation>Το qBittorrent φτιάχτηκε με τις ακόλουθες βιβλιοθήκες:</translation>
+        <source>qSneedTorrent was built with the following libraries:</source>
+        <translation>Το qSneedTorrent φτιάχτηκε με τις ακόλουθες βιβλιοθήκες:</translation>
     </message>
     <message>
         <source>Nationality:</source>
@@ -3025,12 +3025,12 @@
         <translation>Γαλλία</translation>
     </message>
     <message>
-        <source>qBittorrent Mascot</source>
-        <translation>Μασκότ του qBittorrent</translation>
+        <source>qSneedTorrent Mascot</source>
+        <translation>Μασκότ του qSneedTorrent</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
-        <translation>Εικονίδιο του qBittorrent</translation>
+        <source>qSneedTorrent icon</source>
+        <translation>Εικονίδιο του qSneedTorrent</translation>
     </message>
 </context>
 <context>

@@ -112,7 +112,7 @@ void PowerManagementInhibitor::requestBusy()
     m_state = RequestBusy;
 
     QList<QVariant> args;
-    args << "qBittorrent";
+    args << "qSneedTorrent";
     if (m_useGSM) args << 0u;
     args << "Active torrents are presented";
     if (m_useGSM) args << 8u;

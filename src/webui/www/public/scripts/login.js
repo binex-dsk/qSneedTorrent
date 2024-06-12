@@ -54,7 +54,7 @@ function submitLoginForm() {
     xhr.addEventListener('error', function() {
         errorMsgElement.innerHTML = (xhr.responseText !== "")
             ? xhr.responseText
-            : 'QBT_TR(Unable to log in, qBittorrent is probably unreachable.)QBT_TR[CONTEXT=HttpServer]';
+            : 'QBT_TR(Unable to log in, qSneedTorrent is probably unreachable.)QBT_TR[CONTEXT=HttpServer]';
     });
 
     const usernameElement = document.getElementById('username');

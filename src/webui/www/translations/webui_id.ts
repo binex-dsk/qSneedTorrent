@@ -92,8 +92,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>Keluar qBittorrent</translation>
+        <source>Exit qSneedTorrent</source>
+        <translation>Keluar qSneedTorrent</translation>
     </message>
     <message>
         <source>Only one link per line</source>
@@ -140,8 +140,8 @@
         <translation>Jumlah maksimum batas slot unggah per torrent harus lebih besar dari 0 atau nonaktif.</translation>
     </message>
     <message>
-        <source>Unable to save program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Tidak bisa menyimpan preferensi program, qBittorrent mungkin tidak terjangkau.</translation>
+        <source>Unable to save program preferences, qSneedTorrent is probably unreachable.</source>
+        <translation>Tidak bisa menyimpan preferensi program, qSneedTorrent mungkin tidak terjangkau.</translation>
     </message>
     <message>
         <source>Unknown</source>
@@ -152,16 +152,16 @@
         <translation>Batas rasio berbagi harus antara 0 dan 9998.</translation>
     </message>
     <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
-        <translation>Batasan waktu seeding harus antara 0 dan 525600 menit.</translation>
+        <source>Sneeding time limit must be between 0 and 525600 minutes.</source>
+        <translation>Batasan waktu sneeding harus antara 0 dan 525600 menit.</translation>
     </message>
     <message>
         <source>The port used for the Web UI must be between 1 and 65535.</source>
         <translation>Port yang digunakan untuk Web UI harus antara 1 dan 65535.</translation>
     </message>
     <message>
-        <source>Unable to log in, qBittorrent is probably unreachable.</source>
-        <translation>Tidak bisa masuk, qBittorrent mungkin tidak terjangkau.</translation>
+        <source>Unable to log in, qSneedTorrent is probably unreachable.</source>
+        <translation>Tidak bisa masuk, qSneedTorrent mungkin tidak terjangkau.</translation>
     </message>
     <message>
         <source>Invalid Username or Password.</source>
@@ -280,8 +280,8 @@
         <translation>Simpan</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>Klien qBittorrent tidak terjangkau</translation>
+        <source>qSneedTorrent client is not reachable</source>
+        <translation>Klien qSneedTorrent tidak terjangkau</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -320,8 +320,8 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>qBittorrent has been shutdown</source>
-        <translation>qBittorrent telah ditutup</translation>
+        <source>qSneedTorrent has been shutdown</source>
+        <translation>qSneedTorrent telah ditutup</translation>
     </message>
     <message>
         <source>Open documentation</source>
@@ -463,13 +463,13 @@
         <translation>Batas Kecepatan Unduh Global</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Apakah Anda yakin ingin keluar dari qBittorrent?</translation>
+        <source>Are you sure you want to quit qSneedTorrent?</source>
+        <translation>Apakah Anda yakin ingin keluar dari qSneedTorrent?</translation>
     </message>
     <message>
-        <source>[D: %1, U: %2] qBittorrent %3</source>
-        <comment>D = Download; U = Upload; %3 is qBittorrent version</comment>
-        <translation>[D: %1, U: %2] qBittorrent %3</translation>
+        <source>[D: %1, U: %2] qSneedTorrent %3</source>
+        <comment>D = Download; U = Upload; %3 is qSneedTorrent version</comment>
+        <translation>[D: %1, U: %2] qSneedTorrent %3</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1105,7 +1105,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Enable super seeding for torrent</source>
+        <source>Enable super sneeding for torrent</source>
         <translation>Aktifkan berbagi super untuk torrent</translation>
     </message>
     <message>
@@ -1129,7 +1129,7 @@
         <translation>Saat rasio telah tercapai</translation>
     </message>
     <message>
-        <source>When seeding time reaches</source>
+        <source>When sneeding time reaches</source>
         <translation>Saat waktu berbagi telah tercapai</translation>
     </message>
     <message>
@@ -1165,7 +1165,7 @@
         <translation>Buang torrent dan berkasnya</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
+        <source>qSneedTorrent Section</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1237,7 +1237,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeding Limits</source>
+        <source>Sneeding Limits</source>
         <translation>Batasan Berbagi</translation>
     </message>
     <message>
@@ -1629,7 +1629,7 @@
         <translation>Terunggah:</translation>
     </message>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>Pembibitan:</translation>
     </message>
     <message>
@@ -1757,7 +1757,7 @@
         <translation>Ubah nama...</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1897,7 +1897,7 @@
         <translation>Mengunduh (0)</translation>
     </message>
     <message>
-        <source>Seeding (0)</source>
+        <source>Sneeding (0)</source>
         <translation>Pembibitan (0)</translation>
     </message>
     <message>
@@ -1933,7 +1933,7 @@
         <translation>Mengunduh (%1)</translation>
     </message>
     <message>
-        <source>Seeding (%1)</source>
+        <source>Sneeding (%1)</source>
         <translation>Pembibitan (%1)</translation>
     </message>
     <message>
@@ -2015,11 +2015,11 @@
     </message>
     <message>
         <source>Status</source>
-        <comment>Torrent status (e.g. downloading, seeding, paused)</comment>
+        <comment>Torrent status (e.g. downloading, sneeding, paused)</comment>
         <translation>Status</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <comment>i.e. full sources (often untranslated)</comment>
         <translation>Pembibitan</translation>
     </message>
@@ -2192,7 +2192,7 @@
         <translation>N/A</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <translation>Benih</translation>
     </message>
     <message>
@@ -2283,11 +2283,11 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>[F] Seeding</source>
+        <source>[F] Sneeding</source>
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeding</source>
+        <source>Sneeding</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2331,7 +2331,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2455,7 +2455,7 @@
         <translation>Paksa periksa ulang</translation>
     </message>
     <message>
-        <source>Super seeding mode</source>
+        <source>Super sneeding mode</source>
         <translation>Mode pembibitan super</translation>
     </message>
     <message>
@@ -2588,8 +2588,8 @@
         <translation>Juga hapus berkas pada diska</translation>
     </message>
     <message>
-        <source>Deletion confirmation - qBittorrent</source>
-        <translation>Konfirmasi penghapusan - qBittorrent</translation>
+        <source>Deletion confirmation - qSneedTorrent</source>
+        <translation>Konfirmasi penghapusan - qSneedTorrent</translation>
     </message>
 </context>
 <context>
@@ -2712,7 +2712,7 @@
 <context>
     <name>SearchEngineWidget</name>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2842,7 +2842,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeders</source>
+        <source>Sneeders</source>
         <translation type="unfinished" />
     </message>
 </context>
@@ -2989,8 +2989,8 @@
         <translation>Nama:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>Tentang qBittorrent</translation>
+        <source>About qSneedTorrent</source>
+        <translation>Tentang qSneedTorrent</translation>
     </message>
     <message>
         <source>License</source>
@@ -3001,8 +3001,8 @@
         <translation>Penerjemah</translation>
     </message>
     <message>
-        <source>qBittorrent was built with the following libraries:</source>
-        <translation>qBittorrent dibuat dengan pustaka berikut:</translation>
+        <source>qSneedTorrent was built with the following libraries:</source>
+        <translation>qSneedTorrent dibuat dengan pustaka berikut:</translation>
     </message>
     <message>
         <source>Nationality:</source>
@@ -3025,11 +3025,11 @@
         <translation>Perancis</translation>
     </message>
     <message>
-        <source>qBittorrent Mascot</source>
+        <source>qSneedTorrent Mascot</source>
         <translation type="unfinished" />
     </message>
     <message>
-        <source>qBittorrent icon</source>
+        <source>qSneedTorrent icon</source>
         <translation type="unfinished" />
     </message>
 </context>

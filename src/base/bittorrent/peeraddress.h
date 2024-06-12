@@ -44,5 +44,5 @@ namespace BitTorrent
     };
 
     bool operator==(const PeerAddress &left, const PeerAddress &right);
-    uint qHash(const PeerAddress &addr, uint seed);
+    uint qHash(const PeerAddress &addr, uint sneed);
 }

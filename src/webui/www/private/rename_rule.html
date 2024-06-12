@@ -59,7 +59,7 @@
                         newRuleName: newName
                     },
                     onSuccess: (response) => {
-                        window.parent.qBittorrent.RssDownloader.updateRulesList();
+                        window.parent.qSneedTorrent.RssDownloader.updateRulesList();
                         window.parent.MochaUI.closeWindow(window.parent.$('renameRulePage'));
                     }
                 }).send();

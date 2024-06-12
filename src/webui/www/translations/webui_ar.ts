@@ -92,7 +92,7 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
+        <source>Exit qSneedTorrent</source>
         <translation>إغلاق كيوبت‎تورنت</translation>
     </message>
     <message>
@@ -140,7 +140,7 @@
         <translation>أقصى عدد من مقاطع الرفع لكل تورنت يجب أن يكون أكبر من 0 أو معطل.</translation>
     </message>
     <message>
-        <source>Unable to save program preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to save program preferences, qSneedTorrent is probably unreachable.</source>
         <translation>لا يمكن حفظ تفضيلات البرنامج, والسبب على الأرجح هو عدم إمكانية الوصول إلى كيوبت‎تورنت.</translation>
     </message>
     <message>
@@ -152,7 +152,7 @@
         <translation>يجب أن يكون حد نسبة المشاركة بين 0 و 9998.</translation>
     </message>
     <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
+        <source>Sneeding time limit must be between 0 and 525600 minutes.</source>
         <translation>يجب أن يكون الحد الزمني للبذر بين 0 و 525600 دقيقة.</translation>
     </message>
     <message>
@@ -160,7 +160,7 @@
         <translation>يجب أن يكون المنفذ المستخدم لواجهة الوِب الرسومية بين 1 و 65535.</translation>
     </message>
     <message>
-        <source>Unable to log in, qBittorrent is probably unreachable.</source>
+        <source>Unable to log in, qSneedTorrent is probably unreachable.</source>
         <translation>لا يمكن الولوج، والسبب على الأرجح هو عدم إمكانية الوصول إلى كيوبت‎تورنت.</translation>
     </message>
     <message>
@@ -280,7 +280,7 @@
         <translation>حفظ</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
+        <source>qSneedTorrent client is not reachable</source>
         <translation>تعذّر الوصول إلى عميل كيوبت‎تورنت</translation>
     </message>
     <message>
@@ -320,7 +320,7 @@
         <translation>يجب أن يكون حد معدل التنزيل أكبر من 0.</translation>
     </message>
     <message>
-        <source>qBittorrent has been shutdown</source>
+        <source>qSneedTorrent has been shutdown</source>
         <translation>تم إغلاق كيوبت‎تورنت</translation>
     </message>
     <message>
@@ -463,12 +463,12 @@
         <translation>حد سرعة التنزيل العامة</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
+        <source>Are you sure you want to quit qSneedTorrent?</source>
         <translation>هل أنت متأكد من رغبتك في إغلاق كيوبت‎تورنت؟</translation>
     </message>
     <message>
-        <source>[D: %1, U: %2] qBittorrent %3</source>
-        <comment>D = Download; U = Upload; %3 is qBittorrent version</comment>
+        <source>[D: %1, U: %2] qSneedTorrent %3</source>
+        <comment>D = Download; U = Upload; %3 is qSneedTorrent version</comment>
         <translation>[تنزيل: %1, رفع: %2] كيوبت‎تورنت %3</translation>
     </message>
     <message>
@@ -1105,7 +1105,7 @@
         <translation>حجم تراكم مأخذ التوصيل</translation>
     </message>
     <message>
-        <source>Enable super seeding for torrent</source>
+        <source>Enable super sneeding for torrent</source>
         <translation>تفعيل البذر الخارق للتورنت</translation>
     </message>
     <message>
@@ -1129,7 +1129,7 @@
         <translation>عندما تصل النسبة</translation>
     </message>
     <message>
-        <source>When seeding time reaches</source>
+        <source>When sneeding time reaches</source>
         <translation>عندما يصل وقت البذر</translation>
     </message>
     <message>
@@ -1165,7 +1165,7 @@
         <translation>إزالة التورنت وملفاته</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
+        <source>qSneedTorrent Section</source>
         <translation>قسم كيوبت‎تورنت</translation>
     </message>
     <message>
@@ -1237,7 +1237,7 @@
         <translation>تحميل خوارزمية الاختناق</translation>
     </message>
     <message>
-        <source>Seeding Limits</source>
+        <source>Sneeding Limits</source>
         <translation>حدود البذر</translation>
     </message>
     <message>
@@ -1629,7 +1629,7 @@
         <translation>تم رفع:</translation>
     </message>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>البذور:</translation>
     </message>
     <message>
@@ -1757,7 +1757,7 @@
         <translation>إعادة التسمية...</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation>%1 (بذرت لـ %2)</translation>
     </message>
     <message>
@@ -1897,7 +1897,7 @@
         <translation>ينزل (0)</translation>
     </message>
     <message>
-        <source>Seeding (0)</source>
+        <source>Sneeding (0)</source>
         <translation>يبذُر (0)</translation>
     </message>
     <message>
@@ -1933,7 +1933,7 @@
         <translation>ينزل (%1)</translation>
     </message>
     <message>
-        <source>Seeding (%1)</source>
+        <source>Sneeding (%1)</source>
         <translation>يبذُر (%1)</translation>
     </message>
     <message>
@@ -2015,11 +2015,11 @@
     </message>
     <message>
         <source>Status</source>
-        <comment>Torrent status (e.g. downloading, seeding, paused)</comment>
+        <comment>Torrent status (e.g. downloading, sneeding, paused)</comment>
         <translation>الحالة</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <comment>i.e. full sources (often untranslated)</comment>
         <translation>البذور</translation>
     </message>
@@ -2192,7 +2192,7 @@
         <translation>لا يوجد</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <translation>البذور</translation>
     </message>
     <message>
@@ -2283,11 +2283,11 @@
         <translation>ينقل</translation>
     </message>
     <message>
-        <source>[F] Seeding</source>
+        <source>[F] Sneeding</source>
         <translation>[إجباري] يبذُر</translation>
     </message>
     <message>
-        <source>Seeding</source>
+        <source>Sneeding</source>
         <translation>يبذُر</translation>
     </message>
     <message>
@@ -2331,7 +2331,7 @@
         <translation>عالق</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation>%1 (بذرت لـ %2)</translation>
     </message>
     <message>
@@ -2455,7 +2455,7 @@
         <translation>إجبار إعادة الفحص</translation>
     </message>
     <message>
-        <source>Super seeding mode</source>
+        <source>Super sneeding mode</source>
         <translation>نمط البذر الخارق</translation>
     </message>
     <message>
@@ -2588,7 +2588,7 @@
         <translation>حذف الملفات من القرص الصلب أيضا</translation>
     </message>
     <message>
-        <source>Deletion confirmation - qBittorrent</source>
+        <source>Deletion confirmation - qSneedTorrent</source>
         <translation>تأكيد الحذف - كيوبت‎تورنت</translation>
     </message>
 </context>
@@ -2712,7 +2712,7 @@
 <context>
     <name>SearchEngineWidget</name>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>البذور:</translation>
     </message>
     <message>
@@ -2842,7 +2842,7 @@
         <translation>محرّك البحث</translation>
     </message>
     <message>
-        <source>Seeders</source>
+        <source>Sneeders</source>
         <translation>الباذرون</translation>
     </message>
 </context>
@@ -2989,7 +2989,7 @@
         <translation>‫الاسم:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
+        <source>About qSneedTorrent</source>
         <translation>عن كيوبت‎تورنت</translation>
     </message>
     <message>
@@ -3001,7 +3001,7 @@
         <translation>المترجمون</translation>
     </message>
     <message>
-        <source>qBittorrent was built with the following libraries:</source>
+        <source>qSneedTorrent was built with the following libraries:</source>
         <translation>تم بناء كيوبت‎تورنت باستخدام المكتبات التالية:</translation>
     </message>
     <message>
@@ -3025,11 +3025,11 @@
         <translation>فرنسا</translation>
     </message>
     <message>
-        <source>qBittorrent Mascot</source>
+        <source>qSneedTorrent Mascot</source>
         <translation>تميمة كيوبت‎تورنت</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
+        <source>qSneedTorrent icon</source>
         <translation>رمز كيوبت‎تورنت</translation>
     </message>
 </context>

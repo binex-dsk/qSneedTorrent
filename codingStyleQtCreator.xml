@@ -34,6 +34,6 @@
  </data>
  <data>
   <variable>DisplayName</variable>
-  <value type="QString">qBittorrent</value>
+  <value type="QString">qSneedTorrent</value>
  </data>
 </qtcreator>

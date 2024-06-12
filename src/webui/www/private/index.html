@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
-    <meta name="application-name" content="qBittorrent" />
-    <title>qBittorrent Web UI</title>
-    <link rel="icon" type="image/png" href="images/qbittorrent32.png" sizes="32x32" />
-    <link rel="icon" type="image/svg+xml" href="icons/qbittorrent-tray.svg" sizes="any" />
+    <meta name="application-name" content="qSneedTorrent" />
+    <title>qSneedTorrent Web UI</title>
+    <link rel="icon" type="image/png" href="images/qsneedtorrent32.png" sizes="32x32" />
+    <link rel="icon" type="image/svg+xml" href="icons/qsneedtorrent-tray.svg" sizes="any" />
     <link rel="stylesheet" type="text/css" href="css/dynamicTable.css?v=${CACHEID}" />
     <link rel="stylesheet" type="text/css" href="css/style.css?v=${CACHEID}" />
     <!--<link rel="stylesheet" type="text/css" href="css/Content.css" />-->
@@ -40,7 +40,7 @@
     <div id="desktop">
         <div id="desktopHeader">
             <!--<div id="desktopTitlebar">
-                <h1 class="applicationTitle">qBittorrent Web User Interface <span class="version">version 2.0.0</span></h1>
+                <h1 class="applicationTitle">qSneedTorrent Web User Interface <span class="version">version 2.0.0</span></h1>
             </div>-->
             <div id="desktopNavbar">
                 <ul>
@@ -50,7 +50,7 @@
                             <li><a id="uploadLink"><img class="MyMenuIcon" alt="QBT_TR(Add Torrent File...)QBT_TR[CONTEXT=MainWindow]" src="icons/list-add.svg" width="16" height="16" />QBT_TR(Add Torrent File...)QBT_TR[CONTEXT=MainWindow]</a></li>
                             <li><a id="downloadLink"><img class="MyMenuIcon" alt="QBT_TR(Add Torrent Link...)QBT_TR[CONTEXT=MainWindow]" src="icons/insert-link.svg" width="16" height="16" />QBT_TR(Add Torrent Link...)QBT_TR[CONTEXT=MainWindow]</a></li>
                             <li class="divider"><a id="logoutLink"><img class="MyMenuIcon" alt="QBT_TR(Logout)QBT_TR[CONTEXT=HttpServer]" src="icons/system-log-out.svg" width="16" height="16" />QBT_TR(Logout)QBT_TR[CONTEXT=HttpServer]</a></li>
-                            <li><a id="shutdownLink"><img class="MyMenuIcon" alt="QBT_TR(Exit qBittorrent)QBT_TR[CONTEXT=HttpServer]" src="icons/application-exit.svg" width="16" height="16" />QBT_TR(Exit qBittorrent)QBT_TR[CONTEXT=HttpServer]</a></li>
+                            <li><a id="shutdownLink"><img class="MyMenuIcon" alt="QBT_TR(Exit qSneedTorrent)QBT_TR[CONTEXT=HttpServer]" src="icons/application-exit.svg" width="16" height="16" />QBT_TR(Exit qSneedTorrent)QBT_TR[CONTEXT=HttpServer]</a></li>
                         </ul>
                     </li>
                     <li>
@@ -89,8 +89,8 @@
                     <li>
                         <a class="returnFalse">QBT_TR(Help)QBT_TR[CONTEXT=MainWindow]</a>
                         <ul>
-                            <li><a id="docsLink" target="_blank" href="http://wiki.qbittorrent.org/"><img class="MyMenuIcon" src="icons/help-contents.svg" alt="QBT_TR(Documentation)QBT_TR[CONTEXT=MainWindow]" width="16" height="16" />QBT_TR(Documentation)QBT_TR[CONTEXT=MainWindow]</a></li>
-                            <li class="divider"><a id="bugLink" target="_blank" href="https://www.qbittorrent.org/donate"><img class="MyMenuIcon" src="icons/wallet-open.svg" alt="QBT_TR(Donate!)QBT_TR[CONTEXT=MainWindow]" width="16" height="16" />QBT_TR(Donate!)QBT_TR[CONTEXT=MainWindow]</a></li>
+                            <li><a id="docsLink" target="_blank" href="http://wiki.qsneedtorrent.org/"><img class="MyMenuIcon" src="icons/help-contents.svg" alt="QBT_TR(Documentation)QBT_TR[CONTEXT=MainWindow]" width="16" height="16" />QBT_TR(Documentation)QBT_TR[CONTEXT=MainWindow]</a></li>
+                            <li class="divider"><a id="bugLink" target="_blank" href="https://www.qsneedtorrent.org/donate"><img class="MyMenuIcon" src="icons/wallet-open.svg" alt="QBT_TR(Donate!)QBT_TR[CONTEXT=MainWindow]" width="16" height="16" />QBT_TR(Donate!)QBT_TR[CONTEXT=MainWindow]</a></li>
                             <li><a id="aboutLink"><img class="MyMenuIcon" src="icons/help-about.svg" alt="QBT_TR(About)QBT_TR[CONTEXT=MainWindow]" width="16" height="16" />QBT_TR(About)QBT_TR[CONTEXT=MainWindow]</a></li>
                         </ul>
                     </li>
@@ -149,7 +149,7 @@
         <li class="separator"><a href="#downloadLimit"><img src="icons/kt-set-max-download-speed.svg" alt="QBT_TR(Limit download rate...)QBT_TR[CONTEXT=TransferListWidget]" /> QBT_TR(Limit download rate...)QBT_TR[CONTEXT=TransferListWidget]</a></li>
         <li><a href="#uploadLimit"><img src="icons/kt-set-max-upload-speed.svg" alt="QBT_TR(Limit upload rate...)QBT_TR[CONTEXT=TransferListWidget]" /> QBT_TR(Limit upload rate...)QBT_TR[CONTEXT=TransferListWidget]</a></li>
         <li><a href="#shareRatio"><img src="icons/ratio.svg" alt="QBT_TR(Limit share ratio...)QBT_TR[CONTEXT=TransferListWidget]" /> QBT_TR(Limit share ratio...)QBT_TR[CONTEXT=TransferListWidget]</a></li>
-        <li><a href="#superSeeding"><img src="icons/checked.svg" alt="QBT_TR(Super seeding mode)QBT_TR[CONTEXT=TransferListWidget]" /> QBT_TR(Super seeding mode)QBT_TR[CONTEXT=TransferListWidget]</a></li>
+        <li><a href="#superSneeding"><img src="icons/checked.svg" alt="QBT_TR(Super sneeding mode)QBT_TR[CONTEXT=TransferListWidget]" /> QBT_TR(Super sneeding mode)QBT_TR[CONTEXT=TransferListWidget]</a></li>
         <li class="separator"><a href="#sequentialDownload"><img src="icons/checked.svg" alt="QBT_TR(Download in sequential order)QBT_TR[CONTEXT=TransferListWidget]" /> QBT_TR(Download in sequential order)QBT_TR[CONTEXT=TransferListWidget]</a></li>
         <li><a href="#firstLastPiecePrio"><img src="icons/checked.svg" alt="QBT_TR(Download first and last pieces first)QBT_TR[CONTEXT=TransferListWidget]" /> QBT_TR(Download first and last pieces first)QBT_TR[CONTEXT=TransferListWidget]</a></li>
         <li class="separator"><a href="#forceRecheck"><img src="icons/document-edit-verify.svg" alt="QBT_TR(Force recheck)QBT_TR[CONTEXT=TransferListWidget]" /> QBT_TR(Force recheck)QBT_TR[CONTEXT=TransferListWidget]</a></li>
@@ -234,7 +234,7 @@
                     <td class="statusBarSeparator"></td>
                     <td class="speedLabel"><img src="icons/downloading_small.svg" alt="QBT_TR(Download speed icon)QBT_TR[CONTEXT=MainWindow]" style="height: 1.4em; padding-right: 5px; margin-bottom: -4px;"><span id="DlInfos"></span></td>
                     <td class="statusBarSeparator"></td>
-                    <td class="speedLabel"><img src="icons/seeding.svg" alt="QBT_TR(Upload speed icon)QBT_TR[CONTEXT=MainWindow]" style="height: 1.4em; padding-right: 5px; margin-bottom: -3px;"><span id="UpInfos"></span></td>
+                    <td class="speedLabel"><img src="icons/sneeding.svg" alt="QBT_TR(Upload speed icon)QBT_TR[CONTEXT=MainWindow]" style="height: 1.4em; padding-right: 5px; margin-bottom: -3px;"><span id="UpInfos"></span></td>
                 </tr>
             </table>
         </div>

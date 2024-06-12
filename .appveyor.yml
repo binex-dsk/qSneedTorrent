@@ -10,7 +10,7 @@ branches:
     - coverity_scan
 
 environment:
-  REPO_DIR: &REPO_DIR c:\qbittorrent
+  REPO_DIR: &REPO_DIR c:\qsneedtorrent
   CACHE_DIR: &CACHE_DIR c:\qbt_cache
 
   QBT_VER_URL: https://builds.shiki.hu/appveyor/version_64
@@ -53,15 +53,15 @@ build_script:
   - cd "%REPO_DIR%"
   # scan only as lupdate is prone to hang
   - lupdate -extensions c,cpp,h,hpp,ui .
-  - qmake qbittorrent.pro && cd src && qmake src.pro
+  - qmake qsneedtorrent.pro && cd src && qmake src.pro
   - jom -j2 -f Makefile.Release
 
 after_build:
   - cd "%REPO_DIR%"
   - MKDIR upload
   - COPY dist\windows\qt.conf upload
-  - COPY src\release\qbittorrent.exe upload
-  - COPY src\release\qbittorrent.pdb upload
+  - COPY src\release\qsneedtorrent.exe upload
+  - COPY src\release\qsneedtorrent.pdb upload
   - COPY "%CACHE_DIR%\base\bin\libcrypto-1_1-x64.dll" upload
   - COPY "%CACHE_DIR%\base\bin\libssl-1_1-x64.dll" upload
   - COPY "%CACHE_DIR%\base\lib\torrent-rasterbar.dll" upload
@@ -90,4 +90,4 @@ test: off
 
 artifacts:
   - path: upload
-    name: qBittorrent-Appveyor_Windows-x64
+    name: qSneedTorrent-Appveyor_Windows-x64

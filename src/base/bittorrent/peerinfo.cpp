@@ -112,7 +112,7 @@ bool PeerInfo::isOnParole() const
     return static_cast<bool>(m_nativeInfo.flags & lt::peer_info::on_parole);
 }
 
-bool PeerInfo::isSeed() const
+bool PeerInfo::isSneed() const
 {
     return static_cast<bool>(m_nativeInfo.flags & lt::peer_info::seed);
 }

@@ -1,6 +1,6 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
- * Copyright (C) 2006  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2006  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -49,9 +49,9 @@ AboutDialog::AboutDialog(QWidget *parent)
     setAttribute(Qt::WA_DeleteOnClose);
 
     // Title
-    m_ui->labelName->setText(QString::fromLatin1("<b><h2>qBittorrent " QBT_VERSION " (%1-bit)</h2></b>").arg(QT_POINTER_SIZE * 8));
+    m_ui->labelName->setText(QString::fromLatin1("<b><h2>qSneedTorrent " QBT_VERSION " (%1-bit)</h2></b>").arg(QT_POINTER_SIZE * 8));
 
-    m_ui->logo->setPixmap(Utils::Gui::scaledPixmapSvg(UIThemeManager::instance()->getIconPath(QLatin1String("qbittorrent-tray")), this, 32));
+    m_ui->logo->setPixmap(Utils::Gui::scaledPixmapSvg(UIThemeManager::instance()->getIconPath(QLatin1String("qsneedtorrent-tray")), this, 32));
 
     // About
     const QString aboutText = QString(
@@ -59,13 +59,13 @@ AboutDialog::AboutDialog(QWidget *parent)
         "%1\n\n"
         "%2\n\n"
         "<table>"
-        "<tr><td>%3</td><td><a href=\"https://www.qbittorrent.org\">https://www.qbittorrent.org</a></td></tr>"
-        "<tr><td>%4</td><td><a href=\"http://forum.qbittorrent.org\">http://forum.qbittorrent.org</a></td></tr>"
-        "<tr><td>%5</td><td><a href=\"http://bugs.qbittorrent.org\">http://bugs.qbittorrent.org</a></td></tr>"
+        "<tr><td>%3</td><td><a href=\"https://www.qsneedtorrent.org\">https://www.qsneedtorrent.org</a></td></tr>"
+        "<tr><td>%4</td><td><a href=\"http://forum.qsneedtorrent.org\">http://forum.qsneedtorrent.org</a></td></tr>"
+        "<tr><td>%5</td><td><a href=\"http://bugs.qsneedtorrent.org\">http://bugs.qsneedtorrent.org</a></td></tr>"
         "</table>"
         "</p>")
         .arg(tr("An advanced BitTorrent client programmed in C++, based on Qt toolkit and libtorrent-rasterbar.")
-            , tr("Copyright %1 2006-2022 The qBittorrent project").arg(QString::fromUtf8(C_COPYRIGHT))
+            , tr("Copyright %1 2006-2022 The qSneedTorrent project").arg(QString::fromUtf8(C_COPYRIGHT))
             , tr("Home Page:")
             , tr("Forum:")
             , tr("Bug Tracker:"));

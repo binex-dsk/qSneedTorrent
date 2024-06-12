@@ -92,8 +92,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>Închide qBittorrent</translation>
+        <source>Exit qSneedTorrent</source>
+        <translation>Închide qSneedTorrent</translation>
     </message>
     <message>
         <source>Only one link per line</source>
@@ -140,8 +140,8 @@
         <translation>Numărul maxim de sloturi de încărcare pe torrent trebuie să fie mai mare ca 0 sau dezactivat.</translation>
     </message>
     <message>
-        <source>Unable to save program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Nu se pot salva preferințele programului, probabil qBittorrent nu poate fi contactat.</translation>
+        <source>Unable to save program preferences, qSneedTorrent is probably unreachable.</source>
+        <translation>Nu se pot salva preferințele programului, probabil qSneedTorrent nu poate fi contactat.</translation>
     </message>
     <message>
         <source>Unknown</source>
@@ -152,16 +152,16 @@
         <translation>Limita raportului de partajare trebuie să fie între 0 și 9998.</translation>
     </message>
     <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
-        <translation>Limita de timp pentru seed trebuie să fie situată între 0 şi 525600 de minute.</translation>
+        <source>Sneeding time limit must be between 0 and 525600 minutes.</source>
+        <translation>Limita de timp pentru sneed trebuie să fie situată între 0 şi 525600 de minute.</translation>
     </message>
     <message>
         <source>The port used for the Web UI must be between 1 and 65535.</source>
         <translation>Portul folosit pentru interfața Web trebuie să fie între 1 și 65535.</translation>
     </message>
     <message>
-        <source>Unable to log in, qBittorrent is probably unreachable.</source>
-        <translation>Nu se poate autentifica, probabil qBittorrent nu poate fi contactat.</translation>
+        <source>Unable to log in, qSneedTorrent is probably unreachable.</source>
+        <translation>Nu se poate autentifica, probabil qSneedTorrent nu poate fi contactat.</translation>
     </message>
     <message>
         <source>Invalid Username or Password.</source>
@@ -280,8 +280,8 @@
         <translation>Salvează</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>Clientul qBittorrent nu poate fi contactat</translation>
+        <source>qSneedTorrent client is not reachable</source>
+        <translation>Clientul qSneedTorrent nu poate fi contactat</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -320,7 +320,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>qBittorrent has been shutdown</source>
+        <source>qSneedTorrent has been shutdown</source>
         <translation>qBittorent a fost oprit</translation>
     </message>
     <message>
@@ -463,13 +463,13 @@
         <translation>Limită viteză de descărare globală</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Sigur doriți să închideți qBittorrent?</translation>
+        <source>Are you sure you want to quit qSneedTorrent?</source>
+        <translation>Sigur doriți să închideți qSneedTorrent?</translation>
     </message>
     <message>
-        <source>[D: %1, U: %2] qBittorrent %3</source>
-        <comment>D = Download; U = Upload; %3 is qBittorrent version</comment>
-        <translation>[D: %1/s, Î: %2/s] qBittorrent %3</translation>
+        <source>[D: %1, U: %2] qSneedTorrent %3</source>
+        <comment>D = Download; U = Upload; %3 is qSneedTorrent version</comment>
+        <translation>[D: %1/s, Î: %2/s] qSneedTorrent %3</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1105,7 +1105,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Enable super seeding for torrent</source>
+        <source>Enable super sneeding for torrent</source>
         <translation>Activați super transmiterea pentru torrent</translation>
     </message>
     <message>
@@ -1129,7 +1129,7 @@
         <translation>Când rația ajunge la</translation>
     </message>
     <message>
-        <source>When seeding time reaches</source>
+        <source>When sneeding time reaches</source>
         <translation>Când timpul de transmitere ajunge</translation>
     </message>
     <message>
@@ -1165,7 +1165,7 @@
         <translation>Elimină torrentul și fișierele acestuia</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
+        <source>qSneedTorrent Section</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1237,7 +1237,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeding Limits</source>
+        <source>Sneeding Limits</source>
         <translation>Limite de transmitere</translation>
     </message>
     <message>
@@ -1629,7 +1629,7 @@
         <translation>Încărcat:</translation>
     </message>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>Surse:</translation>
     </message>
     <message>
@@ -1757,7 +1757,7 @@
         <translation>Redenumire...</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1897,7 +1897,7 @@
         <translation>Se descarcă (0)</translation>
     </message>
     <message>
-        <source>Seeding (0)</source>
+        <source>Sneeding (0)</source>
         <translation>Se contribuie (0)</translation>
     </message>
     <message>
@@ -1933,7 +1933,7 @@
         <translation>Se descarcă (%1)</translation>
     </message>
     <message>
-        <source>Seeding (%1)</source>
+        <source>Sneeding (%1)</source>
         <translation>Se contribuie (%1)</translation>
     </message>
     <message>
@@ -2015,11 +2015,11 @@
     </message>
     <message>
         <source>Status</source>
-        <comment>Torrent status (e.g. downloading, seeding, paused)</comment>
+        <comment>Torrent status (e.g. downloading, sneeding, paused)</comment>
         <translation>Stare</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <comment>i.e. full sources (often untranslated)</comment>
         <translation>Surse</translation>
     </message>
@@ -2192,7 +2192,7 @@
         <translation>Indisponibil</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <translation>Surse</translation>
     </message>
     <message>
@@ -2283,11 +2283,11 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>[F] Seeding</source>
+        <source>[F] Sneeding</source>
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeding</source>
+        <source>Sneeding</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2331,7 +2331,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2455,7 +2455,7 @@
         <translation>Forțează reverificarea</translation>
     </message>
     <message>
-        <source>Super seeding mode</source>
+        <source>Super sneeding mode</source>
         <translation>Mod super-contribuire</translation>
     </message>
     <message>
@@ -2588,8 +2588,8 @@
         <translation>Șterge și fișierele de pe disc</translation>
     </message>
     <message>
-        <source>Deletion confirmation - qBittorrent</source>
-        <translation>Confirmare ștergere - qBittorrent</translation>
+        <source>Deletion confirmation - qSneedTorrent</source>
+        <translation>Confirmare ștergere - qSneedTorrent</translation>
     </message>
 </context>
 <context>
@@ -2712,7 +2712,7 @@
 <context>
     <name>SearchEngineWidget</name>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2842,7 +2842,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeders</source>
+        <source>Sneeders</source>
         <translation type="unfinished" />
     </message>
 </context>
@@ -2989,8 +2989,8 @@
         <translation>Nume:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>Despre qBittorrent</translation>
+        <source>About qSneedTorrent</source>
+        <translation>Despre qSneedTorrent</translation>
     </message>
     <message>
         <source>License</source>
@@ -3001,8 +3001,8 @@
         <translation>Traducători</translation>
     </message>
     <message>
-        <source>qBittorrent was built with the following libraries:</source>
-        <translation>qBittorrent a fost construit folosind următoarele biblioteci:</translation>
+        <source>qSneedTorrent was built with the following libraries:</source>
+        <translation>qSneedTorrent a fost construit folosind următoarele biblioteci:</translation>
     </message>
     <message>
         <source>Nationality:</source>
@@ -3025,11 +3025,11 @@
         <translation>Franţa</translation>
     </message>
     <message>
-        <source>qBittorrent Mascot</source>
+        <source>qSneedTorrent Mascot</source>
         <translation type="unfinished" />
     </message>
     <message>
-        <source>qBittorrent icon</source>
+        <source>qSneedTorrent icon</source>
         <translation type="unfinished" />
     </message>
 </context>

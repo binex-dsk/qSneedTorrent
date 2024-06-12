@@ -18,11 +18,11 @@
 <script>
     'use strict';
 
-    if (window.qBittorrent === undefined) {
-        window.qBittorrent = {};
+    if (window.qSneedTorrent === undefined) {
+        window.qSneedTorrent = {};
     }
 
-    window.qBittorrent.TransferList = (function() {
+    window.qSneedTorrent.TransferList = (function() {
         const exports = function() {
             return {
                 contextMenu: contextMenu,
@@ -30,7 +30,7 @@
         };
 
         //create a context menu
-        const contextMenu = new window.qBittorrent.ContextMenu.TorrentsTableContextMenu({
+        const contextMenu = new window.qSneedTorrent.ContextMenu.TorrentsTableContextMenu({
             targets: '.torrentsTableContextMenuTarget',
             menu: 'torrentsTableMenu',
             actions: {
@@ -95,8 +95,8 @@
                     reannounceFN();
                 },
 
-                superSeeding: function(element, ref) {
-                    setSuperSeedingFN(!ref.getItemChecked('superSeeding'));
+                superSneeding: function(element, ref) {
+                    setSuperSneedingFN(!ref.getItemChecked('superSneeding'));
                 }
             },
             offsets: {
@@ -110,5 +110,5 @@
         return exports();
     })();
 
-    Object.freeze(window.qBittorrent.TransferList);
+    Object.freeze(window.qSneedTorrent.TransferList);
 </script>

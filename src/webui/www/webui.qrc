@@ -62,7 +62,7 @@
         <file>private/scripts/prop-general.js</file>
         <file>private/scripts/prop-peers.js</file>
         <file>private/scripts/prop-trackers.js</file>
-        <file>private/scripts/prop-webseeds.js</file>
+        <file>private/scripts/prop-websneeds.js</file>
         <file>private/scripts/speedslider.js</file>
         <file>private/setlocation.html</file>
         <file>private/shareratio.html</file>
@@ -84,7 +84,7 @@
         <file>private/views/transferlist.html</file>
         <file>public/css/login.css</file>
         <file>public/css/noscript.css</file>
-        <file>public/images/qbittorrent32.png</file>
+        <file>public/images/qsneedtorrent32.png</file>
         <file>public/index.html</file>
         <file>public/scripts/login.js</file>
     </qresource>

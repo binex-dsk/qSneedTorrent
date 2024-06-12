@@ -92,8 +92,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>צא מ-qBittorrent</translation>
+        <source>Exit qSneedTorrent</source>
+        <translation>צא מ-qSneedTorrent</translation>
     </message>
     <message>
         <source>Only one link per line</source>
@@ -140,8 +140,8 @@
         <translation>מספר מרבי של מגבלת חריצי העלאה לכל טורנט חייב להיות גדול מ-0 או מושבת.</translation>
     </message>
     <message>
-        <source>Unable to save program preferences, qBittorrent is probably unreachable.</source>
-        <translation>לא ניתן לשמור את העדפות התכנית, qBittorrent כנראה בלתי נגיש.</translation>
+        <source>Unable to save program preferences, qSneedTorrent is probably unreachable.</source>
+        <translation>לא ניתן לשמור את העדפות התכנית, qSneedTorrent כנראה בלתי נגיש.</translation>
     </message>
     <message>
         <source>Unknown</source>
@@ -152,7 +152,7 @@
         <translation>מגבלת יחס שיתוף חייבת להיות בין 0 לבין 9998.</translation>
     </message>
     <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
+        <source>Sneeding time limit must be between 0 and 525600 minutes.</source>
         <translation>מגבלת זמן זריעה חייבת להיות בין 0 לבין 525600 דקות.</translation>
     </message>
     <message>
@@ -160,8 +160,8 @@
         <translation>הפתחה המשמשת לממשק משתמש הרשת חייבת להיות בין 1 ל-65535.</translation>
     </message>
     <message>
-        <source>Unable to log in, qBittorrent is probably unreachable.</source>
-        <translation>לא היה ניתן להיכנס, qBittorrent כנראה בלתי נגיש.</translation>
+        <source>Unable to log in, qSneedTorrent is probably unreachable.</source>
+        <translation>לא היה ניתן להיכנס, qSneedTorrent כנראה בלתי נגיש.</translation>
     </message>
     <message>
         <source>Invalid Username or Password.</source>
@@ -280,8 +280,8 @@
         <translation>שמירה</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>לקוח qBittorrent בלתי נגיש</translation>
+        <source>qSneedTorrent client is not reachable</source>
+        <translation>לקוח qSneedTorrent בלתי נגיש</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -320,8 +320,8 @@
         <translation>סף קצב הורדה חייב להיות גדול מ־0.</translation>
     </message>
     <message>
-        <source>qBittorrent has been shutdown</source>
-        <translation>qBittorrent כובה</translation>
+        <source>qSneedTorrent has been shutdown</source>
+        <translation>qSneedTorrent כובה</translation>
     </message>
     <message>
         <source>Open documentation</source>
@@ -463,13 +463,13 @@
         <translation>מגבלה כללית של מהירות הורדה</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>האם אתה בטוח שאתה רוצה לצאת מ-qBittorrent?</translation>
+        <source>Are you sure you want to quit qSneedTorrent?</source>
+        <translation>האם אתה בטוח שאתה רוצה לצאת מ-qSneedTorrent?</translation>
     </message>
     <message>
-        <source>[D: %1, U: %2] qBittorrent %3</source>
-        <comment>D = Download; U = Upload; %3 is qBittorrent version</comment>
-        <translation>[הור: %1, העל: %2] qBittorrent %3</translation>
+        <source>[D: %1, U: %2] qSneedTorrent %3</source>
+        <comment>D = Download; U = Upload; %3 is qSneedTorrent version</comment>
+        <translation>[הור: %1, העל: %2] qSneedTorrent %3</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1105,7 +1105,7 @@
         <translation>גודל מצבור תושבת:</translation>
     </message>
     <message>
-        <source>Enable super seeding for torrent</source>
+        <source>Enable super sneeding for torrent</source>
         <translation>אפשר זריעת־על עבור טורנט</translation>
     </message>
     <message>
@@ -1129,7 +1129,7 @@
         <translation>כאשר יחס מגיע אל</translation>
     </message>
     <message>
-        <source>When seeding time reaches</source>
+        <source>When sneeding time reaches</source>
         <translation>כאשר זמן זריעה מגיע אל</translation>
     </message>
     <message>
@@ -1165,8 +1165,8 @@
         <translation>הסר טורנט ואת קבציו</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>קטע qBittorrent</translation>
+        <source>qSneedTorrent Section</source>
+        <translation>קטע qSneedTorrent</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -1237,7 +1237,7 @@
         <translation>אלגוריתם מחנק העלאה:</translation>
     </message>
     <message>
-        <source>Seeding Limits</source>
+        <source>Sneeding Limits</source>
         <translation>מגבלות זריעה</translation>
     </message>
     <message>
@@ -1629,7 +1629,7 @@
         <translation>הועלה:</translation>
     </message>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>זורעים:</translation>
     </message>
     <message>
@@ -1757,7 +1757,7 @@
         <translation>שנה שם…</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation>%1 (נזרע למשך %2)</translation>
     </message>
     <message>
@@ -1897,7 +1897,7 @@
         <translation>מוריד (0)</translation>
     </message>
     <message>
-        <source>Seeding (0)</source>
+        <source>Sneeding (0)</source>
         <translation>זורע (0)</translation>
     </message>
     <message>
@@ -1933,7 +1933,7 @@
         <translation>מוריד (%1)</translation>
     </message>
     <message>
-        <source>Seeding (%1)</source>
+        <source>Sneeding (%1)</source>
         <translation>זורע (%1)</translation>
     </message>
     <message>
@@ -2015,11 +2015,11 @@
     </message>
     <message>
         <source>Status</source>
-        <comment>Torrent status (e.g. downloading, seeding, paused)</comment>
+        <comment>Torrent status (e.g. downloading, sneeding, paused)</comment>
         <translation>מיצב</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <comment>i.e. full sources (often untranslated)</comment>
         <translation>זורעים</translation>
     </message>
@@ -2192,7 +2192,7 @@
         <translation>לא זמין</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <translation>זורעים</translation>
     </message>
     <message>
@@ -2283,11 +2283,11 @@
         <translation>מעביר</translation>
     </message>
     <message>
-        <source>[F] Seeding</source>
+        <source>[F] Sneeding</source>
         <translation>[א] זורע</translation>
     </message>
     <message>
-        <source>Seeding</source>
+        <source>Sneeding</source>
         <translation>זורע</translation>
     </message>
     <message>
@@ -2331,7 +2331,7 @@
         <translation>ממתין</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation>%1 (נזרע למשך %2)</translation>
     </message>
     <message>
@@ -2455,7 +2455,7 @@
         <translation>אלץ בדיקה חוזרת</translation>
     </message>
     <message>
-        <source>Super seeding mode</source>
+        <source>Super sneeding mode</source>
         <translation>מצב זריעת־על</translation>
     </message>
     <message>
@@ -2588,8 +2588,8 @@
         <translation>מחק את הקבצים גם מהכונן הקשיח</translation>
     </message>
     <message>
-        <source>Deletion confirmation - qBittorrent</source>
-        <translation>אישור מחיקה - qBittorrent</translation>
+        <source>Deletion confirmation - qSneedTorrent</source>
+        <translation>אישור מחיקה - qSneedTorrent</translation>
     </message>
 </context>
 <context>
@@ -2712,7 +2712,7 @@
 <context>
     <name>SearchEngineWidget</name>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>זורעים:</translation>
     </message>
     <message>
@@ -2842,7 +2842,7 @@
         <translation>מנוע חיפוש</translation>
     </message>
     <message>
-        <source>Seeders</source>
+        <source>Sneeders</source>
         <translation>זורעים</translation>
     </message>
 </context>
@@ -2989,8 +2989,8 @@
         <translation>שם:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>אודות qBittorrent</translation>
+        <source>About qSneedTorrent</source>
+        <translation>אודות qSneedTorrent</translation>
     </message>
     <message>
         <source>License</source>
@@ -3001,8 +3001,8 @@
         <translation>מתרגמים</translation>
     </message>
     <message>
-        <source>qBittorrent was built with the following libraries:</source>
-        <translation>qBittorrent נבנה עם הסיפריות הבאות:</translation>
+        <source>qSneedTorrent was built with the following libraries:</source>
+        <translation>qSneedTorrent נבנה עם הסיפריות הבאות:</translation>
     </message>
     <message>
         <source>Nationality:</source>
@@ -3025,12 +3025,12 @@
         <translation>צרפת</translation>
     </message>
     <message>
-        <source>qBittorrent Mascot</source>
-        <translation>qBittorrent Mascot</translation>
+        <source>qSneedTorrent Mascot</source>
+        <translation>qSneedTorrent Mascot</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
-        <translation>איקון של qBittorrent</translation>
+        <source>qSneedTorrent icon</source>
+        <translation>איקון של qSneedTorrent</translation>
     </message>
 </context>
 <context>

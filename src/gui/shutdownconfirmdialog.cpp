@@ -1,7 +1,7 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
  * Copyright (C) 2014  sledgehammer999 <hammered999@gmail.com>
- * Copyright (C) 2011  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2011  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -111,7 +111,7 @@ void ShutdownConfirmDialog::initText()
     switch (m_action)
     {
     case ShutdownDialogAction::Exit:
-        m_msg = tr("qBittorrent will now exit.");
+        m_msg = tr("qSneedTorrent will now exit.");
         okButton->setText(tr("E&xit Now"));
         setWindowTitle(tr("Exit confirmation"));
         break;

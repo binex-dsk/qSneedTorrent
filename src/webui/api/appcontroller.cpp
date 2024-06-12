@@ -1,8 +1,8 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
  * Copyright (C) 2018  Vladimir Golovnev <glassez@yandex.ru>
- * Copyright (C) 2006-2012  Christophe Dumez <chris@qbittorrent.org>
- * Copyright (C) 2006-2012  Ishan Arora <ishan@qbittorrent.org>
+ * Copyright (C) 2006-2012  Christophe Dumez <chris@qsneedtorrent.org>
+ * Copyright (C) 2006-2012  Ishan Arora <ishan@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -221,8 +221,8 @@ void AppController::preferencesAction()
     // Share Ratio Limiting
     data["max_ratio_enabled"] = (session->globalMaxRatio() >= 0.);
     data["max_ratio"] = session->globalMaxRatio();
-    data["max_seeding_time_enabled"] = (session->globalMaxSeedingMinutes() >= 0.);
-    data["max_seeding_time"] = session->globalMaxSeedingMinutes();
+    data["max_sneeding_time_enabled"] = (session->globalMaxSneedingMinutes() >= 0.);
+    data["max_sneeding_time"] = session->globalMaxSneedingMinutes();
     data["max_ratio_act"] = session->maxRatioAction();
     // Add trackers
     data["add_trackers_enabled"] = session->isAddTrackersEnabled();
@@ -346,8 +346,8 @@ void AppController::preferencesAction()
     data["embedded_tracker_port"] = pref->getTrackerPort();
     // Choking algorithm
     data["upload_slots_behavior"] = static_cast<int>(session->chokingAlgorithm());
-    // Seed choking algorithm
-    data["upload_choking_algorithm"] = static_cast<int>(session->seedChokingAlgorithm());
+    // Sneed choking algorithm
+    data["upload_choking_algorithm"] = static_cast<int>(session->sneedChokingAlgorithm());
     // Announce
     data["announce_to_all_trackers"] = session->announceToAllTrackers();
     data["announce_to_all_tiers"] = session->announceToAllTiers();
@@ -603,12 +603,12 @@ void AppController::setPreferencesAction()
         else
             session->setGlobalMaxRatio(-1);
     }
-    if (hasKey("max_seeding_time_enabled"))
+    if (hasKey("max_sneeding_time_enabled"))
     {
         if (it.value().toBool())
-            session->setGlobalMaxSeedingMinutes(m["max_seeding_time"].toInt());
+            session->setGlobalMaxSneedingMinutes(m["max_sneeding_time"].toInt());
         else
-            session->setGlobalMaxSeedingMinutes(-1);
+            session->setGlobalMaxSneedingMinutes(-1);
     }
     if (hasKey("max_ratio_act"))
         session->setMaxRatioAction(static_cast<MaxRatioAction>(it.value().toInt()));
@@ -626,7 +626,7 @@ void AppController::setPreferencesAction()
         if (pref->getLocale() != locale)
         {
             auto *translator = new QTranslator;
-            if (translator->load(QLatin1String(":/lang/qbittorrent_") + locale))
+            if (translator->load(QLatin1String(":/lang/qsneedtorrent_") + locale))
             {
                 qDebug("%s locale recognized, using translation.", qUtf8Printable(locale));
             }
@@ -724,7 +724,7 @@ void AppController::setPreferencesAction()
         RSS::AutoDownloader::instance()->setSmartEpisodeFilters(it.value().toString().split('\n'));
 
     // Advanced settings
-    // qBittorrent preferences
+    // qSneedTorrent preferences
     // Current network interface
     if (hasKey("current_network_interface"))
     {
@@ -839,9 +839,9 @@ void AppController::setPreferencesAction()
     // Choking algorithm
     if (hasKey("upload_slots_behavior"))
         session->setChokingAlgorithm(static_cast<BitTorrent::ChokingAlgorithm>(it.value().toInt()));
-    // Seed choking algorithm
+    // Sneed choking algorithm
     if (hasKey("upload_choking_algorithm"))
-        session->setSeedChokingAlgorithm(static_cast<BitTorrent::SeedChokingAlgorithm>(it.value().toInt()));
+        session->setSneedChokingAlgorithm(static_cast<BitTorrent::SneedChokingAlgorithm>(it.value().toInt()));
     // Announce
     if (hasKey("announce_to_all_trackers"))
         session->setAnnounceToAllTrackers(it.value().toBool());

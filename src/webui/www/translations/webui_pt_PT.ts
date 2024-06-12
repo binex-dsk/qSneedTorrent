@@ -92,8 +92,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>Sair do qBittorrent</translation>
+        <source>Exit qSneedTorrent</source>
+        <translation>Sair do qSneedTorrent</translation>
     </message>
     <message>
         <source>Only one link per line</source>
@@ -140,8 +140,8 @@
         <translation>O número máximo do limite de ligações para upload por torrent tem que ser superior a 0 ou estar inativo.</translation>
     </message>
     <message>
-        <source>Unable to save program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Não foi possível guardar as preferências, o qBittorrent está provavelmente inacessível.</translation>
+        <source>Unable to save program preferences, qSneedTorrent is probably unreachable.</source>
+        <translation>Não foi possível guardar as preferências, o qSneedTorrent está provavelmente inacessível.</translation>
     </message>
     <message>
         <source>Unknown</source>
@@ -152,7 +152,7 @@
         <translation>O limite do rácio de partilha deverá estar situado entre 0 e 9998.</translation>
     </message>
     <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
+        <source>Sneeding time limit must be between 0 and 525600 minutes.</source>
         <translation>O limite do tempo a semear deverá estar localizado entre os 0 e os 525600 minutos.</translation>
     </message>
     <message>
@@ -160,8 +160,8 @@
         <translation>A porta utilizada para a interface web tem que estar compreendida entre 1 e 65535.</translation>
     </message>
     <message>
-        <source>Unable to log in, qBittorrent is probably unreachable.</source>
-        <translation>Não foi possível iniciar sessão, o qBittorrent está provavelmente inacessível.</translation>
+        <source>Unable to log in, qSneedTorrent is probably unreachable.</source>
+        <translation>Não foi possível iniciar sessão, o qSneedTorrent está provavelmente inacessível.</translation>
     </message>
     <message>
         <source>Invalid Username or Password.</source>
@@ -280,8 +280,8 @@
         <translation>Guardar</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>O cliente qBittorrent encontra-se inacessível</translation>
+        <source>qSneedTorrent client is not reachable</source>
+        <translation>O cliente qSneedTorrent encontra-se inacessível</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -320,8 +320,8 @@
         <translation>O rácio de downloads deverá ser superior a 0.</translation>
     </message>
     <message>
-        <source>qBittorrent has been shutdown</source>
-        <translation>O qBittorrent foi desligado</translation>
+        <source>qSneedTorrent has been shutdown</source>
+        <translation>O qSneedTorrent foi desligado</translation>
     </message>
     <message>
         <source>Open documentation</source>
@@ -463,13 +463,13 @@
         <translation>Limite global da velocidade para os downloads</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Tem a certeza que deseja sair do qBittorrent?</translation>
+        <source>Are you sure you want to quit qSneedTorrent?</source>
+        <translation>Tem a certeza que deseja sair do qSneedTorrent?</translation>
     </message>
     <message>
-        <source>[D: %1, U: %2] qBittorrent %3</source>
-        <comment>D = Download; U = Upload; %3 is qBittorrent version</comment>
-        <translation>[D: %1, U: %2] qBittorrent %3</translation>
+        <source>[D: %1, U: %2] qSneedTorrent %3</source>
+        <comment>D = Download; U = Upload; %3 is qSneedTorrent version</comment>
+        <translation>[D: %1, U: %2] qSneedTorrent %3</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1105,7 +1105,7 @@
         <translation>Tamanho da lista pendente do socket:</translation>
     </message>
     <message>
-        <source>Enable super seeding for torrent</source>
+        <source>Enable super sneeding for torrent</source>
         <translation>Ativar o super semear para o torrent</translation>
     </message>
     <message>
@@ -1129,7 +1129,7 @@
         <translation>Quando o rácio atingir</translation>
     </message>
     <message>
-        <source>When seeding time reaches</source>
+        <source>When sneeding time reaches</source>
         <translation>Quando o tempo a semear atingir</translation>
     </message>
     <message>
@@ -1165,8 +1165,8 @@
         <translation>Remover o torrent e os seus ficheiros</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>Secção qBittorrent</translation>
+        <source>qSneedTorrent Section</source>
+        <translation>Secção qSneedTorrent</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -1237,7 +1237,7 @@
         <translation>Algoritmo choking do upload:</translation>
     </message>
     <message>
-        <source>Seeding Limits</source>
+        <source>Sneeding Limits</source>
         <translation>Limites do semear</translation>
     </message>
     <message>
@@ -1629,7 +1629,7 @@
         <translation>Enviados:</translation>
     </message>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>Sementes:</translation>
     </message>
     <message>
@@ -1757,7 +1757,7 @@
         <translation>Renomear...</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation>%1 (semeado durante %2)</translation>
     </message>
     <message>
@@ -1897,7 +1897,7 @@
         <translation>A transferir (0)</translation>
     </message>
     <message>
-        <source>Seeding (0)</source>
+        <source>Sneeding (0)</source>
         <translation>A semar (0)</translation>
     </message>
     <message>
@@ -1933,7 +1933,7 @@
         <translation>A transferir (%1)</translation>
     </message>
     <message>
-        <source>Seeding (%1)</source>
+        <source>Sneeding (%1)</source>
         <translation>A semear (%1)</translation>
     </message>
     <message>
@@ -2015,11 +2015,11 @@
     </message>
     <message>
         <source>Status</source>
-        <comment>Torrent status (e.g. downloading, seeding, paused)</comment>
+        <comment>Torrent status (e.g. downloading, sneeding, paused)</comment>
         <translation>Estado</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <comment>i.e. full sources (often untranslated)</comment>
         <translation>Sementes</translation>
     </message>
@@ -2192,7 +2192,7 @@
         <translation>N/D</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <translation>Sementes</translation>
     </message>
     <message>
@@ -2283,11 +2283,11 @@
         <translation>A mover</translation>
     </message>
     <message>
-        <source>[F] Seeding</source>
+        <source>[F] Sneeding</source>
         <translation>[F] A semear</translation>
     </message>
     <message>
-        <source>Seeding</source>
+        <source>Sneeding</source>
         <translation>A semear</translation>
     </message>
     <message>
@@ -2331,7 +2331,7 @@
         <translation>Parado</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation>%1 (semeado durante %2)</translation>
     </message>
     <message>
@@ -2455,7 +2455,7 @@
         <translation>Forçar nova verificação</translation>
     </message>
     <message>
-        <source>Super seeding mode</source>
+        <source>Super sneeding mode</source>
         <translation>Modo super semeador</translation>
     </message>
     <message>
@@ -2588,8 +2588,8 @@
         <translation>Eliminar também os ficheiros existentes no disco rígido</translation>
     </message>
     <message>
-        <source>Deletion confirmation - qBittorrent</source>
-        <translation>Confirmação de eliminação - qBittorrent</translation>
+        <source>Deletion confirmation - qSneedTorrent</source>
+        <translation>Confirmação de eliminação - qSneedTorrent</translation>
     </message>
 </context>
 <context>
@@ -2712,7 +2712,7 @@
 <context>
     <name>SearchEngineWidget</name>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>Sementes:</translation>
     </message>
     <message>
@@ -2842,7 +2842,7 @@
         <translation>Motor de pesquisa</translation>
     </message>
     <message>
-        <source>Seeders</source>
+        <source>Sneeders</source>
         <translation>Semeadores</translation>
     </message>
 </context>
@@ -2989,8 +2989,8 @@
         <translation>Nome:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>Acerca do qBittorrent</translation>
+        <source>About qSneedTorrent</source>
+        <translation>Acerca do qSneedTorrent</translation>
     </message>
     <message>
         <source>License</source>
@@ -3001,8 +3001,8 @@
         <translation>Tradutores</translation>
     </message>
     <message>
-        <source>qBittorrent was built with the following libraries:</source>
-        <translation>O qBittorrent foi criado com as seguintes bibliotecas:</translation>
+        <source>qSneedTorrent was built with the following libraries:</source>
+        <translation>O qSneedTorrent foi criado com as seguintes bibliotecas:</translation>
     </message>
     <message>
         <source>Nationality:</source>
@@ -3025,12 +3025,12 @@
         <translation>França</translation>
     </message>
     <message>
-        <source>qBittorrent Mascot</source>
-        <translation>Mascote do qBittorrent</translation>
+        <source>qSneedTorrent Mascot</source>
+        <translation>Mascote do qSneedTorrent</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
-        <translation>Ícone do qBittorrent</translation>
+        <source>qSneedTorrent icon</source>
+        <translation>Ícone do qSneedTorrent</translation>
     </message>
 </context>
 <context>

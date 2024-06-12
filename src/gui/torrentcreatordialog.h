@@ -1,7 +1,7 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
  * Copyright (C) 2017  Mike Tzou (Chocobo1)
- * Copyright (C) 2010  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2010  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -81,7 +81,7 @@ private:
     SettingValue<QSize> m_storeDialogSize;
     SettingValue<int> m_storePieceSize;
     SettingValue<bool> m_storePrivateTorrent;
-    SettingValue<bool> m_storeStartSeeding;
+    SettingValue<bool> m_storeStartSneeding;
     SettingValue<bool> m_storeIgnoreRatio;
 #ifdef QBT_USES_LIBTORRENT2
     SettingValue<int> m_storeTorrentFormat;
@@ -91,7 +91,7 @@ private:
 #endif
     SettingValue<Path> m_storeLastAddPath;
     SettingValue<QString> m_storeTrackerList;
-    SettingValue<QString> m_storeWebSeedList;
+    SettingValue<QString> m_storeWebSneedList;
     SettingValue<QString> m_storeComments;
     SettingValue<Path> m_storeLastSavePath;
     SettingValue<QString> m_storeSource;

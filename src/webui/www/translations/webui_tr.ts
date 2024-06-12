@@ -92,8 +92,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>qBittorrent'ten Çık</translation>
+        <source>Exit qSneedTorrent</source>
+        <translation>qSneedTorrent'ten Çık</translation>
     </message>
     <message>
         <source>Only one link per line</source>
@@ -140,8 +140,8 @@
         <translation>Torrent başına en fazla gönderme yuvası sınırı sayısı 0'dan büyük olmak ya da etkisizleştirilmek zorundadır.</translation>
     </message>
     <message>
-        <source>Unable to save program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Program tercihleri kaydedilemiyor, qBittorrent'e muhtemelen ulaşılamıyor.</translation>
+        <source>Unable to save program preferences, qSneedTorrent is probably unreachable.</source>
+        <translation>Program tercihleri kaydedilemiyor, qSneedTorrent'e muhtemelen ulaşılamıyor.</translation>
     </message>
     <message>
         <source>Unknown</source>
@@ -152,7 +152,7 @@
         <translation>Paylaşma oranı sınırı 0 ve 9998 arasında olmak zorundadır.</translation>
     </message>
     <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
+        <source>Sneeding time limit must be between 0 and 525600 minutes.</source>
         <translation>Gönderim süresi sınırı 0 ve 525600 dakika arasında olmak zorundadır.</translation>
     </message>
     <message>
@@ -160,8 +160,8 @@
         <translation>Web Arayüzü için kullanılan bağlantı noktası 1 ve 65535 arasında olmak zorundadır.</translation>
     </message>
     <message>
-        <source>Unable to log in, qBittorrent is probably unreachable.</source>
-        <translation>Oturum açılamıyor, qBittorrent'e muhtemelen ulaşılamıyor.</translation>
+        <source>Unable to log in, qSneedTorrent is probably unreachable.</source>
+        <translation>Oturum açılamıyor, qSneedTorrent'e muhtemelen ulaşılamıyor.</translation>
     </message>
     <message>
         <source>Invalid Username or Password.</source>
@@ -280,8 +280,8 @@
         <translation>Kaydet</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>qBittorrent istemcisine ulaşılamıyor</translation>
+        <source>qSneedTorrent client is not reachable</source>
+        <translation>qSneedTorrent istemcisine ulaşılamıyor</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -320,8 +320,8 @@
         <translation>İndirme oranı eşiği 0'dan büyük olmak zorundadır.</translation>
     </message>
     <message>
-        <source>qBittorrent has been shutdown</source>
-        <translation>qBittorrent kapatıldı</translation>
+        <source>qSneedTorrent has been shutdown</source>
+        <translation>qSneedTorrent kapatıldı</translation>
     </message>
     <message>
         <source>Open documentation</source>
@@ -463,13 +463,13 @@
         <translation>Genel İndirme Hızı Sınırı</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>qBittorrent uygulamasından çıkmak istediğinize emin misiniz?</translation>
+        <source>Are you sure you want to quit qSneedTorrent?</source>
+        <translation>qSneedTorrent uygulamasından çıkmak istediğinize emin misiniz?</translation>
     </message>
     <message>
-        <source>[D: %1, U: %2] qBittorrent %3</source>
-        <comment>D = Download; U = Upload; %3 is qBittorrent version</comment>
-        <translation>[İnd: %1, Gön: %2] qBittorrent %3</translation>
+        <source>[D: %1, U: %2] qSneedTorrent %3</source>
+        <comment>D = Download; U = Upload; %3 is qSneedTorrent version</comment>
+        <translation>[İnd: %1, Gön: %2] qSneedTorrent %3</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1105,7 +1105,7 @@
         <translation>Soket biriktirme listesi boyutu:</translation>
     </message>
     <message>
-        <source>Enable super seeding for torrent</source>
+        <source>Enable super sneeding for torrent</source>
         <translation>Torrent için süper gönderimi etkinleştir</translation>
     </message>
     <message>
@@ -1129,7 +1129,7 @@
         <translation>Oran şu değere ulaştığında</translation>
     </message>
     <message>
-        <source>When seeding time reaches</source>
+        <source>When sneeding time reaches</source>
         <translation>Gönderim şu süreye ulaştığında</translation>
     </message>
     <message>
@@ -1165,8 +1165,8 @@
         <translation>Torrent'i ve dosyalarını kaldır</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>qBittorrent Bölümü</translation>
+        <source>qSneedTorrent Section</source>
+        <translation>qSneedTorrent Bölümü</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -1237,7 +1237,7 @@
         <translation>Gönderme kısma algoritması:</translation>
     </message>
     <message>
-        <source>Seeding Limits</source>
+        <source>Sneeding Limits</source>
         <translation>Gönderim Sınırları</translation>
     </message>
     <message>
@@ -1629,7 +1629,7 @@
         <translation>Gönderilen:</translation>
     </message>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>Gönderim:</translation>
     </message>
     <message>
@@ -1757,7 +1757,7 @@
         <translation>Yeniden adlandır...</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation>%1 (gönderilme %2)</translation>
     </message>
     <message>
@@ -1897,7 +1897,7 @@
         <translation>İndiriliyor (0)</translation>
     </message>
     <message>
-        <source>Seeding (0)</source>
+        <source>Sneeding (0)</source>
         <translation>Gönderiliyor (0)</translation>
     </message>
     <message>
@@ -1933,7 +1933,7 @@
         <translation>İndiriliyor (%1)</translation>
     </message>
     <message>
-        <source>Seeding (%1)</source>
+        <source>Sneeding (%1)</source>
         <translation>Gönderiliyor (%1)</translation>
     </message>
     <message>
@@ -2015,11 +2015,11 @@
     </message>
     <message>
         <source>Status</source>
-        <comment>Torrent status (e.g. downloading, seeding, paused)</comment>
+        <comment>Torrent status (e.g. downloading, sneeding, paused)</comment>
         <translation>Durum</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <comment>i.e. full sources (often untranslated)</comment>
         <translation>Gönderim</translation>
     </message>
@@ -2192,7 +2192,7 @@
         <translation>Yok</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <translation>Gönderim</translation>
     </message>
     <message>
@@ -2283,11 +2283,11 @@
         <translation>Taşınıyor</translation>
     </message>
     <message>
-        <source>[F] Seeding</source>
+        <source>[F] Sneeding</source>
         <translation>[F] Gönderiliyor</translation>
     </message>
     <message>
-        <source>Seeding</source>
+        <source>Sneeding</source>
         <translation>Gönderiliyor</translation>
     </message>
     <message>
@@ -2331,7 +2331,7 @@
         <translation>Durduruldu</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation>%1 (gönderilme %2)</translation>
     </message>
     <message>
@@ -2455,7 +2455,7 @@
         <translation>Yeniden denetlemeye zorla</translation>
     </message>
     <message>
-        <source>Super seeding mode</source>
+        <source>Super sneeding mode</source>
         <translation>Süper gönderim kipi</translation>
     </message>
     <message>
@@ -2588,8 +2588,8 @@
         <translation>Aynı zamanda sabit diskteki dosyaları da sil</translation>
     </message>
     <message>
-        <source>Deletion confirmation - qBittorrent</source>
-        <translation>Silme onayı - qBittorrent</translation>
+        <source>Deletion confirmation - qSneedTorrent</source>
+        <translation>Silme onayı - qSneedTorrent</translation>
     </message>
 </context>
 <context>
@@ -2712,7 +2712,7 @@
 <context>
     <name>SearchEngineWidget</name>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>Gönderim:</translation>
     </message>
     <message>
@@ -2842,7 +2842,7 @@
         <translation>Arama motoru</translation>
     </message>
     <message>
-        <source>Seeders</source>
+        <source>Sneeders</source>
         <translation>Gönderen</translation>
     </message>
 </context>
@@ -2989,8 +2989,8 @@
         <translation>Adı:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>qBittorrent Hakkında</translation>
+        <source>About qSneedTorrent</source>
+        <translation>qSneedTorrent Hakkında</translation>
     </message>
     <message>
         <source>License</source>
@@ -3001,8 +3001,8 @@
         <translation>Çevirmenler</translation>
     </message>
     <message>
-        <source>qBittorrent was built with the following libraries:</source>
-        <translation>qBittorrent aşağıdaki kütüphaneler ile yapıldı:</translation>
+        <source>qSneedTorrent was built with the following libraries:</source>
+        <translation>qSneedTorrent aşağıdaki kütüphaneler ile yapıldı:</translation>
     </message>
     <message>
         <source>Nationality:</source>
@@ -3025,12 +3025,12 @@
         <translation>Fransa</translation>
     </message>
     <message>
-        <source>qBittorrent Mascot</source>
-        <translation>qBittorrent Maskotu</translation>
+        <source>qSneedTorrent Mascot</source>
+        <translation>qSneedTorrent Maskotu</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
-        <translation>qBittorrent simgesi</translation>
+        <source>qSneedTorrent icon</source>
+        <translation>qSneedTorrent simgesi</translation>
     </message>
 </context>
 <context>

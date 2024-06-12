@@ -1,0 +1,3 @@
+IDI_ICON1 ICON DISCARDABLE "icons/qsneedtorrent.ico"
+IDI_ICON2 ICON DISCARDABLE "icons/qsneedtorrent_file.ico"
+1 24 DISCARDABLE "qsneedtorrent.exe.manifest"

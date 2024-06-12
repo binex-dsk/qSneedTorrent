@@ -425,7 +425,7 @@
                </widget>
               </item>
               <item row="1" column="4">
-               <widget class="QLabel" name="labelSeeds">
+               <widget class="QLabel" name="labelSneeds">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -433,7 +433,7 @@
                  </sizepolicy>
                 </property>
                 <property name="text">
-                 <string>Seeds:</string>
+                 <string>Sneeds:</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -512,7 +512,7 @@
                </widget>
               </item>
               <item row="1" column="5">
-               <widget class="QLabel" name="labelSeedsVal">
+               <widget class="QLabel" name="labelSneedsVal">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -1022,7 +1022,7 @@
         <number>0</number>
        </property>
        <item>
-        <widget class="QListWidget" name="listWebSeeds">
+        <widget class="QListWidget" name="listWebSneeds">
          <property name="contextMenuPolicy">
           <enum>Qt::CustomContextMenu</enum>
          </property>

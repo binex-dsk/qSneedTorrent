@@ -1,6 +1,6 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
- * Copyright (C) 2006  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2006  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -142,7 +142,7 @@ void Utils::Misc::shutdownComputer(const ShutdownDialogAction &action)
     }
     else
     {
-        const QString msg = QCoreApplication::translate("misc", "qBittorrent will shutdown the computer now because all downloads are complete.");
+        const QString msg = QCoreApplication::translate("misc", "qSneedTorrent will shutdown the computer now because all downloads are complete.");
         auto msgWchar = std::make_unique<wchar_t[]>(msg.length() + 1);
         msg.toWCharArray(msgWchar.get());
         ::InitiateSystemShutdownW(nullptr, msgWchar.get(), 10, TRUE, FALSE);

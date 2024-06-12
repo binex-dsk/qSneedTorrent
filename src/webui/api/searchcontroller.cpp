@@ -332,7 +332,7 @@ int SearchController::generateSearchId() const
  *   - "fileName"
  *   - "fileUrl"
  *   - "fileSize"
- *   - "nbSeeders"
+ *   - "nbSneeders"
  *   - "nbLeechers"
  *   - "siteUrl"
  *   - "descrLink"
@@ -347,7 +347,7 @@ QJsonObject SearchController::getResults(const QList<SearchResult> &searchResult
             {"fileName", searchResult.fileName},
             {"fileUrl", searchResult.fileUrl},
             {"fileSize", searchResult.fileSize},
-            {"nbSeeders", searchResult.nbSeeders},
+            {"nbSneeders", searchResult.nbSneeders},
             {"nbLeechers", searchResult.nbLeechers},
             {"siteUrl", searchResult.siteUrl},
             {"descrLink", searchResult.descrLink}

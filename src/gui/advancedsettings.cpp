@@ -1,6 +1,6 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
- * Copyright (C) 2016 qBittorrent project
+ * Copyright (C) 2016 qSneedTorrent project
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -59,8 +59,8 @@ namespace
 
     enum AdvSettingsRows
     {
-        // qBittorrent section
-        QBITTORRENT_HEADER,
+        // qSneedTorrent section
+        QSNEEDTORRENT_HEADER,
         RESUME_DATA_STORAGE,
 #if defined(Q_OS_WIN)
         OS_MEMORY_PRIORITY,
@@ -128,9 +128,9 @@ namespace
         VALIDATE_HTTPS_TRACKER_CERTIFICATE,
         SSRF_MITIGATION,
         BLOCK_PEERS_ON_PRIVILEGED_PORTS,
-        // seeding
+        // sneeding
         CHOKING_ALGORITHM,
-        SEED_CHOKING_ALGORITHM,
+        SNEED_CHOKING_ALGORITHM,
         // tracker
         ANNOUNCE_ALL_TRACKERS,
         ANNOUNCE_ALL_TIERS,
@@ -306,8 +306,8 @@ void AdvancedSettings::saveAdvancedSettings()
     session->setTrackerEnabled(m_checkBoxTrackerStatus.isChecked());
     // Choking algorithm
     session->setChokingAlgorithm(static_cast<BitTorrent::ChokingAlgorithm>(m_comboBoxChokingAlgorithm.currentIndex()));
-    // Seed choking algorithm
-    session->setSeedChokingAlgorithm(static_cast<BitTorrent::SeedChokingAlgorithm>(m_comboBoxSeedChokingAlgorithm.currentIndex()));
+    // Sneed choking algorithm
+    session->setSneedChokingAlgorithm(static_cast<BitTorrent::SneedChokingAlgorithm>(m_comboBoxSneedChokingAlgorithm.currentIndex()));
 
     pref->setConfirmTorrentRecheck(m_checkBoxConfirmTorrentRecheck.isChecked());
 
@@ -391,12 +391,12 @@ void AdvancedSettings::loadAdvancedSettings()
 
     // add section headers
     auto *labelQbtLink = new QLabel(
-        makeLink(QLatin1String("https://github.com/qbittorrent/qBittorrent/wiki/Explanation-of-Options-in-qBittorrent#Advanced")
+        makeLink(QLatin1String("https://github.com/qsneedtorrent/qSneedTorrent/wiki/Explanation-of-Options-in-qSneedTorrent#Advanced")
                  , tr("Open documentation"))
         , this);
     labelQbtLink->setOpenExternalLinks(true);
-    addRow(QBITTORRENT_HEADER, QString::fromLatin1("<b>%1</b>").arg(tr("qBittorrent Section")), labelQbtLink);
-    static_cast<QLabel *>(cellWidget(QBITTORRENT_HEADER, PROPERTY))->setAlignment(Qt::AlignCenter | Qt::AlignVCenter);
+    addRow(QSNEEDTORRENT_HEADER, QString::fromLatin1("<b>%1</b>").arg(tr("qSneedTorrent Section")), labelQbtLink);
+    static_cast<QLabel *>(cellWidget(QSNEEDTORRENT_HEADER, PROPERTY))->setAlignment(Qt::AlignCenter | Qt::AlignVCenter);
 
     auto *labelLibtorrentLink = new QLabel(
         makeLink(QLatin1String("https://www.libtorrent.org/reference-Settings.html")
@@ -715,11 +715,11 @@ void AdvancedSettings::loadAdvancedSettings()
     m_comboBoxChokingAlgorithm.setCurrentIndex(static_cast<int>(session->chokingAlgorithm()));
     addRow(CHOKING_ALGORITHM, (tr("Upload slots behavior") + ' ' + makeLink("https://www.libtorrent.org/reference-Settings.html#choking_algorithm", "(?)"))
             , &m_comboBoxChokingAlgorithm);
-    // Seed choking algorithm
-    m_comboBoxSeedChokingAlgorithm.addItems({tr("Round-robin"), tr("Fastest upload"), tr("Anti-leech")});
-    m_comboBoxSeedChokingAlgorithm.setCurrentIndex(static_cast<int>(session->seedChokingAlgorithm()));
-    addRow(SEED_CHOKING_ALGORITHM, (tr("Upload choking algorithm") + ' ' + makeLink("https://www.libtorrent.org/reference-Settings.html#seed_choking_algorithm", "(?)"))
-            , &m_comboBoxSeedChokingAlgorithm);
+    // Sneed choking algorithm
+    m_comboBoxSneedChokingAlgorithm.addItems({tr("Round-robin"), tr("Fastest upload"), tr("Anti-leech")});
+    m_comboBoxSneedChokingAlgorithm.setCurrentIndex(static_cast<int>(session->sneedChokingAlgorithm()));
+    addRow(SNEED_CHOKING_ALGORITHM, (tr("Upload choking algorithm") + ' ' + makeLink("https://www.libtorrent.org/reference-Settings.html#sneed_choking_algorithm", "(?)"))
+            , &m_comboBoxSneedChokingAlgorithm);
 
     // Torrent recheck confirmation
     m_checkBoxConfirmTorrentRecheck.setChecked(pref->confirmTorrentRecheck());

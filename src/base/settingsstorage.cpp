@@ -70,7 +70,7 @@ namespace
 SettingsStorage *SettingsStorage::m_instance = nullptr;
 
 SettingsStorage::SettingsStorage()
-    : m_data {TransactionalSettings(u"qBittorrent"_qs).read()}
+    : m_data {TransactionalSettings(u"qSneedTorrent"_qs).read()}
 {
     m_timer.setSingleShot(true);
     m_timer.setInterval(5 * 1000);
@@ -104,7 +104,7 @@ bool SettingsStorage::save()
     const QWriteLocker locker(&m_lock);  // guard for `m_dirty` too
     if (!m_dirty) return true;
 
-    const TransactionalSettings settings(u"qBittorrent"_qs);
+    const TransactionalSettings settings(u"qSneedTorrent"_qs);
     if (!settings.write(m_data))
     {
         m_timer.start();
@@ -162,7 +162,7 @@ QVariantHash TransactionalSettings::read() const
     { // "_new" file is NOT empty
         // This means that the PC closed either due to power outage
         // or because the disk was full. In any case the settings weren't transferred
-        // in their final position. So assume that qbittorrent_new.ini/qbittorrent_new.conf
+        // in their final position. So assume that qsneedtorrent_new.ini/qsneedtorrent_new.conf
         // contains the most recent settings.
         Logger::instance()->addMessage(QObject::tr("Detected unclean program exit. Using fallback file to restore settings: %1")
                 .arg(newPath.toString())
@@ -189,8 +189,8 @@ bool TransactionalSettings::write(const QVariantHash &data) const
     // QSettings deletes the file before writing it out. This can result in problems
     // if the disk is full or a power outage occurs. Those events might occur
     // between deleting the file and recreating it. This is a safety measure.
-    // Write everything to qBittorrent_new.ini/qBittorrent_new.conf and if it succeeds
-    // replace qBittorrent.ini/qBittorrent.conf with it.
+    // Write everything to qSneedTorrent_new.ini/qSneedTorrent_new.conf and if it succeeds
+    // replace qSneedTorrent.ini/qSneedTorrent.conf with it.
     const Path newPath = serialize(m_name + u"_new", data);
     if (newPath.isEmpty())
     {

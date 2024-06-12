@@ -61,7 +61,7 @@ namespace BitTorrent
         bool isHandshake() const;
         bool isConnecting() const;
         bool isOnParole() const;
-        bool isSeed() const;
+        bool isSneed() const;
 
         bool optimisticUnchoke() const;
         bool isSnubbed() const;

@@ -1,7 +1,7 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
  * Copyright (C) 2015  Vladimir Golovnev <glassez@yandex.ru>
- * Copyright (C) 2006  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2006  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -126,7 +126,7 @@ namespace BitTorrent
         qreal progress() const override;
         QDateTime addedTime() const override;
         qreal ratioLimit() const override;
-        int seedingTimeLimit() const override;
+        int sneedingTimeLimit() const override;
 
         Path filePath(int index) const override;
         Path actualFilePath(int index) const override;
@@ -135,7 +135,7 @@ namespace BitTorrent
         QVector<DownloadPriority> filePriorities() const override;
 
         TorrentInfo info() const override;
-        bool isSeed() const override;
+        bool isSneed() const override;
         bool isPaused() const override;
         bool isQueued() const override;
         bool isForced() const override;
@@ -154,7 +154,7 @@ namespace BitTorrent
         bool hasError() const override;
         int queuePosition() const override;
         QVector<TrackerEntry> trackers() const override;
-        QVector<QUrl> urlSeeds() const override;
+        QVector<QUrl> urlSneeds() const override;
         QString error() const override;
         qlonglong totalDownload() const override;
         qlonglong totalUpload() const override;
@@ -162,10 +162,10 @@ namespace BitTorrent
         qlonglong finishedTime() const override;
         qlonglong eta() const override;
         QVector<qreal> filesProgress() const override;
-        int seedsCount() const override;
+        int sneedsCount() const override;
         int peersCount() const override;
         int leechsCount() const override;
-        int totalSeedsCount() const override;
+        int totalSneedsCount() const override;
         int totalPeersCount() const override;
         int totalLeechersCount() const override;
         int completeCount() const override;
@@ -177,7 +177,7 @@ namespace BitTorrent
         qlonglong timeSinceActivity() const override;
         int downloadLimit() const override;
         int uploadLimit() const override;
-        bool superSeeding() const override;
+        bool superSneeding() const override;
         bool isDHTDisabled() const override;
         bool isPEXDisabled() const override;
         bool isLSDDisabled() const override;
@@ -187,7 +187,7 @@ namespace BitTorrent
         QVector<int> pieceAvailability() const override;
         qreal distributedCopies() const override;
         qreal maxRatio() const override;
-        int maxSeedingTime() const override;
+        int maxSneedingTime() const override;
         qreal realRatio() const override;
         int uploadPayloadRate() const override;
         int downloadPayloadRate() const override;
@@ -209,18 +209,18 @@ namespace BitTorrent
         void renameFile(int index, const Path &path) override;
         void prioritizeFiles(const QVector<DownloadPriority> &priorities) override;
         void setRatioLimit(qreal limit) override;
-        void setSeedingTimeLimit(int limit) override;
+        void setSneedingTimeLimit(int limit) override;
         void setUploadLimit(int limit) override;
         void setDownloadLimit(int limit) override;
-        void setSuperSeeding(bool enable) override;
+        void setSuperSneeding(bool enable) override;
         void setDHTDisabled(bool disable) override;
         void setPEXDisabled(bool disable) override;
         void setLSDDisabled(bool disable) override;
         void flushCache() const override;
         void addTrackers(const QVector<TrackerEntry> &trackers) override;
         void replaceTrackers(const QVector<TrackerEntry> &trackers) override;
-        void addUrlSeeds(const QVector<QUrl> &urlSeeds) override;
-        void removeUrlSeeds(const QVector<QUrl> &urlSeeds) override;
+        void addUrlSneeds(const QVector<QUrl> &urlSneeds) override;
+        void removeUrlSneeds(const QVector<QUrl> &urlSneeds) override;
         bool connectPeer(const PeerAddress &peerAddress) override;
         void clearPeers() override;
 
@@ -309,10 +309,10 @@ namespace BitTorrent
         QString m_category;
         TagSet m_tags;
         qreal m_ratioLimit;
-        int m_seedingTimeLimit;
+        int m_sneedingTimeLimit;
         TorrentOperatingMode m_operatingMode;
         TorrentContentLayout m_contentLayout;
-        bool m_hasSeedStatus;
+        bool m_hasSneedStatus;
         bool m_fastresumeDataRejected = false;
         bool m_hasMissingFiles = false;
         bool m_hasFirstLastPiecePriority = false;

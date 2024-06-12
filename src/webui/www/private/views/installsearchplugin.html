@@ -20,8 +20,8 @@
     <div>
         <input type="text" id="newPluginPath" placeholder="QBT_TR(URL or local directory)QBT_TR[CONTEXT=PluginSourceDlg]" autocorrect="off" autocapitalize="none" />
         <div style="margin-top: 10px; text-align: center;">
-            <button id="newPluginCancel" onclick="qBittorrent.SearchPlugins.closeSearchWindow('installSearchPlugin');">QBT_TR(Cancel)QBT_TR[CONTEXT=PluginSourceDlg]</button>
-            <button id="newPluginOk" onclick="qBittorrent.InstallSearchPlugin.newPluginOk();">QBT_TR(Ok)QBT_TR[CONTEXT=PluginSourceDlg]</button>
+            <button id="newPluginCancel" onclick="qSneedTorrent.SearchPlugins.closeSearchWindow('installSearchPlugin');">QBT_TR(Cancel)QBT_TR[CONTEXT=PluginSourceDlg]</button>
+            <button id="newPluginOk" onclick="qSneedTorrent.InstallSearchPlugin.newPluginOk();">QBT_TR(Ok)QBT_TR[CONTEXT=PluginSourceDlg]</button>
         </div>
     </div>
 </div>
@@ -29,11 +29,11 @@
 <script>
     'use strict';
 
-    if (window.qBittorrent === undefined) {
-        window.qBittorrent = {};
+    if (window.qSneedTorrent === undefined) {
+        window.qSneedTorrent = {};
     }
 
-    window.qBittorrent.InstallSearchPlugin = (function() {
+    window.qSneedTorrent.InstallSearchPlugin = (function() {
         const exports = function() {
             return {
                 newPluginOk: newPluginOk
@@ -52,7 +52,7 @@
                         if ((elem.id === "newPluginPath") || (elem.id === "newPluginOk"))
                             newPluginOk();
                         else if (elem.id === "newPluginCancel")
-                            window.qBittorrent.SearchPlugins.closeSearchWindow('installSearchPlugin');
+                            window.qSneedTorrent.SearchPlugins.closeSearchWindow('installSearchPlugin');
                     }
                 }
             }).activate();
@@ -71,7 +71,7 @@
                         sources: path,
                     },
                     onRequest: function() {
-                        window.qBittorrent.SearchPlugins.closeSearchWindow('installSearchPlugin');
+                        window.qSneedTorrent.SearchPlugins.closeSearchWindow('installSearchPlugin');
                     }
                 }).send();
         };
@@ -81,5 +81,5 @@
         return exports();
     })();
 
-    Object.freeze(window.qBittorrent.InstallSearchPlugin);
+    Object.freeze(window.qSneedTorrent.InstallSearchPlugin);
 </script>

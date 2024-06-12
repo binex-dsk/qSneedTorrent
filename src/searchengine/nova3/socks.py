@@ -2,7 +2,7 @@
 Version 1.01
 
 Copyright 2006 Dan-Haim. All rights reserved.
-Various fixes by Christophe DUMEZ <chris@qbittorrent.org> - 2010
+Various fixes by Christophe DUMEZ <chris@qsneedtorrent.org> - 2010
 
 Redistribution and use in source and binary forms, with or without modification,
 are permitted provided that the following conditions are met:

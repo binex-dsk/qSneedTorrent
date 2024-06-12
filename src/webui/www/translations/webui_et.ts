@@ -92,8 +92,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>Sule qBittorrent</translation>
+        <source>Exit qSneedTorrent</source>
+        <translation>Sule qSneedTorrent</translation>
     </message>
     <message>
         <source>Only one link per line</source>
@@ -140,7 +140,7 @@
         <translation>Maksimum hulk üleslaadimiste kohti ühele torrenti limiidile peab olema enam kui 0 või väljalülitatud.</translation>
     </message>
     <message>
-        <source>Unable to save program preferences, qBittorrent is probably unreachable.</source>
+        <source>Unable to save program preferences, qSneedTorrent is probably unreachable.</source>
         <translation>Ei saa salvestada programmis eelistusi, qBitorrent arvatavasti pole kättesaadav. </translation>
     </message>
     <message>
@@ -152,7 +152,7 @@
         <translation>Jagamise suhte limiit peab olema vahemikus 0 ja 9998.</translation>
     </message>
     <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
+        <source>Sneeding time limit must be between 0 and 525600 minutes.</source>
         <translation>Jagamise aja limiit peab olema vahemikus 0 ja 525600 minutit.</translation>
     </message>
     <message>
@@ -160,7 +160,7 @@
         <translation>Port Web UI jaoks peab olema vahemikus 1 kuni 65535.</translation>
     </message>
     <message>
-        <source>Unable to log in, qBittorrent is probably unreachable.</source>
+        <source>Unable to log in, qSneedTorrent is probably unreachable.</source>
         <translation>Ei saa sisse logida, qBitorrent arvatavasti pole kättesaadav. </translation>
     </message>
     <message>
@@ -280,8 +280,8 @@
         <translation>Salvesta</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>qBittorrenti klient ei ole kättesaadav</translation>
+        <source>qSneedTorrent client is not reachable</source>
+        <translation>qSneedTorrenti klient ei ole kättesaadav</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -320,8 +320,8 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>qBittorrent has been shutdown</source>
-        <translation>qBittorrent on välja lülitatud</translation>
+        <source>qSneedTorrent has been shutdown</source>
+        <translation>qSneedTorrent on välja lülitatud</translation>
     </message>
     <message>
         <source>Open documentation</source>
@@ -463,13 +463,13 @@
         <translation>Üleüldine Allalaadimise Kiiruse Limiit</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Oled kindel, et soovid täielikult sulgeda qBittorrenti?</translation>
+        <source>Are you sure you want to quit qSneedTorrent?</source>
+        <translation>Oled kindel, et soovid täielikult sulgeda qSneedTorrenti?</translation>
     </message>
     <message>
-        <source>[D: %1, U: %2] qBittorrent %3</source>
-        <comment>D = Download; U = Upload; %3 is qBittorrent version</comment>
-        <translation>[A: %1, Ü: %2] qBittorrent %3</translation>
+        <source>[D: %1, U: %2] qSneedTorrent %3</source>
+        <comment>D = Download; U = Upload; %3 is qSneedTorrent version</comment>
+        <translation>[A: %1, Ü: %2] qSneedTorrent %3</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1105,7 +1105,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Enable super seeding for torrent</source>
+        <source>Enable super sneeding for torrent</source>
         <translation>Luba super jagamise režiim torrentile</translation>
     </message>
     <message>
@@ -1129,7 +1129,7 @@
         <translation>Kui suhe jõuab</translation>
     </message>
     <message>
-        <source>When seeding time reaches</source>
+        <source>When sneeding time reaches</source>
         <translation>Kui jagamise aeg jõuab</translation>
     </message>
     <message>
@@ -1165,7 +1165,7 @@
         <translation>Eemalda torrent ja selle failid</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
+        <source>qSneedTorrent Section</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1237,7 +1237,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeding Limits</source>
+        <source>Sneeding Limits</source>
         <translation>Jagamise Limiidid</translation>
     </message>
     <message>
@@ -1629,7 +1629,7 @@
         <translation>Üleslaaditud:</translation>
     </message>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>Seemneid:</translation>
     </message>
     <message>
@@ -1757,7 +1757,7 @@
         <translation>Ümbernimeta...</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1897,7 +1897,7 @@
         <translation>Allalaadimisel (0)</translation>
     </message>
     <message>
-        <source>Seeding (0)</source>
+        <source>Sneeding (0)</source>
         <translation>Jagamisel (0)</translation>
     </message>
     <message>
@@ -1933,7 +1933,7 @@
         <translation>Allalaadimas (%1)</translation>
     </message>
     <message>
-        <source>Seeding (%1)</source>
+        <source>Sneeding (%1)</source>
         <translation>Jagamisel (%1)</translation>
     </message>
     <message>
@@ -2015,11 +2015,11 @@
     </message>
     <message>
         <source>Status</source>
-        <comment>Torrent status (e.g. downloading, seeding, paused)</comment>
+        <comment>Torrent status (e.g. downloading, sneeding, paused)</comment>
         <translation>Olek</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <comment>i.e. full sources (often untranslated)</comment>
         <translation>Seemneid</translation>
     </message>
@@ -2192,7 +2192,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <translation>Seemneid</translation>
     </message>
     <message>
@@ -2283,11 +2283,11 @@
         <translation>Liigutan</translation>
     </message>
     <message>
-        <source>[F] Seeding</source>
+        <source>[F] Sneeding</source>
         <translation>[S] Jagamisel</translation>
     </message>
     <message>
-        <source>Seeding</source>
+        <source>Sneeding</source>
         <translation>Jagamisel</translation>
     </message>
     <message>
@@ -2331,7 +2331,7 @@
         <translation>Ootel</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2455,7 +2455,7 @@
         <translation>Sunni ülekontrolli</translation>
     </message>
     <message>
-        <source>Super seeding mode</source>
+        <source>Super sneeding mode</source>
         <translation>Super jagamise režiim</translation>
     </message>
     <message>
@@ -2588,8 +2588,8 @@
         <translation>Samuti kustuta failid kõvakettalt</translation>
     </message>
     <message>
-        <source>Deletion confirmation - qBittorrent</source>
-        <translation>Kustutamise kinnitamine - qBittorrent</translation>
+        <source>Deletion confirmation - qSneedTorrent</source>
+        <translation>Kustutamise kinnitamine - qSneedTorrent</translation>
     </message>
 </context>
 <context>
@@ -2712,7 +2712,7 @@
 <context>
     <name>SearchEngineWidget</name>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>Seemneid:</translation>
     </message>
     <message>
@@ -2842,7 +2842,7 @@
         <translation>Otsingu mootor</translation>
     </message>
     <message>
-        <source>Seeders</source>
+        <source>Sneeders</source>
         <translation>Jagajaid</translation>
     </message>
 </context>
@@ -2989,8 +2989,8 @@
         <translation>Nimi:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>qBittorrenti info</translation>
+        <source>About qSneedTorrent</source>
+        <translation>qSneedTorrenti info</translation>
     </message>
     <message>
         <source>License</source>
@@ -3001,8 +3001,8 @@
         <translation>Tõlkijad</translation>
     </message>
     <message>
-        <source>qBittorrent was built with the following libraries:</source>
-        <translation>qBittorrent ehitati järgnevate teekidega:</translation>
+        <source>qSneedTorrent was built with the following libraries:</source>
+        <translation>qSneedTorrent ehitati järgnevate teekidega:</translation>
     </message>
     <message>
         <source>Nationality:</source>
@@ -3025,11 +3025,11 @@
         <translation>Prantsuse</translation>
     </message>
     <message>
-        <source>qBittorrent Mascot</source>
+        <source>qSneedTorrent Mascot</source>
         <translation>qBitorrenti maskott</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
+        <source>qSneedTorrent icon</source>
         <translation>qBitorrenti ikoon</translation>
     </message>
 </context>

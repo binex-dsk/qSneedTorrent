@@ -92,8 +92,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>Zatvorite qBittorrent</translation>
+        <source>Exit qSneedTorrent</source>
+        <translation>Zatvorite qSneedTorrent</translation>
     </message>
     <message>
         <source>Only one link per line</source>
@@ -140,8 +140,8 @@
         <translation>Ograničenje najvećeg broja mjesta za slanje po torrentu mora biti veći od 0 ili onemogućeno.</translation>
     </message>
     <message>
-        <source>Unable to save program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Nije moguće spremiti postavke programa. qBittorrent je vjerojatno nedostupan.</translation>
+        <source>Unable to save program preferences, qSneedTorrent is probably unreachable.</source>
+        <translation>Nije moguće spremiti postavke programa. qSneedTorrent je vjerojatno nedostupan.</translation>
     </message>
     <message>
         <source>Unknown</source>
@@ -152,7 +152,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
+        <source>Sneeding time limit must be between 0 and 525600 minutes.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -160,8 +160,8 @@
         <translation>Port korišten za web sučelje mora biti između  1 i 65535.</translation>
     </message>
     <message>
-        <source>Unable to log in, qBittorrent is probably unreachable.</source>
-        <translation>Nije moguća prijava. qBittorrent je vjerojatno nedostupan.</translation>
+        <source>Unable to log in, qSneedTorrent is probably unreachable.</source>
+        <translation>Nije moguća prijava. qSneedTorrent je vjerojatno nedostupan.</translation>
     </message>
     <message>
         <source>Invalid Username or Password.</source>
@@ -280,8 +280,8 @@
         <translation>Spremi</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>qBittorrent klijent nije dostupan</translation>
+        <source>qSneedTorrent client is not reachable</source>
+        <translation>qSneedTorrent klijent nije dostupan</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -320,7 +320,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>qBittorrent has been shutdown</source>
+        <source>qSneedTorrent has been shutdown</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -463,13 +463,13 @@
         <translation>Globalno ograničenje brzine preuzimanja</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
+        <source>Are you sure you want to quit qSneedTorrent?</source>
         <translation type="unfinished" />
     </message>
     <message>
-        <source>[D: %1, U: %2] qBittorrent %3</source>
-        <comment>D = Download; U = Upload; %3 is qBittorrent version</comment>
-        <translation>[P: %1, S: %2] qBittorrent %3</translation>
+        <source>[D: %1, U: %2] qSneedTorrent %3</source>
+        <comment>D = Download; U = Upload; %3 is qSneedTorrent version</comment>
+        <translation>[P: %1, S: %2] qSneedTorrent %3</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1105,7 +1105,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Enable super seeding for torrent</source>
+        <source>Enable super sneeding for torrent</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1129,7 +1129,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>When seeding time reaches</source>
+        <source>When sneeding time reaches</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1165,7 +1165,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>qBittorrent Section</source>
+        <source>qSneedTorrent Section</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1237,7 +1237,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeding Limits</source>
+        <source>Sneeding Limits</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1629,8 +1629,8 @@
         <translation>Poslano:</translation>
     </message>
     <message>
-        <source>Seeds:</source>
-        <translation>Seederi:</translation>
+        <source>Sneeds:</source>
+        <translation>Sneederi:</translation>
     </message>
     <message>
         <source>Download Speed:</source>
@@ -1757,7 +1757,7 @@
         <translation>Preimenuj...</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1897,8 +1897,8 @@
         <translation>Preuzimanje (0)</translation>
     </message>
     <message>
-        <source>Seeding (0)</source>
-        <translation>Seedanje (0)</translation>
+        <source>Sneeding (0)</source>
+        <translation>Sneedanje (0)</translation>
     </message>
     <message>
         <source>Completed (0)</source>
@@ -1933,8 +1933,8 @@
         <translation>Preuzimanje (%1)</translation>
     </message>
     <message>
-        <source>Seeding (%1)</source>
-        <translation>Seedanje (%1)</translation>
+        <source>Sneeding (%1)</source>
+        <translation>Sneedanje (%1)</translation>
     </message>
     <message>
         <source>Completed (%1)</source>
@@ -2015,13 +2015,13 @@
     </message>
     <message>
         <source>Status</source>
-        <comment>Torrent status (e.g. downloading, seeding, paused)</comment>
+        <comment>Torrent status (e.g. downloading, sneeding, paused)</comment>
         <translation>Status</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <comment>i.e. full sources (often untranslated)</comment>
-        <translation>Seedovi</translation>
+        <translation>Sneedovi</translation>
     </message>
     <message>
         <source>Peers</source>
@@ -2192,7 +2192,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2283,11 +2283,11 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>[F] Seeding</source>
+        <source>[F] Sneeding</source>
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeding</source>
+        <source>Sneeding</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2331,7 +2331,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2455,8 +2455,8 @@
         <translation>Prisili ponovnu provjeru</translation>
     </message>
     <message>
-        <source>Super seeding mode</source>
-        <translation>Način superseedanja</translation>
+        <source>Super sneeding mode</source>
+        <translation>Način supersneedanja</translation>
     </message>
     <message>
         <source>Rename...</source>
@@ -2588,8 +2588,8 @@
         <translation>Također ukloni datoteke i na čvrstom disku</translation>
     </message>
     <message>
-        <source>Deletion confirmation - qBittorrent</source>
-        <translation>Potvrda brisanja - qBittorrent</translation>
+        <source>Deletion confirmation - qSneedTorrent</source>
+        <translation>Potvrda brisanja - qSneedTorrent</translation>
     </message>
 </context>
 <context>
@@ -2712,7 +2712,7 @@
 <context>
     <name>SearchEngineWidget</name>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2842,7 +2842,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeders</source>
+        <source>Sneeders</source>
         <translation type="unfinished" />
     </message>
 </context>
@@ -2989,8 +2989,8 @@
         <translation>Ime:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>O qBittorrent-u</translation>
+        <source>About qSneedTorrent</source>
+        <translation>O qSneedTorrent-u</translation>
     </message>
     <message>
         <source>License</source>
@@ -3001,7 +3001,7 @@
         <translation>Prevoditelji</translation>
     </message>
     <message>
-        <source>qBittorrent was built with the following libraries:</source>
+        <source>qSneedTorrent was built with the following libraries:</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -3025,11 +3025,11 @@
         <translation>Francuska</translation>
     </message>
     <message>
-        <source>qBittorrent Mascot</source>
+        <source>qSneedTorrent Mascot</source>
         <translation type="unfinished" />
     </message>
     <message>
-        <source>qBittorrent icon</source>
+        <source>qSneedTorrent icon</source>
         <translation type="unfinished" />
     </message>
 </context>

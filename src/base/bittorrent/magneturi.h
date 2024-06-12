@@ -48,7 +48,7 @@ namespace BitTorrent
         InfoHash infoHash() const;
         QString name() const;
         QVector<TrackerEntry> trackers() const;
-        QVector<QUrl> urlSeeds() const;
+        QVector<QUrl> urlSneeds() const;
         QString url() const;
 
         lt::add_torrent_params addTorrentParams() const;
@@ -59,7 +59,7 @@ namespace BitTorrent
         InfoHash m_infoHash;
         QString m_name;
         QVector<TrackerEntry> m_trackers;
-        QVector<QUrl> m_urlSeeds;
+        QVector<QUrl> m_urlSneeds;
         lt::add_torrent_params m_addTorrentParams;
     };
 }

@@ -92,8 +92,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>Ukončit qBittorrent</translation>
+        <source>Exit qSneedTorrent</source>
+        <translation>Ukončit qSneedTorrent</translation>
     </message>
     <message>
         <source>Only one link per line</source>
@@ -140,8 +140,8 @@
         <translation>Limit maximálního počtu slotů na torrent musí být větší než 0 nebo vypnut.</translation>
     </message>
     <message>
-        <source>Unable to save program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Nelze uložit nastavení programu, qBittorrent klient je pravděpodobně nedostupný.</translation>
+        <source>Unable to save program preferences, qSneedTorrent is probably unreachable.</source>
+        <translation>Nelze uložit nastavení programu, qSneedTorrent klient je pravděpodobně nedostupný.</translation>
     </message>
     <message>
         <source>Unknown</source>
@@ -152,16 +152,16 @@
         <translation>Limit ratia musí být v rozsahu od 0 do 9998.</translation>
     </message>
     <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
-        <translation>Doba seedování musí být v rozsahu od 0 do 525600 minut.</translation>
+        <source>Sneeding time limit must be between 0 and 525600 minutes.</source>
+        <translation>Doba sneedování musí být v rozsahu od 0 do 525600 minut.</translation>
     </message>
     <message>
         <source>The port used for the Web UI must be between 1 and 65535.</source>
         <translation>Port webového rozhraní musí být mezi 1 a 65535.</translation>
     </message>
     <message>
-        <source>Unable to log in, qBittorrent is probably unreachable.</source>
-        <translation>Nelze se přihlásit, qBittorrent je pravděpodobně nedostupný</translation>
+        <source>Unable to log in, qSneedTorrent is probably unreachable.</source>
+        <translation>Nelze se přihlásit, qSneedTorrent je pravděpodobně nedostupný</translation>
     </message>
     <message>
         <source>Invalid Username or Password.</source>
@@ -280,8 +280,8 @@
         <translation>Uložit</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>Klient qBittorrent není dostupný</translation>
+        <source>qSneedTorrent client is not reachable</source>
+        <translation>Klient qSneedTorrent není dostupný</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -320,8 +320,8 @@
         <translation>Limit rychlosti stahování musí být větší než 0.</translation>
     </message>
     <message>
-        <source>qBittorrent has been shutdown</source>
-        <translation>qBittorrent byl ukončen</translation>
+        <source>qSneedTorrent has been shutdown</source>
+        <translation>qSneedTorrent byl ukončen</translation>
     </message>
     <message>
         <source>Open documentation</source>
@@ -463,13 +463,13 @@
         <translation>Celkový limit rychlosti stahování</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Určitě chcete ukončit qBittorrent?</translation>
+        <source>Are you sure you want to quit qSneedTorrent?</source>
+        <translation>Určitě chcete ukončit qSneedTorrent?</translation>
     </message>
     <message>
-        <source>[D: %1, U: %2] qBittorrent %3</source>
-        <comment>D = Download; U = Upload; %3 is qBittorrent version</comment>
-        <translation>[S: %1, O: %2] qBittorrent %3</translation>
+        <source>[D: %1, U: %2] qSneedTorrent %3</source>
+        <comment>D = Download; U = Upload; %3 is qSneedTorrent version</comment>
+        <translation>[S: %1, O: %2] qSneedTorrent %3</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1105,8 +1105,8 @@
         <translation>Socket backlog size:</translation>
     </message>
     <message>
-        <source>Enable super seeding for torrent</source>
-        <translation>Zapnout super seeding pro torrent</translation>
+        <source>Enable super sneeding for torrent</source>
+        <translation>Zapnout super sneeding pro torrent</translation>
     </message>
     <message>
         <source>Prefer TCP</source>
@@ -1129,7 +1129,7 @@
         <translation>Když je dosaženo ratio</translation>
     </message>
     <message>
-        <source>When seeding time reaches</source>
+        <source>When sneeding time reaches</source>
         <translation>Když je dosažena doba odesílání</translation>
     </message>
     <message>
@@ -1165,8 +1165,8 @@
         <translation>Odstranit torrent a jeho soubory</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>Sekce qBittorrentu</translation>
+        <source>qSneedTorrent Section</source>
+        <translation>Sekce qSneedTorrentu</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -1237,7 +1237,7 @@
         <translation>Škrtící algoritmus pro upload</translation>
     </message>
     <message>
-        <source>Seeding Limits</source>
+        <source>Sneeding Limits</source>
         <translation>Limity sdílení</translation>
     </message>
     <message>
@@ -1629,7 +1629,7 @@
         <translation>Odesláno:</translation>
     </message>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>Zdroje:</translation>
     </message>
     <message>
@@ -1757,7 +1757,7 @@
         <translation>Přejmenovat...</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation>%1 (sdíleno %2)</translation>
     </message>
     <message>
@@ -1897,7 +1897,7 @@
         <translation>Stahuji (0)</translation>
     </message>
     <message>
-        <source>Seeding (0)</source>
+        <source>Sneeding (0)</source>
         <translation>Sdílím (0)</translation>
     </message>
     <message>
@@ -1933,7 +1933,7 @@
         <translation>Stahuji (%1)</translation>
     </message>
     <message>
-        <source>Seeding (%1)</source>
+        <source>Sneeding (%1)</source>
         <translation>Sdílím (%1)</translation>
     </message>
     <message>
@@ -1962,7 +1962,7 @@
     </message>
     <message>
         <source>Stalled Uploading (%1)</source>
-        <translation>Pozastavené Seedování (%1)</translation>
+        <translation>Pozastavené Sneedování (%1)</translation>
     </message>
     <message>
         <source>Stalled Downloading (%1)</source>
@@ -1978,7 +1978,7 @@
     </message>
     <message>
         <source>Stalled Uploading (0)</source>
-        <translation>Pozastavené seedování (0)</translation>
+        <translation>Pozastavené sneedování (0)</translation>
     </message>
     <message>
         <source>Stalled (%1)</source>
@@ -2015,11 +2015,11 @@
     </message>
     <message>
         <source>Status</source>
-        <comment>Torrent status (e.g. downloading, seeding, paused)</comment>
+        <comment>Torrent status (e.g. downloading, sneeding, paused)</comment>
         <translation>Stav</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <comment>i.e. full sources (often untranslated)</comment>
         <translation>Zdroje</translation>
     </message>
@@ -2192,8 +2192,8 @@
         <translation>není k dispozici</translation>
     </message>
     <message>
-        <source>Seeds</source>
-        <translation>Seedy</translation>
+        <source>Sneeds</source>
+        <translation>Sneedy</translation>
     </message>
     <message>
         <source>Not working</source>
@@ -2283,11 +2283,11 @@
         <translation>Přesouvám</translation>
     </message>
     <message>
-        <source>[F] Seeding</source>
+        <source>[F] Sneeding</source>
         <translation>[F] Sdílím</translation>
     </message>
     <message>
-        <source>Seeding</source>
+        <source>Sneeding</source>
         <translation>Sdíleno</translation>
     </message>
     <message>
@@ -2331,7 +2331,7 @@
         <translation>Pozastaveno</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation>%1 (sdíleno %2)</translation>
     </message>
     <message>
@@ -2455,7 +2455,7 @@
         <translation>Vynutit překontrolování</translation>
     </message>
     <message>
-        <source>Super seeding mode</source>
+        <source>Super sneeding mode</source>
         <translation>Mód super sdílení</translation>
     </message>
     <message>
@@ -2588,8 +2588,8 @@
         <translation>Smazat soubory také z pevného disku</translation>
     </message>
     <message>
-        <source>Deletion confirmation - qBittorrent</source>
-        <translation>Potvrzení o smazání - qBittorrent</translation>
+        <source>Deletion confirmation - qSneedTorrent</source>
+        <translation>Potvrzení o smazání - qSneedTorrent</translation>
     </message>
 </context>
 <context>
@@ -2712,8 +2712,8 @@
 <context>
     <name>SearchEngineWidget</name>
     <message>
-        <source>Seeds:</source>
-        <translation>Seedy:</translation>
+        <source>Sneeds:</source>
+        <translation>Sneedy:</translation>
     </message>
     <message>
         <source>All plugins</source>
@@ -2842,8 +2842,8 @@
         <translation>Vyhledávač</translation>
     </message>
     <message>
-        <source>Seeders</source>
-        <translation>Seedeři</translation>
+        <source>Sneeders</source>
+        <translation>Sneedeři</translation>
     </message>
 </context>
 <context>
@@ -2989,8 +2989,8 @@
         <translation>Jméno:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>O qBittorrentu</translation>
+        <source>About qSneedTorrent</source>
+        <translation>O qSneedTorrentu</translation>
     </message>
     <message>
         <source>License</source>
@@ -3001,8 +3001,8 @@
         <translation>Překladatelé</translation>
     </message>
     <message>
-        <source>qBittorrent was built with the following libraries:</source>
-        <translation>qBittorrent byl vytvořen s následujícími knihovnami:</translation>
+        <source>qSneedTorrent was built with the following libraries:</source>
+        <translation>qSneedTorrent byl vytvořen s následujícími knihovnami:</translation>
     </message>
     <message>
         <source>Nationality:</source>
@@ -3025,12 +3025,12 @@
         <translation>Francie</translation>
     </message>
     <message>
-        <source>qBittorrent Mascot</source>
-        <translation>qBittorrent Mascot</translation>
+        <source>qSneedTorrent Mascot</source>
+        <translation>qSneedTorrent Mascot</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
-        <translation>ikona qBittorrent</translation>
+        <source>qSneedTorrent icon</source>
+        <translation>ikona qSneedTorrent</translation>
     </message>
 </context>
 <context>

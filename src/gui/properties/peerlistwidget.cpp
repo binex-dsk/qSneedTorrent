@@ -1,6 +1,6 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
- * Copyright (C) 2006  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2006  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -71,9 +71,9 @@ bool operator==(const PeerEndpoint &left, const PeerEndpoint &right)
     return (left.address == right.address) && (left.connectionType == right.connectionType);
 }
 
-uint qHash(const PeerEndpoint &peerEndpoint, const uint seed)
+uint qHash(const PeerEndpoint &peerEndpoint, const uint sneed)
 {
-    return (qHash(peerEndpoint.address, seed) ^ ::qHash(peerEndpoint.connectionType));
+    return (qHash(peerEndpoint.address, sneed) ^ ::qHash(peerEndpoint.connectionType));
 }
 
 PeerListWidget::PeerListWidget(PropertiesWidget *parent)

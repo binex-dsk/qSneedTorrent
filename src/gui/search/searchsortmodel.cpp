@@ -33,8 +33,8 @@
 SearchSortModel::SearchSortModel(QObject *parent)
     : base(parent)
     , m_isNameFilterEnabled(false)
-    , m_minSeeds(0)
-    , m_maxSeeds(-1)
+    , m_minSneeds(0)
+    , m_maxSneeds(-1)
     , m_minLeeches(0)
     , m_maxLeeches(-1)
     , m_minSize(0)
@@ -69,10 +69,10 @@ void SearchSortModel::setSizeFilter(const qint64 minSize, const qint64 maxSize)
     m_maxSize = std::max(static_cast<qint64>(-1), maxSize);
 }
 
-void SearchSortModel::setSeedsFilter(const int minSeeds, const int maxSeeds)
+void SearchSortModel::setSneedsFilter(const int minSneeds, const int maxSneeds)
 {
-    m_minSeeds = std::max(0, minSeeds);
-    m_maxSeeds = std::max(-1, maxSeeds);
+    m_minSneeds = std::max(0, minSneeds);
+    m_maxSneeds = std::max(-1, maxSneeds);
 }
 
 void SearchSortModel::setLeechesFilter(const int minLeeches, const int maxLeeches)
@@ -91,14 +91,14 @@ QString SearchSortModel::searchTerm() const
     return m_searchTerm;
 }
 
-int SearchSortModel::minSeeds() const
+int SearchSortModel::minSneeds() const
 {
-    return m_minSeeds;
+    return m_minSneeds;
 }
 
-int SearchSortModel::maxSeeds() const
+int SearchSortModel::maxSneeds() const
 {
-    return m_maxSeeds;
+    return m_maxSneeds;
 }
 
 qint64 SearchSortModel::minSize() const
@@ -150,11 +150,11 @@ bool SearchSortModel::filterAcceptsRow(const int sourceRow, const QModelIndex &s
             return false;
     }
 
-    if ((m_minSeeds > 0) || (m_maxSeeds >= 0))
+    if ((m_minSneeds > 0) || (m_maxSneeds >= 0))
     {
-        const int seeds = sourceModel->data(sourceModel->index(sourceRow, SEEDS, sourceParent), UnderlyingDataRole).toInt();
-        if (((m_minSeeds > 0) && (seeds < m_minSeeds))
-            || ((m_maxSeeds > 0) && (seeds > m_maxSeeds)))
+        const int sneeds = sourceModel->data(sourceModel->index(sourceRow, SNEEDS, sourceParent), UnderlyingDataRole).toInt();
+        if (((m_minSneeds > 0) && (sneeds < m_minSneeds))
+            || ((m_maxSneeds > 0) && (sneeds > m_maxSneeds)))
             return false;
     }
 

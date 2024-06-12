@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>qBittorrent</string>
+	<string>qSneedTorrent</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
@@ -14,7 +14,7 @@
 				<string>torrent</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>qBitTorrentDocument</string>
+			<string>qSneedTorrentDocument</string>
 			<key>CFBundleTypeName</key>
 			<string>BitTorrent Document</string>
 			<key>CFBundleTypeRole</key>
@@ -47,9 +47,9 @@
 		</dict>
 	</array>
 	<key>CFBundleName</key>
-	<string>qBittorrent</string>
+	<string>qSneedTorrent</string>
 	<key>CFBundleIconFile</key>
-	<string>qbittorrent_mac.icns</string>
+	<string>qsneedtorrent_mac.icns</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>
@@ -59,7 +59,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.qbittorrent.qBittorrent</string>
+	<string>org.qsneedtorrent.qSneedTorrent</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>${MACOSX_DEPLOYMENT_TARGET}.0</string>
 	<key>NSPrincipalClass</key>
@@ -67,7 +67,7 @@
 	<key>NSAppleScriptEnabled</key>
 	<string>YES</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2006-2022 The qBittorrent project</string>
+	<string>Copyright © 2006-2022 The qSneedTorrent project</string>
 	<key>UTExportedTypeDeclarations</key>
 	<array>
 		<dict>
@@ -80,7 +80,7 @@
 			<key>UTTypeDescription</key>
 			<string>BitTorrent Document</string>
 			<key>UTTypeIconFile</key>
-			<string>qBitTorrentDocument</string>
+			<string>qSneedTorrentDocument</string>
 			<key>UTTypeIdentifier</key>
 			<string>org.bittorrent.torrent</string>
 			<key>UTTypeReferenceURL</key>

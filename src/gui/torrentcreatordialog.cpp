@@ -1,7 +1,7 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
  * Copyright (C) 2017  Mike Tzou (Chocobo1)
- * Copyright (C) 2010  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2010  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -51,7 +51,7 @@ TorrentCreatorDialog::TorrentCreatorDialog(QWidget *parent, const Path &defaultP
     , m_storeDialogSize(SETTINGS_KEY("Size"))
     , m_storePieceSize(SETTINGS_KEY("PieceSize"))
     , m_storePrivateTorrent(SETTINGS_KEY("PrivateTorrent"))
-    , m_storeStartSeeding(SETTINGS_KEY("StartSeeding"))
+    , m_storeStartSneeding(SETTINGS_KEY("StartSneeding"))
     , m_storeIgnoreRatio(SETTINGS_KEY("IgnoreRatio"))
 #ifdef QBT_USES_LIBTORRENT2
     , m_storeTorrentFormat(SETTINGS_KEY("TorrentFormat"))
@@ -61,7 +61,7 @@ TorrentCreatorDialog::TorrentCreatorDialog(QWidget *parent, const Path &defaultP
 #endif
     , m_storeLastAddPath(SETTINGS_KEY("LastAddPath"))
     , m_storeTrackerList(SETTINGS_KEY("TrackerList"))
-    , m_storeWebSeedList(SETTINGS_KEY("WebSeedList"))
+    , m_storeWebSneedList(SETTINGS_KEY("WebSneedList"))
     , m_storeComments(SETTINGS_KEY("Comments"))
     , m_storeLastSavePath(SETTINGS_KEY("LastSavePath"))
     , m_storeSource(SETTINGS_KEY("Source"))
@@ -213,7 +213,7 @@ void TorrentCreatorDialog::onCreateButtonClicked()
         , m_ui->txtComment->toPlainText()
         , m_ui->lineEditSource->text()
         , trackers
-        , m_ui->URLSeedsList->toPlainText().split('\n', Qt::SkipEmptyParts)
+        , m_ui->URLSneedsList->toPlainText().split('\n', Qt::SkipEmptyParts)
     };
 
     // run the creator thread
@@ -232,7 +232,7 @@ void TorrentCreatorDialog::handleCreationSuccess(const Path &path, const Path &b
 {
     // Remove busy cursor
     setCursor(QCursor(Qt::ArrowCursor));
-    if (m_ui->checkStartSeeding->isChecked())
+    if (m_ui->checkStartSneeding->isChecked())
     {
         // Create save path temp data
         const nonstd::expected<BitTorrent::TorrentInfo, QString> result = BitTorrent::TorrentInfo::loadFromFile(path);
@@ -248,7 +248,7 @@ void TorrentCreatorDialog::handleCreationSuccess(const Path &path, const Path &b
         if (m_ui->checkIgnoreShareLimits->isChecked())
         {
             params.ratioLimit = BitTorrent::Torrent::NO_RATIO_LIMIT;
-            params.seedingTimeLimit = BitTorrent::Torrent::NO_SEEDING_TIME_LIMIT;
+            params.sneedingTimeLimit = BitTorrent::Torrent::NO_SNEEDING_TIME_LIMIT;
         }
         params.useAutoTMM = false;  // otherwise if it is on by default, it will overwrite `savePath` to the default save path
 
@@ -284,14 +284,14 @@ void TorrentCreatorDialog::setInteractionEnabled(const bool enabled) const
     m_ui->addFileButton->setEnabled(enabled);
     m_ui->addFolderButton->setEnabled(enabled);
     m_ui->trackersList->setEnabled(enabled);
-    m_ui->URLSeedsList->setEnabled(enabled);
+    m_ui->URLSneedsList->setEnabled(enabled);
     m_ui->txtComment->setEnabled(enabled);
     m_ui->comboPieceSize->setEnabled(enabled);
     m_ui->buttonCalcTotalPieces->setEnabled(enabled);
     m_ui->checkPrivate->setEnabled(enabled);
-    m_ui->checkStartSeeding->setEnabled(enabled);
+    m_ui->checkStartSneeding->setEnabled(enabled);
     m_ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(enabled);
-    m_ui->checkIgnoreShareLimits->setEnabled(enabled && m_ui->checkStartSeeding->isChecked());
+    m_ui->checkIgnoreShareLimits->setEnabled(enabled && m_ui->checkStartSneeding->isChecked());
 #ifdef QBT_USES_LIBTORRENT2
     m_ui->widgetTorrentFormat->setEnabled(enabled);
 #else
@@ -306,7 +306,7 @@ void TorrentCreatorDialog::saveSettings()
 
     m_storePieceSize = m_ui->comboPieceSize->currentIndex();
     m_storePrivateTorrent = m_ui->checkPrivate->isChecked();
-    m_storeStartSeeding = m_ui->checkStartSeeding->isChecked();
+    m_storeStartSneeding = m_ui->checkStartSneeding->isChecked();
     m_storeIgnoreRatio = m_ui->checkIgnoreShareLimits->isChecked();
 #ifdef QBT_USES_LIBTORRENT2
     m_storeTorrentFormat = m_ui->comboTorrentFormat->currentIndex();
@@ -316,7 +316,7 @@ void TorrentCreatorDialog::saveSettings()
 #endif
 
     m_storeTrackerList = m_ui->trackersList->toPlainText();
-    m_storeWebSeedList = m_ui->URLSeedsList->toPlainText();
+    m_storeWebSneedList = m_ui->URLSneedsList->toPlainText();
     m_storeComments = m_ui->txtComment->toPlainText();
     m_storeSource = m_ui->lineEditSource->text();
 
@@ -329,9 +329,9 @@ void TorrentCreatorDialog::loadSettings()
 
     m_ui->comboPieceSize->setCurrentIndex(m_storePieceSize);
     m_ui->checkPrivate->setChecked(m_storePrivateTorrent);
-    m_ui->checkStartSeeding->setChecked(m_storeStartSeeding);
+    m_ui->checkStartSneeding->setChecked(m_storeStartSneeding);
     m_ui->checkIgnoreShareLimits->setChecked(m_storeIgnoreRatio);
-    m_ui->checkIgnoreShareLimits->setEnabled(m_ui->checkStartSeeding->isChecked());
+    m_ui->checkIgnoreShareLimits->setEnabled(m_ui->checkStartSneeding->isChecked());
 #ifdef QBT_USES_LIBTORRENT2
     m_ui->comboTorrentFormat->setCurrentIndex(m_storeTorrentFormat.get(1));
 #else
@@ -340,7 +340,7 @@ void TorrentCreatorDialog::loadSettings()
 #endif
 
     m_ui->trackersList->setPlainText(m_storeTrackerList);
-    m_ui->URLSeedsList->setPlainText(m_storeWebSeedList);
+    m_ui->URLSneedsList->setPlainText(m_storeWebSneedList);
     m_ui->txtComment->setPlainText(m_storeComments);
     m_ui->lineEditSource->setText(m_storeSource);
 

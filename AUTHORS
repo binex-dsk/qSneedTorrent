@@ -1,16 +1,16 @@
 Current maintainer:
-* Sledgehammer999 <sledgehammer999@qbittorrent.org>
+* Sledgehammer999 <sledgehammer999@qsneedtorrent.org>
 
 Original author:
-* Christophe Dumez <chris@qbittorrent.org>
+* Christophe Dumez <chris@qsneedtorrent.org>
 
 Contributors:
 * Vladimir Golovnev <glassez@yandex.ru>
 * Stefanos Antaris <santaris@csd.auth.gr>
-* Mohammad Dib <mdib@qbittorrent.org>
+* Mohammad Dib <mdib@qsneedtorrent.org>
 * Mirco Chinelli <infinity89@fastwebmail.it>
-* Ishan Arora <ishan@qbittorrent.org>
-* Arnaud Demaizière <arnaud@qbittorrent.org>
+* Ishan Arora <ishan@qsneedtorrent.org>
+* Arnaud Demaizière <arnaud@qsneedtorrent.org>
 * Grigis Gaëtan <cipher16@gmail.com>
 * Christian Kandeler <zambesi@users.sourceforge.net>
 * Silvan Scherrer <silvan.scherrer@aroa.ch>
@@ -38,12 +38,12 @@ Code from other projects:
   license: GPLv2/3
 
 Images Authors:
-* files: src/icons/skin/qbittorrent-tray.svg (and related pngs)
+* files: src/icons/skin/qsneedtorrent-tray.svg (and related pngs)
   copyright: Provided by HVS <hvs linuxmail org> (raster first proposal) and Atif Afzal(@atfzl github) <atif5801@gmail.com> (vectorized and modified)
   license: GPLv2+
 
-* files: src/qbittorrent_file.ico src/icons/fileicon.svg
-  copyright: 'uknown.svg' (LGPLv3+) from Oxygen Icon Theme was used as base which was slightly modified and 'qbittorrent-tray.svg' (GPLv2+) was overlayed above it.
+* files: src/qsneedtorrent_file.ico src/icons/fileicon.svg
+  copyright: 'uknown.svg' (LGPLv3+) from Oxygen Icon Theme was used as base which was slightly modified and 'qsneedtorrent-tray.svg' (GPLv2+) was overlayed above it.
   license: GPLv3+
 
 * files: src/icons/*.png
@@ -63,14 +63,14 @@ Images Authors:
 
 * files: src/icons/skin/*.png
   files: src/menuicons/YYxYY/*.png
-  copyright: Mateusz Tobola <tobejodok@qbittorrent.org>
+  copyright: Mateusz Tobola <tobejodok@qsneedtorrent.org>
   license: GPLv2
 
 * file: src/icons/tabs.gif
   copyright: Greg Houston <gregory.houston@gmail.com>
   license: MIT
 
-* file: src/icons/skin/qbittorrent_mono*
+* file: src/icons/skin/qsneedtorrent_mono*
   copyright: Daniel Eguren <deguren@gmail.com>
   license: LGPL
 
@@ -99,7 +99,7 @@ Images Authors:
 
 Translations authors:
 * files: src/lang/*.ts
-* file: src/icons/qBittorrent.desktop
+* file: src/icons/qSneedTorrent.desktop
   copyright:
   - Arabic: SDERAWI (abz8868@msn.com), sn51234 (nesseyan@gmail.com) and  Ibrahim Saed ibraheem_alex(Transifex)
   - Armenian: Hrant Ohanyan (hrantohanyan@mail.am)
@@ -113,11 +113,11 @@ Translations authors:
   - Czech: Jirka Vilim (web@tets.cz) and Petr Cernobila abr(Transifex)
   - Danish: Mathias Nielsen (comoneo@gmail.com)
   - Dutch: Pieter Heyvaert (pieter_heyvaert@hotmail.com)
-  - English: Christophe Dumez (chris@qbittorrent.org)
+  - English: Christophe Dumez (chris@qsneedtorrent.org)
   - English(Australia): Robert Readman readmanr(Transifex)
   - English(United Kingdom): Robert Readman readmanr(Transifex)
   - Finnish: Niklas Laxström (nikerabbit@users.sourceforge.net), Pekka Niemi (pekka.niemi@iki.fi) and Jiri Grönroos artnay(Transifex)
-  - French: Christophe Dumez (chris@qbittorrent.org)
+  - French: Christophe Dumez (chris@qsneedtorrent.org)
   - Galician: Marcos Lans (marcoslansgarza@gmail.com) and antiparvos(Transifex)
   - Georgian: Beqa Arabuli (arabulibeqa@yahoo.com)
   - German: Niels Hoffmann (zentralmaschine@users.sourceforge.net)

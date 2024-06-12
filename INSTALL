@@ -1,4 +1,4 @@
-qBittorrent - A BitTorrent client in C++ / Qt
+qSneedTorrent - A BitTorrent client in C++ / Qt
 ------------------------------------------
 
 1) Install these dependencies:
@@ -26,24 +26,24 @@ Dependency version numbers are bumped every once in a while to keep the range of
 You may be able to build with older versions of (some of) the dependencies other than the minimum versions specified in the build scripts, but support for such builds is not provided - you are on your own.
 Please ensure you are building with an officially supported configuration when reporting bugs.
 
-2a) Compile and install qBittorrent with Qt graphical interface
+2a) Compile and install qSneedTorrent with Qt graphical interface
 
   $ ./configure
   $ make && make install
-  $ qbittorrent
+  $ qsneedtorrent
 
-  will install and execute qBittorrent.
+  will install and execute qSneedTorrent.
 
-2b) Compile and install qBittorrent without Qt graphical interface
+2b) Compile and install qSneedTorrent without Qt graphical interface
 
   $ ./configure --disable-gui
   $ make && make install
-  $ qbittorrent-nox
+  $ qsneedtorrent-nox
 
-  will install and execute qBittorrent.
+  will install and execute qSneedTorrent.
 
 DOCUMENTATION:
-Please note that there is a "Compilation" section at http://wiki.qbittorrent.org.
+Please note that there is a "Compilation" section at http://wiki.qsneedtorrent.org.
 
 ------------------------------------------
-sledgehammer999 <sledgehammer999@qbittorrent.org>
+sledgehammer999 <sledgehammer999@qsneedtorrent.org>

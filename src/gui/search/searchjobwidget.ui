@@ -81,17 +81,17 @@
         </sizepolicy>
        </property>
        <property name="toolTip">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set minimal and maximal allowed number of seeders&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set minimal and maximal allowed number of sneeders&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="text">
-        <string>Seeds:</string>
+        <string>Sneeds:</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QSpinBox" name="minSeeds">
+      <widget class="QSpinBox" name="minSneeds">
        <property name="toolTip">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimal number of seeds&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimal number of sneeds&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="minimum">
         <number>0</number>
@@ -118,9 +118,9 @@
       </widget>
      </item>
      <item>
-      <widget class="QSpinBox" name="maxSeeds">
+      <widget class="QSpinBox" name="maxSneeds">
        <property name="toolTip">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximal number of seeds&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximal number of sneeds&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="specialValueText">
         <string>∞</string>

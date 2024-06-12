@@ -25,7 +25,7 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 # Small script to update qrc files (lang.qrc, icons.qrc)
-# by Christophe Dumez <chris@qbittorrent.org>
+# by Christophe Dumez <chris@qsneedtorrent.org>
 
 import os
 from os.path import splitext, join

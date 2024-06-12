@@ -1,7 +1,7 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
  * Copyright (C) 2021  Vladimir Golovnev <glassez@yandex.ru>
- * Copyright (C) 2010  Christian Kandeler, Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2010  Christian Kandeler, Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -83,7 +83,7 @@ const QString PARAM_CONTENTLAYOUT {QStringLiteral("content_layout")};
 const QString PARAM_AUTOTMM {QStringLiteral("use_auto_tmm")};
 const QString PARAM_UPLOADLIMIT {QStringLiteral("upload_limit")};
 const QString PARAM_DOWNLOADLIMIT {QStringLiteral("download_limit")};
-const QString PARAM_SEEDINGTIMELIMIT {QStringLiteral("seeding_time_limit")};
+const QString PARAM_SNEEDINGTIMELIMIT {QStringLiteral("sneeding_time_limit")};
 const QString PARAM_RATIOLIMIT {QStringLiteral("ratio_limit")};
 
 namespace
@@ -147,7 +147,7 @@ namespace
         params.useAutoTMM = getOptionalBool(jsonObj, PARAM_AUTOTMM);
         params.uploadLimit = jsonObj.value(PARAM_UPLOADLIMIT).toInt(-1);
         params.downloadLimit = jsonObj.value(PARAM_DOWNLOADLIMIT).toInt(-1);
-        params.seedingTimeLimit = jsonObj.value(PARAM_SEEDINGTIMELIMIT).toInt(BitTorrent::Torrent::USE_GLOBAL_SEEDING_TIME);
+        params.sneedingTimeLimit = jsonObj.value(PARAM_SNEEDINGTIMELIMIT).toInt(BitTorrent::Torrent::USE_GLOBAL_SNEEDING_TIME);
         params.ratioLimit = jsonObj.value(PARAM_RATIOLIMIT).toDouble(BitTorrent::Torrent::USE_GLOBAL_RATIO);
 
         return params;
@@ -165,7 +165,7 @@ namespace
             {PARAM_SKIPCHECKING, params.skipChecking},
             {PARAM_UPLOADLIMIT, params.uploadLimit},
             {PARAM_DOWNLOADLIMIT, params.downloadLimit},
-            {PARAM_SEEDINGTIMELIMIT, params.seedingTimeLimit},
+            {PARAM_SNEEDINGTIMELIMIT, params.sneedingTimeLimit},
             {PARAM_RATIOLIMIT, params.ratioLimit}
         };
 

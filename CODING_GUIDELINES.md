@@ -311,11 +311,11 @@ The headers should be placed in the following group order:
 4. Boost library headers
 5. Libtorrent headers
 6. Qt headers
-7. qBittorrent's own headers, starting from the *base* headers.
+7. qSneedTorrent's own headers, starting from the *base* headers.
 
 The headers should be ordered alphabetically within each group. \
 If there are conditionals for the same header group, then put them at the bottom of the respective group. \
-If there are conditionals that contain headers from several different header groups, then put them above the "qBittorrent's own headers" group.
+If there are conditionals that contain headers from several different header groups, then put them above the "qSneedTorrent's own headers" group.
 
 One exception is the header containing the library version (for example, QtGlobal), this particular header isn't constrained by the aforementioned order.
 
@@ -364,7 +364,7 @@ Example:
 #include <QElapsedTimer>
 #endif
 
-// qBittorrent's own headers
+// qSneedTorrent's own headers
 #include "base/bittorrent/infohash.h"
 #include "anothermodule.h"
 #include "ui_examplewidget.h"

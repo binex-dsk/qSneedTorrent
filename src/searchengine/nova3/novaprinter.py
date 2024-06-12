@@ -28,7 +28,7 @@
 def prettyPrinter(dictionary):
     dictionary['size'] = anySizeToBytes(dictionary['size'])
     outtext = "|".join((dictionary["link"], dictionary["name"].replace("|", " "),
-                        str(dictionary["size"]), str(dictionary["seeds"]),
+                        str(dictionary["size"]), str(dictionary["sneeds"]),
                         str(dictionary["leech"]), dictionary["engine_url"]))
     if 'desc_link' in dictionary:
         outtext = "|".join((outtext, dictionary["desc_link"]))

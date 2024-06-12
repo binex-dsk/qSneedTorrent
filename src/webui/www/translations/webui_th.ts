@@ -92,8 +92,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>ออก qBittorrent</translation>
+        <source>Exit qSneedTorrent</source>
+        <translation>ออก qSneedTorrent</translation>
     </message>
     <message>
         <source>Only one link per line</source>
@@ -140,8 +140,8 @@
         <translation>จำนวนช่องอัปโหลดสูงสุดต่อขีดจำกัดทอร์เรนต์ต้องมากกว่า 0 หรือปิดใช้งาน</translation>
     </message>
     <message>
-        <source>Unable to save program preferences, qBittorrent is probably unreachable.</source>
-        <translation>ไม่สามารถบันทึกการตั้งค่าโปรแกรมได้ qBittorrent อาจไม่สามารถเข้าถึงได้</translation>
+        <source>Unable to save program preferences, qSneedTorrent is probably unreachable.</source>
+        <translation>ไม่สามารถบันทึกการตั้งค่าโปรแกรมได้ qSneedTorrent อาจไม่สามารถเข้าถึงได้</translation>
     </message>
     <message>
         <source>Unknown</source>
@@ -152,7 +152,7 @@
         <translation>ขีดจำกัดอัตราส่วนการแชร์ต้องอยู่ระหว่าง 0 ถึง 9998</translation>
     </message>
     <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
+        <source>Sneeding time limit must be between 0 and 525600 minutes.</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -160,8 +160,8 @@
         <translation>พอร์ตที่ใช้สำหรับ Web UI ต้องอยู่ระหว่าง 1 ถึง 65535</translation>
     </message>
     <message>
-        <source>Unable to log in, qBittorrent is probably unreachable.</source>
-        <translation>ไม่สามารถเข้าสู่ระบบได้ qBittorrent อาจไม่สามารถเข้าถึงได้</translation>
+        <source>Unable to log in, qSneedTorrent is probably unreachable.</source>
+        <translation>ไม่สามารถเข้าสู่ระบบได้ qSneedTorrent อาจไม่สามารถเข้าถึงได้</translation>
     </message>
     <message>
         <source>Invalid Username or Password.</source>
@@ -280,8 +280,8 @@
         <translation>บันทึก</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>ไคลเอนต์ qBittorrent ไม่สามารถเข้าถึงได้</translation>
+        <source>qSneedTorrent client is not reachable</source>
+        <translation>ไคลเอนต์ qSneedTorrent ไม่สามารถเข้าถึงได้</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -320,8 +320,8 @@
         <translation>เกณฑ์อัตราการดาวน์โหลดต้องมากกว่า 0</translation>
     </message>
     <message>
-        <source>qBittorrent has been shutdown</source>
-        <translation>qBittorrent ถูกปิดลง</translation>
+        <source>qSneedTorrent has been shutdown</source>
+        <translation>qSneedTorrent ถูกปิดลง</translation>
     </message>
     <message>
         <source>Open documentation</source>
@@ -463,13 +463,13 @@
         <translation>ตั้งค่าขีดจำกัดการดาวน์โหลดสำหรับทั่วโลก.</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>คุณแน่ใจหรือว่าต้องการออกจาก qBittorrent?</translation>
+        <source>Are you sure you want to quit qSneedTorrent?</source>
+        <translation>คุณแน่ใจหรือว่าต้องการออกจาก qSneedTorrent?</translation>
     </message>
     <message>
-        <source>[D: %1, U: %2] qBittorrent %3</source>
-        <comment>D = Download; U = Upload; %3 is qBittorrent version</comment>
-        <translation>[ดาวน์โหลด: %1, อัพโหลด: %2] qBittorrent %3</translation>
+        <source>[D: %1, U: %2] qSneedTorrent %3</source>
+        <comment>D = Download; U = Upload; %3 is qSneedTorrent version</comment>
+        <translation>[ดาวน์โหลด: %1, อัพโหลด: %2] qSneedTorrent %3</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1105,7 +1105,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Enable super seeding for torrent</source>
+        <source>Enable super sneeding for torrent</source>
         <translation>เปิดใช้งานการส่งต่อขั้นสูงสำหรับทอร์เรนต์</translation>
     </message>
     <message>
@@ -1129,7 +1129,7 @@
         <translation>เมื่ออัตราส่วนถึง</translation>
     </message>
     <message>
-        <source>When seeding time reaches</source>
+        <source>When sneeding time reaches</source>
         <translation>เวลาในการส่งต่อครบกำหนด</translation>
     </message>
     <message>
@@ -1165,7 +1165,7 @@
         <translation>ลบทอร์เรนต์และไฟล์ของมัน</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
+        <source>qSneedTorrent Section</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1237,7 +1237,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeding Limits</source>
+        <source>Sneeding Limits</source>
         <translation>จำกัดการส่งต่อ</translation>
     </message>
     <message>
@@ -1629,7 +1629,7 @@
         <translation>อัพโหลด:</translation>
     </message>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>ผู้ส่ง:</translation>
     </message>
     <message>
@@ -1757,7 +1757,7 @@
         <translation>เปลี่ยนชื่อ...</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1897,7 +1897,7 @@
         <translation>กำลังดาวน์โหลด (0)</translation>
     </message>
     <message>
-        <source>Seeding (0)</source>
+        <source>Sneeding (0)</source>
         <translation>กำลังส่ง (0)</translation>
     </message>
     <message>
@@ -1933,7 +1933,7 @@
         <translation>กำลังดาวน์โหลด (%1)</translation>
     </message>
     <message>
-        <source>Seeding (%1)</source>
+        <source>Sneeding (%1)</source>
         <translation>กำลังส่ง (%1)</translation>
     </message>
     <message>
@@ -2015,11 +2015,11 @@
     </message>
     <message>
         <source>Status</source>
-        <comment>Torrent status (e.g. downloading, seeding, paused)</comment>
+        <comment>Torrent status (e.g. downloading, sneeding, paused)</comment>
         <translation>สถานะ</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <comment>i.e. full sources (often untranslated)</comment>
         <translation>ผู้ส่ง</translation>
     </message>
@@ -2192,7 +2192,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <translation>ผู้ส่ง</translation>
     </message>
     <message>
@@ -2283,11 +2283,11 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>[F] Seeding</source>
+        <source>[F] Sneeding</source>
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeding</source>
+        <source>Sneeding</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2331,7 +2331,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2455,7 +2455,7 @@
         <translation>บังคับตรวจสอบ</translation>
     </message>
     <message>
-        <source>Super seeding mode</source>
+        <source>Super sneeding mode</source>
         <translation>โหลดส่งต่อข้อมูลขั้นสูง</translation>
     </message>
     <message>
@@ -2588,8 +2588,8 @@
         <translation>ลบไฟล์ออกจากฮาร์ดดิสด้วย</translation>
     </message>
     <message>
-        <source>Deletion confirmation - qBittorrent</source>
-        <translation>ยืนยันการลบ - qBittorrent</translation>
+        <source>Deletion confirmation - qSneedTorrent</source>
+        <translation>ยืนยันการลบ - qSneedTorrent</translation>
     </message>
 </context>
 <context>
@@ -2712,7 +2712,7 @@
 <context>
     <name>SearchEngineWidget</name>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2842,7 +2842,7 @@
         <translation type="unfinished" />
     </message>
     <message>
-        <source>Seeders</source>
+        <source>Sneeders</source>
         <translation type="unfinished" />
     </message>
 </context>
@@ -2989,8 +2989,8 @@
         <translation>ชื่อ</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>เกี่ยวกับ qBittorrent</translation>
+        <source>About qSneedTorrent</source>
+        <translation>เกี่ยวกับ qSneedTorrent</translation>
     </message>
     <message>
         <source>License</source>
@@ -3001,8 +3001,8 @@
         <translation>นักแปล</translation>
     </message>
     <message>
-        <source>qBittorrent was built with the following libraries:</source>
-        <translation>qBittorrent ถูกสร้างขึ้นด้วยไลบรารีต่อไปนี้:</translation>
+        <source>qSneedTorrent was built with the following libraries:</source>
+        <translation>qSneedTorrent ถูกสร้างขึ้นด้วยไลบรารีต่อไปนี้:</translation>
     </message>
     <message>
         <source>Nationality:</source>
@@ -3025,11 +3025,11 @@
         <translation>ฝรั่งเศส</translation>
     </message>
     <message>
-        <source>qBittorrent Mascot</source>
+        <source>qSneedTorrent Mascot</source>
         <translation type="unfinished" />
     </message>
     <message>
-        <source>qBittorrent icon</source>
+        <source>qSneedTorrent icon</source>
         <translation type="unfinished" />
     </message>
 </context>

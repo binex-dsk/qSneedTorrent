@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# TSTool - script for update qBittorrent WebUI translation files
+# TSTool - script for update qSneedTorrent WebUI translation files
 # Copyright (C) 2018  Vladimir Golovnev <glassez@yandex.ru>
 #
 # This program is free software; you can redistribute it and/or
@@ -139,7 +139,7 @@ def processTranslation(filename, sources):
         print('\tFailed to write %s!' % (os.path.normpath(filename)))
 
 argp = argparse.ArgumentParser(
-    prog = 'tstool.py', description = 'Update qBittorrent WebUI translation files.')
+    prog = 'tstool.py', description = 'Update qSneedTorrent WebUI translation files.')
 argp.add_argument('--no-obsolete', dest = 'no_obsolete', action = 'store_true',
                   default = no_obsolete,
                   help = 'remove obsolete messages (default: mark them as obsolete)')

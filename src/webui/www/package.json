@@ -1,9 +1,9 @@
 {
   "name": "webui",
-  "description": "qBittorrent WebUI",
+  "description": "qSneedTorrent WebUI",
   "repository": {
     "type": "git",
-    "url": "https://github.com/qbittorrent/qBittorrent.git"
+    "url": "https://github.com/qsneedtorrent/qSneedTorrent.git"
   },
   "scripts": {
     "format": "js-beautify private/*.html private/scripts/*.js private/views/*.html public/*.html public/scripts/*.js && prettier --write **.css",

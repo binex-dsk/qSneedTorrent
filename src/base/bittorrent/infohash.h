@@ -81,7 +81,7 @@ namespace BitTorrent
         WrappedType m_nativeHash;
     };
 
-    uint qHash(const TorrentID &key, uint seed);
+    uint qHash(const TorrentID &key, uint sneed);
 
     bool operator==(const InfoHash &left, const InfoHash &right);
     bool operator!=(const InfoHash &left, const InfoHash &right);

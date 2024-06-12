@@ -1,6 +1,6 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
- * Copyright (C) 2006  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2006  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -77,7 +77,7 @@ QWidget *PropListDelegate::createEditor(QWidget *parent, const QStyleOptionViewI
     if (m_properties)
     {
         const BitTorrent::Torrent *torrent = m_properties->getCurrentTorrent();
-        if (!torrent || !torrent->hasMetadata() || torrent->isSeed())
+        if (!torrent || !torrent->hasMetadata() || torrent->isSneed())
             return nullptr;
     }
 

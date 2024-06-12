@@ -136,8 +136,8 @@
     <div id="leftRssDownloaderColumn">
         <div id="topMenuBar">
             <b id="rulesTableDesc">QBT_TR(Download Rules)QBT_TR[CONTEXT=AutomatedRssDownloader]</b>
-            <button id="newRuleButton" class="imageButton" onclick="qBittorrent.RssDownloader.addRule()"></button>
-            <button id="deleteRuleButton" class="imageButton" onclick="qBittorrent.RssDownloader.removeSelectedRule()"></button>
+            <button id="newRuleButton" class="imageButton" onclick="qSneedTorrent.RssDownloader.addRule()"></button>
+            <button id="deleteRuleButton" class="imageButton" onclick="qSneedTorrent.RssDownloader.removeSelectedRule()"></button>
         </div>
         <div id="rulesTable">
             <div id="rulesSelectionCheckBoxList">
@@ -163,7 +163,7 @@
         <fieldset class="settings" id="ruleSettings">
             <legend>QBT_TR(Rule Definition)QBT_TR[CONTEXT=AutomatedRssDownloader]</legend>
             <div class="formRow">
-                <input disabled type="checkbox" id="useRegEx" onclick="qBittorrent.RssDownloader.setElementTitles()" />
+                <input disabled type="checkbox" id="useRegEx" onclick="qSneedTorrent.RssDownloader.setElementTitles()" />
                 <label for="useRegEx">QBT_TR(Use Regular Expressions)QBT_TR[CONTEXT=AutomatedRssDownloader]</label>
             </div>
             <table class="fullWidth">
@@ -285,7 +285,7 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
                 </div>
             </div>
         </fieldset>
-        <button disabled id="saveButton" onclick="qBittorrent.RssDownloader.saveSettings()">
+        <button disabled id="saveButton" onclick="qSneedTorrent.RssDownloader.saveSettings()">
             QBT_TR(Save)QBT_TR[CONTEXT=HttpServer]
         </button>
     </div>
@@ -321,11 +321,11 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
 <script>
     'use strict';
 
-    if (window.qBittorrent === undefined) {
-        window.qBittorrent = {};
+    if (window.qSneedTorrent === undefined) {
+        window.qSneedTorrent = {};
     }
 
-    window.qBittorrent.RssDownloader = (() => {
+    window.qSneedTorrent.RssDownloader = (() => {
         const exports = () => {
             return {
                 updateRulesList: updateRulesList,
@@ -341,9 +341,9 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
             };
         };
 
-        let rssDownloaderRulesTable = new window.qBittorrent.DynamicTable.RssDownloaderRulesTable();
-        let rssDownloaderFeedSelectionTable = new window.qBittorrent.DynamicTable.RssDownloaderFeedSelectionTable();
-        let rssDownloaderArticlesTable = new window.qBittorrent.DynamicTable.RssDownloaderArticlesTable();
+        let rssDownloaderRulesTable = new window.qSneedTorrent.DynamicTable.RssDownloaderRulesTable();
+        let rssDownloaderFeedSelectionTable = new window.qSneedTorrent.DynamicTable.RssDownloaderFeedSelectionTable();
+        let rssDownloaderArticlesTable = new window.qSneedTorrent.DynamicTable.RssDownloaderArticlesTable();
 
         let rulesList = {};
         let feedList = [];
@@ -354,7 +354,7 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
                 method: 'get',
                 noCache: true,
                 onFailure: () => {
-                    alert('Could not contact qBittorrent');
+                    alert('Could not contact qSneedTorrent');
                 },
                 onSuccess: (pref) => {
                     if (!pref.rss_auto_downloading_enabled)
@@ -386,7 +386,7 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
                 }
             }).send();
 
-            const rssDownloaderRuleContextMenu = new window.qBittorrent.ContextMenu.RssDownloaderRuleContextMenu({
+            const rssDownloaderRuleContextMenu = new window.qSneedTorrent.ContextMenu.RssDownloaderRuleContextMenu({
                 targets: '',
                 menu: 'rssDownloaderRuleMenu',
                 actions: {
@@ -797,5 +797,5 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
         return exports();
     })();
 
-    Object.freeze(window.qBittorrent.RssDownloader);
+    Object.freeze(window.qSneedTorrent.RssDownloader);
 </script>

@@ -52,11 +52,11 @@ namespace BitTorrent
         TorrentOperatingMode operatingMode = TorrentOperatingMode::AutoManaged;
         bool useAutoTMM = false;
         bool firstLastPiecePriority = false;
-        bool hasSeedStatus = false;
+        bool hasSneedStatus = false;
         bool stopped = false;
 
         qreal ratioLimit = Torrent::USE_GLOBAL_RATIO;
-        int seedingTimeLimit = Torrent::USE_GLOBAL_SEEDING_TIME;
+        int sneedingTimeLimit = Torrent::USE_GLOBAL_SNEEDING_TIME;
 
         bool restored = false;  // is existing torrent job?
     };

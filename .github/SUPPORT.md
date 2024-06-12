@@ -11,8 +11,8 @@ For such questions, use one of the following community support resources:
 
 * The official forum [official forum][forum-url]
 
-* The [qBittorrent subreddit][subreddit-url]
+* The [qSneedTorrent subreddit][subreddit-url]
 
-[discussions-url]: https://github.com/qbittorrent/qBittorrent/discussions
-[forum-url]: http://forum.qbittorrent.org/
-[subreddit-url]: https://www.reddit.com/r/qBittorrent/
+[discussions-url]: https://github.com/qsneedtorrent/qSneedTorrent/discussions
+[forum-url]: http://forum.qsneedtorrent.org/
+[subreddit-url]: https://www.reddit.com/r/qSneedTorrent/

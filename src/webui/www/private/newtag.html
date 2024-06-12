@@ -30,8 +30,8 @@
         }).activate();
 
         window.addEvent('domready', function() {
-            const uriAction = window.qBittorrent.Misc.safeTrim(new URI().getData('action'));
-            const uriHashes = window.qBittorrent.Misc.safeTrim(new URI().getData('hashes'));
+            const uriAction = window.qSneedTorrent.Misc.safeTrim(new URI().getData('action'));
+            const uriHashes = window.qSneedTorrent.Misc.safeTrim(new URI().getData('hashes'));
 
             if (uriAction === 'create')
                 $('legendText').innerText = 'QBT_TR(Tag:)QBT_TR[CONTEXT=TagFilterWidget]';

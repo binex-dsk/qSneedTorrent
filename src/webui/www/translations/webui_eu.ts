@@ -92,8 +92,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>Irten qBittorrent-etik</translation>
+        <source>Exit qSneedTorrent</source>
+        <translation>Irten qSneedTorrent-etik</translation>
     </message>
     <message>
         <source>Only one link per line</source>
@@ -140,8 +140,8 @@
         <translation>Gehienezko igoera aho zenbatekoa torrent bakoitzeko muga 0 baino handiagoa edo ezgaituta izan behar da.</translation>
     </message>
     <message>
-        <source>Unable to save program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Ezinezkoa programa hobespenak gordetzea, qBittorrent zihurrenik erdietsiezina da.</translation>
+        <source>Unable to save program preferences, qSneedTorrent is probably unreachable.</source>
+        <translation>Ezinezkoa programa hobespenak gordetzea, qSneedTorrent zihurrenik erdietsiezina da.</translation>
     </message>
     <message>
         <source>Unknown</source>
@@ -152,7 +152,7 @@
         <translation>Elkarbanatze maila muga 0 eta 9998 artekoa izan behar da.</translation>
     </message>
     <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
+        <source>Sneeding time limit must be between 0 and 525600 minutes.</source>
         <translation>Emaritza denbora muga 0 eta 525600 minutu artekoa izan behar da.</translation>
     </message>
     <message>
@@ -160,8 +160,8 @@
         <translation>Web EI-ak erabiltzeko ataka 1024 eta 65535 artekoa izan behar da.</translation>
     </message>
     <message>
-        <source>Unable to log in, qBittorrent is probably unreachable.</source>
-        <translation>Ezinezkoa saioa hastea, qBittorrent zihurrenik eskuraezina dago.</translation>
+        <source>Unable to log in, qSneedTorrent is probably unreachable.</source>
+        <translation>Ezinezkoa saioa hastea, qSneedTorrent zihurrenik eskuraezina dago.</translation>
     </message>
     <message>
         <source>Invalid Username or Password.</source>
@@ -280,8 +280,8 @@
         <translation>Gorde</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>qBittorrent bezeroa erdietsiezina da</translation>
+        <source>qSneedTorrent client is not reachable</source>
+        <translation>qSneedTorrent bezeroa erdietsiezina da</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -320,8 +320,8 @@
         <translation>Igoera neurri muga 0 baino handiagoa izan behar da.</translation>
     </message>
     <message>
-        <source>qBittorrent has been shutdown</source>
-        <translation>qBittorrent itzali egin da</translation>
+        <source>qSneedTorrent has been shutdown</source>
+        <translation>qSneedTorrent itzali egin da</translation>
     </message>
     <message>
         <source>Open documentation</source>
@@ -463,13 +463,13 @@
         <translation>Jeisketa Abiadura Muga Orokorra</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Zihur zaude qBittorrent uztea nahi duzula?</translation>
+        <source>Are you sure you want to quit qSneedTorrent?</source>
+        <translation>Zihur zaude qSneedTorrent uztea nahi duzula?</translation>
     </message>
     <message>
-        <source>[D: %1, U: %2] qBittorrent %3</source>
-        <comment>D = Download; U = Upload; %3 is qBittorrent version</comment>
-        <translation>[J: %1, I: %2] qBittorrent %3</translation>
+        <source>[D: %1, U: %2] qSneedTorrent %3</source>
+        <comment>D = Download; U = Upload; %3 is qSneedTorrent version</comment>
+        <translation>[J: %1, I: %2] qSneedTorrent %3</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1105,7 +1105,7 @@
         <translation>Socket lan-atzeratuaren tamaina:</translation>
     </message>
     <message>
-        <source>Enable super seeding for torrent</source>
+        <source>Enable super sneeding for torrent</source>
         <translation>Gaitu super-hedatzea torrentarentzat</translation>
     </message>
     <message>
@@ -1129,7 +1129,7 @@
         <translation>Erlazioa hona heltzerakoan</translation>
     </message>
     <message>
-        <source>When seeding time reaches</source>
+        <source>When sneeding time reaches</source>
         <translation>Hedapen denbora honera heltzen denean</translation>
     </message>
     <message>
@@ -1165,7 +1165,7 @@
         <translation>Kendu torrenta eta bere fitxategiak</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
+        <source>qSneedTorrent Section</source>
         <translation>qBitorrent atala</translation>
     </message>
     <message>
@@ -1237,7 +1237,7 @@
         <translation>Karga choking algoritmoa:</translation>
     </message>
     <message>
-        <source>Seeding Limits</source>
+        <source>Sneeding Limits</source>
         <translation>Hedapen mugak</translation>
     </message>
     <message>
@@ -1629,7 +1629,7 @@
         <translation>Igota:</translation>
     </message>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>Emaleak:</translation>
     </message>
     <message>
@@ -1757,7 +1757,7 @@
         <translation>Berrizendatu...</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -1897,7 +1897,7 @@
         <translation>Jeisten (0)</translation>
     </message>
     <message>
-        <source>Seeding (0)</source>
+        <source>Sneeding (0)</source>
         <translation>Emaritzan (0)</translation>
     </message>
     <message>
@@ -1933,7 +1933,7 @@
         <translation>Jeisten (%1)</translation>
     </message>
     <message>
-        <source>Seeding (%1)</source>
+        <source>Sneeding (%1)</source>
         <translation>Emaritzan (%1)</translation>
     </message>
     <message>
@@ -2015,11 +2015,11 @@
     </message>
     <message>
         <source>Status</source>
-        <comment>Torrent status (e.g. downloading, seeding, paused)</comment>
+        <comment>Torrent status (e.g. downloading, sneeding, paused)</comment>
         <translation>Egoera</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <comment>i.e. full sources (often untranslated)</comment>
         <translation>Emaritzak</translation>
     </message>
@@ -2192,7 +2192,7 @@
         <translation>E/G</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <translation>Emaritzak</translation>
     </message>
     <message>
@@ -2283,11 +2283,11 @@
         <translation>Mugitzen</translation>
     </message>
     <message>
-        <source>[F] Seeding</source>
+        <source>[F] Sneeding</source>
         <translation>[B] Emaritzen</translation>
     </message>
     <message>
-        <source>Seeding</source>
+        <source>Sneeding</source>
         <translation>Emaritzan</translation>
     </message>
     <message>
@@ -2331,7 +2331,7 @@
         <translation>Geldituta</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation type="unfinished" />
     </message>
     <message>
@@ -2455,7 +2455,7 @@
         <translation>Behartu berregiaztapena</translation>
     </message>
     <message>
-        <source>Super seeding mode</source>
+        <source>Super sneeding mode</source>
         <translation>Gain emaritza modua</translation>
     </message>
     <message>
@@ -2588,8 +2588,8 @@
         <translation>Ezabatu agiriak diska gogorrean ere</translation>
     </message>
     <message>
-        <source>Deletion confirmation - qBittorrent</source>
-        <translation>Ezabapen baieztapena - qBittorrent</translation>
+        <source>Deletion confirmation - qSneedTorrent</source>
+        <translation>Ezabapen baieztapena - qSneedTorrent</translation>
     </message>
 </context>
 <context>
@@ -2712,7 +2712,7 @@
 <context>
     <name>SearchEngineWidget</name>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>Emaritzak:</translation>
     </message>
     <message>
@@ -2842,7 +2842,7 @@
         <translation>Bilaketa gailua</translation>
     </message>
     <message>
-        <source>Seeders</source>
+        <source>Sneeders</source>
         <translation>Emaleak</translation>
     </message>
 </context>
@@ -2989,8 +2989,8 @@
         <translation>Izena:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>qBittorrent-i buruz</translation>
+        <source>About qSneedTorrent</source>
+        <translation>qSneedTorrent-i buruz</translation>
     </message>
     <message>
         <source>License</source>
@@ -3001,8 +3001,8 @@
         <translation>Itzultzaileak</translation>
     </message>
     <message>
-        <source>qBittorrent was built with the following libraries:</source>
-        <translation>qBittorrent hurrengo liburutegiekin eraiki da:</translation>
+        <source>qSneedTorrent was built with the following libraries:</source>
+        <translation>qSneedTorrent hurrengo liburutegiekin eraiki da:</translation>
     </message>
     <message>
         <source>Nationality:</source>
@@ -3025,11 +3025,11 @@
         <translation>Frantzia</translation>
     </message>
     <message>
-        <source>qBittorrent Mascot</source>
+        <source>qSneedTorrent Mascot</source>
         <translation type="unfinished" />
     </message>
     <message>
-        <source>qBittorrent icon</source>
+        <source>qSneedTorrent icon</source>
         <translation type="unfinished" />
     </message>
 </context>

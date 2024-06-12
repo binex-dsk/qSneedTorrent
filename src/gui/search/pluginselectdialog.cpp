@@ -1,7 +1,7 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
  * Copyright (C) 2015  Vladimir Golovnev <glassez@yandex.ru>
- * Copyright (C) 2006  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2006  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -220,7 +220,7 @@ void PluginSelectDialog::on_actionUninstall_triggered()
     }
 
     if (error)
-        QMessageBox::warning(this, tr("Uninstall warning"), tr("Some plugins could not be uninstalled because they are included in qBittorrent. Only the ones you added yourself can be uninstalled.\nThose plugins were disabled."));
+        QMessageBox::warning(this, tr("Uninstall warning"), tr("Some plugins could not be uninstalled because they are included in qSneedTorrent. Only the ones you added yourself can be uninstalled.\nThose plugins were disabled."));
     else
         QMessageBox::information(this, tr("Uninstall success"), tr("All selected plugins were uninstalled successfully"));
 }
@@ -389,7 +389,7 @@ void PluginSelectDialog::askForLocalPlugin()
 {
     const QStringList pathsList = QFileDialog::getOpenFileNames(
                 nullptr, tr("Select search plugins"), QDir::homePath(),
-                tr("qBittorrent search plugin") + QLatin1String(" (*.py)")
+                tr("qSneedTorrent search plugin") + QLatin1String(" (*.py)")
                 );
     for (const QString &path : pathsList)
     {

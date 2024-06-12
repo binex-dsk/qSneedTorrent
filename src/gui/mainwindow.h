@@ -1,6 +1,6 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
- * Copyright (C) 2006  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2006  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -178,7 +178,7 @@ private slots:
     void on_actionDownloadFromURL_triggered();
     void on_actionExit_triggered();
     void on_actionLock_triggered();
-    // Check for unpaused downloading or seeding torrents and prevent system suspend/sleep according to preferences
+    // Check for unpaused downloading or sneeding torrents and prevent system suspend/sleep according to preferences
     void updatePowerManagementState();
 
     void toolbarMenuRequested();

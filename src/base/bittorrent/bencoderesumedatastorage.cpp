@@ -175,9 +175,9 @@ std::optional<BitTorrent::LoadTorrentParams> BitTorrent::BencodeResumeDataStorag
     torrentParams.restored = true;
     torrentParams.category = fromLTString(root.dict_find_string_value("qBt-category"));
     torrentParams.name = fromLTString(root.dict_find_string_value("qBt-name"));
-    torrentParams.hasSeedStatus = root.dict_find_int_value("qBt-seedStatus");
+    torrentParams.hasSneedStatus = root.dict_find_int_value("qBt-sneedStatus");
     torrentParams.firstLastPiecePriority = root.dict_find_int_value("qBt-firstLastPiecePriority");
-    torrentParams.seedingTimeLimit = root.dict_find_int_value("qBt-seedingTimeLimit", Torrent::USE_GLOBAL_SEEDING_TIME);
+    torrentParams.sneedingTimeLimit = root.dict_find_int_value("qBt-sneedingTimeLimit", Torrent::USE_GLOBAL_SNEEDING_TIME);
 
     torrentParams.savePath = Profile::instance()->fromPortablePath(
                 Path(fromLTString(root.dict_find_string_value("qBt-savePath"))));
@@ -364,11 +364,11 @@ void BitTorrent::BencodeResumeDataStorage::Worker::store(const TorrentID &id, co
     }
 
     data["qBt-ratioLimit"] = static_cast<int>(resumeData.ratioLimit * 1000);
-    data["qBt-seedingTimeLimit"] = resumeData.seedingTimeLimit;
+    data["qBt-sneedingTimeLimit"] = resumeData.sneedingTimeLimit;
     data["qBt-category"] = resumeData.category.toStdString();
     data["qBt-tags"] = setToEntryList(resumeData.tags);
     data["qBt-name"] = resumeData.name.toStdString();
-    data["qBt-seedStatus"] = resumeData.hasSeedStatus;
+    data["qBt-sneedStatus"] = resumeData.hasSneedStatus;
     data["qBt-contentLayout"] = Utils::String::fromEnum(resumeData.contentLayout).toStdString();
     data["qBt-firstLastPiecePriority"] = resumeData.firstLastPiecePriority;
 

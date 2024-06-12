@@ -73,7 +73,7 @@ void PowerManagement::setBusy()
     m_inhibitor->requestBusy();
 #elif defined(Q_OS_MACOS)
     IOReturn success = IOPMAssertionCreateWithName(kIOPMAssertionTypeNoIdleSleep, kIOPMAssertionLevelOn
-        , tr("qBittorrent is active").toCFString(), &m_assertionID);
+        , tr("qSneedTorrent is active").toCFString(), &m_assertionID);
     if (success != kIOReturnSuccess)
         m_busy = false;
 #endif

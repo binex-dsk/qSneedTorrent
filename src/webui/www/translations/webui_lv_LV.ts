@@ -92,8 +92,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>Aizvērt qBittorrent</translation>
+        <source>Exit qSneedTorrent</source>
+        <translation>Aizvērt qSneedTorrent</translation>
     </message>
     <message>
         <source>Only one link per line</source>
@@ -140,8 +140,8 @@
         <translation>Atļautajam augšupielādes slotu skaitam uz katru torrentu jābūt lielākam par 0 vai arī atslēgtam.</translation>
     </message>
     <message>
-        <source>Unable to save program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Neizdevās saglabāt programmas iestatījumus, qBittorrent droši vien nav sasniedzams.</translation>
+        <source>Unable to save program preferences, qSneedTorrent is probably unreachable.</source>
+        <translation>Neizdevās saglabāt programmas iestatījumus, qSneedTorrent droši vien nav sasniedzams.</translation>
     </message>
     <message>
         <source>Unknown</source>
@@ -152,7 +152,7 @@
         <translation>Koplietošanas reitinga limitam jābūt starp 0 un 9998.</translation>
     </message>
     <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
+        <source>Sneeding time limit must be between 0 and 525600 minutes.</source>
         <translation>Augšupielādes ilguma limitam jābūt starp 0 un 525600 minūtēm.</translation>
     </message>
     <message>
@@ -160,8 +160,8 @@
         <translation>Tālvadības kontroles paneļa portam ir jābūt starp 1 un 65535.</translation>
     </message>
     <message>
-        <source>Unable to log in, qBittorrent is probably unreachable.</source>
-        <translation>Neizdevās pierakstīties, qBittorrent droši vien nav sasniedzams.</translation>
+        <source>Unable to log in, qSneedTorrent is probably unreachable.</source>
+        <translation>Neizdevās pierakstīties, qSneedTorrent droši vien nav sasniedzams.</translation>
     </message>
     <message>
         <source>Invalid Username or Password.</source>
@@ -280,8 +280,8 @@
         <translation>Saglabāt</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>qBittorrent klients nav sasniedzams</translation>
+        <source>qSneedTorrent client is not reachable</source>
+        <translation>qSneedTorrent klients nav sasniedzams</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -320,8 +320,8 @@
         <translation>Lejupielādes ātruma slieksnim ir jābūt lielākam par 0</translation>
     </message>
     <message>
-        <source>qBittorrent has been shutdown</source>
-        <translation>qBittorrent klients ir izslēgts.</translation>
+        <source>qSneedTorrent has been shutdown</source>
+        <translation>qSneedTorrent klients ir izslēgts.</translation>
     </message>
     <message>
         <source>Open documentation</source>
@@ -463,13 +463,13 @@
         <translation>Atļautais kopējais lejupielādes ātrums</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Vai esat pārliecināts, ka vēlaties aizvērt qBittorrent?</translation>
+        <source>Are you sure you want to quit qSneedTorrent?</source>
+        <translation>Vai esat pārliecināts, ka vēlaties aizvērt qSneedTorrent?</translation>
     </message>
     <message>
-        <source>[D: %1, U: %2] qBittorrent %3</source>
-        <comment>D = Download; U = Upload; %3 is qBittorrent version</comment>
-        <translation>[L: %1, A: %2] qBittorrent %3</translation>
+        <source>[D: %1, U: %2] qSneedTorrent %3</source>
+        <comment>D = Download; U = Upload; %3 is qSneedTorrent version</comment>
+        <translation>[L: %1, A: %2] qSneedTorrent %3</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1105,7 +1105,7 @@
         <translation>Soketa rindas izmērs:</translation>
     </message>
     <message>
-        <source>Enable super seeding for torrent</source>
+        <source>Enable super sneeding for torrent</source>
         <translation>Ieslēgt torrentu super-augšupielādi</translation>
     </message>
     <message>
@@ -1129,7 +1129,7 @@
         <translation>Kad reitings sasniedz</translation>
     </message>
     <message>
-        <source>When seeding time reaches</source>
+        <source>When sneeding time reaches</source>
         <translation>Kad augšupielādes laiks sasniedz</translation>
     </message>
     <message>
@@ -1165,8 +1165,8 @@
         <translation>Izdzēst torrentu un failus</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>qBittorrent sadaļa</translation>
+        <source>qSneedTorrent Section</source>
+        <translation>qSneedTorrent sadaļa</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -1237,7 +1237,7 @@
         <translation>Augšupielādes regulēšanas algoritms:</translation>
     </message>
     <message>
-        <source>Seeding Limits</source>
+        <source>Sneeding Limits</source>
         <translation>Augšupielādes ierobežojumi</translation>
     </message>
     <message>
@@ -1629,7 +1629,7 @@
         <translation>Augšupielādēti:</translation>
     </message>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>Devēji:</translation>
     </message>
     <message>
@@ -1757,7 +1757,7 @@
         <translation>Pārdēvēt...</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation>%1 (augšupielādē jau %2)</translation>
     </message>
     <message>
@@ -1897,7 +1897,7 @@
         <translation>Lejupielādē (0)</translation>
     </message>
     <message>
-        <source>Seeding (0)</source>
+        <source>Sneeding (0)</source>
         <translation>Augšupielādē (0)</translation>
     </message>
     <message>
@@ -1933,7 +1933,7 @@
         <translation>Lejupielādē (%1)</translation>
     </message>
     <message>
-        <source>Seeding (%1)</source>
+        <source>Sneeding (%1)</source>
         <translation>Augšupielādē (%1)</translation>
     </message>
     <message>
@@ -2015,11 +2015,11 @@
     </message>
     <message>
         <source>Status</source>
-        <comment>Torrent status (e.g. downloading, seeding, paused)</comment>
+        <comment>Torrent status (e.g. downloading, sneeding, paused)</comment>
         <translation>Statuss</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <comment>i.e. full sources (often untranslated)</comment>
         <translation>Devēji</translation>
     </message>
@@ -2192,7 +2192,7 @@
         <translation>Nav zināms</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <translation>Devēji</translation>
     </message>
     <message>
@@ -2283,11 +2283,11 @@
         <translation>Pārvieto</translation>
     </message>
     <message>
-        <source>[F] Seeding</source>
+        <source>[F] Sneeding</source>
         <translation>[P] Augšupielādēšana</translation>
     </message>
     <message>
-        <source>Seeding</source>
+        <source>Sneeding</source>
         <translation>Augšupielādē</translation>
     </message>
     <message>
@@ -2331,7 +2331,7 @@
         <translation>Apstājies</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation>%1 (augšupielādē jau %2)</translation>
     </message>
     <message>
@@ -2455,7 +2455,7 @@
         <translation>Piespiedu pārbaude</translation>
     </message>
     <message>
-        <source>Super seeding mode</source>
+        <source>Super sneeding mode</source>
         <translation>Super-augšupielādēšanas režīms</translation>
     </message>
     <message>
@@ -2588,8 +2588,8 @@
         <translation>Izdzēst failus arī uz cietā diska</translation>
     </message>
     <message>
-        <source>Deletion confirmation - qBittorrent</source>
-        <translation>Dzēšanas apstiprināšana - qBittorrent</translation>
+        <source>Deletion confirmation - qSneedTorrent</source>
+        <translation>Dzēšanas apstiprināšana - qSneedTorrent</translation>
     </message>
 </context>
 <context>
@@ -2712,7 +2712,7 @@
 <context>
     <name>SearchEngineWidget</name>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>Devēji:</translation>
     </message>
     <message>
@@ -2842,7 +2842,7 @@
         <translation>Meklētājs</translation>
     </message>
     <message>
-        <source>Seeders</source>
+        <source>Sneeders</source>
         <translation>Devēji</translation>
     </message>
 </context>
@@ -2989,8 +2989,8 @@
         <translation>Vārds:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>Par qBittorrent</translation>
+        <source>About qSneedTorrent</source>
+        <translation>Par qSneedTorrent</translation>
     </message>
     <message>
         <source>License</source>
@@ -3001,8 +3001,8 @@
         <translation>Tulkotāji</translation>
     </message>
     <message>
-        <source>qBittorrent was built with the following libraries:</source>
-        <translation>Šī qBittorrent versija tika uzbūvēta, izmantojot šīs bibliotēkas:</translation>
+        <source>qSneedTorrent was built with the following libraries:</source>
+        <translation>Šī qSneedTorrent versija tika uzbūvēta, izmantojot šīs bibliotēkas:</translation>
     </message>
     <message>
         <source>Nationality:</source>
@@ -3025,12 +3025,12 @@
         <translation>Francija</translation>
     </message>
     <message>
-        <source>qBittorrent Mascot</source>
-        <translation>qBittorrent talismans</translation>
+        <source>qSneedTorrent Mascot</source>
+        <translation>qSneedTorrent talismans</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
-        <translation>qBittorrent ikona</translation>
+        <source>qSneedTorrent icon</source>
+        <translation>qSneedTorrent ikona</translation>
     </message>
 </context>
 <context>

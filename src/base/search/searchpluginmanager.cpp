@@ -1,7 +1,7 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
  * Copyright (C) 2015, 2018  Vladimir Golovnev <glassez@yandex.ru>
- * Copyright (C) 2006  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2006  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -85,7 +85,7 @@ namespace
 QPointer<SearchPluginManager> SearchPluginManager::m_instance = nullptr;
 
 SearchPluginManager::SearchPluginManager()
-    : m_updateUrl(QLatin1String("http://searchplugins.qbittorrent.org/nova3/engines/"))
+    : m_updateUrl(QLatin1String("http://searchplugins.qsneedtorrent.org/nova3/engines/"))
 {
     Q_ASSERT(!m_instance); // only one instance is allowed
     m_instance = this;

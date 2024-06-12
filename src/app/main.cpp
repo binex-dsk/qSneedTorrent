@@ -1,7 +1,7 @@
 /*
  * Bittorrent Client using Qt and libtorrent.
  * Copyright (C) 2014  Vladimir Golovnev <glassez@yandex.ru>
- * Copyright (C) 2006  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2006  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -179,7 +179,7 @@ int main(int argc, char *argv[])
         }
 
         // Set environment variable
-        if (!qputenv("QBITTORRENT", QBT_VERSION))
+        if (!qputenv("QSNEEDTORRENT", QBT_VERSION))
             fprintf(stderr, "Couldn't set environment variable...\n");
 
         const bool firstTimeUser = !Preferences::instance()->getAcceptedLegal();
@@ -204,18 +204,18 @@ int main(int argc, char *argv[])
             setCurrentMigrationVersion();
         }
 
-        // Check if qBittorrent is already running for this user
+        // Check if qSneedTorrent is already running for this user
         if (app->isRunning())
         {
 #if defined(DISABLE_GUI) && !defined(Q_OS_WIN)
             if (params.shouldDaemonize)
             {
-                throw CommandLineParameterError(QObject::tr("You cannot use %1: qBittorrent is already running for this user.")
+                throw CommandLineParameterError(QObject::tr("You cannot use %1: qSneedTorrent is already running for this user.")
                                      .arg(QLatin1String("-d (or --daemon)")));
             }
             else
 #endif
-            qDebug("qBittorrent is already running for this user.");
+            qDebug("qSneedTorrent is already running for this user.");
 
             QThread::msleep(300);
             app->sendParams(params.paramList());
@@ -231,7 +231,7 @@ int main(int argc, char *argv[])
         // So here we disable it for lack of better measure.
         // It will also spew this message in the console: QObject::startTimer: Timers cannot have negative intervals
         // For more info see:
-        // 1. https://github.com/qbittorrent/qBittorrent/issues/4209
+        // 1. https://github.com/qsneedtorrent/qSneedTorrent/issues/4209
         // 2. https://bugreports.qt.io/browse/QTBUG-40332
         // 3. https://bugreports.qt.io/browse/QTBUG-46015
 
@@ -354,8 +354,8 @@ void sigAbnormalHandler(int signum)
     const char *sigName = sysSigName[signum];
 #if !(defined Q_OS_WIN && !defined DISABLE_GUI) && !defined Q_OS_HAIKU
     const char msg[] = "\n\n*************************************************************\n"
-        "Please file a bug report at http://bug.qbittorrent.org and provide the following information:\n\n"
-        "qBittorrent version: " QBT_VERSION "\n\n"
+        "Please file a bug report at http://bug.qsneedtorrent.org and provide the following information:\n\n"
+        "qSneedTorrent version: " QBT_VERSION "\n\n"
         "Caught signal: ";
     reportToUser(msg);
     reportToUser(sigName);
@@ -419,7 +419,7 @@ bool userAgreesWithLegalNotice()
 
 #ifdef DISABLE_GUI
     const QString eula = QString::fromLatin1("\n*** %1 ***\n").arg(QObject::tr("Legal Notice"))
-        + QObject::tr("qBittorrent is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.") + "\n\n"
+        + QObject::tr("qSneedTorrent is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.") + "\n\n"
         + QObject::tr("No further notices will be issued.") + "\n\n"
         + QObject::tr("Press %1 key to accept and continue...").arg("'y'") + '\n';
     printf("%s", qUtf8Printable(eula));
@@ -433,7 +433,7 @@ bool userAgreesWithLegalNotice()
     }
 #else
     QMessageBox msgBox;
-    msgBox.setText(QObject::tr("qBittorrent is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.\n\nNo further notices will be issued."));
+    msgBox.setText(QObject::tr("qSneedTorrent is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.\n\nNo further notices will be issued."));
     msgBox.setWindowTitle(QObject::tr("Legal notice"));
     msgBox.addButton(QObject::tr("Cancel"), QMessageBox::RejectRole);
     const QAbstractButton *agreeButton = msgBox.addButton(QObject::tr("I Agree"), QMessageBox::AcceptRole);

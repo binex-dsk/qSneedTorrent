@@ -50,7 +50,7 @@ namespace BitTorrent
 
             Status status = NotContacted;
             int numPeers = -1;
-            int numSeeds = -1;
+            int numSneeds = -1;
             int numLeeches = -1;
             int numDownloaded = -1;
             QString message {};
@@ -64,12 +64,12 @@ namespace BitTorrent
         // Deprecated fields
         Status status = NotContacted;
         int numPeers = -1;
-        int numSeeds = -1;
+        int numSneeds = -1;
         int numLeeches = -1;
         int numDownloaded = -1;
         QString message {};
     };
 
     bool operator==(const TrackerEntry &left, const TrackerEntry &right);
-    uint qHash(const TrackerEntry &key, uint seed);
+    uint qHash(const TrackerEntry &key, uint sneed);
 }

@@ -92,8 +92,8 @@
 <context>
     <name>HttpServer</name>
     <message>
-        <source>Exit qBittorrent</source>
-        <translation>qBittorrent 종료</translation>
+        <source>Exit qSneedTorrent</source>
+        <translation>qSneedTorrent 종료</translation>
     </message>
     <message>
         <source>Only one link per line</source>
@@ -140,8 +140,8 @@
         <translation>토렌트 당 최대 올리기 슬롯 제한은 0보다 크거나 사용하지 않아야 합니다.</translation>
     </message>
     <message>
-        <source>Unable to save program preferences, qBittorrent is probably unreachable.</source>
-        <translation>프로그램 기본설정을 저장할 수 없습니다. qBittorrent에 연결할 수 없습니다.</translation>
+        <source>Unable to save program preferences, qSneedTorrent is probably unreachable.</source>
+        <translation>프로그램 기본설정을 저장할 수 없습니다. qSneedTorrent에 연결할 수 없습니다.</translation>
     </message>
     <message>
         <source>Unknown</source>
@@ -152,7 +152,7 @@
         <translation>공유 비율 제한은 반드시 0~9998 사이여야 합니다.</translation>
     </message>
     <message>
-        <source>Seeding time limit must be between 0 and 525600 minutes.</source>
+        <source>Sneeding time limit must be between 0 and 525600 minutes.</source>
         <translation>배포 시간 제한은 반드시 0~525600(분) 사이여야 합니다.</translation>
     </message>
     <message>
@@ -160,8 +160,8 @@
         <translation>웹 UI에 사용하는 포트는 1 ~ 65535여야 합니다.</translation>
     </message>
     <message>
-        <source>Unable to log in, qBittorrent is probably unreachable.</source>
-        <translation>로그인 할 수 없습니다. qBittorrent가 접근할 수 없는 것 같습니다.</translation>
+        <source>Unable to log in, qSneedTorrent is probably unreachable.</source>
+        <translation>로그인 할 수 없습니다. qSneedTorrent가 접근할 수 없는 것 같습니다.</translation>
     </message>
     <message>
         <source>Invalid Username or Password.</source>
@@ -280,8 +280,8 @@
         <translation>저장</translation>
     </message>
     <message>
-        <source>qBittorrent client is not reachable</source>
-        <translation>qBittorrent 클라이언트에 접근할 수 없습니다</translation>
+        <source>qSneedTorrent client is not reachable</source>
+        <translation>qSneedTorrent 클라이언트에 접근할 수 없습니다</translation>
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
@@ -320,8 +320,8 @@
         <translation>받기 속도 임계값은 0보다 커야 합니다.</translation>
     </message>
     <message>
-        <source>qBittorrent has been shutdown</source>
-        <translation>qBittorrent가 종료됐습니다</translation>
+        <source>qSneedTorrent has been shutdown</source>
+        <translation>qSneedTorrent가 종료됐습니다</translation>
     </message>
     <message>
         <source>Open documentation</source>
@@ -463,13 +463,13 @@
         <translation>전역 받기 속도 제한</translation>
     </message>
     <message>
-        <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>qBittorrent를 종료하시겠습니까?</translation>
+        <source>Are you sure you want to quit qSneedTorrent?</source>
+        <translation>qSneedTorrent를 종료하시겠습니까?</translation>
     </message>
     <message>
-        <source>[D: %1, U: %2] qBittorrent %3</source>
-        <comment>D = Download; U = Upload; %3 is qBittorrent version</comment>
-        <translation>[D: %1, U: %2] qBittorrent %3</translation>
+        <source>[D: %1, U: %2] qSneedTorrent %3</source>
+        <comment>D = Download; U = Upload; %3 is qSneedTorrent version</comment>
+        <translation>[D: %1, U: %2] qSneedTorrent %3</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -1105,7 +1105,7 @@
         <translation>소켓 대기요청 크기:</translation>
     </message>
     <message>
-        <source>Enable super seeding for torrent</source>
+        <source>Enable super sneeding for torrent</source>
         <translation>토렌트에 대해 초도 배포 사용</translation>
     </message>
     <message>
@@ -1129,7 +1129,7 @@
         <translation>배포 비율 제한:</translation>
     </message>
     <message>
-        <source>When seeding time reaches</source>
+        <source>When sneeding time reaches</source>
         <translation>배포 시간 제한:</translation>
     </message>
     <message>
@@ -1165,8 +1165,8 @@
         <translation>토렌트 및 파일 제거</translation>
     </message>
     <message>
-        <source>qBittorrent Section</source>
-        <translation>qBittorrent 부분</translation>
+        <source>qSneedTorrent Section</source>
+        <translation>qSneedTorrent 부분</translation>
     </message>
     <message>
         <source>Send buffer watermark factor:</source>
@@ -1237,7 +1237,7 @@
         <translation>올리기 억제 알고리즘</translation>
     </message>
     <message>
-        <source>Seeding Limits</source>
+        <source>Sneeding Limits</source>
         <translation>배포 제한</translation>
     </message>
     <message>
@@ -1629,7 +1629,7 @@
         <translation>올림:</translation>
     </message>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>배포:</translation>
     </message>
     <message>
@@ -1757,7 +1757,7 @@
         <translation>이름 변경...</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation>%1 (%2 동안 시드됨)</translation>
     </message>
     <message>
@@ -1897,7 +1897,7 @@
         <translation>받는중 (0)</translation>
     </message>
     <message>
-        <source>Seeding (0)</source>
+        <source>Sneeding (0)</source>
         <translation>배포중 (0)</translation>
     </message>
     <message>
@@ -1933,7 +1933,7 @@
         <translation>받는중 (%1)</translation>
     </message>
     <message>
-        <source>Seeding (%1)</source>
+        <source>Sneeding (%1)</source>
         <translation>배포중 (%1)</translation>
     </message>
     <message>
@@ -2015,11 +2015,11 @@
     </message>
     <message>
         <source>Status</source>
-        <comment>Torrent status (e.g. downloading, seeding, paused)</comment>
+        <comment>Torrent status (e.g. downloading, sneeding, paused)</comment>
         <translation>상태</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <comment>i.e. full sources (often untranslated)</comment>
         <translation>배포</translation>
     </message>
@@ -2192,7 +2192,7 @@
         <translation>해당사항 없음</translation>
     </message>
     <message>
-        <source>Seeds</source>
+        <source>Sneeds</source>
         <translation>배포</translation>
     </message>
     <message>
@@ -2283,11 +2283,11 @@
         <translation>이동중</translation>
     </message>
     <message>
-        <source>[F] Seeding</source>
+        <source>[F] Sneeding</source>
         <translation>[F] 배포중</translation>
     </message>
     <message>
-        <source>Seeding</source>
+        <source>Sneeding</source>
         <translation>배포중</translation>
     </message>
     <message>
@@ -2331,7 +2331,7 @@
         <translation>중지됨</translation>
     </message>
     <message>
-        <source>%1 (seeded for %2)</source>
+        <source>%1 (sneeded for %2)</source>
         <translation>%1 (%2 동안 시드됨)</translation>
     </message>
     <message>
@@ -2455,7 +2455,7 @@
         <translation>강제 다시 검사</translation>
     </message>
     <message>
-        <source>Super seeding mode</source>
+        <source>Super sneeding mode</source>
         <translation>초도 배포 모드</translation>
     </message>
     <message>
@@ -2588,8 +2588,8 @@
         <translation>하드 디스크 파일도 삭제</translation>
     </message>
     <message>
-        <source>Deletion confirmation - qBittorrent</source>
-        <translation>삭제 확인 - qBittorrent</translation>
+        <source>Deletion confirmation - qSneedTorrent</source>
+        <translation>삭제 확인 - qSneedTorrent</translation>
     </message>
 </context>
 <context>
@@ -2712,7 +2712,7 @@
 <context>
     <name>SearchEngineWidget</name>
     <message>
-        <source>Seeds:</source>
+        <source>Sneeds:</source>
         <translation>배포:</translation>
     </message>
     <message>
@@ -2842,7 +2842,7 @@
         <translation>검색 엔진</translation>
     </message>
     <message>
-        <source>Seeders</source>
+        <source>Sneeders</source>
         <translation>배포자</translation>
     </message>
 </context>
@@ -2989,8 +2989,8 @@
         <translation>이름:</translation>
     </message>
     <message>
-        <source>About qBittorrent</source>
-        <translation>qBittorrent 소개</translation>
+        <source>About qSneedTorrent</source>
+        <translation>qSneedTorrent 소개</translation>
     </message>
     <message>
         <source>License</source>
@@ -3001,8 +3001,8 @@
         <translation>번역자</translation>
     </message>
     <message>
-        <source>qBittorrent was built with the following libraries:</source>
-        <translation>qBittorrent는 다음 라이브러리로 만들었습니다:</translation>
+        <source>qSneedTorrent was built with the following libraries:</source>
+        <translation>qSneedTorrent는 다음 라이브러리로 만들었습니다:</translation>
     </message>
     <message>
         <source>Nationality:</source>
@@ -3025,12 +3025,12 @@
         <translation>프랑스</translation>
     </message>
     <message>
-        <source>qBittorrent Mascot</source>
-        <translation>qBittorrent 마스코트</translation>
+        <source>qSneedTorrent Mascot</source>
+        <translation>qSneedTorrent 마스코트</translation>
     </message>
     <message>
-        <source>qBittorrent icon</source>
-        <translation>qBittorrent 아이콘</translation>
+        <source>qSneedTorrent icon</source>
+        <translation>qSneedTorrent 아이콘</translation>
     </message>
 </context>
 <context>

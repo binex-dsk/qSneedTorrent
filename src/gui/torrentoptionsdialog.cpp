@@ -2,7 +2,7 @@
  * Bittorrent Client using Qt and libtorrent.
  * Copyright (C) 2020  thalieht
  * Copyright (C) 2011  Christian Kandeler
- * Copyright (C) 2011  Christophe Dumez <chris@qbittorrent.org>
+ * Copyright (C) 2011  Christophe Dumez <chris@qsneedtorrent.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -78,7 +78,7 @@ TorrentOptionsDialog::TorrentOptionsDialog(QWidget *parent, const QVector<BitTor
     bool allSameUpLimit = true;
     bool allSameDownLimit = true;
     bool allSameRatio = true;
-    bool allSameSeedingTime = true;
+    bool allSameSneedingTime = true;
     bool allTorrentsArePrivate = true;
     bool allSameDHT = true;
     bool allSamePEX = true;
@@ -98,7 +98,7 @@ TorrentOptionsDialog::TorrentOptionsDialog(QWidget *parent, const QVector<BitTor
     const int firstTorrentDownLimit = std::max(0, torrents[0]->downloadLimit());
 
     const qreal firstTorrentRatio = torrents[0]->ratioLimit();
-    const int firstTorrentSeedingTime = torrents[0]->seedingTimeLimit();
+    const int firstTorrentSneedingTime = torrents[0]->sneedingTimeLimit();
 
     const bool isFirstTorrentDHTDisabled = torrents[0]->isDHTDisabled();
     const bool isFirstTorrentPEXDisabled = torrents[0]->isPEXDisabled();
@@ -146,10 +146,10 @@ TorrentOptionsDialog::TorrentOptionsDialog(QWidget *parent, const QVector<BitTor
             if (torrent->ratioLimit() != firstTorrentRatio)
                 allSameRatio = false;
         }
-        if (allSameSeedingTime)
+        if (allSameSneedingTime)
         {
-            if (torrent->seedingTimeLimit() != firstTorrentSeedingTime)
-                allSameSeedingTime = false;
+            if (torrent->sneedingTimeLimit() != firstTorrentSneedingTime)
+                allSameSneedingTime = false;
         }
         if (allTorrentsArePrivate)
         {
@@ -273,11 +273,11 @@ TorrentOptionsDialog::TorrentOptionsDialog(QWidget *parent, const QVector<BitTor
                            , this, &TorrentOptionsDialog::handleDownSpeedLimitChanged);
     }
 
-    const bool useGlobalValue = allSameRatio && allSameSeedingTime
+    const bool useGlobalValue = allSameRatio && allSameSneedingTime
         && (firstTorrentRatio == BitTorrent::Torrent::USE_GLOBAL_RATIO)
-        && (firstTorrentSeedingTime == BitTorrent::Torrent::USE_GLOBAL_SEEDING_TIME);
+        && (firstTorrentSneedingTime == BitTorrent::Torrent::USE_GLOBAL_SNEEDING_TIME);
 
-    if (!allSameRatio || !allSameSeedingTime)
+    if (!allSameRatio || !allSameSneedingTime)
     {
         m_ui->radioUseGlobalShareLimits->setChecked(false);
         m_ui->radioNoLimit->setChecked(false);
@@ -288,7 +288,7 @@ TorrentOptionsDialog::TorrentOptionsDialog(QWidget *parent, const QVector<BitTor
         m_ui->radioUseGlobalShareLimits->setChecked(true);
     }
     else if ((firstTorrentRatio == BitTorrent::Torrent::NO_RATIO_LIMIT)
-             && (firstTorrentSeedingTime == BitTorrent::Torrent::NO_SEEDING_TIME_LIMIT))
+             && (firstTorrentSneedingTime == BitTorrent::Torrent::NO_SNEEDING_TIME_LIMIT))
     {
         m_ui->radioNoLimit->setChecked(true);
     }
@@ -297,16 +297,16 @@ TorrentOptionsDialog::TorrentOptionsDialog(QWidget *parent, const QVector<BitTor
         m_ui->radioTorrentLimit->setChecked(true);
         if (firstTorrentRatio >= 0)
             m_ui->checkMaxRatio->setChecked(true);
-        if (firstTorrentSeedingTime >= 0)
+        if (firstTorrentSneedingTime >= 0)
             m_ui->checkMaxTime->setChecked(true);
     }
 
     const qreal maxRatio = (allSameRatio && (firstTorrentRatio >= 0))
             ? firstTorrentRatio : session->globalMaxRatio();
-    const int maxSeedingTime = (allSameSeedingTime && (firstTorrentSeedingTime >= 0))
-            ? firstTorrentSeedingTime : session->globalMaxSeedingMinutes();
+    const int maxSneedingTime = (allSameSneedingTime && (firstTorrentSneedingTime >= 0))
+            ? firstTorrentSneedingTime : session->globalMaxSneedingMinutes();
     m_ui->spinRatioLimit->setValue(maxRatio);
-    m_ui->spinTimeLimit->setValue(maxSeedingTime);
+    m_ui->spinTimeLimit->setValue(maxSneedingTime);
 
     if (!allTorrentsArePrivate)
     {
@@ -356,7 +356,7 @@ TorrentOptionsDialog::TorrentOptionsDialog(QWidget *parent, const QVector<BitTor
         m_ui->downloadPath->selectedPath(),
         m_ui->comboCategory->currentText(),
         getRatio(),
-        getSeedingTime(),
+        getSneedingTime(),
         m_ui->spinUploadLimit->value(),
         m_ui->spinDownloadLimit->value(),
         m_ui->checkAutoTMM->checkState(),
@@ -454,9 +454,9 @@ void TorrentOptionsDialog::accept()
         if (m_initialValues.ratio != ratioLimit)
             torrent->setRatioLimit(ratioLimit);
 
-        const int seedingTimeLimit = getSeedingTime();
-        if (m_initialValues.seedingTime != seedingTimeLimit)
-            torrent->setSeedingTimeLimit(seedingTimeLimit);
+        const int sneedingTimeLimit = getSneedingTime();
+        if (m_initialValues.sneedingTime != sneedingTimeLimit)
+            torrent->setSneedingTimeLimit(sneedingTimeLimit);
 
         if (!torrent->isPrivate())
         {
@@ -491,16 +491,16 @@ qreal TorrentOptionsDialog::getRatio() const
     return m_ui->spinRatioLimit->value();
 }
 
-int TorrentOptionsDialog::getSeedingTime() const
+int TorrentOptionsDialog::getSneedingTime() const
 {
     if (m_ui->buttonGroup->checkedId() == -1) // No radio button is selected
         return MIXED_SHARE_LIMITS;
 
     if (m_ui->radioUseGlobalShareLimits->isChecked())
-        return BitTorrent::Torrent::USE_GLOBAL_SEEDING_TIME;
+        return BitTorrent::Torrent::USE_GLOBAL_SNEEDING_TIME;
 
     if (m_ui->radioNoLimit->isChecked() || !m_ui->checkMaxTime->isChecked())
-        return  BitTorrent::Torrent::NO_SEEDING_TIME_LIMIT;
+        return  BitTorrent::Torrent::NO_SNEEDING_TIME_LIMIT;
 
     return m_ui->spinTimeLimit->value();
 }
@@ -584,7 +584,7 @@ void TorrentOptionsDialog::handleUseDownloadPathChanged()
 
 void TorrentOptionsDialog::handleRatioTypeChanged()
 {
-    if ((m_initialValues.ratio == MIXED_SHARE_LIMITS) || (m_initialValues.seedingTime == MIXED_SHARE_LIMITS))
+    if ((m_initialValues.ratio == MIXED_SHARE_LIMITS) || (m_initialValues.sneedingTime == MIXED_SHARE_LIMITS))
     {
         QAbstractButton *currentRadio = m_ui->buttonGroup->checkedButton();
         if (currentRadio && (currentRadio == m_previousRadio))
